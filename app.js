@@ -31,61 +31,95 @@ const siteConfig = {
     walkingRoute: "https://maps.google.com/?q=Stazione+Cagliari+Stampace",
     excursions: "https://maps.google.com/?q=Golfo+degli+Angeli+boat+tour",
   },
+  areaMapEmbed:
+    "https://www.openstreetmap.org/export/embed.html?bbox=9.101%2C39.210%2C9.128%2C39.226&layer=mapnik&marker=39.2183%2C9.1134",
+  areaPoints: [
+    {
+      category: "all",
+      icon: "☕",
+      title: "Caffe in piazza",
+      meta: "Bar · 3 min a piedi",
+      href: "https://maps.google.com/?q=Cagliari+caffe+centro",
+    },
+    {
+      category: "food",
+      icon: "🍝",
+      title: "Trattoria del centro",
+      meta: "Ristorante · cucina sarda",
+      href: "https://maps.google.com/?q=Cagliari+ristorante+centro",
+    },
+    {
+      category: "beach",
+      icon: "🏖️",
+      title: "Poetto",
+      meta: "Spiaggia · bus diretto",
+      href: "https://maps.google.com/?q=Poetto+Cagliari",
+    },
+  ],
 };
 
 const services = [
   {
-    id: "info",
-    icon: "House",
-    chip: { it: "Stay", en: "Stay", fr: "Sejour" },
-    accent: "modal",
-  },
-  {
     id: "wifi",
     icon: "Wifi",
+    tone: "tone-orange",
     chip: { it: "Online", en: "Online", fr: "Online" },
     accent: "wifi",
   },
   {
-    id: "door",
-    icon: "Key",
-    chip: { it: "Accesso", en: "Access", fr: "Acces" },
+    id: "info",
+    icon: "House",
+    tone: "tone-cream",
+    chip: { it: "Stay", en: "Stay", fr: "Sejour" },
+    accent: "modal",
+  },
+  {
+    id: "food",
+    icon: "Glass",
+    tone: "tone-blue",
+    chip: { it: "Food", en: "Food", fr: "Food" },
     accent: "modal",
   },
   {
     id: "mobility",
-    icon: "Train",
+    icon: "Bus",
+    tone: "tone-orange",
     chip: { it: "City", en: "City", fr: "Ville" },
+    accent: "modal",
+  },
+  {
+    id: "transfer",
+    icon: "Plane",
+    tone: "tone-cream",
+    chip: { it: "Transfer", en: "Transfer", fr: "Transfer" },
     accent: "modal",
   },
   {
     id: "map",
     icon: "Compass",
+    tone: "tone-blue",
     chip: { it: "Explore", en: "Explore", fr: "Explore" },
     accent: "links",
   },
   {
-    id: "food",
-    icon: "Glass",
-    chip: { it: "Food", en: "Food", fr: "Food" },
+    id: "rent",
+    icon: "Car",
+    tone: "tone-orange",
+    chip: { it: "Rental", en: "Rental", fr: "Rental" },
     accent: "modal",
   },
   {
     id: "trips",
     icon: "Wave",
+    tone: "tone-orange",
     chip: { it: "Outdoor", en: "Outdoor", fr: "Outdoor" },
     accent: "links",
   },
   {
-    id: "transfer",
-    icon: "Car",
-    chip: { it: "Transfer", en: "Transfer", fr: "Transfer" },
-    accent: "modal",
-  },
-  {
-    id: "rent",
-    icon: "Bike",
-    chip: { it: "Rental", en: "Rental", fr: "Rental" },
+    id: "door",
+    icon: "Key",
+    tone: "tone-cream",
+    chip: { it: "Accesso", en: "Access", fr: "Acces" },
     accent: "modal",
   },
 ];
@@ -109,6 +143,9 @@ const copy = {
     servicesTitle: "Servizi rapidi per gli ospiti",
     servicesCopy:
       "Ogni card apre un'informazione utile o una call to action. La struttura e' pronta per QR code, landing da WhatsApp o link inviato prima del check-in.",
+    areaTitle: "Mappa dei dintorni",
+    areaCopy: "L'alloggio e i punti consigliati nelle vicinanze.",
+    areaFilters: ["Tutti", "Ristorante", "Bar", "Spiagge"],
     storyKicker: "Direzione creativa",
     storyTitle: "Mediterraneo caldo, tono editoriale, interazioni semplici.",
     storyBody:
@@ -205,7 +242,7 @@ const copy = {
         },
       },
       mobility: {
-        title: "Mobilita' urbana",
+        title: "Trasporti",
         description: "Bus, treno aeroporto, fermate vicine e suggerimenti pratici.",
         modal: {
           kicker: "Come muoversi",
@@ -337,6 +374,9 @@ const copy = {
     servicesTitle: "Quick tools for guests",
     servicesCopy:
       "Each card opens a useful detail or a call to action. The structure is ready for QR codes, WhatsApp landings or pre-check-in links.",
+    areaTitle: "Neighborhood map",
+    areaCopy: "Your stay and the most useful points nearby.",
+    areaFilters: ["All", "Food", "Bar", "Beaches"],
     storyKicker: "Creative direction",
     storyTitle: "Warm Mediterranean mood, editorial tone, simple interactions.",
     storyBody:
@@ -776,13 +816,13 @@ const copy = {
 };
 
 const localeOptions = [
-  { code: "it", label: "IT" },
-  { code: "en", label: "EN" },
-  { code: "fr", label: "FR" },
-  { code: "de", label: "DE" },
-  { code: "es", label: "ES" },
-  { code: "pt", label: "PT" },
-  { code: "pl", label: "PL" },
+  { code: "it", label: "IT", flag: "🇮🇹", name: "Italiano" },
+  { code: "en", label: "EN", flag: "🇬🇧", name: "English" },
+  { code: "fr", label: "FR", flag: "🇫🇷", name: "Francais" },
+  { code: "de", label: "DE", flag: "🇩🇪", name: "Deutsch" },
+  { code: "es", label: "ES", flag: "🇪🇸", name: "Espanol" },
+  { code: "pt", label: "PT", flag: "🇵🇹", name: "Portugues" },
+  { code: "pl", label: "PL", flag: "🇵🇱", name: "Polski" },
 ];
 
 function cloneLocale(locale) {
@@ -1867,6 +1907,18 @@ const actionIcons = {
   themeLight: "Sun",
 };
 
+const tileIcons = {
+  wifi: "📶",
+  info: "📋",
+  food: "🍽️",
+  mobility: "🚌",
+  transfer: "🧳",
+  map: "🗺️",
+  rent: "🚗",
+  trips: "🏖️",
+  door: "🔑",
+};
+
 const themeStorageKey = "stampace-theme";
 
 const state = {
@@ -1877,6 +1929,7 @@ const state = {
 const dom = {
   langSwitch: document.querySelector("#lang-switch"),
   themeToggle: document.querySelector("#theme-toggle"),
+  heroCard: document.querySelector("#hero-card"),
   heroTagline: document.querySelector("#hero-tagline"),
   heroKicker: document.querySelector("#hero-kicker"),
   heroTitle: document.querySelector("#hero-title"),
@@ -1895,6 +1948,11 @@ const dom = {
   servicesTitle: document.querySelector("#services-title"),
   servicesCopy: document.querySelector("#services-copy"),
   serviceGrid: document.querySelector("#service-grid"),
+  areaTitle: document.querySelector("#area-title"),
+  areaCopy: document.querySelector("#area-copy"),
+  areaMap: document.querySelector("#area-map"),
+  mapPills: document.querySelector("#map-pills"),
+  mapList: document.querySelector("#map-list"),
   storyKicker: document.querySelector("#story-kicker"),
   storyTitle: document.querySelector("#story-title"),
   storyBody: document.querySelector("#story-body"),
@@ -1932,20 +1990,35 @@ function applyTheme() {
 
 function renderLanguageSwitch() {
   const label = copy[state.lang].languageLabel;
-  dom.langSwitch.innerHTML = "";
+  dom.langSwitch.innerHTML = `
+    <label class="lang-select-shell" aria-label="${label}">
+      <span class="lang-select-current" aria-hidden="true">${localeOptions.find((language) => language.code === state.lang)?.flag ?? "🌐"}</span>
+      <select class="lang-select" id="lang-select">
+        ${localeOptions
+          .map(
+            (language) => `
+              <option value="${language.code}" ${language.code === state.lang ? "selected" : ""}>
+                ${language.name}
+              </option>
+            `,
+          )
+          .join("")}
+      </select>
+      <span class="lang-select-caret" aria-hidden="true">v</span>
+    </label>
+  `;
 
-  localeOptions.forEach((language) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = language.label;
-    button.setAttribute("aria-label", `${label} ${language.label}`);
-    button.className = language.code === state.lang ? "active" : "";
-    button.addEventListener("click", () => {
-      state.lang = language.code;
+  const select = dom.langSwitch.querySelector("#lang-select");
+  if (select instanceof HTMLSelectElement) {
+    select.addEventListener("change", () => {
+      const currentScrollY = window.scrollY;
+      state.lang = select.value;
       renderPage();
+      requestAnimationFrame(() => {
+        window.scrollTo(0, currentScrollY);
+      });
     });
-    dom.langSwitch.append(button);
-  });
+  }
 }
 
 function renderThemeToggle() {
@@ -1954,8 +2027,9 @@ function renderThemeToggle() {
   const label = nextTheme === "dark" ? buttons.themeDark : buttons.themeLight;
   const iconName = nextTheme === "dark" ? actionIcons.themeDark : actionIcons.themeLight;
 
-  dom.themeToggle.innerHTML = renderButtonLabel(iconName, label);
+  dom.themeToggle.innerHTML = `<span class="theme-toggle-icon" aria-hidden="true">${renderIcon(iconName, "button-glyph")}</span>`;
   dom.themeToggle.setAttribute("aria-label", label);
+  dom.themeToggle.setAttribute("title", label);
 }
 
 function renderQuickDock() {
@@ -1986,6 +2060,10 @@ function renderQuickDock() {
 
 function getServiceCopy(serviceId) {
   return copy[state.lang].services[serviceId];
+}
+
+function getLocalizedText(localized, key, fallback = "") {
+  return localized?.[key] ?? copy.en?.[key] ?? fallback;
 }
 
 function renderButtonLabel(iconName, label) {
@@ -2020,36 +2098,43 @@ function serviceActions(service) {
   `;
 }
 
+function runServiceAction(serviceId) {
+  if (serviceId === "wifi") {
+    copyWifiPassword();
+    return;
+  }
+
+  if (serviceId === "map") {
+    scrollToMapSection();
+    return;
+  }
+
+  if (serviceId === "trips") {
+    window.open(siteConfig.links.excursions, "_blank", "noreferrer");
+    return;
+  }
+
+  openModal(serviceId);
+}
+
 function renderServices() {
   dom.serviceGrid.innerHTML = "";
 
   services.forEach((service) => {
     const localized = getServiceCopy(service.id);
-    const article = document.createElement("article");
-    article.className = "service-card";
-    article.innerHTML = `
-      <div class="service-top">
-        <div class="service-icon" aria-hidden="true">${renderIcon(service.icon, "service-glyph")}</div>
-        <div class="service-chip">${service.chip[state.lang] ?? service.chip.en}</div>
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `service-tile ${service.tone ?? "tone-orange"}`;
+    button.dataset.serviceId = service.id;
+    button.setAttribute("aria-label", localized.title);
+    button.innerHTML = `
+      <div class="service-tile-icon" aria-hidden="true"><span class="tile-emoji">${tileIcons[service.id] ?? "✨"}</span></div>
+      <div class="service-tile-copy">
+        <h3>${localized.title}</h3>
       </div>
-      <h3>${localized.title}</h3>
-      <p>${localized.description}</p>
-      ${
-        service.id === "wifi"
-          ? `
-            <div class="service-meta">
-              <strong>${localized.metaLabel}</strong>
-              <span>${siteConfig.brand.wifi.password}</span>
-            </div>
-          `
-          : ""
-      }
-      <div class="service-actions">${serviceActions(service)}</div>
     `;
-    dom.serviceGrid.append(article);
+    dom.serviceGrid.append(button);
   });
-
-  dom.serviceGrid.append(renderContactCard());
 }
 
 function renderContactCard() {
@@ -2089,6 +2174,39 @@ function renderContactCard() {
 
 function renderNotes() {
   dom.notesList.innerHTML = copy[state.lang].notes.map((item) => `<li>${item}</li>`).join("");
+}
+
+function renderAreaSection() {
+  const localized = copy[state.lang];
+  dom.areaTitle.textContent = getLocalizedText(localized, "areaTitle", "Mappa dei dintorni");
+  dom.areaCopy.textContent = getLocalizedText(
+    localized,
+    "areaCopy",
+    "L'alloggio e i punti consigliati nelle vicinanze.",
+  );
+  dom.areaMap.src = siteConfig.areaMapEmbed;
+
+  const filters = getLocalizedText(localized, "areaFilters", ["Tutti", "Ristorante", "Bar", "Spiagge"]);
+  dom.mapPills.innerHTML = filters
+    .map(
+      (filter, index) =>
+        `<span class="map-pill ${index === 0 ? "is-active" : ""}">${filter}</span>`,
+    )
+    .join("");
+
+  dom.mapList.innerHTML = siteConfig.areaPoints
+    .map(
+      (point) => `
+        <a class="map-point-card" href="${point.href}" target="_blank" rel="noreferrer">
+          <span class="map-point-icon" aria-hidden="true">${point.icon}</span>
+          <span class="map-point-copy">
+            <strong>${point.title}</strong>
+            <small>${point.meta}</small>
+          </span>
+        </a>
+      `,
+    )
+    .join("");
 }
 
 function modalSectionActions(actions = []) {
@@ -2182,6 +2300,19 @@ function scrollToContact() {
   const contactCard = document.querySelector(".contact-card");
   if (contactCard) {
     contactCard.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  const primaryHost = siteConfig.brand.contacts[0];
+  if (primaryHost?.whatsapp) {
+    window.open(primaryHost.whatsapp, "_blank", "noreferrer");
+  }
+}
+
+function scrollToMapSection() {
+  const mapSection = document.querySelector("#map-section");
+  if (mapSection) {
+    mapSection.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -2190,19 +2321,20 @@ function renderPage() {
 
   document.documentElement.lang = state.lang;
   document.title = `${siteConfig.brand.name} | ${localized.topbarTagline}`;
+  dom.heroCard.style.backgroundImage = "";
+  dom.heroCard.classList.add("hero-brick");
 
   applyTheme();
   renderLanguageSwitch();
   renderThemeToggle();
 
-  dom.heroTagline.textContent = localized.topbarTagline;
-  dom.heroKicker.textContent = localized.heroKicker;
-  dom.heroTitle.textContent = localized.heroTitle;
-  dom.heroSubtitle.textContent = localized.heroSubtitle;
+  dom.heroKicker.textContent = "";
+  dom.heroTitle.textContent = "Stampace Charming";
+  dom.heroSubtitle.textContent = "Luxury apartment";
   dom.heroAddress.textContent = siteConfig.brand.address;
   dom.heroMail.textContent = siteConfig.brand.email;
   dom.heroLicense.textContent = siteConfig.brand.license;
-  dom.heroWelcome.textContent = localized.heroWelcome;
+  dom.heroWelcome.textContent = "";
 
   dom.statOneValue.textContent = localized.stats[0].value;
   dom.statOneLabel.textContent = localized.stats[0].label;
@@ -2228,6 +2360,7 @@ function renderPage() {
 
   renderQuickDock();
   renderServices();
+  renderAreaSection();
   renderNotes();
 }
 
@@ -2240,6 +2373,12 @@ document.addEventListener("click", (event) => {
   const modalTrigger = target.closest("[data-open-modal]");
   if (modalTrigger instanceof HTMLElement) {
     openModal(modalTrigger.dataset.openModal);
+    return;
+  }
+
+  const serviceTile = target.closest("[data-service-id]");
+  if (serviceTile instanceof HTMLElement) {
+    runServiceAction(serviceTile.dataset.serviceId);
     return;
   }
 
