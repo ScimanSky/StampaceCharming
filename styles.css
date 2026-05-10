@@ -316,6 +316,26 @@ main,
   cursor: pointer;
 }
 
+.button-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .dock-button strong {
   font-size: 0.68rem;
   letter-spacing: 0.08em;
@@ -502,6 +522,13 @@ main {
   letter-spacing: 0.11em;
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.cta-button .button-icon,
+.ghost-button .button-icon,
+.secondary-button .button-icon {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 .secondary-button,

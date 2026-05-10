@@ -800,6 +800,24 @@ const icons = {
   Message: "Chat",
 };
 
+const actionIcons = {
+  info: "🏠",
+  wifi: "📶",
+  door: "🚪",
+  mobility: "🚌",
+  map: "🗺️",
+  food: "🍽️",
+  trips: "⛵",
+  transfer: "🚐",
+  rent: "🛵",
+  contact: "📞",
+  copy: "⧉",
+  call: "☎",
+  whatsapp: "💬",
+  route: "📍",
+  pdf: "📄",
+};
+
 const state = {
   lang: "it",
 };
@@ -869,18 +887,22 @@ function renderQuickDock() {
   const buttons = copy[state.lang].buttons;
   dom.quickDock.innerHTML = `
     <button class="dock-button" type="button" data-open-modal="info">
+      <em class="button-icon" aria-hidden="true">${actionIcons.info}</em>
       <strong>${buttons.dockRules}</strong>
       <span>${buttons.open}</span>
     </button>
     <button class="dock-button" type="button" data-copy-wifi="true">
+      <em class="button-icon" aria-hidden="true">${actionIcons.wifi}</em>
       <strong>${buttons.dockWifi}</strong>
       <span>${buttons.copyPassword}</span>
     </button>
     <a class="dock-button" href="${siteConfig.links.cityMap}" target="_blank" rel="noreferrer">
+      <em class="button-icon" aria-hidden="true">${actionIcons.map}</em>
       <strong>${buttons.dockMap}</strong>
       <span>${buttons.mapPrimary}</span>
     </a>
     <button class="dock-button" type="button" data-scroll-contact="true">
+      <em class="button-icon" aria-hidden="true">${actionIcons.contact}</em>
       <strong>${buttons.dockHost}</strong>
       <span>${buttons.call}</span>
     </button>
@@ -891,31 +913,35 @@ function getServiceCopy(serviceId) {
   return copy[state.lang].services[serviceId];
 }
 
+function renderButtonLabel(icon, label) {
+  return `<span class="button-label"><em class="button-icon" aria-hidden="true">${icon}</em><span>${label}</span></span>`;
+}
+
 function serviceActions(service) {
   const texts = copy[state.lang].buttons;
 
   if (service.id === "wifi") {
     return `
-      <button class="cta-button" type="button" data-connect-wifi="true">${texts.wifi}</button>
-      <button class="secondary-button" type="button" data-copy-wifi="true">${texts.copyPassword}</button>
+      <button class="cta-button" type="button" data-connect-wifi="true">${renderButtonLabel(actionIcons.wifi, texts.wifi)}</button>
+      <button class="secondary-button" type="button" data-copy-wifi="true">${renderButtonLabel(actionIcons.copy, texts.copyPassword)}</button>
     `;
   }
 
   if (service.id === "map") {
     return `
-      <a class="cta-button" href="${siteConfig.links.cityMap}" target="_blank" rel="noreferrer">${texts.mapPrimary}</a>
-      <a class="secondary-button" href="${siteConfig.links.cityGuidePdf}" target="_blank" rel="noreferrer">${texts.mapSecondary}</a>
+      <a class="cta-button" href="${siteConfig.links.cityMap}" target="_blank" rel="noreferrer">${renderButtonLabel(actionIcons.map, texts.mapPrimary)}</a>
+      <a class="secondary-button" href="${siteConfig.links.cityGuidePdf}" target="_blank" rel="noreferrer">${renderButtonLabel(actionIcons.pdf, texts.mapSecondary)}</a>
     `;
   }
 
   if (service.id === "trips") {
     return `
-      <a class="cta-button" href="${siteConfig.links.excursions}" target="_blank" rel="noreferrer">${texts.trips}</a>
+      <a class="cta-button" href="${siteConfig.links.excursions}" target="_blank" rel="noreferrer">${renderButtonLabel(actionIcons.trips, texts.trips)}</a>
     `;
   }
 
   return `
-    <button class="cta-button" type="button" data-open-modal="${service.id}">${texts.open}</button>
+    <button class="cta-button" type="button" data-open-modal="${service.id}">${renderButtonLabel(actionIcons[service.id], texts.open)}</button>
   `;
 }
 
@@ -965,8 +991,8 @@ function renderContactCard() {
             <span class="contact-role">${person.role}</span>
           </div>
           <div class="contact-actions">
-            <a class="ghost-button" href="tel:${person.phone}">${localized.buttons.call}</a>
-            <a class="cta-button" href="${person.whatsapp}" target="_blank" rel="noreferrer">${localized.buttons.whatsapp}</a>
+            <a class="ghost-button" href="tel:${person.phone}">${renderButtonLabel(actionIcons.call, localized.buttons.call)}</a>
+            <a class="cta-button" href="${person.whatsapp}" target="_blank" rel="noreferrer">${renderButtonLabel(actionIcons.whatsapp, localized.buttons.whatsapp)}</a>
           </div>
         </div>
       `,
@@ -1001,7 +1027,7 @@ function modalSectionActions(actions = []) {
     .map(
       (action) => `
         <a class="ghost-button" href="${action.href}" target="_blank" rel="noreferrer">
-          ${buttons[action.labelKey]}
+          ${renderButtonLabel(actionIcons.route, buttons[action.labelKey])}
         </a>
       `,
     )
