@@ -269,7 +269,7 @@ const copy = {
       },
       trips: {
         title: "Escursioni",
-        description: "Boat tour, spiagge, giornate fuori porta e attività da prenotare.",
+        description: "Boat tour, spiagge, giornate fuori porta e attivita da prenotare.",
       },
       transfer: {
         title: "Transfer privato",
@@ -1306,55 +1306,577 @@ copy.pl = mergeLocale(copy.en, {
   },
 });
 
-const icons = {
-  House: "Casa",
-  Wifi: "Wi-Fi",
-  Key: "Key",
-  Train: "Train",
-  Compass: "Map",
-  Glass: "Food",
-  Wave: "Sea",
-  Car: "Car",
-  Bike: "Bike",
-  Clock: "Time",
-  Sparkles: "Plus",
-  Shield: "Rules",
-  Hash: "Code",
-  Lock: "Lock",
-  Door: "Door",
-  Bus: "Bus",
-  Parking: "Park",
-  Fish: "Fish",
-  Fire: "Food",
-  Cocktail: "Bar",
-  Plane: "Fly",
-  Message: "Chat",
+[
+  copy.it,
+  copy.en,
+  copy.fr,
+  copy.de,
+  copy.es,
+  copy.pt,
+  copy.pl,
+].forEach((locale) => {
+  locale.stats[0].value = "7";
+});
+
+copy.it.buttons.themeDark = "Modalita notte";
+copy.it.buttons.themeLight = "Modalita giorno";
+copy.en.buttons.themeDark = "Night mode";
+copy.en.buttons.themeLight = "Day mode";
+copy.fr.buttons.themeDark = "Mode nuit";
+copy.fr.buttons.themeLight = "Mode jour";
+copy.de.buttons.themeDark = "Nachtmodus";
+copy.de.buttons.themeLight = "Tagesmodus";
+copy.es.buttons.themeDark = "Modo nocturno";
+copy.es.buttons.themeLight = "Modo diurno";
+copy.pt.buttons.themeDark = "Modo noturno";
+copy.pt.buttons.themeLight = "Modo diurno";
+copy.pl.buttons.themeDark = "Tryb nocny";
+copy.pl.buttons.themeLight = "Tryb dzienny";
+
+copy.es = mergeLocale(copy.es, {
+  services: {
+    info: {
+      modal: {
+        kicker: "Guia de estancia",
+        title: "Informacion esencial",
+        copy: "Usa esta seccion para reunir la informacion que hoy sueles enviar en varios mensajes separados.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in y check-out",
+            body:
+              "Check-in de 15:00 a 21:30. Check-out antes de las 10:30. Si ofreces early check-in o late check-out, puedes indicar aqui disponibilidad y suplemento.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Durante la estancia",
+            body:
+              "Explica de forma breve como dejar la casa al salir, donde estan los accesorios de playa y que comodidades estan incluidas.",
+          },
+          {
+            icon: "Shield",
+            title: "Normas importantes",
+            body:
+              "Silencio despues de las 22:00, no fumar dentro, mantener las ventanas cerradas cuando el aire acondicionado este encendido y dejar las llaves sobre la mesa al salir.",
+          },
+        ],
+      },
+    },
+    door: {
+      modal: {
+        kicker: "Self check-in",
+        title: "Como entrar",
+        copy: "Esta tarjeta reduce llamadas durante la llegada. Manten las instrucciones muy cortas.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Activa el teclado",
+            body:
+              "Pulsa el boton con el icono de llave para activar el panel. Si el sistema se reinicia, espera dos segundos y vuelve a intentarlo.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Introduce el codigo",
+            body:
+              "Escribe el codigo de acceso que envias el dia de llegada. Aqui tambien puedes anadir instrucciones para la caja de llaves.",
+          },
+          {
+            icon: "Door",
+            title: "3. Confirma y cierra",
+            body:
+              "Pulsa otra vez el boton de llave, entra y asegurate de que la puerta principal se cierre bien detras de ti.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      modal: {
+        kicker: "Moverse por la ciudad",
+        title: "Ciudad, aeropuerto, aparcamiento",
+        copy: "Un solo modal puede cubrir todo lo que un huesped realmente necesita saber si llega sin coche o quiere moverse ligero.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Bus del barrio",
+            body:
+              "Indica la parada mas cercana, las lineas utiles y el precio del billete. Si hay una app local recomendable, puedes mencionarla aqui.",
+          },
+          {
+            icon: "Train",
+            title: "Conexion con el aeropuerto",
+            body:
+              "Especifica cada cuanto sale el tren o el shuttle, cuanto dura el trayecto y cuantos minutos a pie quedan hasta el apartamento.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Aparcamiento",
+            body:
+              "Explica donde estan las plazas de pago, cuando se paga y si existen franjas gratuitas. Es una de las preguntas mas frecuentes.",
+          },
+        ],
+      },
+    },
+    food: {
+      modal: {
+        kicker: "Recomendaciones locales",
+        title: "Donde comer bien",
+        copy: "Organiza las recomendaciones por ambiente o momento del dia en lugar de crear listas interminables.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Pescado",
+            body:
+              "Anade dos o tres sitios fiables junto con una nota util: si conviene reservar, rango de precio o plato destacado.",
+          },
+          {
+            icon: "Fire",
+            title: "Carne y cocina sarda",
+            body:
+              "Ideal para destacar un sitio mas autentico o una trattoria tradicional con cocina local.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitivo y noche",
+            body:
+              "Sugiere un rooftop, un wine bar y una plaza animada. Los huespedes deciden antes cuando las opciones estan claras.",
+          },
+        ],
+      },
+    },
+    transfer: {
+      modal: {
+        kicker: "Servicios premium",
+        title: "Traslado bajo peticion",
+        copy: "Usa esta seccion para recomendar un socio de confianza en vez de dejar al huesped buscando por su cuenta.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Aeropuerto y puerto",
+            body:
+              "Disponible bajo reserva para llegadas tardias, salidas muy tempranas y trayectos puerta a puerta.",
+          },
+          {
+            icon: "Message",
+            title: "Como reservar",
+            body:
+              "Pide un mensaje al menos 24 horas antes con numero de personas, hora y equipaje. Aqui tambien puedes indicar un precio fijo.",
+          },
+        ],
+      },
+    },
+    rent: {
+      modal: {
+        kicker: "Moverse con libertad",
+        title: "Coches, scooters y bicis",
+        copy: "Un modal breve y claro permite presentar los socios adecuados sin sobrecargar la home.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Coches y scooters",
+            body:
+              "Util para huespedes que quieren salir del centro o visitar varias playas en un dia. Menciona si hay entrega cerca del alojamiento.",
+          },
+          {
+            icon: "Bike",
+            title: "Bicis y movilidad ligera",
+            body:
+              "Perfecto para huespedes urbanos y estancias cortas. Puedes mencionar paseos junto al mar o rutas faciles en bici.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.pt = mergeLocale(copy.pt, {
+  services: {
+    info: {
+      modal: {
+        kicker: "Guia da estadia",
+        title: "Informacao essencial",
+        copy: "Use esta secao para reunir a informacao que hoje costuma enviar em varias mensagens separadas.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in e check-out",
+            body:
+              "Check-in das 15:00 as 21:30. Check-out ate as 10:30. Se oferecer early check-in ou late check-out, pode indicar aqui disponibilidade e suplemento.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Durante a estadia",
+            body:
+              "Explique de forma breve como deixar a casa ao sair, onde estao os acessorios de praia e quais comodidades estao incluidas.",
+          },
+          {
+            icon: "Shield",
+            title: "Regras importantes",
+            body:
+              "Silencio apos as 22:00, nao fumar no interior, manter as janelas fechadas quando o ar condicionado estiver ligado e deixar as chaves sobre a mesa na partida.",
+          },
+        ],
+      },
+    },
+    door: {
+      modal: {
+        kicker: "Self check-in",
+        title: "Como entrar",
+        copy: "Este cartao reduz chamadas no momento da chegada. Mantenha as instrucoes muito curtas.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Ative o teclado",
+            body:
+              "Prima o botao com o icone de chave para ativar o painel. Se o sistema reiniciar, espere dois segundos e tente de novo.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Introduza o codigo",
+            body:
+              "Introduza o codigo de acesso enviado no dia da chegada. Aqui tambem pode acrescentar instrucoes para a caixa de chaves.",
+          },
+          {
+            icon: "Door",
+            title: "3. Confirme e feche",
+            body:
+              "Prima novamente o botao da chave, entre e confirme que a porta principal fica bem fechada atras de si.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      modal: {
+        kicker: "Mover-se na cidade",
+        title: "Cidade, aeroporto, estacionamento",
+        copy: "Um unico modal pode cobrir tudo o que um hospede realmente precisa de saber se chega sem carro ou quer circular de forma leve.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Autocarro do bairro",
+            body:
+              "Indique a paragem mais proxima, as linhas uteis e o preco do bilhete. Se houver uma app local recomendada, pode menciona-la aqui.",
+          },
+          {
+            icon: "Train",
+            title: "Ligacao ao aeroporto",
+            body:
+              "Indique com que frequencia sai o comboio ou shuttle, quanto dura a viagem e quantos minutos a pe faltam ate ao apartamento.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Estacionamento",
+            body:
+              "Explique onde ficam os lugares pagos, em que horarios se paga e se existem periodos gratuitos. E uma pergunta muito frequente.",
+          },
+        ],
+      },
+    },
+    food: {
+      modal: {
+        kicker: "Sugestoes locais",
+        title: "Onde comer bem",
+        copy: "Organize as recomendacoes por ambiente ou momento do dia em vez de criar listas interminaveis.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Peixe",
+            body:
+              "Adicione dois ou tres sitios de confianca, juntamente com uma nota util: se convem reservar, faixa de preco ou prato em destaque.",
+          },
+          {
+            icon: "Fire",
+            title: "Carne e cozinha sarda",
+            body:
+              "Perfeito para destacar um lugar mais autentico ou uma trattoria tradicional com cozinha local.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitivo e noite",
+            body:
+              "Sugira um rooftop, um wine bar e uma praca animada. Os hospedes decidem mais depressa quando as opcoes estao bem estruturadas.",
+          },
+        ],
+      },
+    },
+    transfer: {
+      modal: {
+        kicker: "Servicos premium",
+        title: "Transfer sob pedido",
+        copy: "Use esta secao para recomendar um parceiro de confianca em vez de deixar o hospede procurar sozinho.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Aeroporto e porto",
+            body:
+              "Disponivel mediante reserva para chegadas tardias, partidas de madrugada e trajetos porta a porta.",
+          },
+          {
+            icon: "Message",
+            title: "Como reservar",
+            body:
+              "Peca uma mensagem com pelo menos 24 horas de antecedencia com numero de pessoas, horario e bagagem. Aqui tambem pode indicar um preco fixo.",
+          },
+        ],
+      },
+    },
+    rent: {
+      modal: {
+        kicker: "Mover-se com liberdade",
+        title: "Carros, scooters e bicicletas",
+        copy: "Um modal curto e claro permite apresentar os parceiros certos sem sobrecarregar a pagina inicial.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Carros e scooters",
+            body:
+              "Util para hospedes que querem sair do centro ou visitar varias praias no mesmo dia. Refira se existe entrega perto do alojamento.",
+          },
+          {
+            icon: "Bike",
+            title: "Bicicletas e mobilidade leve",
+            body:
+              "Perfeito para hospedes urbanos e estadias curtas. Pode mencionar percursos junto ao mar ou rotas de bicicleta simples.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.pl = mergeLocale(copy.pl, {
+  services: {
+    info: {
+      modal: {
+        kicker: "Przewodnik pobytu",
+        title: "Najwazniejsze informacje",
+        copy: "W tej sekcji zbierzesz informacje, ktore zwykle wysylasz gosciom w kilku osobnych wiadomosciach.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in i check-out",
+            body:
+              "Check-in od 15:00 do 21:30. Check-out do 10:30. Jesli oferujesz early check-in lub late check-out, tutaj mozesz podac dostepnosc i ewentualna oplata.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Podczas pobytu",
+            body:
+              "Krotko wyjasnij, jak zostawic mieszkanie przy wychodzeniu, gdzie znajduja sie akcesoria plazowe i jakie udogodnienia sa w cenie.",
+          },
+          {
+            icon: "Shield",
+            title: "Wazne zasady",
+            body:
+              "Cisza po 22:00, zakaz palenia wewnatrz, zamkniete okna przy wlaczonej klimatyzacji oraz zostawienie kluczy na stole przy wyjezdzie.",
+          },
+        ],
+      },
+    },
+    door: {
+      modal: {
+        kicker: "Self check-in",
+        title: "Jak wejsc",
+        copy: "Ta karta ogranicza telefony przy przyjezdzie. Instrukcje powinny byc bardzo krotkie.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Aktywuj klawiature",
+            body:
+              "Nacisnij przycisk z ikona klucza, aby aktywowac panel. Jesli system sie zresetuje, odczekaj dwie sekundy i sprobuj ponownie.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Wpisz kod",
+            body:
+              "Wpisz kod dostepu wysylany w dniu przyjazdu. W tym miejscu mozesz tez dodac instrukcje do skrytki na klucze.",
+          },
+          {
+            icon: "Door",
+            title: "3. Potwierdz i zamknij",
+            body:
+              "Nacisnij ponownie przycisk klucza, wejdz i upewnij sie, ze drzwi glowne poprawnie zamknely sie za Toba.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      modal: {
+        kicker: "Poruszanie sie po miescie",
+        title: "Miasto, lotnisko, parking",
+        copy: "Jedno okno modalne moze zawierac wszystko, co gosc naprawde musi wiedziec, jesli przyjezdza bez auta lub chce poruszac sie lekko.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Autobus w okolicy",
+            body:
+              "Podaj najblizszy przystanek, przydatne linie i cene biletu. Jesli jest polecana lokalna aplikacja, mozesz ja tu dodac.",
+          },
+          {
+            icon: "Train",
+            title: "Polaczenie z lotniskiem",
+            body:
+              "Wpisz, jak czesto kursuje pociag lub shuttle, ile trwa przejazd i ile minut pieszo zostaje do apartamentu.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Parking",
+            body:
+              "Wyjasnij, gdzie sa miejsca platne, w jakich godzinach obowiazuje oplata i czy sa darmowe przedzialy czasowe. Goscie prawie zawsze o to pytaja.",
+          },
+        ],
+      },
+    },
+    food: {
+      modal: {
+        kicker: "Lokalne rekomendacje",
+        title: "Gdzie dobrze zjesc",
+        copy: "Lepiej uporzadkowac rekomendacje wedlug klimatu lub pory dnia niz budowac bardzo dlugie listy.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Ryby",
+            body:
+              "Dodaj dwie lub trzy sprawdzone miejscowki oraz praktyczna uwage: czy warto rezerwowac, jaki jest poziom cen lub jakie danie warto wybrac.",
+          },
+          {
+            icon: "Fire",
+            title: "Mieso i kuchnia sardynska",
+            body:
+              "To dobre miejsce, by polecic bardziej autentyczny lokal albo tradycyjna trattorie z lokalna kuchnia.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitivo i wieczor",
+            body:
+              "Zaproponuj rooftop, wine bar i zywy plac. Goscie szybciej podejmuja decyzje, gdy opcje sa jasno uporzadkowane.",
+          },
+        ],
+      },
+    },
+    transfer: {
+      modal: {
+        kicker: "Uslugi premium",
+        title: "Transfer na zyczenie",
+        copy: "W tej sekcji mozesz polecic zaufanego partnera zamiast zostawiac goscia samemu sobie.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Lotnisko i port",
+            body:
+              "Dostepne na rezerwacje dla poznych przylotow, wczesnych wyjazdow i przejazdow door-to-door.",
+          },
+          {
+            icon: "Message",
+            title: "Jak zarezerwowac",
+            body:
+              "Popros o wiadomosc co najmniej 24 godziny wczesniej z liczba osob, godzina i bagazem. Tutaj mozesz tez podac cene stala.",
+          },
+        ],
+      },
+    },
+    rent: {
+      modal: {
+        kicker: "Podrozuj swobodnie",
+        title: "Samochody, skutery i rowery",
+        copy: "Krotki i czytelny modal pozwala pokazac odpowiednich partnerow bez przeciazania strony glownej.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Samochody i skutery",
+            body:
+              "Przydatne dla gosci, ktorzy chca wyjechac poza centrum lub odwiedzic kilka plaz jednego dnia. Wspomnij, jesli mozliwa jest dostawa blisko obiektu.",
+          },
+          {
+            icon: "Bike",
+            title: "Rowery i lekka mobilnosc",
+            body:
+              "Idealne dla miejskich gosci i krotkich pobytow. Mozesz wskazac trasy nad morzem lub latwe sciezki rowerowe.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+const localizedChips = {
+  info: { de: "Stay", es: "Estancia", pt: "Estadia", pl: "Pobyt" },
+  wifi: { de: "Online", es: "Online", pt: "Online", pl: "Online" },
+  door: { de: "Zugang", es: "Acceso", pt: "Acesso", pl: "Dostep" },
+  mobility: { de: "Stadt", es: "Ciudad", pt: "Cidade", pl: "Miasto" },
+  map: { de: "Entdecken", es: "Explorar", pt: "Explorar", pl: "Odkryj" },
+  food: { de: "Food", es: "Comida", pt: "Food", pl: "Jedzenie" },
+  trips: { de: "Outdoor", es: "Outdoor", pt: "Outdoor", pl: "Plener" },
+  transfer: { de: "Transfer", es: "Transfer", pt: "Transfer", pl: "Transfer" },
+  rent: { de: "Rental", es: "Alquiler", pt: "Aluguer", pl: "Wynajem" },
+};
+
+services.forEach((service) => Object.assign(service.chip, localizedChips[service.id] ?? {}));
+
+const iconPaths = {
+  House: '<path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/>',
+  Wifi: '<path d="M2 8.5a16 16 0 0 1 20 0"/><path d="M5 12a11 11 0 0 1 14 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><circle cx="12" cy="19" r="1.3" fill="currentColor" stroke="none"/>',
+  Key: '<circle cx="8" cy="14" r="4"/><path d="M11.5 14H21"/><path d="M18 14v-2.5"/><path d="M15 14v2.5"/>',
+  Train: '<rect x="6" y="3" width="12" height="13" rx="3"/><path d="M8 19l-2 2"/><path d="M18 19l2 2"/><path d="M8 8h8"/><path d="M9 12h.01"/><path d="M15 12h.01"/>',
+  Compass: '<circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2l-1.8 5.6-5.6 1.8 1.8-5.6 5.6-1.8z"/>',
+  Glass: '<path d="M7 4h10"/><path d="M8.2 4l1 8.2a3 3 0 0 0 2.98 2.6h0a3 3 0 0 0 2.98-2.6L16 4"/><path d="M12 14.8V21"/>',
+  Wave: '<path d="M3 15c2.5 0 2.5-6 5-6s2.5 6 5 6 2.5-6 5-6 2.5 6 5 6"/><path d="M3 20c2.5 0 2.5-6 5-6s2.5 6 5 6 2.5-6 5-6 2.5 6 5 6"/>',
+  Car: '<path d="M5 16l1.4-5a2 2 0 0 1 1.9-1.5h7.4a2 2 0 0 1 1.9 1.5L19 16"/><path d="M4 16h16v3H4z"/><circle cx="7.5" cy="19.2" r="1.3"/><circle cx="16.5" cy="19.2" r="1.3"/>',
+  Bike: '<circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M9.5 17l3-6 2.2 6"/><path d="M10.5 8h3"/><path d="M12.2 11H8l2 6"/><path d="M15 10h4"/>',
+  Clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.2 2"/>',
+  Sparkles: '<path d="M12 4l1.3 3.7L17 9l-3.7 1.3L12 14l-1.3-3.7L7 9l3.7-1.3L12 4z"/><path d="M19 14l.7 2 .3.1L22 17l-2 .9-.3.1L19 20l-.7-2-.3-.1L16 17l2-.9.3-.1L19 14z"/><path d="M5 14l.6 1.7L7.3 16l-1.7.6L5 18.3l-.6-1.7L2.7 16l1.7-.3L5 14z"/>',
+  Shield: '<path d="M12 3l7 3v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+  Hash: '<path d="M9 3L7 21"/><path d="M17 3l-2 18"/><path d="M4 9h16"/><path d="M3 15h16"/>',
+  Lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3"/>',
+  Door: '<path d="M6 4h10a2 2 0 0 1 2 2v14H6z"/><path d="M10 4v16"/><path d="M13.8 12h.01"/>',
+  Bus: '<rect x="5" y="4" width="14" height="13" rx="3"/><path d="M8 17l-1.5 3"/><path d="M16 17l1.5 3"/><path d="M8 8h8"/><path d="M8.8 12h.01"/><path d="M15.2 12h.01"/>',
+  Parking: '<path d="M7 21V4h5.5a4 4 0 0 1 0 8H7"/><path d="M7 12h5"/>',
+  Fish: '<path d="M4 12s3-5 8-5 8 5 8 5-3 5-8 5-8-5-8-5z"/><path d="M20 12l2-2v4l-2-2z"/><circle cx="10" cy="11" r="0.8" fill="currentColor" stroke="none"/>',
+  Fire: '<path d="M12 3c2.2 2 4 4.6 4 7.3A4 4 0 1 1 8 12c0-1.8.8-3.3 2-4.8.4 1.6 1.2 2.8 2 3.6.8-1.5 1.1-3.6 0-7.8z"/><path d="M12 13c1.1.9 1.8 1.8 1.8 3a1.8 1.8 0 1 1-3.6 0c0-.8.5-1.6 1.8-3z"/>',
+  Cocktail: '<path d="M5 5h14l-6 7v5l2 2H9l2-2v-5L5 5z"/><path d="M8 20h8"/>',
+  Plane: '<path d="M3 13l18-6-6 14-2-6-6-2z"/><path d="M13 15l8-8"/>',
+  Message: '<path d="M5 6h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>',
+  Phone: '<path d="M7 4h4l1 4-2.2 1.8a14 14 0 0 0 4.4 4.4L16 12l4 1v4a2 2 0 0 1-2.2 2A17 17 0 0 1 5 6.2 2 2 0 0 1 7 4z"/>',
+  Copy: '<rect x="9" y="9" width="10" height="10" rx="2"/><path d="M7 15H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/>',
+  Route: '<circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h4a4 4 0 0 0 4-4V8"/>',
+  File: '<path d="M8 3h6l5 5v13H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v6h6"/><path d="M10 14h6"/><path d="M10 18h4"/>',
+  Moon: '<path d="M20 14.5A7.5 7.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/>',
+  Sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5"/><path d="M12 19.5V22"/><path d="M4.9 4.9l1.8 1.8"/><path d="M17.3 17.3l1.8 1.8"/><path d="M2 12h2.5"/><path d="M19.5 12H22"/><path d="M4.9 19.1l1.8-1.8"/><path d="M17.3 6.7l1.8-1.8"/>',
+  Contact: '<path d="M12 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M5 20a7 7 0 0 1 14 0"/>',
 };
 
 const actionIcons = {
-  info: "🏠",
-  wifi: "📶",
-  door: "🚪",
-  mobility: "🚌",
-  map: "🗺️",
-  food: "🍽️",
-  trips: "⛵",
-  transfer: "🚐",
-  rent: "🛵",
-  contact: "📞",
-  copy: "⧉",
-  call: "☎",
-  whatsapp: "💬",
-  route: "📍",
-  pdf: "📄",
+  info: "House",
+  wifi: "Wifi",
+  door: "Key",
+  mobility: "Bus",
+  map: "Compass",
+  food: "Cocktail",
+  trips: "Wave",
+  transfer: "Car",
+  rent: "Bike",
+  contact: "Contact",
+  copy: "Copy",
+  call: "Phone",
+  whatsapp: "Message",
+  route: "Route",
+  pdf: "File",
+  themeDark: "Moon",
+  themeLight: "Sun",
 };
+
+const themeStorageKey = "stampace-theme";
 
 const state = {
   lang: "it",
+  theme: getInitialTheme(),
 };
 
 const dom = {
   langSwitch: document.querySelector("#lang-switch"),
+  themeToggle: document.querySelector("#theme-toggle"),
   heroTagline: document.querySelector("#hero-tagline"),
   heroKicker: document.querySelector("#hero-kicker"),
   heroTitle: document.querySelector("#hero-title"),
@@ -1390,6 +1912,24 @@ const dom = {
   modalBody: document.querySelector("#modal-body"),
 };
 
+function getInitialTheme() {
+  const storedTheme = window.localStorage.getItem(themeStorageKey);
+  if (storedTheme === "dark" || storedTheme === "light") {
+    return storedTheme;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function renderIcon(name, className = "icon-svg") {
+  const path = iconPaths[name] ?? iconPaths.Sparkles;
+  return `<svg class="${className}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${path}</svg>`;
+}
+
+function applyTheme() {
+  document.body.dataset.theme = state.theme;
+}
+
 function renderLanguageSwitch() {
   const label = copy[state.lang].languageLabel;
   dom.langSwitch.innerHTML = "";
@@ -1408,26 +1948,36 @@ function renderLanguageSwitch() {
   });
 }
 
+function renderThemeToggle() {
+  const buttons = copy[state.lang].buttons;
+  const nextTheme = state.theme === "dark" ? "light" : "dark";
+  const label = nextTheme === "dark" ? buttons.themeDark : buttons.themeLight;
+  const iconName = nextTheme === "dark" ? actionIcons.themeDark : actionIcons.themeLight;
+
+  dom.themeToggle.innerHTML = renderButtonLabel(iconName, label);
+  dom.themeToggle.setAttribute("aria-label", label);
+}
+
 function renderQuickDock() {
   const buttons = copy[state.lang].buttons;
   dom.quickDock.innerHTML = `
     <button class="dock-button" type="button" data-open-modal="info">
-      <em class="button-icon" aria-hidden="true">${actionIcons.info}</em>
+      <em class="button-icon" aria-hidden="true">${renderIcon(actionIcons.info, "button-glyph")}</em>
       <strong>${buttons.dockRules}</strong>
       <span>${buttons.open}</span>
     </button>
     <button class="dock-button" type="button" data-copy-wifi="true">
-      <em class="button-icon" aria-hidden="true">${actionIcons.wifi}</em>
+      <em class="button-icon" aria-hidden="true">${renderIcon(actionIcons.wifi, "button-glyph")}</em>
       <strong>${buttons.dockWifi}</strong>
       <span>${buttons.copyPassword}</span>
     </button>
     <a class="dock-button" href="${siteConfig.links.cityMap}" target="_blank" rel="noreferrer">
-      <em class="button-icon" aria-hidden="true">${actionIcons.map}</em>
+      <em class="button-icon" aria-hidden="true">${renderIcon(actionIcons.map, "button-glyph")}</em>
       <strong>${buttons.dockMap}</strong>
       <span>${buttons.mapPrimary}</span>
     </a>
     <button class="dock-button" type="button" data-scroll-contact="true">
-      <em class="button-icon" aria-hidden="true">${actionIcons.contact}</em>
+      <em class="button-icon" aria-hidden="true">${renderIcon(actionIcons.contact, "button-glyph")}</em>
       <strong>${buttons.dockHost}</strong>
       <span>${buttons.call}</span>
     </button>
@@ -1438,8 +1988,8 @@ function getServiceCopy(serviceId) {
   return copy[state.lang].services[serviceId];
 }
 
-function renderButtonLabel(icon, label) {
-  return `<span class="button-label"><em class="button-icon" aria-hidden="true">${icon}</em><span>${label}</span></span>`;
+function renderButtonLabel(iconName, label) {
+  return `<span class="button-label"><em class="button-icon" aria-hidden="true">${renderIcon(iconName, "button-glyph")}</em><span>${label}</span></span>`;
 }
 
 function serviceActions(service) {
@@ -1479,7 +2029,7 @@ function renderServices() {
     article.className = "service-card";
     article.innerHTML = `
       <div class="service-top">
-        <div class="service-icon" aria-hidden="true">${icons[service.icon]}</div>
+        <div class="service-icon" aria-hidden="true">${renderIcon(service.icon, "service-glyph")}</div>
         <div class="service-chip">${service.chip[state.lang] ?? service.chip.en}</div>
       </div>
       <h3>${localized.title}</h3>
@@ -1526,7 +2076,7 @@ function renderContactCard() {
 
   article.innerHTML = `
     <div class="service-top">
-      <div class="service-icon" aria-hidden="true">Host</div>
+      <div class="service-icon" aria-hidden="true">${renderIcon("Contact", "service-glyph")}</div>
       <div class="service-chip">24/7</div>
     </div>
     <h3>${localized.contactTitle}</h3>
@@ -1570,7 +2120,7 @@ function openModal(serviceId) {
     return;
   }
 
-  dom.modalIcon.textContent = icons[service.icon];
+  dom.modalIcon.innerHTML = renderIcon(service.icon, "modal-glyph");
   dom.modalKicker.textContent = modal.kicker;
   dom.modalTitle.textContent = modal.title;
   dom.modalCopy.textContent = modal.copy;
@@ -1579,7 +2129,7 @@ function openModal(serviceId) {
       (section) => `
         <section class="modal-section">
           <div class="modal-section-header">
-            <div class="modal-section-badge" aria-hidden="true">${icons[section.icon]}</div>
+            <div class="modal-section-badge" aria-hidden="true">${renderIcon(section.icon, "badge-glyph")}</div>
             <h4>${section.title}</h4>
           </div>
           <p>${section.body}</p>
@@ -1621,6 +2171,13 @@ function connectWifi() {
   window.location.href = siteConfig.brand.wifi.qr;
 }
 
+function toggleTheme() {
+  state.theme = state.theme === "dark" ? "light" : "dark";
+  window.localStorage.setItem(themeStorageKey, state.theme);
+  applyTheme();
+  renderThemeToggle();
+}
+
 function scrollToContact() {
   const contactCard = document.querySelector(".contact-card");
   if (contactCard) {
@@ -1634,7 +2191,9 @@ function renderPage() {
   document.documentElement.lang = state.lang;
   document.title = `${siteConfig.brand.name} | ${localized.topbarTagline}`;
 
+  applyTheme();
   renderLanguageSwitch();
+  renderThemeToggle();
 
   dom.heroTagline.textContent = localized.topbarTagline;
   dom.heroKicker.textContent = localized.heroKicker;
@@ -1705,6 +2264,7 @@ document.addEventListener("click", (event) => {
 });
 
 dom.modalClose.addEventListener("click", closeModal);
+dom.themeToggle.addEventListener("click", toggleTheme);
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !dom.modal.classList.contains("hidden")) {

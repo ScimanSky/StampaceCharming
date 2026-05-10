@@ -40,6 +40,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at top left, rgba(198, 161, 92, 0.12), transparent 26%),
+    radial-gradient(circle at 88% 14%, rgba(187, 113, 72, 0.14), transparent 22%),
+    linear-gradient(180deg, #121713 0%, #1a211b 45%, #101511 100%);
+  color: #f3eadf;
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -97,6 +105,11 @@ main,
   margin: 0 auto 1rem;
 }
 
+.topbar-controls {
+  display: grid;
+  gap: 0.55rem;
+}
+
 .topbar-badge {
   border: 1px solid rgba(49, 67, 52, 0.12);
   background: rgba(255, 255, 255, 0.55);
@@ -118,7 +131,7 @@ main,
 }
 
 .lang-switch button {
-  min-height: 3.15rem;
+  min-height: 3.3rem;
   border: 1px solid rgba(49, 67, 52, 0.12);
   background: rgba(255, 255, 255, 0.42);
   color: var(--olive);
@@ -143,6 +156,22 @@ main,
   background: linear-gradient(135deg, var(--gold), #d8b67a);
   color: #221b16;
   border-color: transparent;
+}
+
+.theme-toggle {
+  min-height: 3.5rem;
+  border: 1px solid rgba(49, 67, 52, 0.12);
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--olive);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  transform: translateY(-1px);
 }
 
 .hero-card {
@@ -289,10 +318,10 @@ main,
   z-index: 5;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
+  gap: 0.6rem;
   max-width: 1180px;
   margin: 1rem auto 0;
-  padding: 0.65rem;
+  padding: 0.7rem;
   border-radius: 1.5rem;
   background: rgba(250, 245, 237, 0.88);
   border: 1px solid rgba(49, 67, 52, 0.1);
@@ -301,17 +330,17 @@ main,
 }
 
 .dock-button {
-  min-height: 3.7rem;
+  min-height: 4.35rem;
   border: none;
   border-radius: 1.05rem;
-  padding: 0.55rem 0.35rem;
+  padding: 0.7rem 0.4rem;
   background: rgba(255, 255, 255, 0.76);
   color: var(--olive);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.22rem;
+  gap: 0.28rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -320,7 +349,7 @@ main,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.7rem;
   width: 100%;
 }
 
@@ -328,22 +357,30 @@ main,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  flex: 0 0 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 1.7rem;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1;
+  line-height: 0;
+}
+
+.button-icon svg,
+.service-icon svg,
+.modal-icon svg,
+.modal-section-badge svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .dock-button strong {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .dock-button span {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
@@ -431,15 +468,27 @@ main {
 
 .service-icon,
 .modal-icon {
-  width: 3.1rem;
-  height: 3.1rem;
-  border-radius: 18px;
+  width: 4.15rem;
+  height: 4.15rem;
+  border-radius: 22px;
   display: grid;
   place-items: center;
-  background: linear-gradient(150deg, var(--olive), var(--olive-soft));
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.24), transparent 48%),
+    linear-gradient(155deg, #2c3c30, #49614d);
   color: var(--cream);
-  font-size: 1.12rem;
-  box-shadow: 0 14px 26px rgba(49, 67, 52, 0.18);
+  box-shadow: 0 18px 30px rgba(49, 67, 52, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.service-glyph {
+  width: 2rem;
+  height: 2rem;
+}
+
+.modal-glyph {
+  width: 2.15rem;
+  height: 2.15rem;
 }
 
 .service-chip {
@@ -493,15 +542,15 @@ main {
 .contact-actions {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1.2rem;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
 }
 
 .cta-button,
 .ghost-button,
 .secondary-button {
   width: 100%;
-  min-height: 3.35rem;
+  min-height: 3.9rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -514,11 +563,11 @@ main {
 }
 
 .cta-button {
-  padding: 0.95rem 1.1rem;
+  padding: 1rem 1.2rem;
   background: linear-gradient(135deg, var(--olive), #1f2d21);
   color: var(--cream);
   box-shadow: 0 16px 30px rgba(49, 67, 52, 0.22);
-  font-size: 0.79rem;
+  font-size: 0.84rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   font-weight: 800;
@@ -526,18 +575,19 @@ main {
 
 .cta-button .button-icon,
 .ghost-button .button-icon,
-.secondary-button .button-icon {
-  width: 1.35rem;
-  height: 1.35rem;
+.secondary-button .button-icon,
+.theme-toggle .button-icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .secondary-button,
 .ghost-button {
-  padding: 0.95rem 1.1rem;
+  padding: 1rem 1.2rem;
   background: rgba(255, 255, 255, 0.58);
   color: var(--olive);
   border: 1px solid rgba(49, 67, 52, 0.1);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   font-weight: 700;
 }
 
@@ -718,13 +768,18 @@ main {
 }
 
 .modal-section-badge {
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.7rem;
+  height: 2.7rem;
   border-radius: 14px;
   display: grid;
   place-items: center;
   background: rgba(49, 67, 52, 0.08);
   color: var(--olive);
+}
+
+.badge-glyph {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .modal-section h4 {
@@ -769,6 +824,111 @@ main {
   white-space: nowrap;
 }
 
+body[data-theme="dark"] .topbar-badge,
+body[data-theme="dark"] .lang-switch button,
+body[data-theme="dark"] .theme-toggle,
+body[data-theme="dark"] .hero-card,
+body[data-theme="dark"] .stat-card,
+body[data-theme="dark"] .service-card,
+body[data-theme="dark"] .story-panel,
+body[data-theme="dark"] .notes-panel,
+body[data-theme="dark"] .service-meta,
+body[data-theme="dark"] .quick-dock,
+body[data-theme="dark"] .dock-button,
+body[data-theme="dark"] .ghost-button,
+body[data-theme="dark"] .secondary-button,
+body[data-theme="dark"] .modal-dialog,
+body[data-theme="dark"] .modal-section {
+  background: rgba(20, 26, 22, 0.88);
+  border-color: rgba(242, 234, 223, 0.1);
+  color: #f3eadf;
+}
+
+body[data-theme="dark"] .hero-card,
+body[data-theme="dark"] .service-card,
+body[data-theme="dark"] .story-panel,
+body[data-theme="dark"] .notes-panel,
+body[data-theme="dark"] .modal-dialog,
+body[data-theme="dark"] .modal-section {
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.34);
+}
+
+body[data-theme="dark"] .hero-subtitle,
+body[data-theme="dark"] .hero-welcome,
+body[data-theme="dark"] .section-copy,
+body[data-theme="dark"] .split-panel p,
+body[data-theme="dark"] .modal-copy,
+body[data-theme="dark"] .service-card p,
+body[data-theme="dark"] .notes-list,
+body[data-theme="dark"] .footer,
+body[data-theme="dark"] .stat-card span,
+body[data-theme="dark"] .contact-role {
+  color: #c7bbab;
+}
+
+body[data-theme="dark"] .hero-meta,
+body[data-theme="dark"] .topbar-badge,
+body[data-theme="dark"] .section-heading p:first-child,
+body[data-theme="dark"] .stat-card strong,
+body[data-theme="dark"] .footer strong,
+body[data-theme="dark"] .service-chip,
+body[data-theme="dark"] .service-meta strong,
+body[data-theme="dark"] .modal-section-badge,
+body[data-theme="dark"] .modal-close,
+body[data-theme="dark"] .theme-toggle,
+body[data-theme="dark"] .lang-switch button,
+body[data-theme="dark"] .ghost-button,
+body[data-theme="dark"] .secondary-button {
+  color: #f3eadf;
+}
+
+body[data-theme="dark"] .cta-button {
+  background: linear-gradient(135deg, #d7b870, #a9813f);
+  color: #1a1815;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.32);
+}
+
+body[data-theme="dark"] .service-card::before,
+body[data-theme="dark"] .contact-card::before {
+  background: radial-gradient(circle at top right, rgba(198, 161, 92, 0.18), transparent 34%);
+}
+
+body[data-theme="dark"] .contact-card {
+  background: linear-gradient(135deg, rgba(14, 17, 15, 0.96), rgba(25, 31, 26, 0.94));
+}
+
+body[data-theme="dark"] .contact-card h3,
+body[data-theme="dark"] .contact-card p,
+body[data-theme="dark"] .contact-card .contact-name,
+body[data-theme="dark"] .contact-card .contact-role {
+  color: #f3eadf;
+}
+
+body[data-theme="dark"] .dock-button strong,
+body[data-theme="dark"] .dock-button span {
+  color: #f3eadf;
+}
+
+body[data-theme="dark"] .lang-switch button.active {
+  color: #171411;
+}
+
+body[data-theme="dark"] .service-icon,
+body[data-theme="dark"] .modal-icon {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.18), transparent 48%),
+    linear-gradient(155deg, #d0b06f, #8f6b34);
+  color: #1a1815;
+}
+
+body[data-theme="dark"] .hero-card::before {
+  border-color: rgba(242, 234, 223, 0.08);
+}
+
+body[data-theme="dark"] .modal-backdrop {
+  background: rgba(5, 8, 7, 0.78);
+}
+
 @media (min-width: 700px) {
   .hero {
     padding-left: 1.25rem;
@@ -781,6 +941,10 @@ main {
     justify-content: space-between;
   }
 
+  .topbar-controls {
+    min-width: min(40rem, 64vw);
+  }
+
   .topbar-badge {
     text-align: left;
   }
@@ -789,6 +953,12 @@ main {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     justify-content: flex-end;
+  }
+
+  .theme-toggle {
+    justify-self: end;
+    width: auto;
+    min-width: 13rem;
   }
 
   .hero-card {
