@@ -775,6 +775,537 @@ const copy = {
   },
 };
 
+const localeOptions = [
+  { code: "it", label: "IT" },
+  { code: "en", label: "EN" },
+  { code: "fr", label: "FR" },
+  { code: "de", label: "DE" },
+  { code: "es", label: "ES" },
+  { code: "pt", label: "PT" },
+  { code: "pl", label: "PL" },
+];
+
+function cloneLocale(locale) {
+  return structuredClone(locale);
+}
+
+function mergeLocale(base, overrides) {
+  const output = cloneLocale(base);
+
+  function assign(target, source) {
+    Object.entries(source).forEach(([key, value]) => {
+      if (Array.isArray(value) || value === null || typeof value !== "object") {
+        target[key] = value;
+        return;
+      }
+
+      if (!target[key] || Array.isArray(target[key]) || typeof target[key] !== "object") {
+        target[key] = {};
+      }
+
+      assign(target[key], value);
+    });
+  }
+
+  assign(output, overrides);
+  return output;
+}
+
+copy.de = mergeLocale(copy.en, {
+  languageLabel: "Sprache",
+  topbarTagline: "Mehrsprachiger Gast-Guide",
+  heroKicker: "Boutique-Aufenthalt im historischen Zentrum",
+  heroTitle: "Eine elegante App fuer Ihr Apartment.",
+  heroSubtitle:
+    "Eine mobile-first Startseite fuer Gaeste: Zugang, Wi-Fi, lokale Tipps, Transfers und Host-Kontakte in einer klaren Erfahrung.",
+  heroWelcome:
+    "Diese Demo ist vom Referenzprojekt inspiriert, wurde aber sauberer und einfacher anpassbar neu aufgebaut. Alle Inhalte sind datenbasiert, sodass Sie Texte, Nummern und Links ohne Eingriff ins Layout ersetzen koennen.",
+  stats: [
+    { value: "7", label: "Aktive Sprachen" },
+    { value: "9", label: "Servicekarten" },
+    { value: "1 Tipp", label: "Um die Hosts zu erreichen" },
+  ],
+  servicesKicker: "Tippen, scrollen, oeffnen",
+  servicesTitle: "Schnelle Tools fuer Gaeste",
+  servicesCopy:
+    "Jede Karte oeffnet eine nuetzliche Information oder eine direkte Aktion. Die Struktur ist bereit fuer QR-Codes, WhatsApp-Landingpages oder Pre-Check-in-Links.",
+  storyKicker: "Kreative Richtung",
+  storyTitle: "Warme mediterrane Stimmung, redaktioneller Ton, einfache Interaktionen.",
+  storyBody:
+    "Die Bildsprache wurde im Vergleich zur Ausgangsversion angehoben: Sand-, Oliv- und Terrakotta-Toene, Serifentypografie fuer Charakter und weiche Komponenten, die auf dem Smartphone gut lesbar bleiben.",
+  notesKicker: "Was angepasst werden kann",
+  notes: [
+    "Ersetzen Sie Unterkunftsname, Adresse, E-Mail und CIN-Code im Block `siteConfig`.",
+    "Aktualisieren Sie Host-Nummern, Wi-Fi-Passwort und externe Links direkt in `app.js`.",
+    "Weitere Servicekarten koennen ueber das Array `services` und die Inhalte in `copy` ergaenzt werden.",
+  ],
+  footerCopy: "Gast-Erlebnis fuer Kurzaufenthalte und Ferienunterkuenfte.",
+  footerContact: "Hosts kontaktieren",
+  contactTitle: "Hosts erreichbar",
+  contactCopy: "Klare Bereiche fuer Anruf und WhatsApp mit einem direkten, aber hochwertigen Ton.",
+  buttons: {
+    open: "Guide oeffnen",
+    wifi: "Mit Wi-Fi verbinden",
+    copyPassword: "Passwort kopieren",
+    mapPrimary: "Karte oeffnen",
+    mapSecondary: "PDF herunterladen",
+    trips: "Ausfluege ansehen",
+    call: "Anrufen",
+    whatsapp: "WhatsApp",
+    stationRoute: "Route vom Bahnhof",
+    copied: "Passwort kopiert",
+    dockRules: "Regeln",
+    dockWifi: "Wi-Fi",
+    dockMap: "Karte",
+    dockHost: "Host",
+  },
+  services: {
+    info: {
+      title: "Infos & Regeln",
+      description: "Check-in, Hausdetails, inklusive Extras und die wichtigsten Regeln.",
+      modal: {
+        kicker: "Aufenthalts-Guide",
+        title: "Wichtige Informationen",
+        copy: "Nutzen Sie diesen Bereich, um Informationen zu sammeln, die Sie sonst in mehreren einzelnen Nachrichten senden.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in und Check-out",
+            body:
+              "Check-in von 15:00 bis 21:30 Uhr. Check-out bis 10:30 Uhr. Wenn Sie Early Check-in oder Late Check-out anbieten, koennen Sie hier Verfuegbarkeit und Gebuehren angeben.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Waehrend des Aufenthalts",
+            body:
+              "Erklaeren Sie kurz, wie die Wohnung beim Verlassen hinterlassen werden soll, wo Strandsets liegen und welche Komfortleistungen inbegriffen sind.",
+          },
+          {
+            icon: "Shield",
+            title: "Wichtige Regeln",
+            body:
+              "Ruhe nach 22:00 Uhr, kein Rauchen innen, Fenster geschlossen halten wenn die Klimaanlage laeuft, Schluessel beim Check-out auf dem Tisch lassen.",
+          },
+        ],
+      },
+    },
+    wifi: {
+      title: "Wi-Fi Passwort",
+      description: "Gut lesbare Netzwerkdaten mit direkter Verbindungs- und Kopieraktion.",
+      metaLabel: "Passwort",
+    },
+    door: {
+      title: "Zugang zum Gebaeude",
+      description: "Kurze und eindeutige Schritte fuer Haustor und Schluesselbox.",
+      modal: {
+        kicker: "Self Check-in",
+        title: "So kommen Sie hinein",
+        copy: "Diese Karte reduziert Anrufe bei der Anreise. Halten Sie die Anweisungen extrem kurz.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Tastenfeld aktivieren",
+            body:
+              "Druecken Sie die Taste mit dem Schluesselsymbol, um das Panel zu aktivieren. Wenn das System zuruecksetzt, warten Sie zwei Sekunden und versuchen Sie es erneut.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Code eingeben",
+            body:
+              "Geben Sie den Zugangscode ein, den Sie am Anreisetag senden. Hier koennen Sie auch Hinweise zur Schluesselbox ergaenzen.",
+          },
+          {
+            icon: "Door",
+            title: "3. Bestaetigen und schliessen",
+            body:
+              "Druecken Sie erneut die Schluesseltaste, gehen Sie hinein und pruefen Sie, dass sich die Haustuer hinter Ihnen korrekt schliesst.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      title: "Mobilitaet vor Ort",
+      description: "Bus, Flughafenbahn, nahe Haltestellen und praktische Hinweise.",
+      modal: {
+        kicker: "Unterwegs in der Stadt",
+        title: "Stadt, Flughafen, Parken",
+        copy: "Ein einziges Modal kann alles abdecken, was ein Gast ohne Auto oder mit leichtem Gepaeck wirklich wissen muss.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Bus im Viertel",
+            body:
+              "Nennen Sie die naechste Haltestelle, die wichtigen Linien und den Ticketpreis. Wenn es eine hilfreiche lokale App gibt, koennen Sie sie hier nennen.",
+          },
+          {
+            icon: "Train",
+            title: "Flughafenverbindung",
+            body:
+              "Geben Sie an, wie oft Zug oder Shuttle faehrt, wie lange die Fahrt dauert und wie viele Gehminuten bis zum Apartment bleiben.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Parken",
+            body:
+              "Erklaeren Sie, wo kostenpflichtige Plaetze sind, wann bezahlt werden muss und ob es kostenlose Zeitfenster gibt. Danach fragen Gaeste fast immer.",
+          },
+        ],
+      },
+    },
+    map: {
+      title: "Karte der Umgebung",
+      description: "Wichtige Orte oeffnen oder eine offizielle PDF-Karte herunterladen.",
+    },
+    food: {
+      title: "Restaurants & Bars",
+      description: "Eine kurze, glaubwuerdige und gut geordnete Liste lokaler Empfehlungen.",
+      modal: {
+        kicker: "Lokale Tipps",
+        title: "Wo man gut essen kann",
+        copy: "Ordnen Sie Empfehlungen lieber nach Stimmung oder Tageszeit statt endlose Listen zu bauen.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Fisch",
+            body:
+              "Fuegen Sie zwei oder drei verlaessliche Adressen hinzu, plus eine praktische Notiz: Reservierung, Preisniveau oder empfohlenes Gericht.",
+          },
+          {
+            icon: "Fire",
+            title: "Fleisch und sardische Kueche",
+            body:
+              "Ideal, um ein authentischeres Lokal oder eine traditionelle Trattoria hervorzuheben.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitivo und Abend",
+            body:
+              "Empfehlen Sie eine Rooftop-Bar, eine Weinbar und einen lebhaften Platz. Gaeste entscheiden schneller, wenn die Auswahl strukturiert ist.",
+          },
+        ],
+      },
+    },
+    trips: {
+      title: "Ausfluege",
+      description: "Bootstouren, Straende, Tagesausfluege und buchbare Aktivitaeten.",
+    },
+    transfer: {
+      title: "Privater Transfer",
+      description: "Wenn Sie mit einem Fahrer arbeiten, ist diese Karte ein starker Conversion-Punkt.",
+      modal: {
+        kicker: "Premium-Services",
+        title: "Transfer auf Anfrage",
+        copy: "Nutzen Sie diesen Bereich, um einen vertrauenswuerdigen Partner zu empfehlen, statt den Gast allein suchen zu lassen.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Flughafen und Hafen",
+            body:
+              "Auf Anfrage verfuegbar fuer spaete Ankuenfte, fruehe Abfahrten und direkte Tuer-zu-Tuer-Fahrten.",
+          },
+          {
+            icon: "Message",
+            title: "So wird gebucht",
+            body:
+              "Bitten Sie mindestens 24 Stunden vorher um eine Nachricht mit Personenzahl, Uhrzeit und Gepaeck. Hier kann auch ein Fixpreis stehen.",
+          },
+        ],
+      },
+    },
+    rent: {
+      title: "Vermietung",
+      description: "Autos, Roller und Fahrraeder in einem einzigen Bereich.",
+      modal: {
+        kicker: "Frei bewegen",
+        title: "Autos, Roller, Fahrraeder",
+        copy: "Ein kurzes klares Modal praesentiert die richtigen Partner, ohne die Startseite zu ueberladen.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Autos und Roller",
+            body:
+              "Nuetzlich fuer Gaeste, die das Zentrum verlassen oder mehrere Straende an einem Tag besuchen moechten. Erwaehnen Sie ggf. die Lieferung in Unterkunftsnaehe.",
+          },
+          {
+            icon: "Bike",
+            title: "Fahrraeder und leichte Mobilitaet",
+            body:
+              "Perfekt fuer urbane Gaeste und kurze Aufenthalte. Sie koennen Uferwege oder einfache Radrouten nennen.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.es = mergeLocale(copy.en, {
+  languageLabel: "Idioma",
+  topbarTagline: "Guia multilingue para huespedes",
+  heroKicker: "Estancia boutique en el centro historico",
+  heroTitle: "Una app elegante para tu apartamento.",
+  heroSubtitle:
+    "Una pagina mobile-first para huespedes: acceso, Wi-Fi, consejos locales, traslados y contactos del anfitrion en una sola experiencia clara.",
+  heroWelcome:
+    "Esta demo se inspira en el sitio de referencia, pero fue reconstruida de forma mas limpia y facil de personalizar. Todo el contenido esta guiado por datos.",
+  stats: [
+    { value: "7", label: "Idiomas activos" },
+    { value: "9", label: "Tarjetas de servicio" },
+    { value: "1 toque", label: "Para contactar a los anfitriones" },
+  ],
+  servicesKicker: "Toca, desplaza, abre",
+  servicesTitle: "Herramientas rapidas para huespedes",
+  servicesCopy:
+    "Cada tarjeta abre una informacion util o una accion directa. La estructura esta lista para codigos QR, enlaces de WhatsApp o enlaces antes del check-in.",
+  storyKicker: "Direccion creativa",
+  storyTitle: "Ambiente mediterraneo calido, tono editorial e interacciones simples.",
+  storyBody:
+    "La calidad visual se reforzo respecto al ejemplo original: paleta arena, oliva y terracota, tipografia serif con caracter y componentes suaves faciles de leer en movil.",
+  notesKicker: "Que personalizar",
+  notes: [
+    "Sustituye nombre del alojamiento, direccion, email y codigo CIN en `siteConfig`.",
+    "Actualiza numeros de anfitriones, contrasena Wi-Fi y enlaces externos directamente en `app.js`.",
+    "Puedes anadir mas tarjetas ampliando el array `services` y sus contenidos en `copy`.",
+  ],
+  footerCopy: "Experiencia para estancias cortas y alquiler vacacional.",
+  footerContact: "Contactar anfitriones",
+  contactTitle: "Anfitriones disponibles",
+  contactCopy: "Bloques claros para llamada y WhatsApp con un tono premium pero inmediato.",
+  buttons: {
+    open: "Abrir guia",
+    wifi: "Conectar al Wi-Fi",
+    copyPassword: "Copiar contrasena",
+    mapPrimary: "Abrir mapa",
+    mapSecondary: "Descargar PDF",
+    trips: "Ver excursiones",
+    call: "Llamar",
+    whatsapp: "WhatsApp",
+    stationRoute: "Ruta desde la estacion",
+    copied: "Contrasena copiada",
+    dockRules: "Normas",
+    dockWifi: "Wi-Fi",
+    dockMap: "Mapa",
+    dockHost: "Host",
+  },
+  services: {
+    info: {
+      title: "Informacion y normas",
+      description: "Check-in, detalles de la casa, extras incluidos y reglas esenciales.",
+    },
+    wifi: {
+      title: "Contrasena Wi-Fi",
+      description: "Datos de red legibles con accion para copiar o conectar.",
+      metaLabel: "Contrasena",
+    },
+    door: {
+      title: "Acceso al edificio",
+      description: "Secuencia breve y clara para portal y caja de llaves.",
+    },
+    mobility: {
+      title: "Movilidad urbana",
+      description: "Bus, tren al aeropuerto, paradas cercanas y consejos practicos.",
+    },
+    map: {
+      title: "Mapa del barrio",
+      description: "Abre puntos de interes o descarga un mapa PDF oficial.",
+    },
+    food: {
+      title: "Restaurantes y bares",
+      description: "Una lista local breve, fiable y bien organizada.",
+    },
+    trips: {
+      title: "Excursiones",
+      description: "Paseos en barco, playas, salidas de un dia y actividades reservables.",
+    },
+    transfer: {
+      title: "Traslado privado",
+      description: "Si trabajas con un conductor, esta tarjeta convierte muy bien.",
+    },
+    rent: {
+      title: "Alquiler",
+      description: "Coches, scooters y bicicletas en una sola seccion.",
+    },
+  },
+});
+
+copy.pt = mergeLocale(copy.en, {
+  languageLabel: "Idioma",
+  topbarTagline: "Guia multilingue para hospedes",
+  heroKicker: "Estadia boutique no centro historico",
+  heroTitle: "Uma app elegante para o seu apartamento.",
+  heroSubtitle:
+    "Uma pagina mobile-first para hospedes: acesso, Wi-Fi, dicas locais, transfers e contactos do anfitriao numa experiencia clara.",
+  heroWelcome:
+    "Esta demo inspira-se no site de referencia, mas foi reconstruida de forma mais limpa e facil de personalizar. Todo o conteudo e orientado por dados.",
+  stats: [
+    { value: "7", label: "Idiomas ativos" },
+    { value: "9", label: "Cartoes de servico" },
+    { value: "1 toque", label: "Para contactar os anfitrioes" },
+  ],
+  servicesKicker: "Toque, deslize, abra",
+  servicesTitle: "Ferramentas rapidas para hospedes",
+  servicesCopy:
+    "Cada cartao abre uma informacao util ou uma acao direta. A estrutura esta pronta para codigos QR, links do WhatsApp ou links antes do check-in.",
+  storyKicker: "Direcao criativa",
+  storyTitle: "Ambiente mediterranico quente, tom editorial e interacoes simples.",
+  storyBody:
+    "A qualidade visual foi elevada em relacao ao exemplo original: paleta areia, oliva e terracota, tipografia serifada com personalidade e componentes suaves para leitura em telemovel.",
+  notesKicker: "O que personalizar",
+  notes: [
+    "Substitua nome da propriedade, morada, email e codigo CIN em `siteConfig`.",
+    "Atualize numeros dos anfitrioes, palavra-passe do Wi-Fi e links externos diretamente em `app.js`.",
+    "Pode adicionar mais cartoes extendendo o array `services` e os respetivos conteudos em `copy`.",
+  ],
+  footerCopy: "Experiencia para estadias curtas e alojamento local.",
+  footerContact: "Contactar anfitrioes",
+  contactTitle: "Anfitrioes disponiveis",
+  contactCopy: "Blocos claros para chamada e WhatsApp com um tom premium mas direto.",
+  buttons: {
+    open: "Abrir guia",
+    wifi: "Ligar ao Wi-Fi",
+    copyPassword: "Copiar palavra-passe",
+    mapPrimary: "Abrir mapa",
+    mapSecondary: "Descarregar PDF",
+    trips: "Ver excursoes",
+    call: "Ligar",
+    whatsapp: "WhatsApp",
+    stationRoute: "Rota desde a estacao",
+    copied: "Palavra-passe copiada",
+    dockRules: "Regras",
+    dockWifi: "Wi-Fi",
+    dockMap: "Mapa",
+    dockHost: "Host",
+  },
+  services: {
+    info: {
+      title: "Informacoes e regras",
+      description: "Check-in, detalhes da casa, extras incluidos e regras essenciais.",
+    },
+    wifi: {
+      title: "Palavra-passe Wi-Fi",
+      description: "Dados da rede legiveis com acao para copiar ou ligar.",
+      metaLabel: "Palavra-passe",
+    },
+    door: {
+      title: "Acesso ao edificio",
+      description: "Sequencia curta e clara para porta principal e caixa de chaves.",
+    },
+    mobility: {
+      title: "Mobilidade urbana",
+      description: "Autocarro, comboio para o aeroporto, paragens proximas e dicas praticas.",
+    },
+    map: {
+      title: "Mapa da zona",
+      description: "Abra os pontos de interesse ou descarregue um mapa PDF oficial.",
+    },
+    food: {
+      title: "Restaurantes e bares",
+      description: "Uma lista local curta, fiavel e bem organizada.",
+    },
+    trips: {
+      title: "Excursoes",
+      description: "Passeios de barco, praias, saidas de um dia e atividades para reservar.",
+    },
+    transfer: {
+      title: "Transfer privado",
+      description: "Se trabalhar com um motorista, este cartao converte bem.",
+    },
+    rent: {
+      title: "Aluguer",
+      description: "Carros, scooters e bicicletas numa unica secao.",
+    },
+  },
+});
+
+copy.pl = mergeLocale(copy.en, {
+  languageLabel: "Jezyk",
+  topbarTagline: "Wielojezyczny przewodnik dla gosci",
+  heroKicker: "Boutique stay w historycznym centrum",
+  heroTitle: "Elegancka aplikacja dla Twojego apartamentu.",
+  heroSubtitle:
+    "Strona mobile-first dla gosci: dostep, Wi-Fi, lokalne wskazowki, transfery i kontakt do gospodarzy w jednym czytelnym miejscu.",
+  heroWelcome:
+    "Ta wersja jest inspirowana projektem referencyjnym, ale zostala przebudowana tak, aby byla czystsza i latwiejsza do personalizacji. Cala tresc jest oparta na danych.",
+  stats: [
+    { value: "7", label: "Aktywne jezyki" },
+    { value: "9", label: "Karty uslug" },
+    { value: "1 klik", label: "Aby skontaktowac sie z gospodarzem" },
+  ],
+  servicesKicker: "Dotknij, przewin, otworz",
+  servicesTitle: "Szybkie narzedzia dla gosci",
+  servicesCopy:
+    "Kazda karta otwiera przydatna informacje lub szybka akcje. Struktura jest gotowa pod kody QR, linki z WhatsAppa lub link wysylany przed check-inem.",
+  storyKicker: "Kierunek kreatywny",
+  storyTitle: "Cieply srodziemnomorski klimat, redakcyjny ton i proste interakcje.",
+  storyBody:
+    "Warstwa wizualna zostala podniesiona wzgledem oryginalu: paleta piasku, oliwki i terakoty, typografia szeryfowa z charakterem oraz miekkie komponenty czytelne na telefonie.",
+  notesKicker: "Co mozna dostosowac",
+  notes: [
+    "Podmien nazwe obiektu, adres, email i kod CIN w `siteConfig`.",
+    "Zaktualizuj numery gospodarzy, haslo Wi-Fi i linki zewnetrzne bezposrednio w `app.js`.",
+    "Mozesz dodac kolejne karty rozszerzajac tablice `services` i odpowiadajace tresci w `copy`.",
+  ],
+  footerCopy: "Doswiadczenie goscia dla krotkich pobytow i wynajmu wakacyjnego.",
+  footerContact: "Skontaktuj sie z gospodarzami",
+  contactTitle: "Gospodarze dostepni",
+  contactCopy: "Czytelne bloki dla telefonu i WhatsAppa z bezposrednim, ale premium tonem.",
+  buttons: {
+    open: "Otworz przewodnik",
+    wifi: "Polacz z Wi-Fi",
+    copyPassword: "Skopiuj haslo",
+    mapPrimary: "Otworz mape",
+    mapSecondary: "Pobierz PDF",
+    trips: "Zobacz wycieczki",
+    call: "Zadzwon",
+    whatsapp: "WhatsApp",
+    stationRoute: "Trasa z dworca",
+    copied: "Haslo skopiowane",
+    dockRules: "Zasady",
+    dockWifi: "Wi-Fi",
+    dockMap: "Mapa",
+    dockHost: "Host",
+  },
+  services: {
+    info: {
+      title: "Informacje i zasady",
+      description: "Check-in, szczegoly domu, dodatki w cenie i najwazniejsze zasady.",
+    },
+    wifi: {
+      title: "Haslo Wi-Fi",
+      description: "Czytelne dane sieci z opcja kopiowania lub polaczenia.",
+      metaLabel: "Haslo",
+    },
+    door: {
+      title: "Dostep do budynku",
+      description: "Krotka i jednoznaczna sekwencja dla bramy i skrytki na klucze.",
+    },
+    mobility: {
+      title: "Komunikacja miejska",
+      description: "Autobus, pociag na lotnisko, pobliskie przystanki i praktyczne wskazowki.",
+    },
+    map: {
+      title: "Mapa okolicy",
+      description: "Otworz punkty zainteresowania lub pobierz oficjalna mape PDF.",
+    },
+    food: {
+      title: "Restauracje i bary",
+      description: "Krotka, wiarygodna i dobrze uporzadkowana lista miejsc.",
+    },
+    trips: {
+      title: "Wycieczki",
+      description: "Rejsy, plaze, jednodniowe wypady i aktywnosci do rezerwacji.",
+    },
+    transfer: {
+      title: "Transfer prywatny",
+      description: "Jesli wspolpracujesz z kierowca, ta karta dobrze konwertuje.",
+    },
+    rent: {
+      title: "Wynajem",
+      description: "Samochody, skutery i rowery w jednej sekcji.",
+    },
+  },
+});
+
 const icons = {
   House: "Casa",
   Wifi: "Wi-Fi",
@@ -861,15 +1392,9 @@ const dom = {
 
 function renderLanguageSwitch() {
   const label = copy[state.lang].languageLabel;
-  const languages = [
-    { code: "it", label: "IT" },
-    { code: "en", label: "EN" },
-    { code: "fr", label: "FR" },
-  ];
-
   dom.langSwitch.innerHTML = "";
 
-  languages.forEach((language) => {
+  localeOptions.forEach((language) => {
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = language.label;
@@ -955,7 +1480,7 @@ function renderServices() {
     article.innerHTML = `
       <div class="service-top">
         <div class="service-icon" aria-hidden="true">${icons[service.icon]}</div>
-        <div class="service-chip">${service.chip[state.lang]}</div>
+        <div class="service-chip">${service.chip[state.lang] ?? service.chip.en}</div>
       </div>
       <h3>${localized.title}</h3>
       <p>${localized.description}</p>
