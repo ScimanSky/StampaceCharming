@@ -1,6 +1,6 @@
 # Stampace Charming
 
-Demo statico di una guest app ispirata a `lilyumapartment.netlify.app`, ricostruita con un layout piu' curato e una struttura dati facile da personalizzare.
+Demo statico di una guest app, ricostruita con un layout piu' curato e una struttura dati facile da personalizzare.
 
 ## Avvio locale
 
