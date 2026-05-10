@@ -37,22 +37,94 @@ const siteConfig = {
     {
       category: "all",
       icon: "☕",
-      title: "Caffe in piazza",
-      meta: "Bar · 3 min a piedi",
+      title: {
+        it: "Caffe in piazza",
+        en: "Coffee in the square",
+        fr: "Cafe sur la place",
+        de: "Kaffee am Platz",
+        es: "Cafe en la plaza",
+        pt: "Cafe na praca",
+        pl: "Kawa na placu",
+        zh: "广场咖啡馆",
+        ru: "Кофе на площади",
+        cs: "Kava na namesti",
+        ro: "Cafea in piata",
+      },
+      meta: {
+        it: "Bar · 3 min a piedi",
+        en: "Bar · 3 min walk",
+        fr: "Bar · 3 min a pied",
+        de: "Bar · 3 Min zu Fuss",
+        es: "Bar · 3 min a pie",
+        pt: "Bar · 3 min a pe",
+        pl: "Bar · 3 min pieszo",
+        zh: "咖啡吧 · 步行3分钟",
+        ru: "Бар · 3 мин пешком",
+        cs: "Bar · 3 min pesky",
+        ro: "Bar · 3 min pe jos",
+      },
       href: "https://maps.google.com/?q=Cagliari+caffe+centro",
     },
     {
       category: "food",
       icon: "🍝",
-      title: "Trattoria del centro",
-      meta: "Ristorante · cucina sarda",
+      title: {
+        it: "Trattoria del centro",
+        en: "Old town trattoria",
+        fr: "Trattoria du centre",
+        de: "Trattoria im Zentrum",
+        es: "Trattoria del centro",
+        pt: "Trattoria do centro",
+        pl: "Trattoria w centrum",
+        zh: "市中心传统餐馆",
+        ru: "Траттория в центре",
+        cs: "Trattorie v centru",
+        ro: "Trattoria din centru",
+      },
+      meta: {
+        it: "Ristorante · cucina sarda",
+        en: "Restaurant · Sardinian cuisine",
+        fr: "Restaurant · cuisine sarde",
+        de: "Restaurant · sardische Kueche",
+        es: "Restaurante · cocina sarda",
+        pt: "Restaurante · cozinha sarda",
+        pl: "Restauracja · kuchnia sardynska",
+        zh: "餐厅 · 撒丁岛风味",
+        ru: "Ресторан · сардинская кухня",
+        cs: "Restaurace · sardinska kuchyne",
+        ro: "Restaurant · bucatarie sardina",
+      },
       href: "https://maps.google.com/?q=Cagliari+ristorante+centro",
     },
     {
       category: "beach",
       icon: "🏖️",
-      title: "Poetto",
-      meta: "Spiaggia · bus diretto",
+      title: {
+        it: "Poetto",
+        en: "Poetto beach",
+        fr: "Plage du Poetto",
+        de: "Poetto Strand",
+        es: "Playa del Poetto",
+        pt: "Praia do Poetto",
+        pl: "Plaza Poetto",
+        zh: "波埃托海滩",
+        ru: "Пляж Поэтто",
+        cs: "Plaz Poetto",
+        ro: "Plaja Poetto",
+      },
+      meta: {
+        it: "Spiaggia · bus diretto",
+        en: "Beach · direct bus",
+        fr: "Plage · bus direct",
+        de: "Strand · Direktbus",
+        es: "Playa · bus directo",
+        pt: "Praia · autocarro direto",
+        pl: "Plaza · autobus bezposredni",
+        zh: "海滩 · 直达公交",
+        ru: "Пляж · прямой автобус",
+        cs: "Plaz · primy autobus",
+        ro: "Plaja · autobuz direct",
+      },
       href: "https://maps.google.com/?q=Poetto+Cagliari",
     },
   ],
@@ -823,6 +895,10 @@ const localeOptions = [
   { code: "es", label: "ES", flag: "🇪🇸", name: "Espanol" },
   { code: "pt", label: "PT", flag: "🇵🇹", name: "Portugues" },
   { code: "pl", label: "PL", flag: "🇵🇱", name: "Polski" },
+  { code: "zh", label: "ZH", flag: "🇨🇳", name: "中文" },
+  { code: "ru", label: "RU", flag: "🇷🇺", name: "Русский" },
+  { code: "cs", label: "CS", flag: "🇨🇿", name: "Cestina" },
+  { code: "ro", label: "RO", flag: "🇷🇴", name: "Romana" },
 ];
 
 function cloneLocale(locale) {
@@ -1841,6 +1917,985 @@ copy.pl = mergeLocale(copy.pl, {
   },
 });
 
+copy.fr = mergeLocale(copy.fr, {
+  areaTitle: "Carte des environs",
+  areaCopy: "Le logement et les points utiles a proximite.",
+  areaFilters: ["Tout", "Restaurants", "Bars", "Plages"],
+});
+
+copy.de = mergeLocale(copy.de, {
+  areaTitle: "Karte der Umgebung",
+  areaCopy: "Ihre Unterkunft und die wichtigsten Punkte in der Naehe.",
+  areaFilters: ["Alle", "Restaurants", "Bars", "Straende"],
+});
+
+copy.es = mergeLocale(copy.es, {
+  areaTitle: "Mapa de la zona",
+  areaCopy: "Tu alojamiento y los puntos utiles cercanos.",
+  areaFilters: ["Todo", "Restaurantes", "Bares", "Playas"],
+});
+
+copy.pt = mergeLocale(copy.pt, {
+  areaTitle: "Mapa da zona",
+  areaCopy: "O alojamento e os pontos uteis nas proximidades.",
+  areaFilters: ["Tudo", "Restaurantes", "Bares", "Praias"],
+});
+
+copy.pl = mergeLocale(copy.pl, {
+  areaTitle: "Mapa okolicy",
+  areaCopy: "Twoj pobyt i najwazniejsze punkty w poblizu.",
+  areaFilters: ["Wszystko", "Restauracje", "Bary", "Plaze"],
+});
+
+copy.zh = mergeLocale(copy.en, {
+  languageLabel: "语言",
+  topbarTagline: "多语言住客指南",
+  heroKicker: "历史中心精品入住",
+  heroTitle: "为您的公寓打造的优雅应用。",
+  heroSubtitle:
+    "面向住客的移动优先主页：入住方式、Wi-Fi、本地建议、接送与房东联系，一页搞定。",
+  heroWelcome:
+    "本演示参考了原站点，但以更整洁、更易定制的方式重新构建。所有内容都由数据驱动，因此无需改动布局也能替换文字、号码和链接。",
+  stats: [
+    { value: "11", label: "已启用语言" },
+    { value: "9", label: "服务卡片" },
+    { value: "1次点击", label: "联系房东" },
+  ],
+  servicesKicker: "轻触、滑动、打开",
+  servicesTitle: "住客快捷工具",
+  servicesCopy:
+    "每张卡片都会打开一条实用信息或一个快捷操作。该结构适合二维码、WhatsApp 落地页或入住前链接。",
+  areaTitle: "周边地图",
+  areaCopy: "住宿位置及附近实用地点。",
+  areaFilters: ["全部", "餐厅", "酒吧", "海滩"],
+  storyKicker: "设计方向",
+  storyTitle: "温暖的地中海氛围，编辑感语气，简单直接的交互。",
+  storyBody:
+    "我将视觉质量提升到了参考示例之上：沙色、橄榄色与陶土色调，带有气质的衬线标题，以及在手机上依旧清晰的柔和组件。",
+  notesKicker: "可自定义内容",
+  notes: [
+    "在 `siteConfig` 中替换房源名称、地址、邮箱和 CIN 编号。",
+    "直接在 `app.js` 中更新房东电话、Wi-Fi 密码和外部链接。",
+    "你可以扩展 `services` 数组以及 `copy` 中的对应内容，继续添加服务卡片。",
+  ],
+  footerCopy: "为短住与度假出租打造的住客体验。",
+  footerContact: "联系房东",
+  contactTitle: "房东在线",
+  contactCopy: "电话与 WhatsApp 操作清晰直接，同时保持高级感。",
+  buttons: {
+    open: "打开指南",
+    wifi: "连接 Wi-Fi",
+    copyPassword: "复制密码",
+    mapPrimary: "打开地图",
+    mapSecondary: "下载 PDF",
+    trips: "查看体验",
+    call: "拨打电话",
+    whatsapp: "WhatsApp",
+    stationRoute: "从车站步行路线",
+    copied: "密码已复制",
+    dockRules: "规则",
+    dockWifi: "Wi-Fi",
+    dockMap: "地图",
+    dockHost: "房东",
+  },
+  services: {
+    info: {
+      title: "信息与规则",
+      description: "入住、房屋说明、包含服务以及最重要的几条规则。",
+      modal: {
+        kicker: "入住手册",
+        title: "重要信息",
+        copy: "把原本分散在多条消息里的信息集中放在这里，住客会更容易理解。",
+        sections: [
+          {
+            icon: "Clock",
+            title: "入住与退房",
+            body:
+              "入住时间为 15:00 到 21:30，退房时间为 10:30 前。如果提供提前入住或延迟退房，也可以在这里注明是否可用以及费用。",
+          },
+          {
+            icon: "Sparkles",
+            title: "入住期间",
+            body:
+              "简要说明住客外出时如何整理房间、海滩用品放在哪里，以及已经包含了哪些舒适设施。",
+          },
+          {
+            icon: "Shield",
+            title: "重要规则",
+            body:
+              "22:00 后请保持安静，室内禁止吸烟，空调开启时请关闭窗户，退房时请将钥匙留在桌上。",
+          },
+        ],
+      },
+    },
+    wifi: {
+      title: "Wi-Fi 密码",
+      description: "网络信息清晰可见，并提供复制或直接连接的快捷操作。",
+      metaLabel: "密码",
+    },
+    door: {
+      title: "楼宇入口",
+      description: "用于大门与钥匙盒的简短清晰步骤。",
+      modal: {
+        kicker: "自助入住",
+        title: "如何进入",
+        copy: "这张卡片可以减少到店时的电话沟通。说明越短越好。",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. 激活键盘",
+            body:
+              "按下带钥匙图标的按钮启动面板。如果系统重置，请等待两秒后再试一次。",
+          },
+          {
+            icon: "Lock",
+            title: "2. 输入代码",
+            body:
+              "输入你在到达当天收到的门禁代码。这里也可以补充钥匙盒的使用说明。",
+          },
+          {
+            icon: "Door",
+            title: "3. 确认并关门",
+            body:
+              "再次按下钥匙按钮后进入，并确认身后的楼门已经正确关好。",
+          },
+        ],
+      },
+    },
+    mobility: {
+      title: "交通出行",
+      description: "公交、机场火车、附近站点以及实用出行建议。",
+      modal: {
+        kicker: "城市出行",
+        title: "城市、机场、停车",
+        copy: "如果住客没有开车或希望轻松出行，一个弹窗就能覆盖真正需要知道的内容。",
+        sections: [
+          {
+            icon: "Bus",
+            title: "附近公交",
+            body:
+              "写明最近的站点、常用线路以及票价。如果有好用的本地应用，也可以在这里推荐。",
+          },
+          {
+            icon: "Train",
+            title: "机场连接",
+            body:
+              "说明火车或接驳车的发车频率、车程时间，以及从车站步行到公寓还需要多少分钟。",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "停车信息",
+            body:
+              "说明付费车位在哪里、收费时段是什么，以及是否有免费的时间段。住客通常都会问到这一点。",
+          },
+        ],
+      },
+    },
+    map: {
+      title: "街区地图",
+      description: "打开附近重点地点，或下载官方 PDF 地图。",
+    },
+    food: {
+      title: "餐厅与酒吧",
+      description: "简短、可信、好理解的本地推荐。少而精更有效。",
+      modal: {
+        kicker: "本地推荐",
+        title: "哪里吃得好",
+        copy: "建议按氛围或一天中的时段整理推荐，而不是做成长长的列表。",
+        sections: [
+          {
+            icon: "Fish",
+            title: "海鲜",
+            body:
+              "添加两到三家真正可靠的地方，并附上一条实用说明：是否建议预订、价格区间或招牌菜。",
+          },
+          {
+            icon: "Fire",
+            title: "肉类与撒丁岛风味",
+            body:
+              "很适合推荐更地道的餐厅，或主打本地菜的传统 trattoria。",
+          },
+          {
+            icon: "Cocktail",
+            title: "开胃酒与夜晚",
+            body:
+              "可以推荐一家屋顶酒吧、一家葡萄酒吧和一个热闹广场。选项清楚，住客会更快做决定。",
+          },
+        ],
+      },
+    },
+    trips: {
+      title: "短途体验",
+      description: "船游、海滩、一日游以及值得预订的活动。",
+    },
+    transfer: {
+      title: "接送服务",
+      description: "如果你有合作司机，这张卡片会非常实用。",
+      modal: {
+        kicker: "高级服务",
+        title: "可预约接送",
+        copy: "可以在这里推荐值得信赖的合作伙伴，而不是让住客自己去寻找。",
+        sections: [
+          {
+            icon: "Plane",
+            title: "机场与港口",
+            body:
+              "可按需预约，适合晚到、清晨出发以及门到门接送。",
+          },
+          {
+            icon: "Message",
+            title: "如何预约",
+            body:
+              "请至少提前 24 小时发送消息，说明人数、时间和行李情况。这里也可以写固定价格。",
+          },
+        ],
+      },
+    },
+    rent: {
+      title: "租赁服务",
+      description: "汽车、踏板车和自行车集中在一个区块里。",
+      modal: {
+        kicker: "自由出行",
+        title: "汽车、踏板车、自行车",
+        copy: "简短清晰的弹窗，可以介绍合适的合作方，而不会让首页变得拥挤。",
+        sections: [
+          {
+            icon: "Car",
+            title: "汽车与踏板车",
+            body:
+              "适合想离开市中心、或一天内跑几个海滩的住客。如果支持送车到附近，也可以在这里说明。",
+          },
+          {
+            icon: "Bike",
+            title: "自行车与轻出行",
+            body:
+              "非常适合城市型住客和短住客人。你可以提到海边路线或简单易骑的道路。",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.ru = mergeLocale(copy.en, {
+  languageLabel: "Язык",
+  topbarTagline: "Многоязычный гид для гостей",
+  heroKicker: "Бутик-апартаменты в историческом центре",
+  heroTitle: "Элегантное приложение для ваших апартаментов.",
+  heroSubtitle:
+    "Мобильная стартовая страница для гостей: доступ, Wi-Fi, местные советы, трансферы и контакты хозяев в одном понятном интерфейсе.",
+  heroWelcome:
+    "Эта демо-версия вдохновлена исходным сайтом, но собрана чище и удобнее для настройки. Весь контент управляется данными, поэтому тексты, номера и ссылки можно менять без изменения макета.",
+  stats: [
+    { value: "11", label: "Активные языки" },
+    { value: "9", label: "Сервисные карточки" },
+    { value: "1 касание", label: "Чтобы связаться с хозяевами" },
+  ],
+  servicesKicker: "Нажмите, прокрутите, откройте",
+  servicesTitle: "Быстрые инструменты для гостей",
+  servicesCopy:
+    "Каждая карточка открывает полезную информацию или быстрое действие. Структура подходит для QR-кодов, ссылок WhatsApp или страницы перед заселением.",
+  areaTitle: "Карта окрестностей",
+  areaCopy: "Жилье и самые полезные точки поблизости.",
+  areaFilters: ["Все", "Рестораны", "Бары", "Пляжи"],
+  storyKicker: "Творческое направление",
+  storyTitle: "Теплая средиземноморская атмосфера, редакционный тон и простые взаимодействия.",
+  storyBody:
+    "Визуальное качество стало выше, чем в исходном примере: палитра песка, оливы и терракоты, выразительная антиква и мягкие компоненты, которые остаются читаемыми на смартфоне.",
+  notesKicker: "Что можно настроить",
+  notes: [
+    "Замените название жилья, адрес, email и код CIN в блоке `siteConfig`.",
+    "Обновите номера хозяев, пароль Wi-Fi и внешние ссылки прямо в `app.js`.",
+    "Можно добавить новые карточки, расширив массив `services` и связанные тексты в `copy`.",
+  ],
+  footerCopy: "Опыт для гостей, рассчитанный на короткие поездки и аренду жилья.",
+  footerContact: "Связаться с хозяевами",
+  contactTitle: "Хозяева на связи",
+  contactCopy: "Понятные блоки для звонка и WhatsApp с премиальным, но прямым тоном.",
+  buttons: {
+    open: "Открыть гид",
+    wifi: "Подключить Wi-Fi",
+    copyPassword: "Скопировать пароль",
+    mapPrimary: "Открыть карту",
+    mapSecondary: "Скачать PDF",
+    trips: "Смотреть экскурсии",
+    call: "Позвонить",
+    whatsapp: "WhatsApp",
+    stationRoute: "Маршрут от вокзала",
+    copied: "Пароль скопирован",
+    dockRules: "Правила",
+    dockWifi: "Wi-Fi",
+    dockMap: "Карта",
+    dockHost: "Хозяева",
+  },
+  services: {
+    info: {
+      title: "Инфо и правила",
+      description: "Заезд, детали жилья, включенные удобства и самые важные правила.",
+      modal: {
+        kicker: "Гид по проживанию",
+        title: "Важная информация",
+        copy: "Соберите здесь всю информацию, которую обычно отправляете гостям в нескольких отдельных сообщениях.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Заезд и выезд",
+            body:
+              "Заезд с 15:00 до 21:30. Выезд до 10:30. Если вы предлагаете ранний заезд или поздний выезд, здесь можно указать доступность и доплату.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Во время проживания",
+            body:
+              "Кратко объясните, как оставлять квартиру при выходе, где лежат пляжные принадлежности и какие удобства уже включены.",
+          },
+          {
+            icon: "Shield",
+            title: "Важные правила",
+            body:
+              "Тишина после 22:00, не курить в помещении, держать окна закрытыми при включенном кондиционере и оставить ключи на столе при выезде.",
+          },
+        ],
+      },
+    },
+    wifi: {
+      title: "Пароль Wi-Fi",
+      description: "Понятные данные сети с действием для копирования или подключения.",
+      metaLabel: "Пароль",
+    },
+    door: {
+      title: "Доступ в здание",
+      description: "Короткая и понятная последовательность для входной двери и ключевого бокса.",
+      modal: {
+        kicker: "Self check-in",
+        title: "Как войти",
+        copy: "Эта карточка сокращает количество звонков в момент приезда. Инструкции должны быть очень короткими.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Активируйте клавиатуру",
+            body:
+              "Нажмите кнопку с иконкой ключа, чтобы активировать панель. Если система сбросится, подождите две секунды и попробуйте снова.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Введите код",
+            body:
+              "Введите код доступа, который высылается в день приезда. Здесь же можно добавить инструкции для ключевого бокса.",
+          },
+          {
+            icon: "Door",
+            title: "3. Подтвердите и закройте",
+            body:
+              "Снова нажмите кнопку с ключом, войдите и убедитесь, что входная дверь хорошо закрылась за вами.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      title: "Транспорт",
+      description: "Автобус, поезд в аэропорт, ближайшие остановки и практичные советы.",
+      modal: {
+        kicker: "Передвижение по городу",
+        title: "Город, аэропорт, парковка",
+        copy: "Одно модальное окно может закрыть все, что действительно нужно гостю без машины или с легким багажом.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Автобус рядом",
+            body:
+              "Укажите ближайшую остановку, важные маршруты и стоимость билета. Если есть полезное местное приложение, можно указать его здесь.",
+          },
+          {
+            icon: "Train",
+            title: "Связь с аэропортом",
+            body:
+              "Напишите, как часто ходит поезд или шаттл, сколько длится дорога и сколько минут пешком остается до апартаментов.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Парковка",
+            body:
+              "Объясните, где находятся платные места, в какие часы действует оплата и есть ли бесплатные интервалы. Об этом спрашивают почти все гости.",
+          },
+        ],
+      },
+    },
+    map: {
+      title: "Карта района",
+      description: "Откройте ключевые точки или скачайте официальную PDF-карту.",
+    },
+    food: {
+      title: "Рестораны и бары",
+      description: "Короткий, надежный и хорошо организованный список мест. Лучше меньше, но точнее.",
+      modal: {
+        kicker: "Местные рекомендации",
+        title: "Где вкусно поесть",
+        copy: "Лучше группировать рекомендации по атмосфере или времени дня, а не делать бесконечный список.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Морепродукты",
+            body:
+              "Добавьте две или три действительно надежные точки и короткую практичную заметку: нужна ли бронь, ценовой диапазон или фирменное блюдо.",
+          },
+          {
+            icon: "Fire",
+            title: "Мясо и сардинская кухня",
+            body:
+              "Подходит для более аутентичного места или традиционной trattoria с местной кухней.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Аперитив и вечер",
+            body:
+              "Посоветуйте rooftop, винный бар и оживленную площадь. Когда выбор структурирован, гости решают быстрее.",
+          },
+        ],
+      },
+    },
+    trips: {
+      title: "Экскурсии",
+      description: "Лодочные прогулки, пляжи, однодневные поездки и активности, которые стоит забронировать.",
+    },
+    transfer: {
+      title: "Частный трансфер",
+      description: "Если вы работаете с водителем, эта карточка хорошо помогает гостю сориентироваться.",
+      modal: {
+        kicker: "Премиум-сервис",
+        title: "Трансфер по запросу",
+        copy: "Используйте этот раздел, чтобы рекомендовать надежного партнера, а не оставлять гостя искать все самому.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Аэропорт и порт",
+            body:
+              "Доступно по запросу для позднего прилета, раннего выезда и прямых поездок от двери до двери.",
+          },
+          {
+            icon: "Message",
+            title: "Как забронировать",
+            body:
+              "Попросите написать минимум за 24 часа и указать число гостей, время и багаж. Здесь же можно добавить фиксированную стоимость.",
+          },
+        ],
+      },
+    },
+    rent: {
+      title: "Прокат",
+      description: "Авто, скутеры и велосипеды в одном понятном разделе.",
+      modal: {
+        kicker: "Свобода передвижения",
+        title: "Авто, скутеры, велосипеды",
+        copy: "Короткое и понятное модальное окно позволяет показать нужных партнеров, не перегружая главную страницу.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Авто и скутеры",
+            body:
+              "Полезно для гостей, которые хотят выехать за пределы центра или посетить несколько пляжей за один день. Можно упомянуть выдачу рядом с жильем.",
+          },
+          {
+            icon: "Bike",
+            title: "Велосипеды и легкая мобильность",
+            body:
+              "Отлично подходит для городских гостей и коротких поездок. Можно указать набережную или простые веломаршруты.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.cs = mergeLocale(copy.en, {
+  languageLabel: "Jazyk",
+  topbarTagline: "Vicejazycny pruvodce pro hosty",
+  heroKicker: "Boutique pobyt v historickem centru",
+  heroTitle: "Elegantni aplikace pro vas apartman.",
+  heroSubtitle:
+    "Mobilni uvodni stranka pro hosty: pristup, Wi-Fi, mistni tipy, transfery a kontakt na hostitele v jednom prehlednem zazitku.",
+  heroWelcome:
+    "Tato ukazka vychazi z referencniho webu, ale byla postavena cisteji a snaze upravitelne. Veskery obsah je rizeny daty, takze muzete menit texty, cisla i odkazy bez zasahu do rozlozeni.",
+  stats: [
+    { value: "11", label: "Aktivni jazyky" },
+    { value: "9", label: "Servisni karty" },
+    { value: "1 klepnuti", label: "Pro kontakt s hostiteli" },
+  ],
+  servicesKicker: "Klepnete, posunte, otevrete",
+  servicesTitle: "Rychle nastroje pro hosty",
+  servicesCopy:
+    "Kazda karta otevre uzitecnou informaci nebo rychlou akci. Struktura je pripravena pro QR kody, WhatsApp odkazy i pre-check-in stranky.",
+  areaTitle: "Mapa okoli",
+  areaCopy: "Ubytovani a nejuzitecnejsi body v okoli.",
+  areaFilters: ["Vse", "Restaurace", "Bary", "Plaze"],
+  storyKicker: "Kreativni smer",
+  storyTitle: "Tepla stredomorska atmosfera, editorialni ton a jednoduche interakce.",
+  storyBody:
+    "Vizualni uroven jsem posunul nad puvodni ukazku: paleta pisku, olivove a terakoty, serifova typografie s charakterem a mekke prvky, ktere zustavaji citelne i na telefonu.",
+  notesKicker: "Co prizpusobit",
+  notes: [
+    "Nahradte nazev ubytovani, adresu, email a CIN kod v `siteConfig`.",
+    "Aktualizujte cisla hostitelu, Wi-Fi heslo a externi odkazy primo v `app.js`.",
+    "Dalsi servisni karty lze pridat rozsirenim pole `services` a odpovidajicich textu v `copy`.",
+  ],
+  footerCopy: "Zazitek pro hosty navrzeny pro kratke pobyty a rekreacni pronajmy.",
+  footerContact: "Kontaktovat hostitele",
+  contactTitle: "Hostitele k dispozici",
+  contactCopy: "Prehledne bloky pro hovor a WhatsApp s premium, ale primym tonem.",
+  buttons: {
+    open: "Otevrit pruvodce",
+    wifi: "Pripojit Wi-Fi",
+    copyPassword: "Kopirovat heslo",
+    mapPrimary: "Otevrit mapu",
+    mapSecondary: "Stahnout PDF",
+    trips: "Zobrazit vylety",
+    call: "Volat",
+    whatsapp: "WhatsApp",
+    stationRoute: "Trasa od nadrazi",
+    copied: "Heslo zkopirovano",
+    dockRules: "Pravidla",
+    dockWifi: "Wi-Fi",
+    dockMap: "Mapa",
+    dockHost: "Hostitel",
+  },
+  services: {
+    info: {
+      title: "Info a pravidla",
+      description: "Check-in, informace o byte, zahrnute sluzby a nejdulezitejsi pravidla.",
+      modal: {
+        kicker: "Prirucka pobytu",
+        title: "Dulezite informace",
+        copy: "Shromazdete zde informace, ktere dnes obvykle posilate hostum v nekolika samostatnych zpravach.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in a check-out",
+            body:
+              "Check-in od 15:00 do 21:30. Check-out do 10:30. Pokud nabizite drivejsi prijezd nebo pozdejsi odjezd, muzete zde uvest dostupnost i pripadny priplatek.",
+          },
+          {
+            icon: "Sparkles",
+            title: "Behem pobytu",
+            body:
+              "Strucne vysvetlete, jak ma host zanechat apartman pri odchodu, kde jsou plazove veci a ktere pohodlne prvky jsou uz zahrnuty.",
+          },
+          {
+            icon: "Shield",
+            title: "Dulezita pravidla",
+            body:
+              "Po 22:00 klid, zadne koureni uvnitr, okna zavrena pri zapnute klimatizaci a klice nechat pri odjezdu na stole.",
+          },
+        ],
+      },
+    },
+    wifi: {
+      title: "Heslo k Wi-Fi",
+      description: "Prehledne sitove udaje s moznosti kopirovani nebo primeho pripojeni.",
+      metaLabel: "Heslo",
+    },
+    door: {
+      title: "Vstup do budovy",
+      description: "Kratky a jasny postup pro dvere i schranku na klice.",
+      modal: {
+        kicker: "Self check-in",
+        title: "Jak vstoupit",
+        copy: "Tato karta omezuje telefonaty pri prijezdu. Instrukce udrzujte co nejkratsi.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Aktivujte klavesnici",
+            body:
+              "Stisknete tlacitko s ikonou klice pro aktivaci panelu. Pokud se system restartuje, pockejte dve sekundy a zkuste to znovu.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Zadejte kod",
+            body:
+              "Zadejte pristupovy kod, ktery posilate v den prijezdu. Zde muzete doplnit i instrukce ke schrance na klice.",
+          },
+          {
+            icon: "Door",
+            title: "3. Potvrdte a zavrete",
+            body:
+              "Znovu stisknete tlacitko s klicem, vstupte a overte, ze se vstupni dvere za vami spravne zavrely.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      title: "Doprava",
+      description: "Autobus, vlak na letiste, blizke zastavky a prakticke tipy k pohybu po meste.",
+      modal: {
+        kicker: "Pohyb po meste",
+        title: "Mesto, letiste, parkovani",
+        copy: "Jedno modalni okno muze pokryt vse, co host skutecne potrebuje vedet, kdyz prijizdi bez auta nebo chce cestovat nalehko.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Autobus v okoli",
+            body:
+              "Uvedte nejblizsi zastavku, dulezite linky a cenu jizdenky. Pokud existuje uzitecna mistni aplikace, doplnte ji sem.",
+          },
+          {
+            icon: "Train",
+            title: "Spojeni na letiste",
+            body:
+              "Napiste, jak casto jezdi vlak nebo shuttle, jak dlouho trva cesta a kolik minut pesky zbyva do apartmanu.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Parkovani",
+            body:
+              "Vysvetlete, kde jsou placena mista, kdy se plati a zda existuji volne casove useky. Hoste se na to ptaji velmi casto.",
+          },
+        ],
+      },
+    },
+    map: {
+      title: "Mapa ctvrti",
+      description: "Otevrete dulezite body zajmu nebo stahnete oficialni PDF mapu.",
+    },
+    food: {
+      title: "Restaurace a bary",
+      description: "Kratky, duveryhodny a dobre usporadany seznam mistnich tipu.",
+      modal: {
+        kicker: "Mistni tipy",
+        title: "Kde se dobre najist",
+        copy: "Doporuceni je lepsi rozdelit podle atmosfery nebo casti dne, nez tvorit nekonecne seznamy.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Ryby a more",
+            body:
+              "Pridejte dve nebo tri spolehliva mista a jednu praktickou poznamku: zda rezervovat, cenovou uroven nebo doporucene jidlo.",
+          },
+          {
+            icon: "Fire",
+            title: "Maso a sardinska kuchyne",
+            body:
+              "Idealni pro doporuceni autentictejsiho podniku nebo tradicni trattorie s mistni kuchyni.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitiv a vecer",
+            body:
+              "Doporucte rooftop, wine bar a zive namesti. Kdyz jsou moznosti prehledne, hoste se rozhodnou rychleji.",
+          },
+        ],
+      },
+    },
+    trips: {
+      title: "Vylety",
+      description: "Lodni vyjizdky, plaze, jednodenni vypravy a aktivity vhodne k rezervaci.",
+    },
+    transfer: {
+      title: "Soukromy transfer",
+      description: "Pokud spolupracujete s ridicem, tato karta je velmi uzitecna.",
+      modal: {
+        kicker: "Premium sluzby",
+        title: "Transfer na vyzadani",
+        copy: "Pouzijte tuto sekci pro doporuceni spolehliveho partnera, misto aby host vse hledal sam.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Letiste a pristav",
+            body:
+              "Dostupne na vyzadani pro pozdni prijezdy, brzke odjezdy a prime cesty ode dveri ke dverim.",
+          },
+          {
+            icon: "Message",
+            title: "Jak rezervovat",
+            body:
+              "Pozadejte o zpravu alespon 24 hodin predem s poctem osob, casem a zavazadly. Zde muzete uvest i pevnou cenu.",
+          },
+        ],
+      },
+    },
+    rent: {
+      title: "Pronajem",
+      description: "Auta, skutry a kola v jedne prehledne sekci.",
+      modal: {
+        kicker: "Pohyb bez omezeni",
+        title: "Auta, skutry a kola",
+        copy: "Kratke a jasne modalni okno predstavi spravne partnery bez pretezovani domovske stranky.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Auta a skutry",
+            body:
+              "Uzitecne pro hosty, kteri chteji vyrazit mimo centrum nebo navstivit vice plazi behem jednoho dne. Zminte i predani pobliz ubytovani, pokud je mozne.",
+          },
+          {
+            icon: "Bike",
+            title: "Kola a lehka mobilita",
+            body:
+              "Idealni pro mestske hosty a kratke pobyty. Muzete zminit pobrezni trasu nebo jednoduche cyklostezky.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+copy.ro = mergeLocale(copy.en, {
+  languageLabel: "Limba",
+  topbarTagline: "Ghid multilingv pentru oaspeti",
+  heroKicker: "Sejur boutique in centrul istoric",
+  heroTitle: "O aplicatie eleganta pentru apartamentul tau.",
+  heroSubtitle:
+    "O pagina mobile-first pentru oaspeti: acces, Wi-Fi, recomandari locale, transferuri si contactele gazdelor intr-o experienta clara.",
+  heroWelcome:
+    "Aceasta demonstratie este inspirata de proiectul de referinta, dar a fost refacuta mai curat si mai usor de personalizat. Tot continutul este bazat pe date, astfel incat poti schimba textele, numerele si linkurile fara sa atingi layoutul.",
+  stats: [
+    { value: "11", label: "Limbi active" },
+    { value: "9", label: "Carduri de servicii" },
+    { value: "1 atingere", label: "Pentru a contacta gazdele" },
+  ],
+  servicesKicker: "Atinge, deruleaza, deschide",
+  servicesTitle: "Instrumente rapide pentru oaspeti",
+  servicesCopy:
+    "Fiecare card deschide o informatie utila sau o actiune rapida. Structura este potrivita pentru coduri QR, linkuri WhatsApp sau pagini trimise inainte de check-in.",
+  areaTitle: "Harta zonei",
+  areaCopy: "Cazarea si cele mai utile puncte din apropiere.",
+  areaFilters: ["Tot", "Restaurante", "Baruri", "Plaje"],
+  storyKicker: "Directie creativa",
+  storyTitle: "Atmosfera mediteraneana calda, ton editorial si interactiuni simple.",
+  storyBody:
+    "Calitatea vizuala a fost ridicata peste exemplul original: paleta de nisip, masliniu si teracota, tipografie serif cu personalitate si componente moi care raman usor de citit pe telefon.",
+  notesKicker: "Ce poti personaliza",
+  notes: [
+    "Inlocuieste numele proprietatii, adresa, emailul si codul CIN in `siteConfig`.",
+    "Actualizeaza numerele gazdelor, parola Wi-Fi si linkurile externe direct in `app.js`.",
+    "Poti adauga alte carduri extinzand array-ul `services` si continutul aferent din `copy`.",
+  ],
+  footerCopy: "Experienta pentru oaspeti gandita pentru sejururi scurte si inchirieri de vacanta.",
+  footerContact: "Contacteaza gazdele",
+  contactTitle: "Gazde disponibile",
+  contactCopy: "Blocuri clare pentru apel si WhatsApp, cu un ton premium, dar direct.",
+  buttons: {
+    open: "Deschide ghidul",
+    wifi: "Conecteaza Wi-Fi",
+    copyPassword: "Copiaza parola",
+    mapPrimary: "Deschide harta",
+    mapSecondary: "Descarca PDF",
+    trips: "Vezi excursiile",
+    call: "Suna",
+    whatsapp: "WhatsApp",
+    stationRoute: "Ruta de la gara",
+    copied: "Parola copiata",
+    dockRules: "Reguli",
+    dockWifi: "Wi-Fi",
+    dockMap: "Harta",
+    dockHost: "Gazde",
+  },
+  services: {
+    info: {
+      title: "Informatii si reguli",
+      description: "Check-in, detalii despre casa, facilitati incluse si regulile care conteaza.",
+      modal: {
+        kicker: "Ghid de sejur",
+        title: "Informatii esentiale",
+        copy: "Aduna aici toate informatiile pe care astazi le trimiti in mai multe mesaje separate.",
+        sections: [
+          {
+            icon: "Clock",
+            title: "Check-in si check-out",
+            body:
+              "Check-in intre 15:00 si 21:30. Check-out pana la 10:30. Daca oferi early check-in sau late check-out, aici poti mentiona disponibilitatea si eventualul cost.",
+          },
+          {
+            icon: "Sparkles",
+            title: "In timpul sejurului",
+            body:
+              "Explica pe scurt cum trebuie lasata casa cand oaspetii ies, unde se gasesc accesoriile de plaja si ce confort este deja inclus.",
+          },
+          {
+            icon: "Shield",
+            title: "Reguli importante",
+            body:
+              "Liniste dupa 22:00, fara fumat in interior, ferestre inchise cand aerul conditionat este pornit si cheile lasate pe masa la plecare.",
+          },
+        ],
+      },
+    },
+    wifi: {
+      title: "Parola Wi-Fi",
+      description: "Datele retelei afisate clar, cu actiuni pentru copiere sau conectare.",
+      metaLabel: "Parola",
+    },
+    door: {
+      title: "Acces in cladire",
+      description: "O succesiune scurta si clara pentru usa principala si cutia de chei.",
+      modal: {
+        kicker: "Self check-in",
+        title: "Cum intri",
+        copy: "Acest card reduce apelurile din momentul sosirii. Pastreaza instructiunile cat mai scurte.",
+        sections: [
+          {
+            icon: "Hash",
+            title: "1. Activeaza tastatura",
+            body:
+              "Apasa butonul cu pictograma cheii pentru a activa panoul. Daca sistemul se reseteaza, asteapta doua secunde si incearca din nou.",
+          },
+          {
+            icon: "Lock",
+            title: "2. Introdu codul",
+            body:
+              "Introdu codul de acces trimis in ziua sosirii. Aici poti adauga si instructiuni pentru cutia de chei.",
+          },
+          {
+            icon: "Door",
+            title: "3. Confirma si inchide",
+            body:
+              "Apasa din nou butonul cu cheia, intra si asigura-te ca usa cladirii se inchide bine in urma ta.",
+          },
+        ],
+      },
+    },
+    mobility: {
+      title: "Transport",
+      description: "Autobuz, tren spre aeroport, statii apropiate si sfaturi practice.",
+      modal: {
+        kicker: "Miscare prin oras",
+        title: "Oras, aeroport, parcare",
+        copy: "Un singur modal poate acoperi tot ce trebuie sa stie un oaspete care soseste fara masina sau vrea sa se deplaseze usor.",
+        sections: [
+          {
+            icon: "Bus",
+            title: "Autobuz in zona",
+            body:
+              "Mentioneaza statia cea mai apropiata, liniile utile si pretul biletului. Daca exista o aplicatie locala buna, o poti recomanda aici.",
+          },
+          {
+            icon: "Train",
+            title: "Legatura cu aeroportul",
+            body:
+              "Spune cat de des pleaca trenul sau shuttle-ul, cat dureaza drumul si cate minute de mers pe jos mai raman pana la apartament.",
+            actions: [{ type: "link", labelKey: "stationRoute", href: siteConfig.links.walkingRoute }],
+          },
+          {
+            icon: "Parking",
+            title: "Parcare",
+            body:
+              "Explica unde sunt locurile cu plata, cand se plateste si daca exista intervale gratuite. Aproape toti oaspetii intreaba asta.",
+          },
+        ],
+      },
+    },
+    map: {
+      title: "Harta cartierului",
+      description: "Deschide punctele de interes sau descarca o harta PDF oficiala.",
+    },
+    food: {
+      title: "Restaurante si baruri",
+      description: "O lista locala scurta, credibila si bine organizata. Mai putine recomandari, dar mai bune.",
+      modal: {
+        kicker: "Recomandari locale",
+        title: "Unde se mananca bine",
+        copy: "Organizeaza recomandarile dupa atmosfera sau momentul zilei, nu in liste foarte lungi.",
+        sections: [
+          {
+            icon: "Fish",
+            title: "Peste si fructe de mare",
+            body:
+              "Adauga doua sau trei locuri de incredere, plus o nota practica: rezervare recomandata, nivel de pret sau preparatul principal.",
+          },
+          {
+            icon: "Fire",
+            title: "Carne si bucatarie sardina",
+            body:
+              "Ideal pentru a scoate in evidenta un loc mai autentic sau o trattoria traditionala cu specific local.",
+          },
+          {
+            icon: "Cocktail",
+            title: "Aperitiv si seara",
+            body:
+              "Sugereaza un rooftop, un wine bar si o piata animata. Oaspetii decid mai repede cand optiunile sunt bine structurate.",
+          },
+        ],
+      },
+    },
+    trips: {
+      title: "Excursii",
+      description: "Tururi cu barca, plaje, iesiri de o zi si activitati care merita rezervate.",
+    },
+    transfer: {
+      title: "Transfer privat",
+      description: "Daca lucrezi cu un sofer, acest card este foarte util pentru oaspeti.",
+      modal: {
+        kicker: "Servicii premium",
+        title: "Transfer la cerere",
+        copy: "Foloseste aceasta sectiune pentru a recomanda un partener de incredere, in loc sa lasi oaspetele sa caute singur.",
+        sections: [
+          {
+            icon: "Plane",
+            title: "Aeroport si port",
+            body:
+              "Disponibil la cerere pentru sosiri tarzii, plecari devreme si curse directe din usa in usa.",
+          },
+          {
+            icon: "Message",
+            title: "Cum rezervi",
+            body:
+              "Cere un mesaj cu cel putin 24 de ore inainte, cu numarul de persoane, ora si bagajele. Aici poti mentiona si un pret fix.",
+          },
+        ],
+      },
+    },
+    rent: {
+      title: "Inchirieri",
+      description: "Masini, scutere si biciclete intr-o singura sectiune clara.",
+      modal: {
+        kicker: "Misca-te liber",
+        title: "Masini, scutere si biciclete",
+        copy: "Un modal scurt si clar te ajuta sa prezinti partenerii potriviti fara sa incarci pagina principala.",
+        sections: [
+          {
+            icon: "Car",
+            title: "Masini si scutere",
+            body:
+              "Util pentru oaspetii care vor sa iasa din centru sau sa viziteze mai multe plaje intr-o singura zi. Mentioneaza daca exista livrare aproape de proprietate.",
+          },
+          {
+            icon: "Bike",
+            title: "Biciclete si mobilitate usoara",
+            body:
+              "Perfect pentru oaspeti urbani si sejururi scurte. Poti mentiona trasee de pe faleza sau rute simple pentru bicicleta.",
+          },
+        ],
+      },
+    },
+  },
+});
+
+[
+  copy.it,
+  copy.en,
+  copy.fr,
+  copy.de,
+  copy.es,
+  copy.pt,
+  copy.pl,
+  copy.zh,
+  copy.ru,
+  copy.cs,
+  copy.ro,
+].forEach((locale) => {
+  locale.stats[0].value = "11";
+});
+
+copy.zh.buttons.themeDark = "夜间模式";
+copy.zh.buttons.themeLight = "日间模式";
+copy.ru.buttons.themeDark = "Ночной режим";
+copy.ru.buttons.themeLight = "Дневной режим";
+copy.cs.buttons.themeDark = "Nocni rezim";
+copy.cs.buttons.themeLight = "Denni rezim";
+copy.ro.buttons.themeDark = "Mod de noapte";
+copy.ro.buttons.themeLight = "Mod de zi";
+
 const localizedChips = {
   info: { de: "Stay", es: "Estancia", pt: "Estadia", pl: "Pobyt" },
   wifi: { de: "Online", es: "Online", pt: "Online", pl: "Online" },
@@ -1924,12 +2979,14 @@ const themeStorageKey = "stampace-theme";
 const state = {
   lang: "it",
   theme: getInitialTheme(),
+  langMenuOpen: false,
 };
 
 const dom = {
   langSwitch: document.querySelector("#lang-switch"),
   themeToggle: document.querySelector("#theme-toggle"),
   heroCard: document.querySelector("#hero-card"),
+  heroLangOverlay: document.querySelector("#hero-lang-overlay"),
   heroTagline: document.querySelector("#hero-tagline"),
   heroKicker: document.querySelector("#hero-kicker"),
   heroTitle: document.querySelector("#hero-title"),
@@ -1988,36 +3045,73 @@ function applyTheme() {
   document.body.dataset.theme = state.theme;
 }
 
+function positionHeroLangOverlay() {
+  if (!dom.heroCard || !dom.heroLangOverlay) {
+    return;
+  }
+
+  const rect = dom.heroCard.getBoundingClientRect();
+  dom.heroLangOverlay.style.top = `${rect.top}px`;
+  dom.heroLangOverlay.style.left = `${rect.left}px`;
+  dom.heroLangOverlay.style.width = `${rect.width}px`;
+  dom.heroLangOverlay.style.height = `${rect.height}px`;
+}
+
 function renderLanguageSwitch() {
   const label = copy[state.lang].languageLabel;
+  const currentLanguage = localeOptions.find((language) => language.code === state.lang) ?? localeOptions[0];
+  const columns = 4;
+  const fillerCount = (columns - (localeOptions.length % columns)) % columns;
+  const languageSlots = [...localeOptions, ...Array.from({ length: fillerCount }, (_, index) => ({ code: `empty-${index}`, empty: true }))];
+  dom.langSwitch.className = `lang-switch ${state.langMenuOpen ? "is-open" : ""}`;
   dom.langSwitch.innerHTML = `
-    <label class="lang-select-shell" aria-label="${label}">
-      <span class="lang-select-current" aria-hidden="true">${localeOptions.find((language) => language.code === state.lang)?.flag ?? "🌐"}</span>
-      <select class="lang-select" id="lang-select">
-        ${localeOptions
-          .map(
-            (language) => `
-              <option value="${language.code}" ${language.code === state.lang ? "selected" : ""}>
-                ${language.name}
-              </option>
-            `,
-          )
-          .join("")}
-      </select>
-      <span class="lang-select-caret" aria-hidden="true">v</span>
-    </label>
+    <button
+      class="lang-picker-button"
+      id="lang-picker-button"
+      type="button"
+      aria-label="${label}"
+      aria-haspopup="listbox"
+      aria-expanded="${state.langMenuOpen ? "true" : "false"}"
+      data-lang-menu-toggle="true"
+      title="${currentLanguage.name}"
+    >
+      <span class="lang-picker-flag" aria-hidden="true">${currentLanguage.flag}</span>
+    </button>
   `;
 
-  const select = dom.langSwitch.querySelector("#lang-select");
-  if (select instanceof HTMLSelectElement) {
-    select.addEventListener("change", () => {
-      const currentScrollY = window.scrollY;
-      state.lang = select.value;
-      renderPage();
-      requestAnimationFrame(() => {
-        window.scrollTo(0, currentScrollY);
-      });
-    });
+  dom.heroLangOverlay.className = `hero-lang-overlay ${state.langMenuOpen ? "is-open" : ""}`;
+  dom.heroLangOverlay.setAttribute("aria-hidden", state.langMenuOpen ? "false" : "true");
+  dom.heroLangOverlay.innerHTML = state.langMenuOpen
+    ? `
+      ${languageSlots
+        .map((language) =>
+          language.empty
+            ? '<span class="lang-option lang-option-placeholder" aria-hidden="true"></span>'
+            : `
+              <button
+                class="lang-option hero-lang-option ${language.code === state.lang ? "is-active" : ""}"
+                type="button"
+                role="option"
+                aria-selected="${language.code === state.lang ? "true" : "false"}"
+                data-lang-option="${language.code}"
+                title="${language.name}"
+              >
+                <span aria-hidden="true">${language.flag}</span>
+                <span class="sr-only">${language.name}</span>
+              </button>
+            `,
+        )
+        .join("")}
+    `
+    : "";
+
+  if (state.langMenuOpen) {
+    positionHeroLangOverlay();
+  } else {
+    dom.heroLangOverlay.style.top = "";
+    dom.heroLangOverlay.style.left = "";
+    dom.heroLangOverlay.style.width = "";
+    dom.heroLangOverlay.style.height = "";
   }
 }
 
@@ -2064,6 +3158,14 @@ function getServiceCopy(serviceId) {
 
 function getLocalizedText(localized, key, fallback = "") {
   return localized?.[key] ?? copy.en?.[key] ?? fallback;
+}
+
+function getLocalizedValue(value) {
+  if (value && typeof value === "object" && !Array.isArray(value)) {
+    return value[state.lang] ?? value.en ?? Object.values(value)[0] ?? "";
+  }
+
+  return value ?? "";
 }
 
 function renderButtonLabel(iconName, label) {
@@ -2200,8 +3302,8 @@ function renderAreaSection() {
         <a class="map-point-card" href="${point.href}" target="_blank" rel="noreferrer">
           <span class="map-point-icon" aria-hidden="true">${point.icon}</span>
           <span class="map-point-copy">
-            <strong>${point.title}</strong>
-            <small>${point.meta}</small>
+            <strong>${getLocalizedValue(point.title)}</strong>
+            <small>${getLocalizedValue(point.meta)}</small>
           </span>
         </a>
       `,
@@ -2330,7 +3432,7 @@ function renderPage() {
 
   dom.heroKicker.textContent = "";
   dom.heroTitle.textContent = "Stampace Charming";
-  dom.heroSubtitle.textContent = "Luxury apartment";
+  dom.heroSubtitle.textContent = "Luxury Apartment";
   dom.heroAddress.textContent = siteConfig.brand.address;
   dom.heroMail.textContent = siteConfig.brand.email;
   dom.heroLicense.textContent = siteConfig.brand.license;
@@ -2370,6 +3472,29 @@ document.addEventListener("click", (event) => {
     return;
   }
 
+  const langOption = target.closest("[data-lang-option]");
+  if (langOption instanceof HTMLElement) {
+    const currentScrollY = window.scrollY;
+    state.lang = langOption.dataset.langOption;
+    state.langMenuOpen = false;
+    renderPage();
+    requestAnimationFrame(() => {
+      window.scrollTo(0, currentScrollY);
+    });
+    return;
+  }
+
+  if (target.closest("[data-lang-menu-toggle='true']")) {
+    state.langMenuOpen = !state.langMenuOpen;
+    renderLanguageSwitch();
+    return;
+  }
+
+  if (!target.closest(".lang-switch") && !target.closest(".hero-lang-overlay") && state.langMenuOpen) {
+    state.langMenuOpen = false;
+    renderLanguageSwitch();
+  }
+
   const modalTrigger = target.closest("[data-open-modal]");
   if (modalTrigger instanceof HTMLElement) {
     openModal(modalTrigger.dataset.openModal);
@@ -2406,8 +3531,25 @@ dom.modalClose.addEventListener("click", closeModal);
 dom.themeToggle.addEventListener("click", toggleTheme);
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.langMenuOpen) {
+    state.langMenuOpen = false;
+    renderLanguageSwitch();
+  }
+
   if (event.key === "Escape" && !dom.modal.classList.contains("hidden")) {
     closeModal();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (state.langMenuOpen) {
+    positionHeroLangOverlay();
+  }
+});
+
+window.addEventListener("scroll", () => {
+  if (state.langMenuOpen) {
+    positionHeroLangOverlay();
   }
 });
 
