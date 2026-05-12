@@ -25,8 +25,11 @@
       <header class="hero">
         <div class="topbar">
           <div class="topbar-controls">
-            <div class="lang-switch-wrap">
-              <div class="lang-switch" id="lang-switch" aria-label="Language switcher"></div>
+            <div class="topbar-leading">
+              <button class="host-trigger" id="host-trigger" type="button" aria-label="Host"></button>
+              <div class="lang-switch-wrap">
+                <div class="lang-switch" id="lang-switch" aria-label="Language switcher"></div>
+              </div>
             </div>
             <button class="theme-toggle" id="theme-toggle" type="button"></button>
           </div>
@@ -68,6 +71,7 @@
       </header>
 
       <div class="hero-lang-overlay" id="hero-lang-overlay" aria-hidden="true"></div>
+      <div class="host-popover" id="host-popover" aria-hidden="true"></div>
 
       <main>
         <section class="services">

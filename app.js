@@ -4,6 +4,14 @@ const siteConfig = {
     email: "hello@stampacecharming.com",
     address: "Via del Demo 12, Cagliari",
     license: "CIN: IT000000B000000000",
+    host: {
+      name: "Fabrizio",
+      role: "Host",
+      email: "fabrizio@stampacecharming.com",
+      phone: "+393401234567",
+      whatsapp: "https://wa.me/393401234567",
+      instagram: "https://instagram.com/stampacecharming",
+    },
     wifi: {
       network: "Stampace Charming Guest",
       password: "stampace-2026",
@@ -2896,6 +2904,138 @@ copy.cs.buttons.themeLight = "Denni rezim";
 copy.ro.buttons.themeDark = "Mod de noapte";
 copy.ro.buttons.themeLight = "Mod de zi";
 
+copy.it = mergeLocale(copy.it, {
+  hostPanel: {
+    buttonLabel: "Contatti host",
+    roleLabel: "Host",
+    intro: "Ciao, sono Fabrizio, il tuo host. Puoi trovarmi ai seguenti contatti:",
+    emailLabel: "Email",
+    phoneLabel: "Chiama",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.en = mergeLocale(copy.en, {
+  hostPanel: {
+    buttonLabel: "Host contacts",
+    roleLabel: "Host",
+    intro: "Hi, I'm Fabrizio, your host. You can reach me here:",
+    emailLabel: "Email",
+    phoneLabel: "Call",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.fr = mergeLocale(copy.fr, {
+  hostPanel: {
+    buttonLabel: "Contacts de l'hote",
+    roleLabel: "Hote",
+    intro: "Bonjour, je suis Fabrizio, votre hote. Vous pouvez me joindre ici :",
+    emailLabel: "Email",
+    phoneLabel: "Appeler",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.de = mergeLocale(copy.de, {
+  hostPanel: {
+    buttonLabel: "Host-Kontakte",
+    roleLabel: "Host",
+    intro: "Hallo, ich bin Fabrizio, Ihr Host. Sie erreichen mich hier:",
+    emailLabel: "E-Mail",
+    phoneLabel: "Anrufen",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.es = mergeLocale(copy.es, {
+  hostPanel: {
+    buttonLabel: "Contactos del anfitrion",
+    roleLabel: "Anfitrion",
+    intro: "Hola, soy Fabrizio, tu anfitrion. Puedes encontrarme en estos contactos:",
+    emailLabel: "Email",
+    phoneLabel: "Llamar",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.pt = mergeLocale(copy.pt, {
+  hostPanel: {
+    buttonLabel: "Contactos do anfitriao",
+    roleLabel: "Anfitriao",
+    intro: "Ola, sou o Fabrizio, o teu anfitriao. Podes encontrar-me nestes contactos:",
+    emailLabel: "Email",
+    phoneLabel: "Ligar",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.pl = mergeLocale(copy.pl, {
+  hostPanel: {
+    buttonLabel: "Kontakt do gospodarza",
+    roleLabel: "Gospodarz",
+    intro: "Czesc, jestem Fabrizio, Twoim gospodarzem. Mozesz skontaktowac sie ze mna tutaj:",
+    emailLabel: "Email",
+    phoneLabel: "Zadzwon",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.zh = mergeLocale(copy.zh, {
+  hostPanel: {
+    buttonLabel: "房东联系方式",
+    roleLabel: "房东",
+    intro: "你好，我是 Fabrizio，你的房东。你可以通过以下方式联系我：",
+    emailLabel: "邮箱",
+    phoneLabel: "电话",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.ru = mergeLocale(copy.ru, {
+  hostPanel: {
+    buttonLabel: "Контакты хозяина",
+    roleLabel: "Хозяин",
+    intro: "Здравствуйте, я Fabrizio, ваш хозяин. Со мной можно связаться здесь:",
+    emailLabel: "Email",
+    phoneLabel: "Позвонить",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.cs = mergeLocale(copy.cs, {
+  hostPanel: {
+    buttonLabel: "Kontakty na hostitele",
+    roleLabel: "Hostitel",
+    intro: "Ahoj, jsem Fabrizio, vas hostitel. Muzete me kontaktovat zde:",
+    emailLabel: "Email",
+    phoneLabel: "Zavolat",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
+copy.ro = mergeLocale(copy.ro, {
+  hostPanel: {
+    buttonLabel: "Contacte gazda",
+    roleLabel: "Gazda",
+    intro: "Salut, sunt Fabrizio, gazda ta. Ma poti gasi la urmatoarele contacte:",
+    emailLabel: "Email",
+    phoneLabel: "Suna",
+    whatsappLabel: "WhatsApp",
+    instagramLabel: "Instagram",
+  },
+});
+
 const localizedChips = {
   info: { de: "Stay", es: "Estancia", pt: "Estadia", pl: "Pobyt" },
   wifi: { de: "Online", es: "Online", pt: "Online", pl: "Online" },
@@ -2980,13 +3120,16 @@ const state = {
   lang: "it",
   theme: getInitialTheme(),
   langMenuOpen: false,
+  hostCardOpen: false,
 };
 
 const dom = {
+  hostTrigger: document.querySelector("#host-trigger"),
   langSwitch: document.querySelector("#lang-switch"),
   themeToggle: document.querySelector("#theme-toggle"),
   heroCard: document.querySelector("#hero-card"),
   heroLangOverlay: document.querySelector("#hero-lang-overlay"),
+  hostPopover: document.querySelector("#host-popover"),
   heroTagline: document.querySelector("#hero-tagline"),
   heroKicker: document.querySelector("#hero-kicker"),
   heroTitle: document.querySelector("#hero-title"),
@@ -3057,12 +3200,60 @@ function positionHeroLangOverlay() {
   dom.heroLangOverlay.style.height = `${rect.height}px`;
 }
 
+function positionHostPopover() {
+  if (!dom.hostTrigger || !dom.hostPopover) {
+    return;
+  }
+
+  const rect = dom.hostTrigger.getBoundingClientRect();
+  dom.hostPopover.style.top = `${rect.bottom + 0.55 * 16}px`;
+  dom.hostPopover.style.left = `${Math.max(16, rect.left)}px`;
+}
+
+function renderHostCard() {
+  const localized = copy[state.lang];
+  const host = siteConfig.brand.host;
+  dom.hostTrigger.className = `host-trigger ${state.hostCardOpen ? "is-open" : ""}`;
+  dom.hostTrigger.setAttribute("aria-label", localized.hostPanel.buttonLabel);
+  dom.hostTrigger.setAttribute("title", localized.hostPanel.buttonLabel);
+
+  dom.hostPopover.className = `host-popover ${state.hostCardOpen ? "is-open" : ""}`;
+  dom.hostPopover.setAttribute("aria-hidden", state.hostCardOpen ? "false" : "true");
+  dom.hostPopover.innerHTML = state.hostCardOpen
+    ? `
+      <div class="host-popover-card">
+        <div class="host-popover-header">
+          <div class="host-popover-avatar" aria-hidden="true"></div>
+          <div>
+            <strong>${host.name}</strong>
+            <span>${localized.hostPanel.roleLabel}</span>
+          </div>
+        </div>
+        <p class="host-popover-copy">${localized.hostPanel.intro}</p>
+        <div class="host-popover-actions">
+          <a class="ghost-button" href="mailto:${host.email}">${renderButtonLabel("Message", localized.hostPanel.emailLabel)}</a>
+          <a class="cta-button" href="${host.whatsapp}" target="_blank" rel="noreferrer">${renderButtonLabel(actionIcons.whatsapp, localized.hostPanel.whatsappLabel)}</a>
+          <a class="ghost-button" href="${host.instagram}" target="_blank" rel="noreferrer">${renderButtonLabel("Sparkles", localized.hostPanel.instagramLabel)}</a>
+        </div>
+      </div>
+    `
+    : "";
+
+  if (state.hostCardOpen) {
+    positionHostPopover();
+  } else {
+    dom.hostPopover.style.top = "";
+    dom.hostPopover.style.left = "";
+  }
+}
+
 function renderLanguageSwitch() {
   const label = copy[state.lang].languageLabel;
   const currentLanguage = localeOptions.find((language) => language.code === state.lang) ?? localeOptions[0];
   const columns = 4;
   const fillerCount = (columns - (localeOptions.length % columns)) % columns;
   const languageSlots = [...localeOptions, ...Array.from({ length: fillerCount }, (_, index) => ({ code: `empty-${index}`, empty: true }))];
+  document.body.classList.toggle("lang-menu-open", state.langMenuOpen);
   dom.langSwitch.className = `lang-switch ${state.langMenuOpen ? "is-open" : ""}`;
   dom.langSwitch.innerHTML = `
     <button
@@ -3427,6 +3618,7 @@ function renderPage() {
   dom.heroCard.classList.add("hero-brick");
 
   applyTheme();
+  renderHostCard();
   renderLanguageSwitch();
   renderThemeToggle();
 
@@ -3477,6 +3669,7 @@ document.addEventListener("click", (event) => {
     const currentScrollY = window.scrollY;
     state.lang = langOption.dataset.langOption;
     state.langMenuOpen = false;
+    state.hostCardOpen = false;
     renderPage();
     requestAnimationFrame(() => {
       window.scrollTo(0, currentScrollY);
@@ -3484,8 +3677,18 @@ document.addEventListener("click", (event) => {
     return;
   }
 
+  if (target.closest("#host-trigger")) {
+    state.hostCardOpen = !state.hostCardOpen;
+    state.langMenuOpen = false;
+    renderHostCard();
+    renderLanguageSwitch();
+    return;
+  }
+
   if (target.closest("[data-lang-menu-toggle='true']")) {
     state.langMenuOpen = !state.langMenuOpen;
+    state.hostCardOpen = false;
+    renderHostCard();
     renderLanguageSwitch();
     return;
   }
@@ -3493,6 +3696,11 @@ document.addEventListener("click", (event) => {
   if (!target.closest(".lang-switch") && !target.closest(".hero-lang-overlay") && state.langMenuOpen) {
     state.langMenuOpen = false;
     renderLanguageSwitch();
+  }
+
+  if (!target.closest("#host-trigger") && !target.closest(".host-popover") && state.hostCardOpen) {
+    state.hostCardOpen = false;
+    renderHostCard();
   }
 
   const modalTrigger = target.closest("[data-open-modal]");
@@ -3531,6 +3739,11 @@ dom.modalClose.addEventListener("click", closeModal);
 dom.themeToggle.addEventListener("click", toggleTheme);
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.hostCardOpen) {
+    state.hostCardOpen = false;
+    renderHostCard();
+  }
+
   if (event.key === "Escape" && state.langMenuOpen) {
     state.langMenuOpen = false;
     renderLanguageSwitch();
@@ -3545,11 +3758,19 @@ window.addEventListener("resize", () => {
   if (state.langMenuOpen) {
     positionHeroLangOverlay();
   }
+
+  if (state.hostCardOpen) {
+    positionHostPopover();
+  }
 });
 
 window.addEventListener("scroll", () => {
   if (state.langMenuOpen) {
     positionHeroLangOverlay();
+  }
+
+  if (state.hostCardOpen) {
+    positionHostPopover();
   }
 });
 
