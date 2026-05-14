@@ -19,11 +19,11 @@
 5. Use the listing copy from `ETSY_LISTING_COPY.md`
 6. Publish a live demo before going live on Etsy
 
-## Demo URLs to fill in
+## Demo URLs
 
-- public demo homepage: `____________________________`
-- demo customizer: `____________________________`
-- demo QR sign: `____________________________`
+- public demo homepage: `https://scimansky.github.io/StampaceCharming/`
+- demo customizer: `https://scimansky.github.io/StampaceCharming/customize.html`
+- demo QR sign: `https://scimansky.github.io/StampaceCharming/printables/qr-sign.html`
 
 Recommended hosting: GitHub Pages.
 
