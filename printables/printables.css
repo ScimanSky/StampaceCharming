@@ -1,0 +1,251 @@
+.printable-body {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.printable-shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.printable-shell-card {
+  width: min(820px, 100%);
+}
+
+.printable-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.printable-toolbar-copy strong,
+.printable-toolbar-copy span {
+  display: block;
+}
+
+.printable-toolbar-copy span {
+  margin-top: 0.35rem;
+  color: var(--ink-soft);
+}
+
+.printable-toolbar-actions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.printable-locale-switch {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.printable-locale-switch .topbar-button.is-active {
+  background: var(--accent);
+  color: #fff8f1;
+  border-color: transparent;
+}
+
+.printable-card {
+  border-radius: 34px;
+  padding: 1.6rem;
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.printable-card-compact {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.printable-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.compact-header {
+  align-items: center;
+}
+
+.printable-header h1 {
+  margin: 0.35rem 0 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 0.98;
+  max-width: 14ch;
+}
+
+.printable-copy {
+  margin: 0.9rem 0 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  max-width: 44rem;
+}
+
+.printable-seal {
+  flex: 0 0 auto;
+}
+
+.printable-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.printable-grid-sign {
+  grid-template-columns: minmax(20rem, 0.9fr) minmax(20rem, 1.1fr);
+}
+
+.printable-grid-card {
+  grid-template-columns: minmax(18rem, 1fr) minmax(14rem, 0.7fr);
+  align-items: center;
+}
+
+.printable-grid-sheet {
+  grid-template-columns: minmax(20rem, 1fr) minmax(18rem, 0.8fr);
+}
+
+.qr-panel {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid var(--line);
+  padding: 1.2rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  align-content: start;
+}
+
+.qr-panel-card {
+  min-height: 100%;
+  align-content: center;
+}
+
+.qr-frame {
+  width: min(100%, 24rem);
+  aspect-ratio: 1;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 1.1rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+}
+
+.qr-frame svg,
+.qr-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qr-frame-empty {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.qr-caption {
+  margin: 0;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.info-stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.info-card {
+  border-radius: 24px;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid var(--line);
+}
+
+.info-card strong,
+.info-card small {
+  display: block;
+}
+
+.info-card strong {
+  margin-top: 0.28rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.45rem;
+}
+
+.info-card small {
+  margin-top: 0.35rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.info-label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.printable-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  display: grid;
+  gap: 0.45rem;
+}
+
+@page {
+  margin: 12mm;
+}
+
+@media (max-width: 860px) {
+  .printable-toolbar,
+  .printable-grid-sign,
+  .printable-grid-card,
+  .printable-grid-sheet {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .printable-toolbar-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .printable-toolbar {
+    display: none;
+  }
+
+  .printable-shell,
+  .printable-shell-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .printable-card {
+    box-shadow: none;
+    background: #ffffff;
+  }
+}

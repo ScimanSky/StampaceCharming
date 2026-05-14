@@ -1,0 +1,976 @@
+{
+  "meta": {
+    "title": "Porta Nova Loft Guide",
+    "description": "City-forward guest guide preset for urban lofts and short-stay apartments."
+  },
+  "themePreset": "gallery",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN"
+    },
+    {
+      "code": "it",
+      "label": "Italiano",
+      "short": "IT"
+    },
+    {
+      "code": "fr",
+      "label": "Francais",
+      "short": "FR"
+    }
+  ],
+  "brand": {
+    "name": "Porta Nova Loft",
+    "crest": "PN",
+    "eyebrow": {
+      "en": "Smart guest page for urban stays",
+      "it": "Pagina ospiti smart per soggiorni urbani",
+      "fr": "Page invite intelligente pour sejours urbains"
+    },
+    "headline": {
+      "en": "A sharper preset for business travelers, design lofts and fast city stays.",
+      "it": "Un preset piu deciso per business traveler, design loft e soggiorni rapidi in citta.",
+      "fr": "Un preset plus direct pour voyageurs d'affaires, lofts design et courts sejours urbains."
+    },
+    "subtitle": {
+      "en": "Built for guests who want clarity: self check-in, transport shortcuts, work-friendly details and immediate contacts.",
+      "it": "Pensato per ospiti che vogliono chiarezza: self check-in, scorciatoie trasporti, dettagli work-friendly e contatti immediati.",
+      "fr": "Concu pour des voyageurs qui veulent de la clarte : self check-in, raccourcis transport, details work-friendly et contacts immediats."
+    },
+    "welcome": {
+      "en": "Use this preset if your listing tone is modern, practical and slightly premium. It suits serviced apartments, city lofts and remote-work-friendly stays.",
+      "it": "Usa questo preset se il tono della tua struttura e moderno, pratico e leggermente premium. Perfetto per serviced apartments, loft cittadini e stay adatti al remote work.",
+      "fr": "Utilisez ce preset si le ton de votre logement est moderne, pratique et legerement premium. Ideal pour serviced apartments, lofts urbains et sejours remote work."
+    },
+    "address": "Corso Garibaldi 52, Milan",
+    "email": "stay@portanova.example",
+    "license": "CIN / Registration: IT-DEMO-0019",
+    "footerNote": {
+      "en": "Ideal for serviced apartments, urban rentals and remote-work guests.",
+      "it": "Ideale per serviced apartment, affitti urbani e ospiti in remote work.",
+      "fr": "Ideal pour serviced apartments, locations urbaines et voyageurs remote work."
+    }
+  },
+  "stats": [
+    {
+      "value": "24/7",
+      "label": {
+        "en": "Self check-in ready",
+        "it": "Self check-in pronto",
+        "fr": "Self check-in pret"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "en": "Focused modules",
+        "it": "Moduli mirati",
+        "fr": "Modules cibles"
+      }
+    },
+    {
+      "value": "3 min",
+      "label": {
+        "en": "To the metro",
+        "it": "Alla metro",
+        "fr": "Jusqu'au metro"
+      }
+    }
+  ],
+  "host": {
+    "name": "Andrea Nova",
+    "role": {
+      "en": "Property manager",
+      "it": "Property manager",
+      "fr": "Property manager"
+    },
+    "intro": {
+      "en": "If plans change or you need a fast answer during the stay, use these direct contacts.",
+      "it": "Se i piani cambiano o ti serve una risposta veloce durante il soggiorno, usa questi contatti diretti.",
+      "fr": "Si vos plans changent ou si vous avez besoin d'une reponse rapide pendant le sejour, utilisez ces contacts directs."
+    },
+    "email": "andrea@portanova.example",
+    "phone": "+390000000111",
+    "whatsapp": "https://wa.me/390000000111",
+    "instagram": "https://instagram.com/portanovaloft"
+  },
+  "wifi": {
+    "network": "Porta Nova Work Loft",
+    "password": "nova-fast-2026",
+    "connectUrl": "WIFI:T:WPA;S:Porta Nova Work Loft;P:nova-fast-2026;;"
+  },
+  "links": {
+    "cityMap": "https://maps.google.com/?q=Milan+Porta+Nuova",
+    "guidePdf": "https://example.com/milan-guide.pdf",
+    "arrivalRoute": "https://maps.google.com/?q=Milan+Central+Station+to+Corso+Garibaldi+52",
+    "excursions": "https://maps.google.com/?q=Lake+Como+day+trip"
+  },
+  "ui": {
+    "contactHosts": {
+      "en": "Manager",
+      "it": "Manager",
+      "fr": "Manager"
+    },
+    "themeLight": {
+      "en": "Light",
+      "it": "Chiaro",
+      "fr": "Clair"
+    },
+    "themeDark": {
+      "en": "Night",
+      "it": "Notte",
+      "fr": "Nuit"
+    },
+    "openCard": {
+      "en": "Open details",
+      "it": "Apri dettagli",
+      "fr": "Ouvrir"
+    },
+    "call": {
+      "en": "Call",
+      "it": "Chiama",
+      "fr": "Appeler"
+    },
+    "whatsapp": {
+      "en": "WhatsApp",
+      "it": "WhatsApp",
+      "fr": "WhatsApp"
+    },
+    "email": {
+      "en": "Email",
+      "it": "Email",
+      "fr": "Email"
+    },
+    "instagram": {
+      "en": "Instagram",
+      "it": "Instagram",
+      "fr": "Instagram"
+    },
+    "copied": {
+      "en": "Password copied",
+      "it": "Password copiata",
+      "fr": "Mot de passe copie"
+    },
+    "openCustomizer": {
+      "en": "Customizer",
+      "it": "Customizer",
+      "fr": "Customizer"
+    },
+    "previewBanner": {
+      "en": "Previewing your browser config",
+      "it": "Anteprima della tua configurazione browser",
+      "fr": "Apercu de votre configuration navigateur"
+    }
+  },
+  "quickActions": [
+    {
+      "type": "modal",
+      "serviceId": "arrival",
+      "icon": "Door",
+      "label": {
+        "en": "Access",
+        "it": "Accesso",
+        "fr": "Acces"
+      }
+    },
+    {
+      "type": "copy-wifi",
+      "icon": "Wi",
+      "label": {
+        "en": "Wi-Fi",
+        "it": "Wi-Fi",
+        "fr": "Wi-Fi"
+      }
+    },
+    {
+      "type": "link",
+      "href": "https://maps.google.com/?q=Milan+Porta+Nuova",
+      "reference": "cityMap",
+      "icon": "Map",
+      "label": {
+        "en": "Map",
+        "it": "Mappa",
+        "fr": "Carte"
+      }
+    },
+    {
+      "type": "host-sheet",
+      "icon": "SOS",
+      "label": {
+        "en": "Support",
+        "it": "Supporto",
+        "fr": "Support"
+      }
+    }
+  ],
+  "sections": {
+    "services": {
+      "kicker": {
+        "en": "Operational clarity",
+        "it": "Chiarezza operativa",
+        "fr": "Clarte operationnelle"
+      },
+      "title": {
+        "en": "A guest page built for fast decisions",
+        "it": "Una pagina ospiti pensata per decisioni rapide",
+        "fr": "Une page invite construite pour des decisions rapides"
+      },
+      "copy": {
+        "en": "This preset is more structured and practical. It works when guests are in transit, arriving late or mixing leisure with work.",
+        "it": "Questo preset e piu strutturato e pratico. Funziona quando gli ospiti sono in transito, arrivano tardi o mescolano lavoro e tempo libero.",
+        "fr": "Ce preset est plus structure et pratique. Il fonctionne bien pour les voyageurs en transit, les arrivees tardives et les sejours mixant travail et loisir."
+      }
+    },
+    "area": {
+      "title": {
+        "en": "Nearby shortcuts",
+        "it": "Shortcut vicini",
+        "fr": "Raccourcis a proximite"
+      },
+      "copy": {
+        "en": "Focus on speed: metro, groceries, pharmacy and one or two strong dining options.",
+        "it": "Concentrati sulla velocita: metro, spesa, farmacia e una o due ottime opzioni food.",
+        "fr": "Concentrez-vous sur la rapidite : metro, courses, pharmacie et une ou deux bonnes adresses food."
+      }
+    },
+    "story": {
+      "kicker": {
+        "en": "Preset use case",
+        "it": "Caso d'uso del preset",
+        "fr": "Cas d'usage du preset"
+      },
+      "title": {
+        "en": "Less romance, more signal.",
+        "it": "Meno romanticismo, piu segnale.",
+        "fr": "Moins de romantisme, plus de signal."
+      },
+      "body": {
+        "en": "The gallery theme shifts the template toward a cleaner metropolitan tone. It is useful when the property promise is efficiency, location and smart autonomy rather than leisurely escape.",
+        "it": "Il tema gallery sposta il template verso un tono metropolitano piu pulito. E utile quando la promessa della struttura e efficienza, posizione e autonomia intelligente piu che evasione rilassata.",
+        "fr": "Le theme gallery oriente le template vers un ton metropolitain plus net. Il convient quand la promesse du logement repose sur l'efficacite, l'emplacement et l'autonomie."
+      }
+    },
+    "notes": {
+      "kicker": {
+        "en": "Recommended edits",
+        "it": "Modifiche consigliate",
+        "fr": "Modifications conseillees"
+      },
+      "items": {
+        "en": [
+          "Replace the self check-in copy with your exact entry sequence.",
+          "Mention one backup contact for late train or flight arrivals.",
+          "Keep the city recommendations limited to what a short stay can actually use."
+        ],
+        "it": [
+          "Sostituisci il testo self check-in con la tua sequenza di ingresso esatta.",
+          "Indica un contatto di backup per arrivi in ritardo da treno o volo.",
+          "Limita i consigli in citta a cio che un soggiorno breve puo davvero usare."
+        ],
+        "fr": [
+          "Remplacez le texte self check-in par votre sequence d'entree exacte.",
+          "Ajoutez un contact de secours pour les arrivees tardives en train ou avion.",
+          "Limitez les recommandations a ce qu'un court sejour peut vraiment utiliser."
+        ]
+      }
+    },
+    "contact": {
+      "title": {
+        "en": "Support team",
+        "it": "Team di supporto",
+        "fr": "Equipe support"
+      },
+      "copy": {
+        "en": "Use the support cards for operations, maintenance or concierge assistance.",
+        "it": "Usa queste card per operations, manutenzione o concierge.",
+        "fr": "Utilisez ces cartes pour operations, maintenance ou concierge."
+      }
+    }
+  },
+  "services": [
+    {
+      "id": "wifi",
+      "icon": "Wi",
+      "tone": "blue",
+      "chip": {
+        "en": "Work-ready",
+        "it": "Work-ready",
+        "fr": "Work-ready"
+      },
+      "title": {
+        "en": "Fast Wi-Fi",
+        "it": "Wi-Fi veloce",
+        "fr": "Wi-Fi rapide"
+      },
+      "description": {
+        "en": "Highlight network speed, direct access and any desk-friendly detail.",
+        "it": "Metti in evidenza velocita rete, accesso diretto ed eventuali dettagli desk-friendly.",
+        "fr": "Mettez en avant la vitesse reseau, l'acces direct et tout detail desk-friendly."
+      },
+      "cardActions": [
+        {
+          "type": "copy-wifi",
+          "label": {
+            "en": "Copy password",
+            "it": "Copia password",
+            "fr": "Copier le mot de passe"
+          }
+        },
+        {
+          "type": "connect-wifi",
+          "label": {
+            "en": "Connect",
+            "it": "Connetti",
+            "fr": "Connecter"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Digital setup",
+          "it": "Setup digitale",
+          "fr": "Setup numerique"
+        },
+        "title": {
+          "en": "Short, clean, useful",
+          "it": "Breve, pulito, utile",
+          "fr": "Court, clair, utile"
+        },
+        "copy": {
+          "en": "For city stays the Wi-Fi card should answer one question fast: how do I get online now?",
+          "it": "Per soggiorni urbani la card Wi-Fi dovrebbe rispondere velocemente a una domanda: come vado online adesso?",
+          "fr": "Pour les sejours urbains, la carte Wi-Fi doit repondre vite a une question : comment me connecter maintenant ?"
+        },
+        "sections": [
+          {
+            "icon": "ID",
+            "title": {
+              "en": "Network",
+              "it": "Rete",
+              "fr": "Reseau"
+            },
+            "text": {
+              "en": "Porta Nova Work Loft",
+              "it": "Porta Nova Work Loft",
+              "fr": "Porta Nova Work Loft"
+            }
+          },
+          {
+            "icon": "PW",
+            "title": {
+              "en": "Password",
+              "it": "Password",
+              "fr": "Mot de passe"
+            },
+            "text": {
+              "en": "nova-fast-2026",
+              "it": "nova-fast-2026",
+              "fr": "nova-fast-2026"
+            },
+            "actions": [
+              {
+                "type": "copy-wifi",
+                "label": {
+                  "en": "Copy password",
+                  "it": "Copia password",
+                  "fr": "Copier le mot de passe"
+                }
+              },
+              {
+                "type": "connect-wifi",
+                "label": {
+                  "en": "Connect",
+                  "it": "Connetti",
+                  "fr": "Connecter"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrival",
+      "icon": "Key",
+      "tone": "olive",
+      "chip": {
+        "en": "Access",
+        "it": "Accesso",
+        "fr": "Acces"
+      },
+      "title": {
+        "en": "Self check-in",
+        "it": "Self check-in",
+        "fr": "Self check-in"
+      },
+      "description": {
+        "en": "Door codes, elevator notes and building entry should live here.",
+        "it": "Qui devono stare codici porta, ascensore e accesso al palazzo.",
+        "fr": "Les codes porte, l'ascenseur et l'acces immeuble doivent vivre ici."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "arrival",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Arrival operations",
+          "it": "Operativita arrivo",
+          "fr": "Operations d'arrivee"
+        },
+        "title": {
+          "en": "Write this as if the guest is reading on the sidewalk",
+          "it": "Scrivilo come se l'ospite lo stesse leggendo sul marciapiede",
+          "fr": "Ecrivez ceci comme si le voyageur le lisait sur le trottoir"
+        },
+        "copy": {
+          "en": "Every sentence should remove hesitation during building access.",
+          "it": "Ogni frase dovrebbe togliere esitazione durante l'accesso al palazzo.",
+          "fr": "Chaque phrase doit lever les hesitations pendant l'acces a l'immeuble."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Arrival window",
+              "it": "Finestra arrivo",
+              "fr": "Fenetre d'arrivee"
+            },
+            "text": {
+              "en": "Self check-in from 15:00 with keypad entry. Send the code on the day of arrival only.",
+              "it": "Self check-in dalle 15:00 con tastierino. Invia il codice solo il giorno di arrivo.",
+              "fr": "Self check-in a partir de 15h00 avec clavier. Envoyez le code uniquement le jour de l'arrivee."
+            }
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "From Milano Centrale",
+              "it": "Da Milano Centrale",
+              "fr": "Depuis Milano Centrale"
+            },
+            "text": {
+              "en": "Use the direct route to reach the building quickly by metro and a short walk.",
+              "it": "Usa il percorso diretto per raggiungere il palazzo rapidamente con metro e breve camminata.",
+              "fr": "Utilisez l'itineraire direct pour rejoindre l'immeuble rapidement en metro puis a pied."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Milan+Central+Station+to+Corso+Garibaldi+52",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "house",
+      "icon": "Stay",
+      "tone": "sand",
+      "chip": {
+        "en": "Stay",
+        "it": "Soggiorno",
+        "fr": "Sejour"
+      },
+      "title": {
+        "en": "Loft notes",
+        "it": "Note loft",
+        "fr": "Notes loft"
+      },
+      "description": {
+        "en": "Use this for A/C, windows, waste sorting and anything guests can misuse quickly.",
+        "it": "Usala per A/C, finestre, raccolta rifiuti e tutto cio che si puo usare male in fretta.",
+        "fr": "Utilisez-la pour clim, fenetres, tri des dechets et tout ce qui peut etre mal utilise rapidement."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "house",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Property operations",
+          "it": "Operativita struttura",
+          "fr": "Operations logement"
+        },
+        "title": {
+          "en": "Explain only what changes behavior",
+          "it": "Spiega solo cio che cambia il comportamento",
+          "fr": "Expliquez seulement ce qui change le comportement"
+        },
+        "copy": {
+          "en": "If a detail does not prevent confusion, it probably does not belong here.",
+          "it": "Se un dettaglio non previene confusione, probabilmente non deve stare qui.",
+          "fr": "Si un detail ne previent pas une confusion, il n'a probablement pas sa place ici."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Building etiquette",
+              "it": "Etichetta condominiale",
+              "fr": "Etiquette immeuble"
+            },
+            "text": {
+              "en": "Keep calls and speaker audio low in shared corridors and elevator spaces.",
+              "it": "Mantieni basso il volume di chiamate e audio negli spazi comuni e in ascensore.",
+              "fr": "Gardez un faible volume pour appels et audio dans les espaces communs et l'ascenseur."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Checkout flow",
+              "it": "Flusso checkout",
+              "fr": "Flux de depart"
+            },
+            "text": {
+              "en": "Close windows, switch off the A/C and place keys back in the lockbox before leaving.",
+              "it": "Chiudi le finestre, spegni l'A/C e rimetti le chiavi nella lockbox prima di uscire.",
+              "fr": "Fermez les fenetres, eteignez la clim et replacez les cles dans la lockbox avant de partir."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "icon": "Fork",
+      "tone": "blue",
+      "chip": {
+        "en": "Food",
+        "it": "Food",
+        "fr": "Food"
+      },
+      "title": {
+        "en": "Fast local picks",
+        "it": "Consigli veloci",
+        "fr": "Adresses rapides"
+      },
+      "description": {
+        "en": "Perfect for one breakfast spot, one business lunch and one dinner fallback.",
+        "it": "Perfetta per un posto colazione, un business lunch e una cena affidabile.",
+        "fr": "Parfaite pour un spot petit-dejeuner, un dejeuner business et un diner fiable."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "food",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "City eating",
+          "it": "Mangiare in citta",
+          "fr": "Manger en ville"
+        },
+        "title": {
+          "en": "Curate for pace",
+          "it": "Cura in base al ritmo",
+          "fr": "Curate selon le rythme"
+        },
+        "copy": {
+          "en": "Urban guests often want places that are close, predictable and good enough to trust quickly.",
+          "it": "Gli ospiti urbani spesso vogliono posti vicini, affidabili e abbastanza buoni da scegliere in fretta.",
+          "fr": "Les voyageurs urbains veulent souvent des lieux proches, fiables et assez bons pour choisir rapidement."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Coffee + pastry",
+              "it": "Caffe + pastry",
+              "fr": "Cafe + viennoiserie"
+            },
+            "text": {
+              "en": "Recommend a nearby bar that opens early and handles take-away well.",
+              "it": "Consiglia un bar vicino che apra presto e gestisca bene il take-away.",
+              "fr": "Recommandez un bar proche qui ouvre tot et gere bien le take-away."
+            }
+          },
+          {
+            "icon": "PM",
+            "title": {
+              "en": "Reliable dinner",
+              "it": "Cena affidabile",
+              "fr": "Diner fiable"
+            },
+            "text": {
+              "en": "One trusted neighborhood restaurant beats a long list every time.",
+              "it": "Un solo ristorante di quartiere affidabile batte sempre una lista lunga.",
+              "fr": "Un seul restaurant de quartier fiable vaut mieux qu'une longue liste."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Milan+Porta+Nuova",
+                "reference": "cityMap",
+                "label": {
+                  "en": "Open map",
+                  "it": "Apri mappa",
+                  "fr": "Ouvrir la carte"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobility",
+      "icon": "Metro",
+      "tone": "olive",
+      "chip": {
+        "en": "Transit",
+        "it": "Trasporti",
+        "fr": "Transport"
+      },
+      "title": {
+        "en": "Metro and taxi",
+        "it": "Metro e taxi",
+        "fr": "Metro et taxi"
+      },
+      "description": {
+        "en": "Give the two or three transport truths that save guests time immediately.",
+        "it": "Dai le due o tre verita sui trasporti che fanno risparmiare tempo subito.",
+        "fr": "Donnez les deux ou trois verites transport qui font gagner du temps tout de suite."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "mobility",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Mobility",
+          "it": "Mobilita",
+          "fr": "Mobilite"
+        },
+        "title": {
+          "en": "Be specific about what is actually easy",
+          "it": "Sii specifico su cio che e davvero facile",
+          "fr": "Soyez precis sur ce qui est vraiment simple"
+        },
+        "copy": {
+          "en": "Mention the nearest metro, an airport transfer option and when a taxi is faster than public transport.",
+          "it": "Menziona la metro piu vicina, un'opzione aeroporto e quando un taxi e piu rapido del trasporto pubblico.",
+          "fr": "Mentionnez le metro le plus proche, une option aeroport et quand le taxi est plus rapide que les transports publics."
+        },
+        "sections": [
+          {
+            "icon": "M",
+            "title": {
+              "en": "Nearest metro",
+              "it": "Metro vicina",
+              "fr": "Metro proche"
+            },
+            "text": {
+              "en": "The station is a short walk away. Call this out early because it anchors every city movement decision.",
+              "it": "La stazione e a pochi minuti a piedi. Dillo subito, perche orienta tutte le decisioni di spostamento.",
+              "fr": "La station est a quelques minutes a pied. Dites-le rapidement, car cela guide les decisions de deplacement."
+            }
+          },
+          {
+            "icon": "R",
+            "title": {
+              "en": "Arrival route",
+              "it": "Percorso arrivo",
+              "fr": "Itineraire d'arrivee"
+            },
+            "text": {
+              "en": "Use one saved route from the station so guests can follow something precise with luggage.",
+              "it": "Usa un solo percorso salvato dalla stazione cosi gli ospiti seguono qualcosa di preciso con i bagagli.",
+              "fr": "Utilisez un seul itineraire sauvegarde depuis la gare pour que les voyageurs suivent quelque chose de precis avec leurs bagages."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Milan+Central+Station+to+Corso+Garibaldi+52",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "experiences",
+      "icon": "City",
+      "tone": "sand",
+      "chip": {
+        "en": "Add-on",
+        "it": "Add-on",
+        "fr": "Add-on"
+      },
+      "title": {
+        "en": "City escape",
+        "it": "Fuga in giornata",
+        "fr": "Escapade en journee"
+      },
+      "description": {
+        "en": "Useful for day trips, private drivers or one premium upsell.",
+        "it": "Utile per gite giornaliere, driver privati o un upsell premium.",
+        "fr": "Utile pour excursions, chauffeurs prives ou un upsell premium."
+      },
+      "cardActions": [
+        {
+          "type": "link",
+          "href": "https://maps.google.com/?q=Lake+Como+day+trip",
+          "reference": "excursions",
+          "label": {
+            "en": "View trips",
+            "it": "Vedi gite",
+            "fr": "Voir les sorties"
+          }
+        },
+        {
+          "type": "modal",
+          "serviceId": "experiences",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Optional revenue",
+          "it": "Ricavo opzionale",
+          "fr": "Revenu optionnel"
+        },
+        "title": {
+          "en": "A template can sell experiences too",
+          "it": "Un template puo anche vendere esperienze",
+          "fr": "Un template peut aussi vendre des experiences"
+        },
+        "copy": {
+          "en": "For urban stays this is a smart place for a lake day trip, airport transfer or premium mobility partner.",
+          "it": "Per soggiorni urbani questa e un'ottima area per una gita al lago, un transfer aeroporto o un partner mobilita premium.",
+          "fr": "Pour les sejours urbains, cet espace est ideal pour une sortie au lac, un transfert aeroport ou un partenaire mobilite premium."
+        },
+        "sections": [
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Featured outing",
+              "it": "Uscita in evidenza",
+              "fr": "Sortie en vedette"
+            },
+            "text": {
+              "en": "Offer one polished extra instead of overwhelming guests with options.",
+              "it": "Offri un extra curato invece di sommergere gli ospiti di opzioni.",
+              "fr": "Proposez un extra soigne plutot que de noyer les voyageurs sous les options."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Lake+Como+day+trip",
+                "reference": "excursions",
+                "label": {
+                  "en": "Open experience",
+                  "it": "Apri esperienza",
+                  "fr": "Ouvrir l'experience"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "area": {
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=9.177%2C45.476%2C9.205%2C45.492&layer=mapnik&marker=45.4845%2C9.1918",
+    "filters": [
+      {
+        "id": "all",
+        "label": {
+          "en": "All",
+          "it": "Tutti",
+          "fr": "Tout"
+        }
+      },
+      {
+        "id": "metro",
+        "label": {
+          "en": "Metro",
+          "it": "Metro",
+          "fr": "Metro"
+        }
+      },
+      {
+        "id": "food",
+        "label": {
+          "en": "Food",
+          "it": "Food",
+          "fr": "Food"
+        }
+      },
+      {
+        "id": "essentials",
+        "label": {
+          "en": "Essentials",
+          "it": "Essenziali",
+          "fr": "Essentiels"
+        }
+      }
+    ],
+    "points": [
+      {
+        "category": "metro",
+        "icon": "M",
+        "title": {
+          "en": "Nearest metro",
+          "it": "Metro piu vicina",
+          "fr": "Metro la plus proche"
+        },
+        "meta": {
+          "en": "Transit stop \u00b7 3 min walk",
+          "it": "Fermata \u00b7 3 min a piedi",
+          "fr": "Station \u00b7 3 min a pied"
+        },
+        "href": "https://maps.google.com/?q=Milan+Porta+Nuova+metro"
+      },
+      {
+        "category": "essentials",
+        "icon": "24",
+        "title": {
+          "en": "Late grocery",
+          "it": "Spesa tardi",
+          "fr": "Courses tardives"
+        },
+        "meta": {
+          "en": "Convenience store \u00b7 open late",
+          "it": "Convenience store \u00b7 aperto tardi",
+          "fr": "Commerce pratique \u00b7 ouvert tard"
+        },
+        "href": "https://maps.google.com/?q=Milan+convenience+store"
+      },
+      {
+        "category": "food",
+        "icon": "Eat",
+        "title": {
+          "en": "Reliable dinner",
+          "it": "Cena affidabile",
+          "fr": "Diner fiable"
+        },
+        "meta": {
+          "en": "Neighborhood spot \u00b7 easy booking",
+          "it": "Locale di quartiere \u00b7 prenotazione facile",
+          "fr": "Adresse de quartier \u00b7 reservation facile"
+        },
+        "href": "https://maps.google.com/?q=Milan+dinner"
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Noemi",
+      "role": {
+        "en": "Late arrival support",
+        "it": "Supporto arrivi tardivi",
+        "fr": "Support arrivees tardives"
+      },
+      "phone": "+390000000112",
+      "whatsapp": "https://wa.me/390000000112"
+    },
+    {
+      "name": "Lorenzo",
+      "role": {
+        "en": "Maintenance contact",
+        "it": "Contatto manutenzione",
+        "fr": "Contact maintenance"
+      },
+      "phone": "+390000000113",
+      "whatsapp": "https://wa.me/390000000113"
+    },
+    {
+      "name": "Nova Desk",
+      "role": {
+        "en": "Guest operations",
+        "it": "Guest operations",
+        "fr": "Operations voyageurs"
+      },
+      "phone": "+390000000114",
+      "whatsapp": "https://wa.me/390000000114"
+    }
+  ],
+  "share": {
+    "publicUrl": "",
+    "qrDestinationUrl": ""
+  },
+  "printables": {
+    "qrSign": {
+      "title": {
+        "en": "Scan for your guest guide",
+        "it": "Scansiona per la guida ospiti",
+        "fr": "Scannez pour le guide voyageurs"
+      },
+      "subtitle": {
+        "en": "Wi-Fi, arrival details, local recommendations and host contacts",
+        "it": "Wi-Fi, arrivo, consigli locali e contatti host",
+        "fr": "Wi-Fi, arrivee, recommandations locales et contacts host"
+      },
+      "footer": {
+        "en": "Open on your phone",
+        "it": "Apri sul telefono",
+        "fr": "Ouvrez sur votre telephone"
+      }
+    },
+    "wifiCard": {
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      }
+    },
+    "welcomeSheet": {
+      "title": {
+        "en": "Welcome",
+        "it": "Benvenuti",
+        "fr": "Bienvenue"
+      }
+    }
+  },
+  "layout": {
+    "heroMode": "full"
+  }
+}

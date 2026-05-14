@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./printables.css" />
+  </head>
+  <body class="printable-body">
+    <main class="printable-shell printable-shell-large">
+      <div class="printable-toolbar">
+        <div class="printable-toolbar-copy">
+          <strong>Welcome Sheet</strong>
+          <span>Lightweight printable intro for the entrance, desk or guest room.</span>
+        </div>
+        <div class="printable-toolbar-actions">
+          <div class="printable-locale-switch" id="locale-switch"></div>
+          <button class="topbar-button" id="open-guide-button" type="button">Open guide</button>
+          <button class="topbar-button" id="print-button" type="button">Print / Save as PDF</button>
+        </div>
+      </div>
+
+      <section class="printable-card">
+        <div class="printable-header">
+          <div>
+            <p class="hero-label">Guest welcome</p>
+            <h1 id="welcome-title"></h1>
+            <p class="printable-copy" id="welcome-intro"></p>
+          </div>
+          <div class="brand-seal printable-seal" id="sign-crest">GG</div>
+        </div>
+
+        <div class="printable-grid printable-grid-sheet">
+          <div class="info-stack">
+            <article class="info-card">
+              <span class="info-label">Property</span>
+              <strong id="property-name"></strong>
+              <small id="property-address"></small>
+            </article>
+            <article class="info-card">
+              <span class="info-label">Direct host contact</span>
+              <strong id="host-name"></strong>
+              <small id="host-contact"></small>
+            </article>
+            <article class="info-card">
+              <span class="info-label">Open the guide for</span>
+              <ul class="printable-list">
+                <li>Wi-Fi access</li>
+                <li>Arrival details</li>
+                <li>House notes</li>
+                <li>Local recommendations</li>
+              </ul>
+            </article>
+          </div>
+          <div class="qr-panel">
+            <div class="qr-frame" id="qr-frame"></div>
+            <p class="qr-caption" id="sign-footer"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../vendor/qrcode.js"></script>
+    <script type="module" src="./printables.js"></script>
+  </body>
+</html>

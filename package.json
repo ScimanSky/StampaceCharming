@@ -1,0 +1,26 @@
+{
+  "name": "stampacecharming",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "White-label guest guide template for vacation rentals, boutique stays and short-term hospitality brands.",
+  "main": "app.js",
+  "scripts": {
+    "build:etsy": "python3 scripts/build_etsy_package.py",
+    "check:js": "node --check app.js && node --check customize.js && node --check template-utils.js && node --check printables/printables.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScimanSky/StampaceCharming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ScimanSky/StampaceCharming/issues"
+  },
+  "homepage": "https://github.com/ScimanSky/StampaceCharming#readme",
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

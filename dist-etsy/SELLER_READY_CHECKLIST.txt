@@ -1,0 +1,18 @@
+Guest Guide Atelier seller bundle created successfully.
+
+Buyer ZIP:
+- dist-etsy/guest-guide-atelier-template.zip
+
+Buyer folder:
+- dist-etsy/guest-guide-atelier-template
+
+Listing slides:
+- seller-assets/listing-slides
+
+Social crops:
+- seller-assets/social-crops
+
+Reminder:
+- publish a live demo before listing on Etsy
+- upload only the ZIP file as the digital download
+- keep seller-only files out of the buyer bundle

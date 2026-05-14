@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Guest Guide Atelier Customizer</title>
+    <meta
+      name="description"
+      content="Customize the guest guide template, prepare your live URL and generate bonus printables for guests."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./customize.css" />
+  </head>
+  <body class="customizer-body">
+    <main class="customizer-shell">
+      <section class="customizer-hero">
+        <p class="hero-label">Vacation rental guest guide website template</p>
+        <h1>Customize the guide, prep the live link, and ship the QR-ready bundle.</h1>
+        <p>
+          This is not a PDF builder. It is a mobile guest website with a no-code setup layer for
+          the most important edits.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="./index.html">Open guide preview</a>
+          <a class="secondary-link" href="./README.md">Read buyer docs</a>
+        </div>
+      </section>
+
+      <section class="editor-shell">
+        <aside class="editor-rail">
+          <div class="editor-panel sticky-panel">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Buyer-ready flow</p>
+              <h2>5-step onboarding</h2>
+            </div>
+            <ol class="step-strip">
+              <li>Choose preset</li>
+              <li>Edit</li>
+              <li>Preview</li>
+              <li>Download config</li>
+              <li>Publish and print</li>
+            </ol>
+            <div class="callout-card">
+              <strong>No coding needed for basic edits</strong>
+              <p>
+                Edit in browser, export `config.json`, replace one file, then publish the guest
+                guide and printable QR assets.
+              </p>
+            </div>
+            <nav class="section-nav" aria-label="Customizer sections">
+              <a href="#start-section">Start</a>
+              <a href="#edit-section">Edit Content</a>
+              <a href="#publish-section">Publish</a>
+              <a href="#printables-section">Bonus Printables</a>
+              <a href="#json-section">Deep Customization</a>
+            </nav>
+            <div class="helper-card">
+              <strong>What this is</strong>
+              <p>Mini guest web app, QR-ready, mobile-first, and faster to update than a PDF.</p>
+              <strong>What this is not</strong>
+              <p>Not a hosted SaaS, not a Canva file, and not a full booking website.</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="editor-column">
+          <section class="editor-panel" id="start-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Start</p>
+              <h2>Choose the right starting point</h2>
+            </div>
+            <p class="helper-copy">
+              Pick the preset closest to the property style, then set the business fundamentals.
+            </p>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Preset</span>
+                <select id="preset-select"></select>
+              </label>
+              <label class="field">
+                <span>Theme preset</span>
+                <select id="theme-select">
+                  <option value="mediterranean">Mediterranean</option>
+                  <option value="gallery">Gallery</option>
+                  <option value="coastal">Coastal</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Hero display</span>
+              <select id="hero-mode-select">
+                <option value="full">Full hero</option>
+                <option value="compact">Compact hero</option>
+                <option value="hidden">Hide hero copy</option>
+              </select>
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Property name</span>
+                <input id="brand-name-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Crest</span>
+                <input id="brand-crest-input" type="text" maxlength="3" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Address</span>
+                <input id="brand-address-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input id="brand-email-input" type="email" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>License / registration</span>
+              <input id="brand-license-input" type="text" />
+            </label>
+          </section>
+
+          <section class="editor-panel" id="edit-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Edit Content</p>
+              <h2>Update the guest-facing essentials</h2>
+            </div>
+            <p class="helper-copy">
+              These fields are the ones most buyers will change first: host info, Wi-Fi, headline,
+              and core links.
+            </p>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Host name</span>
+                <input id="host-name-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Host phone</span>
+                <input id="host-phone-input" type="text" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Host email</span>
+                <input id="host-email-input" type="email" />
+              </label>
+              <label class="field">
+                <span>WhatsApp link</span>
+                <input id="host-whatsapp-input" type="url" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Wi-Fi network</span>
+                <input id="wifi-network-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Wi-Fi password</span>
+                <input id="wifi-password-input" type="text" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Headline (EN)</span>
+                <input id="headline-en-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Headline (IT)</span>
+                <input id="headline-it-input" type="text" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Headline (FR)</span>
+              <input id="headline-fr-input" type="text" />
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>City map URL</span>
+                <input id="city-map-input" type="url" />
+              </label>
+              <label class="field">
+                <span>Arrival route URL</span>
+                <input id="arrival-route-input" type="url" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Guide PDF URL</span>
+                <input id="guide-pdf-input" type="url" />
+              </label>
+              <label class="field">
+                <span>Excursions URL</span>
+                <input id="excursions-input" type="url" />
+              </label>
+            </div>
+          </section>
+
+          <section class="editor-panel" id="publish-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Publish</p>
+              <h2>Prepare the live share link before printing any QR</h2>
+            </div>
+            <p class="helper-copy">
+              Add the public guide URL once the page is live. The QR welcome sign will use it by
+              default unless you enter a custom QR destination.
+            </p>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Public guide URL</span>
+                <input id="public-url-input" type="url" placeholder="https://yourdomain.com/guide/" />
+              </label>
+              <label class="field">
+                <span>QR destination URL</span>
+                <input id="qr-destination-input" type="url" placeholder="Optional override for the QR code destination" />
+              </label>
+            </div>
+
+            <div class="publish-actions">
+              <button class="primary-action" id="preview-button" type="button">Preview guide</button>
+              <button class="secondary-action" id="copy-share-link-button" type="button">Copy share link</button>
+              <button class="secondary-action" id="download-button" type="button">Download config.json</button>
+              <label class="secondary-action upload-button">
+                Import config
+                <input id="import-input" type="file" accept="application/json" hidden />
+              </label>
+            </div>
+            <p class="helper-copy">
+              Preview uses browser storage. Download `config.json` when the guide is ready, then
+              replace the root file before publishing or deploying.
+            </p>
+            <div class="preview-links">
+              <a class="ghost-link" id="guide-preview-link" target="_blank" rel="noreferrer">Open guide preview</a>
+              <a class="ghost-link" href="./DEPLOY_GUIDE.md">Open deploy guide</a>
+            </div>
+          </section>
+
+          <section class="editor-panel" id="printables-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Bonus Printables</p>
+              <h2>Turn the same config into QR-ready hospitality extras</h2>
+            </div>
+            <p class="helper-copy">
+              These bonus assets are included to make the Etsy bundle feel complete and practical
+              for hosts. They read the same `config.json`.
+            </p>
+
+            <label class="field">
+              <span>QR sign title (EN)</span>
+              <input id="qr-title-en-input" type="text" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>QR sign title (IT)</span>
+                <input id="qr-title-it-input" type="text" />
+              </label>
+              <label class="field">
+                <span>QR sign title (FR)</span>
+                <input id="qr-title-fr-input" type="text" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>QR sign subtitle (EN)</span>
+              <input id="qr-subtitle-en-input" type="text" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Wi-Fi card title (EN)</span>
+                <input id="wifi-card-title-en-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Welcome sheet title (EN)</span>
+                <input id="welcome-sheet-title-en-input" type="text" />
+              </label>
+            </div>
+
+            <div class="preview-links preview-links-grid">
+              <a class="primary-link" id="qr-sign-preview-link" target="_blank" rel="noreferrer">Preview QR sign</a>
+              <a class="ghost-link" id="wifi-card-preview-link" target="_blank" rel="noreferrer">Preview Wi-Fi card</a>
+              <a class="ghost-link" id="welcome-sheet-preview-link" target="_blank" rel="noreferrer">Preview welcome sheet</a>
+            </div>
+          </section>
+
+          <section class="editor-panel json-panel" id="json-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Deep Customization</p>
+              <h2>Edit the full JSON for services, translations and structure</h2>
+            </div>
+            <p class="helper-copy">
+              Use the raw JSON editor for advanced changes such as service cards, section copy,
+              contacts, languages, map points and printable text in every locale.
+            </p>
+            <textarea id="json-editor" spellcheck="false"></textarea>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./customize.js"></script>
+  </body>
+</html>

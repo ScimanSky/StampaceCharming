@@ -1,0 +1,998 @@
+{
+  "meta": {
+    "title": "Atelier Verdi Guest Guide",
+    "description": "Editorial mobile guide for a boutique apartment in the historic center."
+  },
+  "themePreset": "mediterranean",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN"
+    },
+    {
+      "code": "it",
+      "label": "Italiano",
+      "short": "IT"
+    },
+    {
+      "code": "fr",
+      "label": "Francais",
+      "short": "FR"
+    }
+  ],
+  "brand": {
+    "name": "Atelier Verdi",
+    "crest": "AV",
+    "eyebrow": {
+      "en": "Guest guide for boutique stays",
+      "it": "Guida ospiti per soggiorni boutique",
+      "fr": "Guide invite pour sejours boutique"
+    },
+    "headline": {
+      "en": "A polished guest guide your visitors can open before they ring the bell.",
+      "it": "Una guida elegante che i tuoi ospiti possono aprire prima ancora di suonare il campanello.",
+      "fr": "Un guide elegant que vos voyageurs peuvent ouvrir avant meme de sonner."
+    },
+    "subtitle": {
+      "en": "Wi-Fi, arrival notes, house details, trusted local picks and host contacts in one mobile-first page.",
+      "it": "Wi-Fi, arrivo, note della casa, consigli locali e contatti host in un'unica pagina mobile-first.",
+      "fr": "Wi-Fi, arrivee, infos maison, bonnes adresses et contacts host dans une seule page mobile."
+    },
+    "welcome": {
+      "en": "This preset is designed to look premium out of the box while staying easy to personalize. Replace the text, links and contacts in the included JSON file, then share the page as a direct link or QR code.",
+      "it": "Questo preset e pensato per sembrare premium fin da subito, ma restare facile da personalizzare. Sostituisci testi, link e contatti nel file JSON incluso, poi condividi la pagina come link diretto o QR code.",
+      "fr": "Ce preset est concu pour paraitre premium des le depart tout en restant simple a personnaliser. Remplacez textes, liens et contacts dans le fichier JSON fourni, puis partagez la page via lien direct ou QR code."
+    },
+    "address": "Via Giuseppe Verdi 18, Florence",
+    "email": "hello@atelierverdi.example",
+    "license": "CIN / Registration: IT-DEMO-0001",
+    "footerNote": {
+      "en": "Made for boutique apartments, short stays and premium hospitality brands.",
+      "it": "Pensato per appartamenti boutique, short stay e brand hospitality premium.",
+      "fr": "Pense pour appartements boutique, courts sejours et marques hospitality premium."
+    }
+  },
+  "stats": [
+    {
+      "value": "3",
+      "label": {
+        "en": "Included languages",
+        "it": "Lingue incluse",
+        "fr": "Langues incluses"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "en": "Service cards",
+        "it": "Carte servizio",
+        "fr": "Cartes service"
+      }
+    },
+    {
+      "value": "1 tap",
+      "label": {
+        "en": "To reach the host",
+        "it": "Per contattare l'host",
+        "fr": "Pour joindre l'hote"
+      }
+    }
+  ],
+  "host": {
+    "name": "Sofia Verdi",
+    "role": {
+      "en": "Guest host",
+      "it": "Host ospiti",
+      "fr": "Host voyageurs"
+    },
+    "intro": {
+      "en": "Hi, I'm Sofia. If you need anything before arrival or during your stay, use one of the contact methods below.",
+      "it": "Ciao, sono Sofia. Se hai bisogno di qualcosa prima dell'arrivo o durante il soggiorno, usa uno dei contatti qui sotto.",
+      "fr": "Bonjour, je suis Sofia. Si vous avez besoin d'aide avant l'arrivee ou pendant le sejour, utilisez l'un des contacts ci-dessous."
+    },
+    "email": "sofia@atelierverdi.example",
+    "phone": "+390000000001",
+    "whatsapp": "https://wa.me/390000000001",
+    "instagram": "https://instagram.com/atelierverdi"
+  },
+  "wifi": {
+    "network": "Atelier Verdi Guest",
+    "password": "atelier-2026",
+    "connectUrl": "WIFI:T:WPA;S:Atelier Verdi Guest;P:atelier-2026;;"
+  },
+  "links": {
+    "cityMap": "https://maps.google.com/?q=Florence+historic+center",
+    "guidePdf": "https://example.com/guide.pdf",
+    "arrivalRoute": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+    "excursions": "https://maps.google.com/?q=Tuscany+wine+tour"
+  },
+  "ui": {
+    "contactHosts": {
+      "en": "Host",
+      "it": "Host",
+      "fr": "Host"
+    },
+    "themeLight": {
+      "en": "Light",
+      "it": "Chiaro",
+      "fr": "Clair"
+    },
+    "themeDark": {
+      "en": "Night",
+      "it": "Notte",
+      "fr": "Nuit"
+    },
+    "openCard": {
+      "en": "Open details",
+      "it": "Apri dettagli",
+      "fr": "Ouvrir"
+    },
+    "call": {
+      "en": "Call",
+      "it": "Chiama",
+      "fr": "Appeler"
+    },
+    "whatsapp": {
+      "en": "WhatsApp",
+      "it": "WhatsApp",
+      "fr": "WhatsApp"
+    },
+    "email": {
+      "en": "Email",
+      "it": "Email",
+      "fr": "Email"
+    },
+    "instagram": {
+      "en": "Instagram",
+      "it": "Instagram",
+      "fr": "Instagram"
+    },
+    "copied": {
+      "en": "Password copied",
+      "it": "Password copiata",
+      "fr": "Mot de passe copie"
+    },
+    "openCustomizer": {
+      "en": "Customizer",
+      "it": "Customizer",
+      "fr": "Customizer"
+    },
+    "previewBanner": {
+      "en": "Previewing your browser config",
+      "it": "Anteprima della tua configurazione browser",
+      "fr": "Apercu de votre configuration navigateur"
+    }
+  },
+  "quickActions": [
+    {
+      "type": "modal",
+      "serviceId": "arrival",
+      "icon": "01",
+      "label": {
+        "en": "Arrival",
+        "it": "Arrivo",
+        "fr": "Arrivee"
+      }
+    },
+    {
+      "type": "copy-wifi",
+      "icon": "Wi",
+      "label": {
+        "en": "Wi-Fi",
+        "it": "Wi-Fi",
+        "fr": "Wi-Fi"
+      }
+    },
+    {
+      "type": "link",
+      "href": "https://maps.google.com/?q=Florence+historic+center",
+      "reference": "cityMap",
+      "icon": "Map",
+      "label": {
+        "en": "Map",
+        "it": "Mappa",
+        "fr": "Carte"
+      }
+    },
+    {
+      "type": "host-sheet",
+      "icon": "SOS",
+      "label": {
+        "en": "Contact",
+        "it": "Contatti",
+        "fr": "Contact"
+      }
+    }
+  ],
+  "sections": {
+    "services": {
+      "kicker": {
+        "en": "Quick tools",
+        "it": "Accesso rapido",
+        "fr": "Acces rapide"
+      },
+      "title": {
+        "en": "Everything guests need in one place",
+        "it": "Tutto cio che serve agli ospiti in un solo posto",
+        "fr": "Tout ce dont les voyageurs ont besoin au meme endroit"
+      },
+      "copy": {
+        "en": "Each card is ready for a modal, a direct action or an external link. Keep the page short, useful and easy to scan from a phone.",
+        "it": "Ogni card e pronta per una modale, un'azione diretta o un link esterno. Mantieni la pagina breve, utile e facile da leggere da smartphone.",
+        "fr": "Chaque carte peut ouvrir une modale, lancer une action directe ou un lien externe. Gardez la page courte, utile et lisible sur mobile."
+      }
+    },
+    "area": {
+      "title": {
+        "en": "Around the stay",
+        "it": "Nei dintorni",
+        "fr": "Autour du sejour"
+      },
+      "copy": {
+        "en": "Use this section for your hand-picked neighborhood shortcuts.",
+        "it": "Usa questa sezione per i tuoi shortcut di quartiere selezionati.",
+        "fr": "Utilisez cette section pour vos raccourcis de quartier selectionnes."
+      }
+    },
+    "story": {
+      "kicker": {
+        "en": "Creative direction",
+        "it": "Direzione creativa",
+        "fr": "Direction creative"
+      },
+      "title": {
+        "en": "Editorial, warm and unmistakably boutique.",
+        "it": "Editoriale, caldo e decisamente boutique.",
+        "fr": "Editorial, chaleureux et clairement boutique."
+      },
+      "body": {
+        "en": "This preset mixes serif typography, circular seals and soft hospitality colors to feel more like a printed welcome dossier than a generic app. It works well for city apartments, design stays and renovation-led properties.",
+        "it": "Questo preset unisce tipografia serif, sigilli circolari e colori hospitality morbidi per sembrare piu un dossier di benvenuto stampato che una generica app. Funziona bene per appartamenti in citta, design stay e proprieta ristrutturate.",
+        "fr": "Ce preset melange typographie serif, sceaux circulaires et couleurs hospitality douces pour evoquer davantage un dossier de bienvenue imprime qu'une application generique. Il fonctionne tres bien pour appartements en ville et sejours design."
+      }
+    },
+    "notes": {
+      "kicker": {
+        "en": "What to edit first",
+        "it": "Cosa modificare per prima cosa",
+        "fr": "Quoi modifier en premier"
+      },
+      "items": {
+        "en": [
+          "Replace property name, address, host contacts and license code in config.json.",
+          "Swap the demo map and route links with real guest-facing URLs.",
+          "Keep service cards focused on the questions guests ask most often."
+        ],
+        "it": [
+          "Sostituisci nome struttura, indirizzo, contatti host e codice licenza in config.json.",
+          "Sostituisci mappa e link demo con URL reali per gli ospiti.",
+          "Mantieni le service card concentrate sulle domande piu frequenti."
+        ],
+        "fr": [
+          "Remplacez nom, adresse, contacts host et code licence dans config.json.",
+          "Remplacez carte et liens demo par de vraies URL utiles aux voyageurs.",
+          "Gardez les cartes service concentrees sur les questions les plus frequentes."
+        ]
+      }
+    },
+    "contact": {
+      "title": {
+        "en": "Backup contacts",
+        "it": "Contatti di supporto",
+        "fr": "Contacts de support"
+      },
+      "copy": {
+        "en": "Add one or two additional people for check-in support, late arrivals or local assistance.",
+        "it": "Aggiungi una o due persone per supporto check-in, arrivi tardivi o assistenza locale.",
+        "fr": "Ajoutez une ou deux personnes pour le check-in, les arrivees tardives ou l'assistance locale."
+      }
+    }
+  },
+  "services": [
+    {
+      "id": "wifi",
+      "icon": "Wi",
+      "tone": "sand",
+      "chip": {
+        "en": "Always on",
+        "it": "Sempre attivo",
+        "fr": "Toujours pret"
+      },
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      },
+      "description": {
+        "en": "Give guests a quick way to connect without searching in messages.",
+        "it": "Dai agli ospiti un modo rapido per connettersi senza cercare nei messaggi.",
+        "fr": "Donnez aux voyageurs un acces rapide au Wi-Fi sans fouiller dans les messages."
+      },
+      "cardActions": [
+        {
+          "type": "copy-wifi",
+          "label": {
+            "en": "Copy password",
+            "it": "Copia password",
+            "fr": "Copier le mot de passe"
+          }
+        },
+        {
+          "type": "connect-wifi",
+          "label": {
+            "en": "Connect",
+            "it": "Connetti",
+            "fr": "Connecter"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Digital essentials",
+          "it": "Essenziali digitali",
+          "fr": "Essentiels numeriques"
+        },
+        "title": {
+          "en": "Share network details beautifully",
+          "it": "Condividi i dettagli rete con stile",
+          "fr": "Partagez les details reseau avec style"
+        },
+        "copy": {
+          "en": "Use the built-in buttons for one-tap copying and direct connection on supported devices.",
+          "it": "Usa i pulsanti inclusi per copiare in un tap e collegarti direttamente sui dispositivi supportati.",
+          "fr": "Utilisez les boutons integres pour copier en un tap et se connecter directement sur les appareils compatibles."
+        },
+        "sections": [
+          {
+            "icon": "ID",
+            "title": {
+              "en": "Network",
+              "it": "Rete",
+              "fr": "Reseau"
+            },
+            "text": {
+              "en": "Atelier Verdi Guest",
+              "it": "Atelier Verdi Guest",
+              "fr": "Atelier Verdi Guest"
+            }
+          },
+          {
+            "icon": "PW",
+            "title": {
+              "en": "Password",
+              "it": "Password",
+              "fr": "Mot de passe"
+            },
+            "text": {
+              "en": "atelier-2026",
+              "it": "atelier-2026",
+              "fr": "atelier-2026"
+            },
+            "actions": [
+              {
+                "type": "copy-wifi",
+                "label": {
+                  "en": "Copy password",
+                  "it": "Copia password",
+                  "fr": "Copier le mot de passe"
+                }
+              },
+              {
+                "type": "connect-wifi",
+                "label": {
+                  "en": "Connect",
+                  "it": "Connetti",
+                  "fr": "Connecter"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrival",
+      "icon": "Arr",
+      "tone": "olive",
+      "chip": {
+        "en": "Check-in",
+        "it": "Check-in",
+        "fr": "Check-in"
+      },
+      "title": {
+        "en": "Arrival notes",
+        "it": "Note di arrivo",
+        "fr": "Infos d'arrivee"
+      },
+      "description": {
+        "en": "Summarize building access, timing and the best last-mile route.",
+        "it": "Riassumi accesso al palazzo, orari e il miglior ultimo tratto.",
+        "fr": "Resumez acces, horaires et meilleur dernier kilometre."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "arrival",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Smooth arrivals",
+          "it": "Arrivi fluidi",
+          "fr": "Arrivees fluides"
+        },
+        "title": {
+          "en": "Keep first access clear and short",
+          "it": "Rendi il primo accesso chiaro e breve",
+          "fr": "Gardez l'acces initial clair et court"
+        },
+        "copy": {
+          "en": "This section works best when every instruction answers a real arrival question and nothing more.",
+          "it": "Questa sezione funziona meglio quando ogni istruzione risponde a una vera domanda di arrivo e nulla di piu.",
+          "fr": "Cette section fonctionne mieux lorsque chaque instruction repond a une vraie question d'arrivee et rien de plus."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Check-in window",
+              "it": "Fascia check-in",
+              "fr": "Plage check-in"
+            },
+            "text": {
+              "en": "Standard arrival from 15:00. Message the host for luggage drop or late check-in support.",
+              "it": "Arrivo standard dalle 15:00. Scrivi all'host per deposito bagagli o supporto late check-in.",
+              "fr": "Arrivee standard a partir de 15h00. Ecrivez a l'host pour depot bagages ou arrivee tardive."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "+390000000001",
+                "reference": "hostPhone",
+                "label": {
+                  "en": "Call host",
+                  "it": "Chiama host",
+                  "fr": "Appeler l'host"
+                }
+              },
+              {
+                "type": "link",
+                "href": "https://wa.me/390000000001",
+                "reference": "hostWhatsapp",
+                "label": {
+                  "en": "WhatsApp host",
+                  "it": "WhatsApp host",
+                  "fr": "WhatsApp host"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "From the station",
+              "it": "Dalla stazione",
+              "fr": "Depuis la gare"
+            },
+            "text": {
+              "en": "The walk takes around 18 minutes. Use this route to avoid the busiest vehicle-only streets.",
+              "it": "La camminata dura circa 18 minuti. Usa questo percorso per evitare le strade piu trafficate.",
+              "fr": "La marche prend environ 18 minutes. Utilisez cet itineraire pour eviter les rues les plus chargees."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "house",
+      "icon": "Stay",
+      "tone": "sand",
+      "chip": {
+        "en": "House",
+        "it": "Casa",
+        "fr": "Maison"
+      },
+      "title": {
+        "en": "House essentials",
+        "it": "Info essenziali",
+        "fr": "Essentiels maison"
+      },
+      "description": {
+        "en": "Use this card for the few rules and details guests actually need on day one.",
+        "it": "Usa questa card per le poche regole e info che servono davvero il primo giorno.",
+        "fr": "Utilisez cette carte pour les quelques regles et infos vraiment utiles le premier jour."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "house",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Stay notes",
+          "it": "Note soggiorno",
+          "fr": "Notes sejour"
+        },
+        "title": {
+          "en": "Only the information that prevents friction",
+          "it": "Solo le informazioni che evitano attrito",
+          "fr": "Seulement les informations qui evitent les frictions"
+        },
+        "copy": {
+          "en": "Short-term guests do not need a manual. They need concise answers at the right moment.",
+          "it": "Gli ospiti short-term non hanno bisogno di un manuale. Hanno bisogno di risposte concise al momento giusto.",
+          "fr": "Les voyageurs short-term n'ont pas besoin d'un manuel. Ils ont besoin de reponses concises au bon moment."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Quiet hours",
+              "it": "Orari di quiete",
+              "fr": "Heures calmes"
+            },
+            "text": {
+              "en": "Please keep noise low after 22:00 and inside the common staircase.",
+              "it": "Mantieni il rumore basso dopo le 22:00 e nelle scale comuni.",
+              "fr": "Merci de limiter le bruit apres 22h00 et dans l'escalier commun."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Checkout",
+              "it": "Checkout",
+              "fr": "Depart"
+            },
+            "text": {
+              "en": "Standard checkout at 10:30. Leave keys on the console table and close every window before leaving.",
+              "it": "Checkout standard alle 10:30. Lascia le chiavi sul mobile ingresso e chiudi tutte le finestre prima di uscire.",
+              "fr": "Depart standard a 10h30. Laissez les cles sur la console d'entree et fermez toutes les fenetres avant de partir."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "icon": "Taste",
+      "tone": "blue",
+      "chip": {
+        "en": "Local",
+        "it": "Locale",
+        "fr": "Local"
+      },
+      "title": {
+        "en": "Food picks",
+        "it": "Food picks",
+        "fr": "Bonnes adresses"
+      },
+      "description": {
+        "en": "Share a few strong recommendations instead of a long undifferentiated list.",
+        "it": "Condividi pochi consigli forti invece di una lunga lista indistinta.",
+        "fr": "Partagez quelques bonnes adresses fortes plutot qu'une longue liste sans hierarchie."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "food",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Neighborhood taste",
+          "it": "Sapori di quartiere",
+          "fr": "Gouts du quartier"
+        },
+        "title": {
+          "en": "Recommend by mood, not by quantity",
+          "it": "Consiglia per atmosfera, non per quantita",
+          "fr": "Recommandez par ambiance, pas par quantite"
+        },
+        "copy": {
+          "en": "Use categories such as breakfast, aperitivo or one special dinner spot. Guests decide faster when the list has a point of view.",
+          "it": "Usa categorie come colazione, aperitivo o una cena speciale. Gli ospiti decidono piu in fretta quando la lista ha un punto di vista.",
+          "fr": "Utilisez des categories comme petit-dejeuner, aperitivo ou diner special. Les voyageurs choisissent plus vite quand la liste a un point de vue."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Morning stop",
+              "it": "Tappa mattina",
+              "fr": "Etape du matin"
+            },
+            "text": {
+              "en": "A small coffee bar two streets away with fast service and strong pastries before museum visits.",
+              "it": "Un piccolo caffe a due strade di distanza con servizio veloce e ottima pasticceria prima dei musei.",
+              "fr": "Un petit cafe a deux rues avec service rapide et belle selection de viennoiseries avant les visites."
+            }
+          },
+          {
+            "icon": "PM",
+            "title": {
+              "en": "Dinner idea",
+              "it": "Idea cena",
+              "fr": "Idee diner"
+            },
+            "text": {
+              "en": "Book one signature trattoria and tell guests why it is worth choosing over tourist-heavy alternatives.",
+              "it": "Consiglia una trattoria signature e spiega perche vale la pena sceglierla invece di opzioni troppo turistiche.",
+              "fr": "Recommandez une trattoria signature et expliquez pourquoi elle vaut mieux que les options trop touristiques."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+historic+center",
+                "reference": "cityMap",
+                "label": {
+                  "en": "Open map",
+                  "it": "Apri mappa",
+                  "fr": "Ouvrir la carte"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobility",
+      "icon": "Move",
+      "tone": "olive",
+      "chip": {
+        "en": "City",
+        "it": "Citta",
+        "fr": "Ville"
+      },
+      "title": {
+        "en": "Mobility tips",
+        "it": "Mobilita",
+        "fr": "Mobilite"
+      },
+      "description": {
+        "en": "Help guests decide when to walk, when to take a taxi and what is realistic from the property.",
+        "it": "Aiuta gli ospiti a capire quando camminare, quando prendere un taxi e cosa e realistico dall'alloggio.",
+        "fr": "Aidez les voyageurs a savoir quand marcher, quand prendre un taxi et ce qui est realiste depuis le logement."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "mobility",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Move with confidence",
+          "it": "Muoviti con sicurezza",
+          "fr": "Bougez sereinement"
+        },
+        "title": {
+          "en": "Answer the transport questions before they ask",
+          "it": "Rispondi prima alle domande sui trasporti",
+          "fr": "Repondez aux questions transport avant qu'elles n'arrivent"
+        },
+        "copy": {
+          "en": "State the easiest route from key arrival points and recommend one taxi app or number if relevant.",
+          "it": "Indica il percorso piu facile dai principali punti di arrivo e suggerisci una app taxi o un numero se utile.",
+          "fr": "Indiquez le trajet le plus simple depuis les principaux points d'arrivee et recommandez une appli taxi ou un numero si utile."
+        },
+        "sections": [
+          {
+            "icon": "T",
+            "title": {
+              "en": "Walking radius",
+              "it": "Raggio a piedi",
+              "fr": "Rayon a pied"
+            },
+            "text": {
+              "en": "Most landmarks are reachable on foot from the apartment. Mention this because it changes how guests plan their days.",
+              "it": "La maggior parte dei luoghi principali e raggiungibile a piedi dall'appartamento. Dillo, perche cambia il modo in cui gli ospiti organizzano la giornata.",
+              "fr": "La plupart des sites sont accessibles a pied depuis l'appartement. Dites-le, car cela change la facon dont les voyageurs organisent leurs journees."
+            }
+          },
+          {
+            "icon": "R",
+            "title": {
+              "en": "Station route",
+              "it": "Percorso stazione",
+              "fr": "Itineraire gare"
+            },
+            "text": {
+              "en": "Use a saved walking route for arrivals with luggage and avoid vague written directions.",
+              "it": "Usa un percorso salvato per gli arrivi con bagagli ed evita indicazioni scritte vaghe.",
+              "fr": "Utilisez un itineraire sauvegarde pour les arrivees avec bagages et evitez les indications vagues."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "experiences",
+      "icon": "Trip",
+      "tone": "blue",
+      "chip": {
+        "en": "Days out",
+        "it": "Fuori porta",
+        "fr": "Escapades"
+      },
+      "title": {
+        "en": "Signature experiences",
+        "it": "Esperienze signature",
+        "fr": "Experiences signature"
+      },
+      "description": {
+        "en": "Use this area for a trusted partner, a transfer offer or one memorable add-on.",
+        "it": "Usa quest'area per un partner fidato, un transfer o un add-on memorabile.",
+        "fr": "Utilisez cette section pour un partenaire de confiance, un transfert ou un add-on memorable."
+      },
+      "cardActions": [
+        {
+          "type": "link",
+          "href": "https://maps.google.com/?q=Tuscany+wine+tour",
+          "reference": "excursions",
+          "label": {
+            "en": "View trips",
+            "it": "Vedi esperienze",
+            "fr": "Voir les experiences"
+          }
+        },
+        {
+          "type": "modal",
+          "serviceId": "experiences",
+          "label": {
+            "en": "Why this works",
+            "it": "Perche funziona",
+            "fr": "Pourquoi ca marche"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "High-value add-on",
+          "it": "Add-on ad alto valore",
+          "fr": "Add-on a forte valeur"
+        },
+        "title": {
+          "en": "Promote one curated option, not ten random ones",
+          "it": "Promuovi una sola opzione curata, non dieci casuali",
+          "fr": "Proposez une option selectionnee, pas dix choix aleatoires"
+        },
+        "copy": {
+          "en": "Templates sell better when they show a clear hospitality use case. This card is ideal for private tours, airport transfers or partner offers.",
+          "it": "I template vendono meglio quando mostrano un caso hospitality chiaro. Questa card e ideale per tour privati, transfer aeroporto o offerte partner.",
+          "fr": "Les templates se vendent mieux lorsqu'ils montrent un usage hospitality clair. Cette carte est ideale pour tours prives, transferts aeroport ou offres partenaires."
+        },
+        "sections": [
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Featured day trip",
+              "it": "Escursione in evidenza",
+              "fr": "Excursion en vedette"
+            },
+            "text": {
+              "en": "Show one strong excursion with a direct inquiry link rather than multiple low-context links.",
+              "it": "Mostra una sola escursione forte con link diretto invece di molti link senza contesto.",
+              "fr": "Mettez en avant une seule excursion forte avec lien direct plutot que plusieurs liens peu contextuels."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Tuscany+wine+tour",
+                "reference": "excursions",
+                "label": {
+                  "en": "View excursions",
+                  "it": "Apri escursioni",
+                  "fr": "Voir les excursions"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "area": {
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=11.240%2C43.764%2C11.266%2C43.779&layer=mapnik&marker=43.7715%2C11.2558",
+    "filters": [
+      {
+        "id": "all",
+        "label": {
+          "en": "All",
+          "it": "Tutti",
+          "fr": "Tout"
+        }
+      },
+      {
+        "id": "coffee",
+        "label": {
+          "en": "Coffee",
+          "it": "Caffe",
+          "fr": "Cafe"
+        }
+      },
+      {
+        "id": "food",
+        "label": {
+          "en": "Food",
+          "it": "Food",
+          "fr": "Food"
+        }
+      },
+      {
+        "id": "sights",
+        "label": {
+          "en": "Sights",
+          "it": "Luoghi",
+          "fr": "Lieux"
+        }
+      }
+    ],
+    "points": [
+      {
+        "category": "coffee",
+        "icon": "AM",
+        "title": {
+          "en": "Morning bar",
+          "it": "Bar del mattino",
+          "fr": "Bar du matin"
+        },
+        "meta": {
+          "en": "Coffee stop \u00b7 4 min walk",
+          "it": "Tappa caffe \u00b7 4 min a piedi",
+          "fr": "Pause cafe \u00b7 4 min a pied"
+        },
+        "href": "https://maps.google.com/?q=Florence+coffee"
+      },
+      {
+        "category": "food",
+        "icon": "PM",
+        "title": {
+          "en": "Favorite trattoria",
+          "it": "Trattoria preferita",
+          "fr": "Trattoria preferee"
+        },
+        "meta": {
+          "en": "Dinner pick \u00b7 Tuscan cuisine",
+          "it": "Cena consigliata \u00b7 cucina toscana",
+          "fr": "Diner conseille \u00b7 cuisine toscane"
+        },
+        "href": "https://maps.google.com/?q=Florence+trattoria"
+      },
+      {
+        "category": "sights",
+        "icon": "Art",
+        "title": {
+          "en": "Old town walk",
+          "it": "Passeggiata centro",
+          "fr": "Balade centre historique"
+        },
+        "meta": {
+          "en": "Landmarks nearby \u00b7 sunset route",
+          "it": "Luoghi vicini \u00b7 percorso al tramonto",
+          "fr": "Lieux proches \u00b7 itineraire au coucher du soleil"
+        },
+        "href": "https://maps.google.com/?q=Florence+historic+center"
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Marco",
+      "role": {
+        "en": "Check-in support",
+        "it": "Supporto check-in",
+        "fr": "Support check-in"
+      },
+      "phone": "+390000000002",
+      "whatsapp": "https://wa.me/390000000002"
+    },
+    {
+      "name": "Chiara",
+      "role": {
+        "en": "Guest care",
+        "it": "Guest care",
+        "fr": "Guest care"
+      },
+      "phone": "+390000000003",
+      "whatsapp": "https://wa.me/390000000003"
+    },
+    {
+      "name": "Studio Verdi",
+      "role": {
+        "en": "Property office",
+        "it": "Ufficio struttura",
+        "fr": "Bureau propriete"
+      },
+      "phone": "+390000000004",
+      "whatsapp": "https://wa.me/390000000004"
+    }
+  ],
+  "share": {
+    "publicUrl": "",
+    "qrDestinationUrl": ""
+  },
+  "printables": {
+    "qrSign": {
+      "title": {
+        "en": "Scan for your guest guide",
+        "it": "Scansiona per la guida ospiti",
+        "fr": "Scannez pour le guide voyageurs"
+      },
+      "subtitle": {
+        "en": "Wi-Fi, arrival details, local recommendations and host contacts",
+        "it": "Wi-Fi, arrivo, consigli locali e contatti host",
+        "fr": "Wi-Fi, arrivee, recommandations locales et contacts host"
+      },
+      "footer": {
+        "en": "Open on your phone",
+        "it": "Apri sul telefono",
+        "fr": "Ouvrez sur votre telephone"
+      }
+    },
+    "wifiCard": {
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      }
+    },
+    "welcomeSheet": {
+      "title": {
+        "en": "Welcome",
+        "it": "Benvenuti",
+        "fr": "Bienvenue"
+      }
+    }
+  },
+  "layout": {
+    "heroMode": "full"
+  }
+}

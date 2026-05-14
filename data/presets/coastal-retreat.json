@@ -1,0 +1,964 @@
+{
+  "meta": {
+    "title": "Casa Mareluna Guide",
+    "description": "Relaxed coastal preset for villas, sea-view apartments and slow-stay hospitality."
+  },
+  "themePreset": "coastal",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN"
+    },
+    {
+      "code": "it",
+      "label": "Italiano",
+      "short": "IT"
+    },
+    {
+      "code": "fr",
+      "label": "Francais",
+      "short": "FR"
+    }
+  ],
+  "brand": {
+    "name": "Casa Mareluna",
+    "crest": "CM",
+    "eyebrow": {
+      "en": "Sea-view preset for coastal stays",
+      "it": "Preset vista mare per soggiorni costieri",
+      "fr": "Preset vue mer pour sejours cotiers"
+    },
+    "headline": {
+      "en": "Turn a calm holiday stay into a guide guests actually keep open.",
+      "it": "Trasforma un soggiorno vacanza rilassato in una guida che gli ospiti tengono davvero aperta.",
+      "fr": "Transformez un sejour vacances paisible en guide que les voyageurs gardent vraiment ouvert."
+    },
+    "subtitle": {
+      "en": "Beach access, parking, local recommendations, day trips and direct host support on one elegant page.",
+      "it": "Accesso spiaggia, parcheggio, consigli locali, day trip e supporto host in una sola pagina elegante.",
+      "fr": "Acces plage, parking, recommandations locales, excursions et support host sur une page elegante."
+    },
+    "welcome": {
+      "en": "This version is ideal when the property promise is atmosphere and ease. It suits villas, sea-view apartments, resort-style rentals and summer listings.",
+      "it": "Questa versione e ideale quando la promessa della struttura e atmosfera e facilita. Perfetta per ville, appartamenti vista mare, rental stile resort e annunci estivi.",
+      "fr": "Cette version est ideale lorsque la promesse du logement repose sur l'atmosphere et la facilite. Parfaite pour villas, appartements vue mer et locations estivales."
+    },
+    "address": "Lungomare delle Palme 6, Cefalu",
+    "email": "welcome@mareluna.example",
+    "license": "CIN / Registration: IT-DEMO-0027",
+    "footerNote": {
+      "en": "Designed for villas, retreats and destination-driven holiday rentals.",
+      "it": "Progettato per ville, retreat e case vacanza guidate dalla destinazione.",
+      "fr": "Concu pour villas, retraites et locations vacances orientees destination."
+    }
+  },
+  "stats": [
+    {
+      "value": "8 min",
+      "label": {
+        "en": "To the beach",
+        "it": "Alla spiaggia",
+        "fr": "Jusqu'a la plage"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "en": "Day-trip ideas",
+        "it": "Idee gita",
+        "fr": "Idees sortie"
+      }
+    },
+    {
+      "value": "Sunset",
+      "label": {
+        "en": "Mood baked in",
+        "it": "Atmosfera inclusa",
+        "fr": "Ambiance incluse"
+      }
+    }
+  ],
+  "host": {
+    "name": "Elena Costa",
+    "role": {
+      "en": "Villa host",
+      "it": "Host villa",
+      "fr": "Host villa"
+    },
+    "intro": {
+      "en": "Reach out for beach advice, restaurant reservations or anything that helps the stay feel easy.",
+      "it": "Scrivimi per consigli spiaggia, prenotazioni ristorante o qualsiasi cosa renda il soggiorno piu semplice.",
+      "fr": "Contactez-moi pour des conseils plage, reservations restaurant ou tout ce qui peut rendre le sejour plus simple."
+    },
+    "email": "elena@mareluna.example",
+    "phone": "+390000000221",
+    "whatsapp": "https://wa.me/390000000221",
+    "instagram": "https://instagram.com/casamareluna"
+  },
+  "wifi": {
+    "network": "Casa Mareluna Guest",
+    "password": "mareluna-sunset",
+    "connectUrl": "WIFI:T:WPA;S:Casa Mareluna Guest;P:mareluna-sunset;;"
+  },
+  "links": {
+    "cityMap": "https://maps.google.com/?q=Cefalu+old+town",
+    "guidePdf": "https://example.com/coastal-guide.pdf",
+    "arrivalRoute": "https://maps.google.com/?q=Cefalu+station+to+Lungomare+delle+Palme+6",
+    "excursions": "https://maps.google.com/?q=Madonie+day+trip"
+  },
+  "ui": {
+    "contactHosts": {
+      "en": "Host",
+      "it": "Host",
+      "fr": "Host"
+    },
+    "themeLight": {
+      "en": "Light",
+      "it": "Chiaro",
+      "fr": "Clair"
+    },
+    "themeDark": {
+      "en": "Night",
+      "it": "Notte",
+      "fr": "Nuit"
+    },
+    "openCard": {
+      "en": "Open details",
+      "it": "Apri dettagli",
+      "fr": "Ouvrir"
+    },
+    "call": {
+      "en": "Call",
+      "it": "Chiama",
+      "fr": "Appeler"
+    },
+    "whatsapp": {
+      "en": "WhatsApp",
+      "it": "WhatsApp",
+      "fr": "WhatsApp"
+    },
+    "email": {
+      "en": "Email",
+      "it": "Email",
+      "fr": "Email"
+    },
+    "instagram": {
+      "en": "Instagram",
+      "it": "Instagram",
+      "fr": "Instagram"
+    },
+    "copied": {
+      "en": "Password copied",
+      "it": "Password copiata",
+      "fr": "Mot de passe copie"
+    },
+    "openCustomizer": {
+      "en": "Customizer",
+      "it": "Customizer",
+      "fr": "Customizer"
+    },
+    "previewBanner": {
+      "en": "Previewing your browser config",
+      "it": "Anteprima della tua configurazione browser",
+      "fr": "Apercu de votre configuration navigateur"
+    }
+  },
+  "quickActions": [
+    {
+      "type": "modal",
+      "serviceId": "beach",
+      "icon": "Sea",
+      "label": {
+        "en": "Beach",
+        "it": "Spiaggia",
+        "fr": "Plage"
+      }
+    },
+    {
+      "type": "copy-wifi",
+      "icon": "Wi",
+      "label": {
+        "en": "Wi-Fi",
+        "it": "Wi-Fi",
+        "fr": "Wi-Fi"
+      }
+    },
+    {
+      "type": "link",
+      "href": "https://maps.google.com/?q=Cefalu+old+town",
+      "reference": "cityMap",
+      "icon": "Map",
+      "label": {
+        "en": "Map",
+        "it": "Mappa",
+        "fr": "Carte"
+      }
+    },
+    {
+      "type": "host-sheet",
+      "icon": "SOS",
+      "label": {
+        "en": "Host",
+        "it": "Host",
+        "fr": "Host"
+      }
+    }
+  ],
+  "sections": {
+    "services": {
+      "kicker": {
+        "en": "Holiday flow",
+        "it": "Flusso vacanza",
+        "fr": "Flux vacances"
+      },
+      "title": {
+        "en": "A lighter, softer guide for destination stays",
+        "it": "Una guida piu leggera e morbida per soggiorni destinazione",
+        "fr": "Un guide plus leger et doux pour sejours destination"
+      },
+      "copy": {
+        "en": "The coastal preset works when guests want ease, rhythm and local atmosphere rather than operational density.",
+        "it": "Il preset coastal funziona quando gli ospiti cercano facilita, ritmo e atmosfera locale piu che densita operativa.",
+        "fr": "Le preset coastal fonctionne lorsque les voyageurs cherchent facilite, rythme et atmosphere locale plutot que densite operationnelle."
+      }
+    },
+    "area": {
+      "title": {
+        "en": "Explore nearby",
+        "it": "Esplora vicino",
+        "fr": "Explorer a proximite"
+      },
+      "copy": {
+        "en": "Highlight beach access, scenic stops and the two or three places that shape the stay.",
+        "it": "Metti in evidenza accesso spiaggia, soste panoramiche e i due o tre luoghi che definiscono il soggiorno.",
+        "fr": "Mettez en avant l'acces plage, les points de vue et les deux ou trois lieux qui definissent le sejour."
+      }
+    },
+    "story": {
+      "kicker": {
+        "en": "Preset personality",
+        "it": "Personalita del preset",
+        "fr": "Personnalite du preset"
+      },
+      "title": {
+        "en": "Designed for slower days and destination memory.",
+        "it": "Disegnato per giornate lente e memoria di destinazione.",
+        "fr": "Pense pour des journees plus lentes et un souvenir de destination."
+      },
+      "body": {
+        "en": "The coastal palette leans into sea glass tones, warm stone accents and a slower hospitality rhythm. It is especially effective for QR-code welcome guides left inside the home.",
+        "it": "La palette coastal punta su toni sea-glass, accenti pietra calda e un ritmo hospitality piu lento. E particolarmente efficace per welcome guide via QR code lasciate in casa.",
+        "fr": "La palette coastal s'appuie sur des teintes sea-glass, des accents pierre chaude et un rythme hospitality plus lent. Elle est tres efficace pour les guides QR laisses dans le logement."
+      }
+    },
+    "notes": {
+      "kicker": {
+        "en": "Best first edits",
+        "it": "Prime modifiche migliori",
+        "fr": "Premieres modifications utiles"
+      },
+      "items": {
+        "en": [
+          "Replace the beach and parking copy with precise guest-facing instructions.",
+          "Add one backup indoor suggestion for windy or rainy days.",
+          "Use the experiences card for a boat trip, chef dinner or transfer service."
+        ],
+        "it": [
+          "Sostituisci il testo su spiaggia e parcheggio con istruzioni precise per gli ospiti.",
+          "Aggiungi un suggerimento indoor di backup per giornate ventose o piovose.",
+          "Usa la card esperienze per gita in barca, chef dinner o transfer."
+        ],
+        "fr": [
+          "Remplacez le texte plage et parking par des instructions precises pour les voyageurs.",
+          "Ajoutez une suggestion indoor de secours pour les jours venteux ou pluvieux.",
+          "Utilisez la carte experiences pour une sortie bateau, un chef a domicile ou un transfert."
+        ]
+      }
+    },
+    "contact": {
+      "title": {
+        "en": "Local help",
+        "it": "Aiuto locale",
+        "fr": "Aide locale"
+      },
+      "copy": {
+        "en": "Perfect for adding a beach contact, a driver and one trusted guest-care person.",
+        "it": "Perfetto per aggiungere un contatto spiaggia, un driver e una persona guest care fidata.",
+        "fr": "Parfait pour ajouter un contact plage, un chauffeur et une personne guest-care de confiance."
+      }
+    }
+  },
+  "services": [
+    {
+      "id": "wifi",
+      "icon": "Wi",
+      "tone": "sand",
+      "chip": {
+        "en": "Essentials",
+        "it": "Essenziali",
+        "fr": "Essentiels"
+      },
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      },
+      "description": {
+        "en": "Still important, but softer in tone and visually secondary to the stay experience.",
+        "it": "Sempre importante, ma con un tono piu morbido e visivamente secondario rispetto all'esperienza di soggiorno.",
+        "fr": "Toujours important, mais avec un ton plus doux et visuellement secondaire par rapport a l'experience du sejour."
+      },
+      "cardActions": [
+        {
+          "type": "copy-wifi",
+          "label": {
+            "en": "Copy password",
+            "it": "Copia password",
+            "fr": "Copier le mot de passe"
+          }
+        },
+        {
+          "type": "connect-wifi",
+          "label": {
+            "en": "Connect",
+            "it": "Connetti",
+            "fr": "Connecter"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Digital basics",
+          "it": "Basi digitali",
+          "fr": "Bases numeriques"
+        },
+        "title": {
+          "en": "Keep access frictionless",
+          "it": "Mantieni l'accesso senza attrito",
+          "fr": "Gardez l'acces sans friction"
+        },
+        "copy": {
+          "en": "Even in a holiday preset, guests should never have to message for the password.",
+          "it": "Anche in un preset vacanza, gli ospiti non dovrebbero mai dover scrivere per la password.",
+          "fr": "Meme dans un preset vacances, les voyageurs ne devraient jamais avoir a demander le mot de passe."
+        },
+        "sections": [
+          {
+            "icon": "ID",
+            "title": {
+              "en": "Network",
+              "it": "Rete",
+              "fr": "Reseau"
+            },
+            "text": {
+              "en": "Casa Mareluna Guest",
+              "it": "Casa Mareluna Guest",
+              "fr": "Casa Mareluna Guest"
+            }
+          },
+          {
+            "icon": "PW",
+            "title": {
+              "en": "Password",
+              "it": "Password",
+              "fr": "Mot de passe"
+            },
+            "text": {
+              "en": "mareluna-sunset",
+              "it": "mareluna-sunset",
+              "fr": "mareluna-sunset"
+            },
+            "actions": [
+              {
+                "type": "copy-wifi",
+                "label": {
+                  "en": "Copy password",
+                  "it": "Copia password",
+                  "fr": "Copier le mot de passe"
+                }
+              },
+              {
+                "type": "connect-wifi",
+                "label": {
+                  "en": "Connect",
+                  "it": "Connetti",
+                  "fr": "Connecter"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "beach",
+      "icon": "Sea",
+      "tone": "blue",
+      "chip": {
+        "en": "Summer",
+        "it": "Estate",
+        "fr": "Ete"
+      },
+      "title": {
+        "en": "Beach access",
+        "it": "Accesso spiaggia",
+        "fr": "Acces plage"
+      },
+      "description": {
+        "en": "Tell guests exactly where to go, what to bring and when the water feels best.",
+        "it": "Spiega agli ospiti dove andare, cosa portare e quando il mare rende meglio.",
+        "fr": "Dites aux voyageurs ou aller, quoi apporter et a quel moment la mer est la meilleure."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "beach",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Seaside flow",
+          "it": "Flusso mare",
+          "fr": "Rythme bord de mer"
+        },
+        "title": {
+          "en": "Good beach information feels surprisingly premium",
+          "it": "Buone informazioni spiaggia sembrano sorprendentemente premium",
+          "fr": "De bonnes infos plage donnent une vraie impression premium"
+        },
+        "copy": {
+          "en": "Guests remember useful beach details because they affect the best part of the day.",
+          "it": "Gli ospiti ricordano i dettagli spiaggia utili perche influenzano la parte migliore della giornata.",
+          "fr": "Les voyageurs retiennent les details plage utiles parce qu'ils influencent le meilleur moment de la journee."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Best time",
+              "it": "Momento migliore",
+              "fr": "Meilleur moment"
+            },
+            "text": {
+              "en": "Morning is calmer and easier for parking. Sunset is ideal for a shorter swim and aperitivo return.",
+              "it": "La mattina e piu tranquilla e comoda per il parcheggio. Il tramonto e ideale per un bagno breve e rientro aperitivo.",
+              "fr": "Le matin est plus calme et plus simple pour le parking. Le coucher du soleil est ideal pour une baignade courte suivie d'un aperitif."
+            }
+          },
+          {
+            "icon": "Bag",
+            "title": {
+              "en": "What to bring",
+              "it": "Cosa portare",
+              "fr": "Quoi apporter"
+            },
+            "text": {
+              "en": "Beach towels, a refillable water bottle and sandals matter more than a long packing list.",
+              "it": "Teli mare, borraccia e sandali contano piu di una lunga lista da valigia.",
+              "fr": "Serviettes de plage, gourde et sandales comptent plus qu'une longue liste de bagages."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "house",
+      "icon": "Stay",
+      "tone": "olive",
+      "chip": {
+        "en": "House",
+        "it": "Casa",
+        "fr": "Maison"
+      },
+      "title": {
+        "en": "Villa notes",
+        "it": "Note villa",
+        "fr": "Notes villa"
+      },
+      "description": {
+        "en": "Best used for outdoor shower, terrace care, air conditioning and waste timing.",
+        "it": "Ideale per doccia esterna, cura terrazza, aria condizionata e giorni rifiuti.",
+        "fr": "Ideal pour douche exterieure, terrasse, climatisation et tri des dechets."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "house",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Stay details",
+          "it": "Dettagli soggiorno",
+          "fr": "Details sejour"
+        },
+        "title": {
+          "en": "Focus on outdoor living and comfort",
+          "it": "Concentrati su vita outdoor e comfort",
+          "fr": "Concentrez-vous sur la vie exterieure et le confort"
+        },
+        "copy": {
+          "en": "Holiday homes work best when guests understand how to use the outdoor spaces well.",
+          "it": "Le case vacanza funzionano meglio quando gli ospiti capiscono bene come usare gli spazi esterni.",
+          "fr": "Les maisons de vacances fonctionnent mieux lorsque les voyageurs comprennent bien comment utiliser les espaces exterieurs."
+        },
+        "sections": [
+          {
+            "icon": "Sun",
+            "title": {
+              "en": "Terrace rhythm",
+              "it": "Ritmo terrazza",
+              "fr": "Rythme terrasse"
+            },
+            "text": {
+              "en": "Bring in cushions at night on windy evenings and close the umbrella before leaving for the beach.",
+              "it": "Rientra i cuscini la sera se c'e vento e chiudi l'ombrellone prima di andare in spiaggia.",
+              "fr": "Rentrez les coussins le soir en cas de vent et fermez le parasol avant de partir a la plage."
+            }
+          },
+          {
+            "icon": "Cool",
+            "title": {
+              "en": "A/C use",
+              "it": "Uso A/C",
+              "fr": "Usage clim"
+            },
+            "text": {
+              "en": "Please switch off the air conditioning when windows or terrace doors are open.",
+              "it": "Spegni l'aria condizionata quando finestre o porte terrazza sono aperte.",
+              "fr": "Merci d'eteindre la climatisation lorsque les fenetres ou portes terrasse sont ouvertes."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "icon": "Taste",
+      "tone": "sand",
+      "chip": {
+        "en": "Local",
+        "it": "Locale",
+        "fr": "Local"
+      },
+      "title": {
+        "en": "Local favorites",
+        "it": "Preferiti locali",
+        "fr": "Favoris locaux"
+      },
+      "description": {
+        "en": "Use this for a beach lunch, a seafood dinner and one sunset aperitivo spot.",
+        "it": "Usala per un pranzo in spiaggia, una cena di mare e un aperitivo al tramonto.",
+        "fr": "Utilisez-la pour un dejeuner plage, un diner de poisson et un aperitif coucher du soleil."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "food",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Slow hospitality",
+          "it": "Hospitality lenta",
+          "fr": "Hospitality lente"
+        },
+        "title": {
+          "en": "Recommend the stay, not just the meal",
+          "it": "Consiglia il soggiorno, non solo il pasto",
+          "fr": "Recommandez le sejour, pas seulement le repas"
+        },
+        "copy": {
+          "en": "For destination properties, every recommendation can reinforce the atmosphere of the place.",
+          "it": "Per strutture destinazione, ogni consiglio puo rafforzare l'atmosfera del posto.",
+          "fr": "Pour les logements destination, chaque recommandation peut renforcer l'atmosphere du lieu."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Beach lunch",
+              "it": "Pranzo spiaggia",
+              "fr": "Dejeuner plage"
+            },
+            "text": {
+              "en": "Choose one laid-back beach stop where guests can stay barefoot and eat well without planning too much.",
+              "it": "Scegli una tappa beach rilassata dove gli ospiti possano restare scalzi e mangiare bene senza troppa organizzazione.",
+              "fr": "Choisissez une halte plage detendue ou les voyageurs peuvent rester pieds nus et bien manger sans trop planifier."
+            }
+          },
+          {
+            "icon": "PM",
+            "title": {
+              "en": "Sunset drink",
+              "it": "Drink tramonto",
+              "fr": "Verre au coucher du soleil"
+            },
+            "text": {
+              "en": "One strong sunset tip is more memorable than many generic bars.",
+              "it": "Un solo consiglio forte al tramonto e piu memorabile di molti bar generici.",
+              "fr": "Un seul bon conseil coucher du soleil est plus memorable qu'une serie de bars generiques."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Cefalu+old+town",
+                "reference": "cityMap",
+                "label": {
+                  "en": "Open map",
+                  "it": "Apri mappa",
+                  "fr": "Ouvrir la carte"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobility",
+      "icon": "Move",
+      "tone": "olive",
+      "chip": {
+        "en": "Arrival",
+        "it": "Arrivo",
+        "fr": "Arrivee"
+      },
+      "title": {
+        "en": "Parking and route",
+        "it": "Parcheggio e percorso",
+        "fr": "Parking et itineraire"
+      },
+      "description": {
+        "en": "Very useful for road-trip guests, ferry arrivals or train connections.",
+        "it": "Molto utile per road-trip guest, arrivi in traghetto o coincidenze treno.",
+        "fr": "Tres utile pour road-trips, arrivees ferry ou connexions train."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "mobility",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Arrival support",
+          "it": "Supporto arrivo",
+          "fr": "Support d'arrivee"
+        },
+        "title": {
+          "en": "Holiday guests value reassurance",
+          "it": "Gli ospiti vacanza apprezzano rassicurazione",
+          "fr": "Les voyageurs vacances apprecient la reassurance"
+        },
+        "copy": {
+          "en": "Parking notes, street access and one clean arrival route reduce a surprising amount of stress.",
+          "it": "Note parcheggio, accesso strada e un solo percorso pulito riducono una quantita sorprendente di stress.",
+          "fr": "Les notes parking, l'acces rue et un itineraire clair reduisent beaucoup de stress."
+        },
+        "sections": [
+          {
+            "icon": "P",
+            "title": {
+              "en": "Parking",
+              "it": "Parcheggio",
+              "fr": "Parking"
+            },
+            "text": {
+              "en": "Mention the closest easy parking option and whether unloading near the house is realistic.",
+              "it": "Indica l'opzione parcheggio piu semplice e se lo scarico vicino casa e realistico.",
+              "fr": "Mentionnez l'option parking la plus simple et si le dechargement pres de la maison est realiste."
+            }
+          },
+          {
+            "icon": "R",
+            "title": {
+              "en": "Station route",
+              "it": "Percorso stazione",
+              "fr": "Itineraire gare"
+            },
+            "text": {
+              "en": "Use a saved route from the station for guests arriving without a car.",
+              "it": "Usa un percorso salvato dalla stazione per gli ospiti che arrivano senza auto.",
+              "fr": "Utilisez un itineraire sauvegarde depuis la gare pour les voyageurs sans voiture."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Cefalu+station+to+Lungomare+delle+Palme+6",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "experiences",
+      "icon": "Trip",
+      "tone": "blue",
+      "chip": {
+        "en": "Explore",
+        "it": "Esplora",
+        "fr": "Explorer"
+      },
+      "title": {
+        "en": "Day trips",
+        "it": "Gite",
+        "fr": "Excursions"
+      },
+      "description": {
+        "en": "Great for boat tours, inland villages, hiking partners or a private driver.",
+        "it": "Ottima per tour in barca, borghi interni, hiking partner o driver privato.",
+        "fr": "Parfaite pour excursions en bateau, villages de l'interieur, randonnee ou chauffeur prive."
+      },
+      "cardActions": [
+        {
+          "type": "link",
+          "href": "https://maps.google.com/?q=Madonie+day+trip",
+          "reference": "excursions",
+          "label": {
+            "en": "View trips",
+            "it": "Vedi gite",
+            "fr": "Voir les sorties"
+          }
+        },
+        {
+          "type": "modal",
+          "serviceId": "experiences",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Destination layer",
+          "it": "Livello destinazione",
+          "fr": "Couche destination"
+        },
+        "title": {
+          "en": "Help the stay feel bigger than the house",
+          "it": "Aiuta il soggiorno a sembrare piu grande della casa",
+          "fr": "Aidez le sejour a depasser la simple maison"
+        },
+        "copy": {
+          "en": "A strong excursion suggestion turns the guide into part concierge, part memory-maker.",
+          "it": "Un buon suggerimento escursione trasforma la guida in parte concierge e in parte memory-maker.",
+          "fr": "Une bonne suggestion d'excursion transforme le guide en partie concierge, en partie createur de souvenirs."
+        },
+        "sections": [
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Featured trip",
+              "it": "Gita in evidenza",
+              "fr": "Sortie vedette"
+            },
+            "text": {
+              "en": "Choose one memorable outing and explain why it fits this exact property.",
+              "it": "Scegli un'uscita memorabile e spiega perche si abbina proprio a questa struttura.",
+              "fr": "Choisissez une sortie memorable et expliquez pourquoi elle correspond a cette propriete precise."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Madonie+day+trip",
+                "reference": "excursions",
+                "label": {
+                  "en": "Open excursion",
+                  "it": "Apri escursione",
+                  "fr": "Ouvrir l'excursion"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "area": {
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=14.011%2C38.029%2C14.031%2C38.041&layer=mapnik&marker=38.0354%2C14.0208",
+    "filters": [
+      {
+        "id": "all",
+        "label": {
+          "en": "All",
+          "it": "Tutti",
+          "fr": "Tout"
+        }
+      },
+      {
+        "id": "beach",
+        "label": {
+          "en": "Beach",
+          "it": "Spiaggia",
+          "fr": "Plage"
+        }
+      },
+      {
+        "id": "food",
+        "label": {
+          "en": "Food",
+          "it": "Food",
+          "fr": "Food"
+        }
+      },
+      {
+        "id": "views",
+        "label": {
+          "en": "Views",
+          "it": "Panorami",
+          "fr": "Vues"
+        }
+      }
+    ],
+    "points": [
+      {
+        "category": "beach",
+        "icon": "Sea",
+        "title": {
+          "en": "Nearest beach access",
+          "it": "Accesso spiaggia vicino",
+          "fr": "Acces plage proche"
+        },
+        "meta": {
+          "en": "Sea access \u00b7 8 min walk",
+          "it": "Accesso mare \u00b7 8 min a piedi",
+          "fr": "Acces mer \u00b7 8 min a pied"
+        },
+        "href": "https://maps.google.com/?q=Cefalu+beach"
+      },
+      {
+        "category": "food",
+        "icon": "Eat",
+        "title": {
+          "en": "Sunset seafood",
+          "it": "Seafood al tramonto",
+          "fr": "Poissons au coucher du soleil"
+        },
+        "meta": {
+          "en": "Dinner pick \u00b7 sea view",
+          "it": "Cena consigliata \u00b7 vista mare",
+          "fr": "Diner conseille \u00b7 vue mer"
+        },
+        "href": "https://maps.google.com/?q=Cefalu+seafood"
+      },
+      {
+        "category": "views",
+        "icon": "View",
+        "title": {
+          "en": "Scenic lookout",
+          "it": "Punto panoramico",
+          "fr": "Point de vue"
+        },
+        "meta": {
+          "en": "Golden hour stop \u00b7 local favorite",
+          "it": "Tappa golden hour \u00b7 preferita locale",
+          "fr": "Arret golden hour \u00b7 favori local"
+        },
+        "href": "https://maps.google.com/?q=Cefalu+viewpoint"
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Giulia",
+      "role": {
+        "en": "Arrival support",
+        "it": "Supporto arrivi",
+        "fr": "Support arrivee"
+      },
+      "phone": "+390000000222",
+      "whatsapp": "https://wa.me/390000000222"
+    },
+    {
+      "name": "Salvo",
+      "role": {
+        "en": "Driver contact",
+        "it": "Contatto driver",
+        "fr": "Contact chauffeur"
+      },
+      "phone": "+390000000223",
+      "whatsapp": "https://wa.me/390000000223"
+    },
+    {
+      "name": "Mareluna Care",
+      "role": {
+        "en": "Guest care",
+        "it": "Guest care",
+        "fr": "Guest care"
+      },
+      "phone": "+390000000224",
+      "whatsapp": "https://wa.me/390000000224"
+    }
+  ],
+  "share": {
+    "publicUrl": "",
+    "qrDestinationUrl": ""
+  },
+  "printables": {
+    "qrSign": {
+      "title": {
+        "en": "Scan for your guest guide",
+        "it": "Scansiona per la guida ospiti",
+        "fr": "Scannez pour le guide voyageurs"
+      },
+      "subtitle": {
+        "en": "Wi-Fi, arrival details, local recommendations and host contacts",
+        "it": "Wi-Fi, arrivo, consigli locali e contatti host",
+        "fr": "Wi-Fi, arrivee, recommandations locales et contacts host"
+      },
+      "footer": {
+        "en": "Open on your phone",
+        "it": "Apri sul telefono",
+        "fr": "Ouvrez sur votre telephone"
+      }
+    },
+    "wifiCard": {
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      }
+    },
+    "welcomeSheet": {
+      "title": {
+        "en": "Welcome",
+        "it": "Benvenuti",
+        "fr": "Bienvenue"
+      }
+    }
+  },
+  "layout": {
+    "heroMode": "full"
+  }
+}
