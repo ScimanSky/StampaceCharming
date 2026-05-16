@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -57,6 +57,7 @@
             <nav class="section-nav" aria-label="Customizer sections">
               <a href="#start-section">Start</a>
               <a href="#edit-section">Edit Content</a>
+              <a href="#media-section">Property Images</a>
               <a href="#publish-section">Publish</a>
               <a href="#printables-section">Bonus Printables</a>
               <a href="#json-section">Deep Customization</a>
@@ -214,6 +215,83 @@
             </div>
           </section>
 
+          <section class="editor-panel" id="media-section">
+            <div class="panel-heading">
+              <p class="panel-eyebrow">Property Images</p>
+              <h2>Add a hero photo and a mini gallery</h2>
+            </div>
+            <p class="helper-copy">
+              Paste direct image URLs. Use services like Imgur, Cloudinary or any public host.
+              Leave blank for a clean image-free layout.
+            </p>
+
+            <label class="field">
+              <span>Hero image URL</span>
+              <input id="hero-image-input" type="url" placeholder="https://example.com/hero.jpg" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Hero alt text (EN)</span>
+                <input id="hero-alt-en-input" type="text" placeholder="Sunlit living room" />
+              </label>
+              <label class="field">
+                <span>Hero alt text (IT)</span>
+                <input id="hero-alt-it-input" type="text" placeholder="Soggiorno luminoso" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Hero alt text (FR)</span>
+              <input id="hero-alt-fr-input" type="text" placeholder="Séjour ensoleillé" />
+            </label>
+
+            <hr style="border: none; border-top: 1px solid var(--line); margin: 1.4rem 0;" />
+
+            <label class="field">
+              <span>Gallery image 1 URL</span>
+              <input id="gallery-1-src-input" type="url" placeholder="https://example.com/photo-1.jpg" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Gallery 1 alt (EN)</span>
+                <input id="gallery-1-alt-en-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Gallery 1 alt (IT)</span>
+                <input id="gallery-1-alt-it-input" type="text" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Gallery image 2 URL</span>
+              <input id="gallery-2-src-input" type="url" placeholder="https://example.com/photo-2.jpg" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Gallery 2 alt (EN)</span>
+                <input id="gallery-2-alt-en-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Gallery 2 alt (IT)</span>
+                <input id="gallery-2-alt-it-input" type="text" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Gallery image 3 URL</span>
+              <input id="gallery-3-src-input" type="url" placeholder="https://example.com/photo-3.jpg" />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Gallery 3 alt (EN)</span>
+                <input id="gallery-3-alt-en-input" type="text" />
+              </label>
+              <label class="field">
+                <span>Gallery 3 alt (IT)</span>
+                <input id="gallery-3-alt-it-input" type="text" />
+              </label>
+            </div>
+          </section>
+
           <section class="editor-panel" id="publish-section">
             <div class="panel-heading">
               <p class="panel-eyebrow">Publish</p>
@@ -236,8 +314,10 @@
             </div>
 
             <div class="publish-actions">
-              <button class="primary-action" id="preview-button" type="button">Preview guide</button>
+              <button class="primary-action" id="host-preview-button" type="button">Preview host mode</button>
+              <button class="secondary-action" id="guest-preview-button" type="button">Preview guest mode</button>
               <button class="secondary-action" id="copy-share-link-button" type="button">Copy share link</button>
+              <button class="secondary-action" id="copy-guest-link-button" type="button">Copy guest link</button>
               <button class="secondary-action" id="download-button" type="button">Download config.json</button>
               <label class="secondary-action upload-button">
                 Import config
@@ -298,6 +378,7 @@
               <a class="primary-link" id="qr-sign-preview-link" target="_blank" rel="noreferrer">Preview QR sign</a>
               <a class="ghost-link" id="wifi-card-preview-link" target="_blank" rel="noreferrer">Preview Wi-Fi card</a>
               <a class="ghost-link" id="welcome-sheet-preview-link" target="_blank" rel="noreferrer">Preview welcome sheet</a>
+              <a class="ghost-link" id="pocket-card-preview-link" target="_blank" rel="noreferrer">Preview QR pocket card</a>
             </div>
           </section>
 

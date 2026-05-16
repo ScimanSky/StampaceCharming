@@ -13,6 +13,8 @@
 4. Update:
    - property name
    - hero display mode
+   - guest-facing guest mode link
+   - optional property images
    - address
    - host contact
    - Wi-Fi details
@@ -26,6 +28,7 @@
 
 - `index.html`
 - `app.js`
+- `icons.js`
 - `template-utils.js`
 - `styles.css`
 - `favicon.svg`
@@ -49,6 +52,7 @@
    - `printables/qr-sign.html`
    - `printables/wifi-card.html`
    - `printables/welcome-sheet.html`
+   - `printables/qr-pocket-card.html`
 5. Print or save them as PDF
 
 ## Best practice

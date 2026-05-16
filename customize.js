@@ -4,6 +4,7 @@ import {
   cloneConfig,
   escapeHtml,
   normalizeConfig,
+  resolveGuestUrl,
   resolveQrDestinationUrl,
   t,
 } from "./template-utils.js";
@@ -43,15 +44,31 @@ const dom = {
   qrSubtitleEnInput: document.querySelector("#qr-subtitle-en-input"),
   wifiCardTitleEnInput: document.querySelector("#wifi-card-title-en-input"),
   welcomeSheetTitleEnInput: document.querySelector("#welcome-sheet-title-en-input"),
+  heroImageInput: document.querySelector("#hero-image-input"),
+  heroAltEnInput: document.querySelector("#hero-alt-en-input"),
+  heroAltItInput: document.querySelector("#hero-alt-it-input"),
+  heroAltFrInput: document.querySelector("#hero-alt-fr-input"),
+  gallery1SrcInput: document.querySelector("#gallery-1-src-input"),
+  gallery1AltEnInput: document.querySelector("#gallery-1-alt-en-input"),
+  gallery1AltItInput: document.querySelector("#gallery-1-alt-it-input"),
+  gallery2SrcInput: document.querySelector("#gallery-2-src-input"),
+  gallery2AltEnInput: document.querySelector("#gallery-2-alt-en-input"),
+  gallery2AltItInput: document.querySelector("#gallery-2-alt-it-input"),
+  gallery3SrcInput: document.querySelector("#gallery-3-src-input"),
+  gallery3AltEnInput: document.querySelector("#gallery-3-alt-en-input"),
+  gallery3AltItInput: document.querySelector("#gallery-3-alt-it-input"),
   jsonEditor: document.querySelector("#json-editor"),
-  previewButton: document.querySelector("#preview-button"),
+  hostPreviewButton: document.querySelector("#host-preview-button"),
+  guestPreviewButton: document.querySelector("#guest-preview-button"),
   copyShareLinkButton: document.querySelector("#copy-share-link-button"),
+  copyGuestLinkButton: document.querySelector("#copy-guest-link-button"),
   downloadButton: document.querySelector("#download-button"),
   importInput: document.querySelector("#import-input"),
   guidePreviewLink: document.querySelector("#guide-preview-link"),
   qrSignPreviewLink: document.querySelector("#qr-sign-preview-link"),
   wifiCardPreviewLink: document.querySelector("#wifi-card-preview-link"),
   welcomeSheetPreviewLink: document.querySelector("#welcome-sheet-preview-link"),
+  pocketCardPreviewLink: document.querySelector("#pocket-card-preview-link"),
   toast: document.querySelector("#toast"),
 };
 
@@ -239,7 +256,134 @@ const fieldBindings = [
       config.printables.welcomeSheet.title.en = value;
     },
   },
+  {
+    input: dom.heroImageInput,
+    read: (config) => config.media?.heroImage?.src ?? "",
+    write: (config, value) => {
+      config.media ??= {};
+      config.media.heroImage ??= { src: "", alt: { en: "", it: "", fr: "" } };
+      config.media.heroImage.src = value;
+    },
+  },
+  {
+    input: dom.heroAltEnInput,
+    read: (config) => config.media?.heroImage?.alt?.en ?? "",
+    write: (config, value) => {
+      config.media ??= {};
+      config.media.heroImage ??= { src: "", alt: { en: "", it: "", fr: "" } };
+      config.media.heroImage.alt ??= {};
+      config.media.heroImage.alt.en = value;
+    },
+  },
+  {
+    input: dom.heroAltItInput,
+    read: (config) => config.media?.heroImage?.alt?.it ?? "",
+    write: (config, value) => {
+      config.media ??= {};
+      config.media.heroImage ??= { src: "", alt: { en: "", it: "", fr: "" } };
+      config.media.heroImage.alt ??= {};
+      config.media.heroImage.alt.it = value;
+    },
+  },
+  {
+    input: dom.heroAltFrInput,
+    read: (config) => config.media?.heroImage?.alt?.fr ?? "",
+    write: (config, value) => {
+      config.media ??= {};
+      config.media.heroImage ??= { src: "", alt: { en: "", it: "", fr: "" } };
+      config.media.heroImage.alt ??= {};
+      config.media.heroImage.alt.fr = value;
+    },
+  },
+  {
+    input: dom.gallery1SrcInput,
+    read: (config) => config.media?.gallery?.[0]?.src ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 0);
+      config.media.gallery[0].src = value;
+    },
+  },
+  {
+    input: dom.gallery1AltEnInput,
+    read: (config) => config.media?.gallery?.[0]?.alt?.en ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 0);
+      config.media.gallery[0].alt.en = value;
+    },
+  },
+  {
+    input: dom.gallery1AltItInput,
+    read: (config) => config.media?.gallery?.[0]?.alt?.it ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 0);
+      config.media.gallery[0].alt.it = value;
+    },
+  },
+  {
+    input: dom.gallery2SrcInput,
+    read: (config) => config.media?.gallery?.[1]?.src ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 1);
+      config.media.gallery[1].src = value;
+    },
+  },
+  {
+    input: dom.gallery2AltEnInput,
+    read: (config) => config.media?.gallery?.[1]?.alt?.en ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 1);
+      config.media.gallery[1].alt.en = value;
+    },
+  },
+  {
+    input: dom.gallery2AltItInput,
+    read: (config) => config.media?.gallery?.[1]?.alt?.it ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 1);
+      config.media.gallery[1].alt.it = value;
+    },
+  },
+  {
+    input: dom.gallery3SrcInput,
+    read: (config) => config.media?.gallery?.[2]?.src ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 2);
+      config.media.gallery[2].src = value;
+    },
+  },
+  {
+    input: dom.gallery3AltEnInput,
+    read: (config) => config.media?.gallery?.[2]?.alt?.en ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 2);
+      config.media.gallery[2].alt.en = value;
+    },
+  },
+  {
+    input: dom.gallery3AltItInput,
+    read: (config) => config.media?.gallery?.[2]?.alt?.it ?? "",
+    write: (config, value) => {
+      ensureGallerySlot(config, 2);
+      config.media.gallery[2].alt.it = value;
+    },
+  },
 ];
+
+function ensureGallerySlot(config, index) {
+  config.media ??= {};
+  if (!Array.isArray(config.media.gallery)) {
+    config.media.gallery = [];
+  }
+
+  while (config.media.gallery.length <= index) {
+    config.media.gallery.push({
+      src: "",
+      alt: { en: "", it: "", fr: "" },
+    });
+  }
+
+  config.media.gallery[index].alt ??= { en: "", it: "", fr: "" };
+}
 
 function showToast(message) {
   dom.toast.textContent = message;
@@ -259,6 +403,7 @@ function renderPreviewLinks() {
   dom.qrSignPreviewLink.href = previewUrl("./printables/qr-sign.html");
   dom.wifiCardPreviewLink.href = previewUrl("./printables/wifi-card.html");
   dom.welcomeSheetPreviewLink.href = previewUrl("./printables/welcome-sheet.html");
+  dom.pocketCardPreviewLink.href = previewUrl("./printables/qr-pocket-card.html");
 }
 
 function renderPresetOptions() {
@@ -352,6 +497,10 @@ function getShareUrl() {
   return resolveQrDestinationUrl(state.config);
 }
 
+function getGuestUrl() {
+  return resolveGuestUrl(state.config);
+}
+
 async function copyShareLink() {
   const shareUrl = getShareUrl();
 
@@ -360,6 +509,17 @@ async function copyShareLink() {
     showToast("Share link copied");
   } catch {
     showToast(shareUrl);
+  }
+}
+
+async function copyGuestLink() {
+  const guestUrl = getGuestUrl();
+
+  try {
+    await navigator.clipboard.writeText(guestUrl);
+    showToast("Guest link copied");
+  } catch {
+    showToast(guestUrl);
   }
 }
 
@@ -377,7 +537,7 @@ fieldBindings.forEach((binding) => {
   binding.input.addEventListener("input", applyFormChanges);
 });
 
-dom.previewButton.addEventListener("click", () => {
+dom.hostPreviewButton.addEventListener("click", () => {
   if (!parseJsonEditor()) {
     showToast("Fix the JSON before previewing");
     return;
@@ -387,6 +547,16 @@ dom.previewButton.addEventListener("click", () => {
   window.open(previewUrl("./index.html"), "_blank", "noreferrer");
 });
 
+dom.guestPreviewButton.addEventListener("click", () => {
+  if (!parseJsonEditor()) {
+    showToast("Fix the JSON before previewing");
+    return;
+  }
+
+  savePreviewConfig();
+  window.open(`${previewUrl("./index.html")}&view=guest`, "_blank", "noreferrer");
+});
+
 dom.copyShareLinkButton.addEventListener("click", () => {
   if (!parseJsonEditor()) {
     showToast("Fix the JSON before copying");
@@ -394,6 +564,15 @@ dom.copyShareLinkButton.addEventListener("click", () => {
   }
 
   copyShareLink();
+});
+
+dom.copyGuestLinkButton.addEventListener("click", () => {
+  if (!parseJsonEditor()) {
+    showToast("Fix the JSON before copying");
+    return;
+  }
+
+  copyGuestLink();
 });
 
 dom.downloadButton.addEventListener("click", () => {

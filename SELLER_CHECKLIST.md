@@ -24,6 +24,7 @@
 - public demo homepage: `https://scimansky.github.io/StampaceCharming/`
 - demo customizer: `https://scimansky.github.io/StampaceCharming/customize.html`
 - demo QR sign: `https://scimansky.github.io/StampaceCharming/printables/qr-sign.html`
+- demo guest mode: `https://scimansky.github.io/StampaceCharming/?view=guest`
 
 Recommended hosting: GitHub Pages.
 
@@ -47,6 +48,9 @@ Recommended hosting: GitHub Pages.
 ## Manual QA
 
 - every phone number and email is clearly demo content
+- verify demo content for `house-rules`, `checkout` and `emergency` modules
+- verify host mode and guest mode links both work
+- verify hero image and gallery fallbacks still look clean when empty
 - the buyer ZIP contains no seller-only files
 - the QR sign opens the correct guide URL
 - the printables look coherent with the guide theme

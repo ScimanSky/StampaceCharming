@@ -7,7 +7,7 @@
   "main": "app.js",
   "scripts": {
     "build:etsy": "python3 scripts/build_etsy_package.py",
-    "check:js": "node --check app.js && node --check customize.js && node --check template-utils.js && node --check printables/printables.js"
+    "check:js": "node --check app.js && node --check icons.js && node --check customize.js && node --check template-utils.js && node --check printables/printables.js"
   },
   "repository": {
     "type": "git",

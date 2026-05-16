@@ -2,6 +2,11 @@
 
 This template is designed for static hosting. No backend is required.
 
+Deploying your guide as a live website provides significant advantages over a traditional PDF:
+- **Always up-to-date:** Changes reflect instantly for all guests.
+- **Interactive:** Features like the map widget, clickable emergency numbers, and dynamic checkout instructions.
+- **Accessible:** Guests don't need to download large files to access House Rules or Emergency info.
+
 ## Recommended path: GitHub Pages
 
 1. Create a new GitHub repository
@@ -25,17 +30,18 @@ After GitHub Pages is live:
 1. Open `customize.html`
 2. Set `Public guide URL` to the final live URL
 3. Leave `QR destination URL` empty unless you want a different target
-4. Download `config.json` again
-5. Replace the published `config.json`
+4. Leave `Guest URL` empty unless you want a guest-safe custom link
+5. Download `config.json` again
+6. Replace the published `config.json`
 
-This ensures the QR sign points to the real live page.
+This ensures the QR sign points to the real live page and the guest mode link stays shareable.
 
 ## Printable flow after publishing
 
 1. Open `printables/qr-sign.html`
 2. Confirm the QR code opens the correct guide
 3. Click `Print / Save as PDF`
-4. Repeat for `wifi-card.html` and `welcome-sheet.html`
+4. Repeat for `wifi-card.html`, `welcome-sheet.html` and `qr-pocket-card.html`
 
 ## Notes
 

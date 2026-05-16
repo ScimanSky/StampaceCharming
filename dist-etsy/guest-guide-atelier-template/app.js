@@ -9,6 +9,7 @@ import {
   modeStorageKey,
   t,
 } from "./template-utils.js";
+import { renderIcon } from "./icons.js";
 
 const state = {
   config: null,
@@ -18,6 +19,7 @@ const state = {
   openServiceId: null,
   hostSheetOpen: false,
   source: "preset",
+  isGuestMode: false,
 };
 
 const dom = {
@@ -36,6 +38,10 @@ const dom = {
   heroLicense: document.querySelector("#hero-license"),
   heroWelcome: document.querySelector("#hero-welcome"),
   statsGrid: document.querySelector("#stats-grid"),
+  heroImageWrap: document.querySelector("#hero-image-wrap"),
+  heroImageEl: document.querySelector("#hero-image"),
+  galleryStrip: document.querySelector("#gallery-strip"),
+  galleryGrid: document.querySelector("#gallery-grid"),
   previewBanner: document.querySelector("#preview-banner"),
   quickDock: document.querySelector("#quick-dock"),
   servicesKicker: document.querySelector("#services-kicker"),
@@ -115,7 +121,7 @@ function renderLocaleSwitch() {
 }
 
 function renderPreviewBanner() {
-  if (state.source !== "browser") {
+  if (state.source !== "browser" || state.isGuestMode) {
     dom.previewBanner.hidden = true;
     dom.previewBanner.textContent = "";
     return;
@@ -157,13 +163,50 @@ function renderHero() {
     .join("");
 }
 
+function renderHeroImage() {
+  const heroImg = state.config.media?.heroImage;
+  const src = heroImg?.src?.trim();
+  if (!src) {
+    dom.heroImageWrap.hidden = true;
+    return;
+  }
+  dom.heroImageEl.src = src;
+  dom.heroImageEl.alt = getCopy(heroImg.alt, state.config.brand?.name ?? "Property photo");
+  dom.heroImageWrap.hidden = false;
+}
+
+function renderGallery() {
+  const gallery = (state.config.media?.gallery ?? []).filter((item) => item.src?.trim());
+  if (gallery.length === 0) {
+    dom.galleryStrip.hidden = true;
+    dom.galleryGrid.innerHTML = "";
+    return;
+  }
+  dom.galleryStrip.hidden = false;
+  dom.galleryGrid.innerHTML = gallery
+    .map(
+      (item, index) => `
+        <figure class="gallery-item gallery-item-${index + 1}">
+          <img src="${escapeHtml(item.src)}" alt="${escapeHtml(getCopy(item.alt, 'Property photo'))}" loading="lazy" />
+        </figure>
+      `,
+    )
+    .join("");
+}
+
 function renderTopbar() {
-  dom.hostButton.textContent = getCopy(state.config.ui?.contactHosts, "Host");
-  dom.themeToggle.textContent =
+  const isGuest = state.isGuestMode;
+
+  // Host-only elements: hide in guest mode
+  dom.customizerLink.hidden = isGuest;
+  dom.hostButton.hidden = isGuest;
+
+  dom.hostButton.innerHTML = renderIcon('user') + " " + escapeHtml(getCopy(state.config.ui?.contactHosts, "Host"));
+  dom.themeToggle.innerHTML =
     state.colorMode === "dark"
-      ? getCopy(state.config.ui?.themeLight, "Light")
-      : getCopy(state.config.ui?.themeDark, "Night");
-  dom.customizerLink.textContent = getCopy(state.config.ui?.openCustomizer, "Customizer");
+      ? renderIcon('sun') + " " + escapeHtml(getCopy(state.config.ui?.themeLight, "Light"))
+      : renderIcon('moon') + " " + escapeHtml(getCopy(state.config.ui?.themeDark, "Night"));
+  dom.customizerLink.innerHTML = renderIcon('settings') + " " + escapeHtml(getCopy(state.config.ui?.openCustomizer, "Customizer"));
 }
 
 function getActionMarkup(action, classes = "ghost-link") {
@@ -201,7 +244,7 @@ function renderQuickDock() {
     .map(
       (action) => `
         <button class="dock-button" type="button" data-action='${escapeHtml(JSON.stringify(action))}'>
-          <span class="dock-emoji">${escapeHtml(action.icon ?? "•")}</span>
+          <span class="dock-emoji">${renderIcon(action.icon)}</span>
           <span>${escapeHtml(getCopy(action.label))}</span>
         </button>
       `,
@@ -228,7 +271,7 @@ function renderServices() {
       return `
         <article class="service-card service-tone-${escapeHtml(service.tone ?? "sand")}">
           <div class="service-card-top">
-            <span class="service-icon">${escapeHtml(service.icon ?? "•")}</span>
+            <span class="service-icon">${renderIcon(service.icon)}</span>
             <span class="service-chip">${escapeHtml(getCopy(service.chip))}</span>
           </div>
           <div class="service-card-copy">
@@ -266,7 +309,7 @@ function renderArea() {
     .map(
       (point) => `
         <a class="map-point" href="${escapeHtml(point.href)}" target="_blank" rel="noreferrer">
-          <span class="map-point-icon">${escapeHtml(point.icon)}</span>
+          <span class="map-point-icon">${renderIcon(point.icon)}</span>
           <span class="map-point-copy">
             <strong>${escapeHtml(getCopy(point.title))}</strong>
             <small>${escapeHtml(getCopy(point.meta))}</small>
@@ -350,7 +393,7 @@ function renderModal() {
       (section) => `
         <section class="modal-section">
           <div class="modal-section-head">
-            <span class="modal-badge">${escapeHtml(section.icon)}</span>
+            <span class="modal-badge">${renderIcon(section.icon)}</span>
             <h4>${escapeHtml(getCopy(section.title))}</h4>
           </div>
           <p>${escapeHtml(getCopy(section.text))}</p>
@@ -457,10 +500,13 @@ function renderAll() {
   setDocumentMeta();
   applyThemeVariables(document.documentElement, state.colorMode, state.config.themePreset);
   document.body.dataset.mode = state.colorMode;
+  document.body.dataset.viewMode = state.isGuestMode ? "guest" : "host";
   renderTopbar();
   renderLocaleSwitch();
   renderPreviewBanner();
   renderHero();
+  renderHeroImage();
+  renderGallery();
   renderQuickDock();
   renderServices();
   renderArea();
@@ -551,6 +597,7 @@ loadTemplateConfig()
     state.config = config;
     state.source = source;
     state.locale = getInitialLocale();
+    state.isGuestMode = getQueryConfig().view === "guest";
     renderAll();
   })
   .catch((error) => {

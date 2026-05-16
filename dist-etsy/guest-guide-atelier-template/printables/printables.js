@@ -14,7 +14,9 @@ const pageType = pageName.includes("wifi-card")
   ? "wifi-card"
   : pageName.includes("welcome-sheet")
     ? "welcome-sheet"
-    : "qr-sign";
+    : pageName.includes("qr-pocket-card")
+      ? "qr-pocket-card"
+      : "qr-sign";
 
 const query = getQueryConfig();
 
@@ -144,6 +146,61 @@ function renderWelcomeSheet(config) {
   renderQrFrame(buildQrValue(config));
 }
 
+function buildPocketCardHtml(config) {
+  const locale = state.locale;
+  const qrValue = buildQrValue(config);
+  const crest = config.brand?.crest || "GG";
+  const propertyName = config.brand?.name || "";
+  const hostName = config.host?.name || "";
+  const title = t(config.printables?.qrPocketCard?.title, locale, "Your guest guide");
+  const tagline = t(config.printables?.qrPocketCard?.tagline, locale, "Scan for Wi-Fi, arrival info & local tips");
+
+  // Generate the QR SVG once
+  let qrHtml = "";
+  if (qrValue) {
+    const qr = window.qrcode(0, "M");
+    qr.addData(qrValue);
+    qr.make();
+    qrHtml = qr.createSvgTag(4, 0);
+  } else {
+    qrHtml = `<div class="qr-frame-empty">Add a public URL to generate the QR code.</div>`;
+  }
+
+  const escStr = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+  const cardHtml = `
+    <div class="pocket-card">
+      <div class="pocket-body">
+        <div>
+          <p class="pocket-overline">Guest guide</p>
+          <h2 class="pocket-title">${escStr(title)}</h2>
+          <p class="pocket-tagline">${escStr(tagline)}</p>
+        </div>
+        <div class="pocket-footer">
+          <div class="pocket-seal">${escStr(crest)}</div>
+          <span class="pocket-host">${escStr(propertyName || hostName)}</span>
+        </div>
+      </div>
+      <div class="pocket-qr-side">
+        <div class="pocket-qr-frame">${qrHtml}</div>
+        <p class="pocket-scan-label">Scan me</p>
+      </div>
+    </div>
+  `;
+
+  return cardHtml;
+}
+
+function renderQrPocketCard(config) {
+  const grid = document.getElementById("pocket-grid");
+  if (!grid) {
+    return;
+  }
+  // Render 3 cards per sheet
+  const card = buildPocketCardHtml(config);
+  grid.innerHTML = card + card + card;
+}
+
 function renderPrintable() {
   const { config } = state;
   if (!config) {
@@ -158,6 +215,8 @@ function renderPrintable() {
     renderWifiCard(config);
   } else if (pageType === "welcome-sheet") {
     renderWelcomeSheet(config);
+  } else if (pageType === "qr-pocket-card") {
+    renderQrPocketCard(config);
   } else {
     renderQrSign(config);
   }

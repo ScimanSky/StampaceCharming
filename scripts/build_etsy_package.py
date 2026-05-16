@@ -23,6 +23,7 @@ PACKAGE_ZIP = DIST / f"{PACKAGE_NAME}.zip"
 FILES_TO_COPY = [
     "index.html",
     "app.js",
+    "icons.js",
     "template-utils.js",
     "styles.css",
     "favicon.svg",

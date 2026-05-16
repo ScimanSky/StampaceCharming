@@ -480,28 +480,180 @@
       }
     },
     {
-      "id": "house",
+      "id": "house-rules",
       "icon": "Stay",
       "tone": "sand",
       "chip": {
-        "en": "Stay",
-        "it": "Soggiorno",
-        "fr": "Sejour"
+        "en": "Rules",
+        "it": "Regole",
+        "fr": "R\u00e8gles"
       },
       "title": {
-        "en": "Loft notes",
-        "it": "Note loft",
-        "fr": "Notes loft"
+        "en": "House rules",
+        "it": "Regole della casa",
+        "fr": "R\u00e8gles de la maison"
       },
       "description": {
-        "en": "Use this for A/C, windows, waste sorting and anything guests can misuse quickly.",
-        "it": "Usala per A/C, finestre, raccolta rifiuti e tutto cio che si puo usare male in fretta.",
-        "fr": "Utilisez-la pour clim, fenetres, tri des dechets et tout ce qui peut etre mal utilise rapidement."
+        "en": "The few important notes to ensure a smooth stay.",
+        "it": "Le poche note importanti per garantire un soggiorno tranquillo.",
+        "fr": "Les quelques notes importantes pour assurer un bon s\u00e9jour."
       },
       "cardActions": [
         {
           "type": "modal",
-          "serviceId": "house",
+          "serviceId": "house-rules",
+          "label": {
+            "en": "Read rules",
+            "it": "Leggi regole",
+            "fr": "Lire les r\u00e8gles"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Stay notes",
+          "it": "Note soggiorno",
+          "fr": "Notes s\u00e9jour"
+        },
+        "title": {
+          "en": "Respect the space and the neighbors",
+          "it": "Rispetta lo spazio e i vicini",
+          "fr": "Respectez l'espace et les voisins"
+        },
+        "copy": {
+          "en": "These few rules help us maintain the property in perfect condition for everyone.",
+          "it": "Queste poche regole ci aiutano a mantenere la struttura in perfette condizioni per tutti.",
+          "fr": "Ces quelques r\u00e8gles nous aident \u00e0 maintenir la propri\u00e9t\u00e9 en parfait \u00e9tat pour tous."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Quiet hours",
+              "it": "Orari di quiete",
+              "fr": "Heures calmes"
+            },
+            "text": {
+              "en": "Please keep noise low after 22:00 and inside the common staircase.",
+              "it": "Mantieni il rumore basso dopo le 22:00 e nelle scale comuni.",
+              "fr": "Merci de limiter le bruit apr\u00e8s 22h00 et dans l'escalier commun."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Smoking policy",
+              "it": "Fumo",
+              "fr": "Politique fumeur"
+            },
+            "text": {
+              "en": "Smoking is strictly forbidden inside. You can smoke on the balcony.",
+              "it": "\u00c8 severamente vietato fumare all'interno. Puoi fumare sul balcone.",
+              "fr": "Il est strictement interdit de fumer \u00e0 l'int\u00e9rieur. Vous pouvez fumer sur le balcon."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "checkout",
+      "icon": "B",
+      "tone": "sand",
+      "chip": {
+        "en": "Departure",
+        "it": "Partenza",
+        "fr": "D\u00e9part"
+      },
+      "title": {
+        "en": "Checkout steps",
+        "it": "Checkout",
+        "fr": "D\u00e9part"
+      },
+      "description": {
+        "en": "Everything you need to know before leaving.",
+        "it": "Tutto quello che devi sapere prima di partire.",
+        "fr": "Tout ce que vous devez savoir avant de partir."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "checkout",
+          "label": {
+            "en": "View details",
+            "it": "Vedi dettagli",
+            "fr": "Voir d\u00e9tails"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Before you go",
+          "it": "Prima di andare",
+          "fr": "Avant de partir"
+        },
+        "title": {
+          "en": "A simple checkout process",
+          "it": "Un processo di checkout semplice",
+          "fr": "Un processus de d\u00e9part simple"
+        },
+        "copy": {
+          "en": "No need to clean, just a few quick checks before closing the door.",
+          "it": "Non serve pulire, solo un rapido controllo prima di chiudere la porta.",
+          "fr": "Pas besoin de nettoyer, juste quelques v\u00e9rifications avant de fermer la porte."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Timing",
+              "it": "Orario",
+              "fr": "Horaire"
+            },
+            "text": {
+              "en": "Standard checkout is at 10:30. Let us know if you need to store luggage.",
+              "it": "Il checkout standard \u00e8 alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
+              "fr": "Le d\u00e9part standard est \u00e0 10h30. Dites-nous si vous devez laisser des bagages."
+            }
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "Keys & lights",
+              "it": "Chiavi e luci",
+              "fr": "Cl\u00e9s et lumi\u00e8res"
+            },
+            "text": {
+              "en": "Leave the keys on the console table, turn off the lights and ensure the door is locked behind you.",
+              "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
+              "fr": "Laissez les cl\u00e9s sur la console, \u00e9teignez les lumi\u00e8res et assurez-vous que la porte est ferm\u00e9e."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "icon": "SOS",
+      "tone": "red",
+      "chip": {
+        "en": "Urgent",
+        "it": "Urgente",
+        "fr": "Urgent"
+      },
+      "title": {
+        "en": "Emergency & safety",
+        "it": "Emergenze e sicurezza",
+        "fr": "Urgences et s\u00e9curit\u00e9"
+      },
+      "description": {
+        "en": "Important numbers and safety information.",
+        "it": "Numeri importanti e informazioni sulla sicurezza.",
+        "fr": "Num\u00e9ros importants et informations de s\u00e9curit\u00e9."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "emergency",
           "label": {
             "en": "Open details",
             "it": "Apri dettagli",
@@ -511,45 +663,57 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Property operations",
-          "it": "Operativita struttura",
-          "fr": "Operations logement"
+          "en": "Safety first",
+          "it": "Sicurezza prima",
+          "fr": "S\u00e9curit\u00e9 d'abord"
         },
         "title": {
-          "en": "Explain only what changes behavior",
-          "it": "Spiega solo cio che cambia il comportamento",
-          "fr": "Expliquez seulement ce qui change le comportement"
+          "en": "Local emergency contacts",
+          "it": "Contatti di emergenza locali",
+          "fr": "Contacts d'urgence locaux"
         },
         "copy": {
-          "en": "If a detail does not prevent confusion, it probably does not belong here.",
-          "it": "Se un dettaglio non previene confusione, probabilmente non deve stare qui.",
-          "fr": "Si un detail ne previent pas une confusion, il n'a probablement pas sa place ici."
+          "en": "In case of immediate danger, always call the national emergency number first.",
+          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
+          "fr": "En cas de danger imm\u00e9diat, appelez toujours d'abord le num\u00e9ro d'urgence national."
         },
         "sections": [
           {
-            "icon": "A",
+            "icon": "SOS",
             "title": {
-              "en": "Building etiquette",
-              "it": "Etichetta condominiale",
-              "fr": "Etiquette immeuble"
+              "en": "National emergency",
+              "it": "Emergenza nazionale",
+              "fr": "Urgence nationale"
             },
             "text": {
-              "en": "Keep calls and speaker audio low in shared corridors and elevator spaces.",
-              "it": "Mantieni basso il volume di chiamate e audio negli spazi comuni e in ascensore.",
-              "fr": "Gardez un faible volume pour appels et audio dans les espaces communs et l'ascenseur."
-            }
+              "en": "Call 112 for police, ambulance or fire department.",
+              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
+              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "112",
+                "reference": "emergencyPhone",
+                "label": {
+                  "en": "Call 112",
+                  "it": "Chiama 112",
+                  "fr": "Appeler 112"
+                }
+              }
+            ]
           },
           {
-            "icon": "B",
+            "icon": "A",
             "title": {
-              "en": "Checkout flow",
-              "it": "Flusso checkout",
-              "fr": "Flux de depart"
+              "en": "First aid kit",
+              "it": "Kit primo soccorso",
+              "fr": "Trousse de secours"
             },
             "text": {
-              "en": "Close windows, switch off the A/C and place keys back in the lockbox before leaving.",
-              "it": "Chiudi le finestre, spegni l'A/C e rimetti le chiavi nella lockbox prima di uscire.",
-              "fr": "Fermez les fenetres, eteignez la clim et replacez les cles dans la lockbox avant de partir."
+              "en": "Located in the bathroom cabinet.",
+              "it": "Si trova nell'armadietto del bagno.",
+              "fr": "Situ\u00e9 dans le placard de la salle de bain."
             }
           }
         ]
@@ -935,7 +1099,8 @@
   ],
   "share": {
     "publicUrl": "",
-    "qrDestinationUrl": ""
+    "qrDestinationUrl": "",
+    "guestUrl": ""
   },
   "printables": {
     "qrSign": {
@@ -968,9 +1133,57 @@
         "it": "Benvenuti",
         "fr": "Bienvenue"
       }
+    },
+    "qrPocketCard": {
+      "title": {
+        "en": "Your guest guide",
+        "it": "La tua guida ospiti",
+        "fr": "Votre guide voyageurs"
+      },
+      "tagline": {
+        "en": "Scan for Wi-Fi, arrival info & local tips",
+        "it": "Scansiona per Wi-Fi, arrivo e consigli locali",
+        "fr": "Scannez pour Wi-Fi, arrivee et conseils locaux"
+      }
     }
   },
   "layout": {
     "heroMode": "full"
+  },
+  "media": {
+    "heroImage": {
+      "src": "",
+      "alt": {
+        "en": "",
+        "it": "",
+        "fr": ""
+      }
+    },
+    "gallery": [
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      }
+    ]
   }
 }

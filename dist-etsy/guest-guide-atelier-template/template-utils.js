@@ -134,6 +134,18 @@ export const printableDefaults = {
       fr: "Bienvenue",
     },
   },
+  qrPocketCard: {
+    title: {
+      en: "Your guest guide",
+      it: "La tua guida ospiti",
+      fr: "Votre guide voyageurs",
+    },
+    tagline: {
+      en: "Scan for Wi-Fi, arrival info & local tips",
+      it: "Scansiona per Wi-Fi, arrivo e consigli locali",
+      fr: "Scannez pour Wi-Fi, arrivee et conseils locaux",
+    },
+  },
 };
 
 export const layoutDefaults = {
@@ -176,6 +188,7 @@ export function getQueryConfig(search = window.location.search) {
     preset: params.get("preset"),
     config: params.get("config"),
     lang: params.get("lang"),
+    view: params.get("view"),
   };
 }
 
@@ -194,12 +207,30 @@ function ensureLocalizedValue(target = {}, source = {}) {
 }
 
 export function ensurePrintableConfig(config) {
+  config.media ??= {};
+  config.media.heroImage ??= { src: "", alt: { en: "", it: "", fr: "" } };
+  if (typeof config.media.heroImage === "string") {
+    config.media.heroImage = { src: config.media.heroImage, alt: { en: "", it: "", fr: "" } };
+  }
+  config.media.heroImage.alt ??= { en: "", it: "", fr: "" };
+  if (!Array.isArray(config.media.gallery)) {
+    config.media.gallery = [];
+  }
+  config.media.gallery = config.media.gallery.map((item) => {
+    if (typeof item === "string") {
+      return { src: item, alt: { en: "", it: "", fr: "" } };
+    }
+    item.alt ??= { en: "", it: "", fr: "" };
+    return item;
+  });
+
   config.layout ??= { ...layoutDefaults };
   config.layout.heroMode = ["full", "compact", "hidden"].includes(config.layout.heroMode)
     ? config.layout.heroMode
     : layoutDefaults.heroMode;
 
-  config.share ??= { publicUrl: "", qrDestinationUrl: "" };
+  config.share ??= { publicUrl: "", qrDestinationUrl: "", guestUrl: "" };
+  config.share.guestUrl ??= "";
   config.printables ??= {};
   config.printables.qrSign = {
     ...printableDefaults.qrSign,
@@ -217,6 +248,12 @@ export function ensurePrintableConfig(config) {
     ...printableDefaults.welcomeSheet,
     ...(config.printables.welcomeSheet ?? {}),
     title: ensureLocalizedValue(config.printables.welcomeSheet?.title, printableDefaults.welcomeSheet.title),
+  };
+  config.printables.qrPocketCard = {
+    ...printableDefaults.qrPocketCard,
+    ...(config.printables.qrPocketCard ?? {}),
+    title: ensureLocalizedValue(config.printables.qrPocketCard?.title, printableDefaults.qrPocketCard.title),
+    tagline: ensureLocalizedValue(config.printables.qrPocketCard?.tagline, printableDefaults.qrPocketCard.tagline),
   };
 }
 
@@ -306,6 +343,18 @@ export function resolveQrDestinationUrl(config) {
 
   const fallbackPath = window.location.pathname.includes("/printables/") ? "../index.html" : "./index.html";
   return new URL(fallbackPath, window.location.href).toString();
+}
+
+export function resolveGuestUrl(config) {
+  const explicit = config.share?.guestUrl?.trim();
+  if (explicit) {
+    return explicit;
+  }
+
+  const base = resolveQrDestinationUrl(config);
+  const url = new URL(base);
+  url.searchParams.set("view", "guest");
+  return url.toString();
 }
 
 export function getLocaleList(config) {

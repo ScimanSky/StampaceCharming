@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Pocket Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./printables.css" />
+    <style>
+      /* ── Pocket card layout ───────────────────────────────────── */
+
+      .pocket-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        gap: 1.4rem;
+        margin-top: 1rem;
+      }
+
+      .pocket-card {
+        /* DL / business-card proportions: ~85mm × 54mm at 96dpi ≈ 322×204px */
+        width: min(100%, 22rem);
+        aspect-ratio: 85 / 54;
+        border-radius: 18px;
+        background: var(--paper-strong);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .pocket-card::before {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+        border-radius: 0 0 18px 18px;
+      }
+
+      .pocket-body {
+        padding: 1rem 0.8rem 1.3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+      }
+
+      .pocket-overline {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.62rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .pocket-title {
+        margin: 0.2rem 0 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+        line-height: 1.1;
+        font-weight: 600;
+      }
+
+      .pocket-tagline {
+        margin: 0.25rem 0 0;
+        font-size: 0.62rem;
+        color: var(--ink-soft);
+        line-height: 1.45;
+      }
+
+      .pocket-footer {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.55rem;
+      }
+
+      .pocket-seal {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.48rem;
+        letter-spacing: 0.12em;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 700;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-alt) 100%);
+        color: #fff9f3;
+        flex-shrink: 0;
+      }
+
+      .pocket-host {
+        font-size: 0.62rem;
+        font-weight: 600;
+        color: var(--ink-soft);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .pocket-qr-side {
+        background: rgba(255, 255, 255, 0.56);
+        border-left: 1px solid var(--line);
+        padding: 0.65rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        min-width: 5.4rem;
+      }
+
+      .pocket-qr-frame {
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 10px;
+        background: #ffffff;
+        padding: 0.3rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+      }
+
+      .pocket-qr-frame svg,
+      .pocket-qr-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .pocket-qr-frame .qr-frame-empty {
+        font-size: 0.5rem;
+        text-align: center;
+        color: var(--ink-soft);
+        line-height: 1.4;
+        padding: 0.2rem;
+      }
+
+      .pocket-scan-label {
+        font-size: 0.52rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-soft);
+        text-align: center;
+      }
+
+      /* Cut guide (screen only) */
+      .cut-hint {
+        margin: 1.2rem 0 0.4rem;
+        font-size: 0.75rem;
+        color: var(--ink-soft);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .cut-hint::before,
+      .cut-hint::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        border-top: 1px dashed var(--line);
+      }
+
+      /* Print: one card per row, compact */
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      @media print {
+        .printable-toolbar,
+        .cut-hint {
+          display: none;
+        }
+
+        .pocket-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 6mm;
+          page-break-inside: avoid;
+        }
+
+        .pocket-card {
+          width: 100%;
+          border: 1px solid #ccc;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="printable-body">
+    <main class="printable-shell printable-shell-card">
+      <div class="printable-toolbar">
+        <div class="printable-toolbar-copy">
+          <strong>QR Pocket Card</strong>
+          <span>Credit-card sized printable — cut out and hand to guests or leave on the table.</span>
+        </div>
+        <div class="printable-toolbar-actions">
+          <div class="printable-locale-switch" id="locale-switch"></div>
+          <button class="topbar-button" id="open-guide-button" type="button">Open guide</button>
+          <button class="topbar-button" id="print-button" type="button">Print / Save as PDF</button>
+        </div>
+      </div>
+
+      <!-- 3 identical cards — enough for a full cut sheet -->
+      <p class="cut-hint">✂ cut along dashed lines</p>
+      <div class="pocket-grid" id="pocket-grid">
+        <!-- Cards are rendered by JS -->
+      </div>
+    </main>
+
+    <script src="../vendor/qrcode.js"></script>
+    <script type="module" src="./printables.js"></script>
+  </body>
+</html>

@@ -6,16 +6,19 @@ Vacation Rental Guest Guide Website Template, Airbnb QR Welcome Page, Digital Ho
 
 ## Short description
 
-Mobile-first guest guide website template for Airbnb hosts, vacation rentals and boutique stays. Includes a no-code customizer, 4 presets, QR-ready sharing, and printable bonus files for your Wi-Fi card, welcome sheet and guest QR sign.
+Mobile-first guest guide website template for Airbnb hosts, vacation rentals and boutique stays. Includes a no-code customizer, 4 presets, guest mode sharing, property image support, and printable bonus files for your Wi-Fi card, welcome sheet and guest QR sign.
 
 ## Key value bullets
 
 - no-code customizer included for basic edits
 - mobile-first guest guide website, not a PDF
 - single `config.json` file for text, links and translations
+- guest mode link for cleaner guest-facing sharing
+- optional hero image and gallery support
 - QR-ready sharing flow for pre-arrival messages and in-home signage
 - 4 included presets: boutique, urban, coastal and blank
-- bundled printables: QR sign, Wi-Fi card and welcome sheet
+- bundled printables: QR sign, Wi-Fi card, welcome sheet and pocket QR card
+- dedicated pre-built modules for House Rules, Checkout, and Emergency contacts
 - ideal for Airbnb hosts, vacation rentals, villas and boutique apartments
 
 ## What buyers receive
@@ -27,6 +30,7 @@ Mobile-first guest guide website template for Airbnb hosts, vacation rentals and
 - QR Welcome Sign
 - Wi-Fi Card
 - Welcome Sheet
+- Pocket QR Card
 - deploy guide for GitHub Pages
 - buyer license
 

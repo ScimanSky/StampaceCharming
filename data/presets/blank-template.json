@@ -480,7 +480,7 @@
       }
     },
     {
-      "id": "house",
+      "id": "house-rules",
       "icon": "Stay",
       "tone": "sand",
       "chip": {
@@ -489,19 +489,19 @@
         "fr": "Modifiez-moi"
       },
       "title": {
-        "en": "House notes",
-        "it": "Note casa",
-        "fr": "Notes maison"
+        "en": "House rules",
+        "it": "Regole casa",
+        "fr": "R\u00e8gles maison"
       },
       "description": {
-        "en": "Use this for the rules or details guests really need.",
-        "it": "Usa questa per le regole o i dettagli che servono davvero.",
-        "fr": "Utilisez-la pour les regles ou details vraiment utiles."
+        "en": "Use this for the rules guests really need.",
+        "it": "Usa questa per le regole che servono davvero.",
+        "fr": "Utilisez-la pour les r\u00e8gles vraiment utiles."
       },
       "cardActions": [
         {
           "type": "modal",
-          "serviceId": "house",
+          "serviceId": "house-rules",
           "label": {
             "en": "Open details",
             "it": "Apri dettagli",
@@ -516,9 +516,9 @@
           "fr": "Exemple"
         },
         "title": {
-          "en": "House details go here",
-          "it": "I dettagli casa vanno qui",
-          "fr": "Les details maison vont ici"
+          "en": "House rules go here",
+          "it": "Le regole vanno qui",
+          "fr": "Les r\u00e8gles vont ici"
         },
         "copy": {
           "en": "Use only the information guests may forget or ask often.",
@@ -531,12 +531,12 @@
             "title": {
               "en": "Rule one",
               "it": "Regola uno",
-              "fr": "Regle un"
+              "fr": "R\u00e8gle un"
             },
             "text": {
               "en": "Write one practical note.",
               "it": "Scrivi una nota pratica.",
-              "fr": "Ecrivez une note pratique."
+              "fr": "\u00c9crivez une note pratique."
             }
           },
           {
@@ -544,12 +544,176 @@
             "title": {
               "en": "Rule two",
               "it": "Regola due",
-              "fr": "Regle deux"
+              "fr": "R\u00e8gle deux"
             },
             "text": {
               "en": "Write another practical note.",
               "it": "Scrivi un'altra nota pratica.",
-              "fr": "Ecrivez une autre note pratique."
+              "fr": "\u00c9crivez une autre note pratique."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "checkout",
+      "icon": "B",
+      "tone": "sand",
+      "chip": {
+        "en": "Edit me",
+        "it": "Modificami",
+        "fr": "Modifiez-moi"
+      },
+      "title": {
+        "en": "Checkout",
+        "it": "Checkout",
+        "fr": "D\u00e9part"
+      },
+      "description": {
+        "en": "Use this for departure instructions.",
+        "it": "Usa questa per le istruzioni di partenza.",
+        "fr": "Utilisez-la pour les instructions de d\u00e9part."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "checkout",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Example",
+          "it": "Esempio",
+          "fr": "Exemple"
+        },
+        "title": {
+          "en": "Checkout details go here",
+          "it": "I dettagli di checkout vanno qui",
+          "fr": "Les d\u00e9tails de d\u00e9part vont ici"
+        },
+        "copy": {
+          "en": "Keep this focused on what guests actually need to do.",
+          "it": "Mantieni questa sezione focalizzata su ci\u00f2 che gli ospiti devono fare.",
+          "fr": "Gardez cette section concentr\u00e9e sur ce que les voyageurs doivent faire."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Timing",
+              "it": "Orario",
+              "fr": "Horaire"
+            },
+            "text": {
+              "en": "Standard checkout time.",
+              "it": "Orario di checkout standard.",
+              "fr": "Heure de d\u00e9part standard."
+            }
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "Keys",
+              "it": "Chiavi",
+              "fr": "Cl\u00e9s"
+            },
+            "text": {
+              "en": "Where to leave the keys.",
+              "it": "Dove lasciare le chiavi.",
+              "fr": "O\u00f9 laisser les cl\u00e9s."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "icon": "SOS",
+      "tone": "red",
+      "chip": {
+        "en": "Edit me",
+        "it": "Modificami",
+        "fr": "Modifiez-moi"
+      },
+      "title": {
+        "en": "Emergency",
+        "it": "Emergenza",
+        "fr": "Urgence"
+      },
+      "description": {
+        "en": "Use this for safety and emergency contacts.",
+        "it": "Usa questa per contatti di emergenza.",
+        "fr": "Utilisez-la pour les contacts d'urgence."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "emergency",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Example",
+          "it": "Esempio",
+          "fr": "Exemple"
+        },
+        "title": {
+          "en": "Emergency info goes here",
+          "it": "Le info di emergenza vanno qui",
+          "fr": "Les infos d'urgence vont ici"
+        },
+        "copy": {
+          "en": "Provide essential contacts and locations.",
+          "it": "Fornisci contatti e luoghi essenziali.",
+          "fr": "Fournissez les contacts et lieux essentiels."
+        },
+        "sections": [
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "National emergency",
+              "it": "Emergenza nazionale",
+              "fr": "Urgence nationale"
+            },
+            "text": {
+              "en": "Emergency number details.",
+              "it": "Dettagli numero di emergenza.",
+              "fr": "D\u00e9tails du num\u00e9ro d'urgence."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "112",
+                "reference": "emergencyPhone",
+                "label": {
+                  "en": "Call 112",
+                  "it": "Chiama 112",
+                  "fr": "Appeler 112"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "A",
+            "title": {
+              "en": "First aid kit",
+              "it": "Kit primo soccorso",
+              "fr": "Trousse de secours"
+            },
+            "text": {
+              "en": "Location of first aid kit.",
+              "it": "Posizione kit di soccorso.",
+              "fr": "Emplacement de la trousse."
             }
           }
         ]
@@ -935,7 +1099,8 @@
   ],
   "share": {
     "publicUrl": "",
-    "qrDestinationUrl": ""
+    "qrDestinationUrl": "",
+    "guestUrl": ""
   },
   "printables": {
     "qrSign": {
@@ -968,9 +1133,57 @@
         "it": "Benvenuti",
         "fr": "Bienvenue"
       }
+    },
+    "qrPocketCard": {
+      "title": {
+        "en": "Your guest guide",
+        "it": "La tua guida ospiti",
+        "fr": "Votre guide voyageurs"
+      },
+      "tagline": {
+        "en": "Scan for Wi-Fi, arrival info & local tips",
+        "it": "Scansiona per Wi-Fi, arrivo e consigli locali",
+        "fr": "Scannez pour Wi-Fi, arrivee et conseils locaux"
+      }
     }
   },
   "layout": {
     "heroMode": "full"
+  },
+  "media": {
+    "heroImage": {
+      "src": "",
+      "alt": {
+        "en": "",
+        "it": "",
+        "fr": ""
+      }
+    },
+    "gallery": [
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      }
+    ]
   }
 }
