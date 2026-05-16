@@ -1,87 +1,38 @@
 # Etsy Listing Copy
 
-## Suggested title
+## Title
 
-Vacation Rental Guest Guide Website Template, Airbnb QR Welcome Page, Digital House Manual, Mobile Guest Guide, Editable Hospitality Template
+Vacation Rental Digital Guest Book Template, 5 Language Airbnb House Manual, QR Welcome Guide, Wi-Fi and House Rules Website
 
 ## Short description
 
-Mobile-first guest guide website template for Airbnb hosts, vacation rentals, villas, family stays, cabins and work-friendly rentals. Includes a no-code customizer, a template-selection wizard, 6 distinct guest guide templates, 1 blank bonus starter, guest mode sharing, property image support, and printable bonus files for your Wi-Fi card, welcome sheet and guest QR sign.
+Five-language digital guest book template for Airbnb hosts, B&Bs and holiday homes. Includes a simple browser customizer, fixed guest-book sections, QR-ready printables and a guest-friendly mobile layout.
 
-## Key value bullets
+## Key features
 
-- no-code customizer included for basic edits
-- mobile-first guest guide website, not a PDF
-- single `config.json` file for text, links and translations
-- guest mode link for cleaner guest-facing sharing
-- optional hero image and gallery support
-- QR-ready sharing flow for pre-arrival messages and in-home signage
-- 6 distinct templates: boutique, urban, coastal, family, cabin and self check-in workstay
-- 1 blank bonus starter for advanced buyers
-- bundled printables: QR sign, Wi-Fi card, welcome sheet and pocket QR card
-- dedicated pre-built modules for House Rules, Checkout, and Emergency contacts
-- ideal for Airbnb hosts, vacation rentals, villas and boutique apartments
-
-## What buyers receive
-
-- editable guest guide website template
-- browser customizer
-- root `config.json`
-- 6 distinct guest guide templates
-- 1 blank bonus starter
-- QR Welcome Sign
-- Wi-Fi Card
-- Welcome Sheet
-- Pocket QR Card
-- deploy guide for GitHub Pages
-- buyer license
+- 5 guest languages included: English, Italian, French, German and Spanish
+- fixed house manual structure: Wi-Fi, house rules, useful info, check-in, check-out, local tips and emergency help
+- no-code browser customizer for normal edits
+- guest-ready mobile page
+- QR sign, Wi-Fi card, welcome sheet and pocket QR card included
+- easy GitHub Pages deployment
 
 ## FAQ
 
-### Is this a website or a PDF?
-
-This is a static website template. It also includes printable bonus files, but the main product is a guest guide web page.
+### Is this a PDF?
+No. This is a static guest book website template.
 
 ### Do I need coding skills?
-
-Not for basic edits. Most buyers can update the content from the included browser customizer and export a new `config.json`.
+No for normal edits. Buyers update the content in the browser customizer and export `config.json`.
 
 ### Is hosting included?
+No. The buyer publishes the files on GitHub Pages or another static host.
 
-No. This is a self-hosted static template. A GitHub Pages guide is included.
+### Which languages are included?
+English, Italian, French, German and Spanish.
 
-### Can I use it with Airbnb guests?
+### Can I change the text?
+Yes. The customizer includes separate language tabs and fixed guest-book fields.
 
-Yes. It is designed for Airbnb hosts, vacation rentals, villas, family stays, cabins and work-friendly rentals.
-
-### Can I change the colors and text?
-
-Yes. You can switch presets, edit text, update links and adjust the theme.
-
-### Can I print the QR sign?
-
-Yes. The bundle includes a QR sign, a Wi-Fi card and a welcome sheet.
-
-### Can I use it for a client?
-
-One purchase covers one business or one client deployment. Multi-client redistribution is not included.
-
-## Listing disclaimer
-
-Digital product only. No physical item will be shipped. Hosting is not included. This template is not a full hotel website builder or a Canva file.
-
-## Suggested tags
-
-- airbnb template
-- guest guide website
-- qr welcome page
-- vacation rental
-- digital house manual
-- host template
-- welcome book alternative
-- boutique stay template
-- hospitality website
-- wifi sign template
-- digital download
-- rental guest guide
-- airbnb qr code
+### Can I print the QR sign and Wi-Fi card?
+Yes. The bundle includes matching printables.

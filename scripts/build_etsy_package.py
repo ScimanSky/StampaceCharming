@@ -16,7 +16,7 @@ DIST = ROOT / "dist-etsy"
 SELLER = ROOT / "seller-assets"
 LISTING_DIR = SELLER / "listing-slides"
 SOCIAL_DIR = SELLER / "social-crops"
-PACKAGE_NAME = "guest-guide-atelier-template"
+PACKAGE_NAME = "staybook-digital-guest-book-template"
 PACKAGE_DIR = DIST / PACKAGE_NAME
 PACKAGE_ZIP = DIST / f"{PACKAGE_NAME}.zip"
 
@@ -39,7 +39,6 @@ FILES_TO_COPY = [
 ]
 
 DIRS_TO_COPY = [
-    "data/presets",
     "printables",
     "vendor",
 ]
@@ -51,74 +50,16 @@ FONT_SANS_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_SERIF = "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"
 FONT_SERIF_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
 
-
-THEMES = {
-    "mediterranean": {
-        "bg": "#f8efe3",
-        "bg_alt": "#ecdbc6",
-        "paper": "#fff8f1",
-        "ink": "#271f19",
-        "muted": "#625247",
-        "accent": "#b86f46",
-        "accent_alt": "#2d5142",
-        "line": "#dbc6b2",
-        "soft": "#ead4bf",
-    },
-    "gallery": {
-        "bg": "#f3f0eb",
-        "bg_alt": "#ddd7cf",
-        "paper": "#ffffff",
-        "ink": "#171818",
-        "muted": "#5a5e60",
-        "accent": "#1f3c63",
-        "accent_alt": "#8f5e31",
-        "line": "#d6d1c9",
-        "soft": "#e3eaf3",
-    },
-    "coastal": {
-        "bg": "#eef6f5",
-        "bg_alt": "#d6e7e4",
-        "paper": "#fcffff",
-        "ink": "#163031",
-        "muted": "#4a6966",
-        "accent": "#1e7474",
-        "accent_alt": "#c67f53",
-        "line": "#c8dedb",
-        "soft": "#d9eeeb",
-    },
-    "family": {
-        "bg": "#f7f4ee",
-        "bg_alt": "#ebe5da",
-        "paper": "#ffffff",
-        "ink": "#2b2722",
-        "muted": "#666056",
-        "accent": "#be8b5e",
-        "accent_alt": "#56706b",
-        "line": "#ddd4c8",
-        "soft": "#f2e5d8",
-    },
-    "cabin": {
-        "bg": "#efe8de",
-        "bg_alt": "#ddd0c0",
-        "paper": "#fffdf9",
-        "ink": "#232019",
-        "muted": "#615a4e",
-        "accent": "#87674c",
-        "accent_alt": "#43584d",
-        "line": "#d4c7b8",
-        "soft": "#e5d6c6",
-    },
-    "workstay": {
-        "bg": "#edf1f4",
-        "bg_alt": "#dde5ea",
-        "paper": "#ffffff",
-        "ink": "#151a20",
-        "muted": "#586371",
-        "accent": "#31618c",
-        "accent_alt": "#1f2f44",
-        "line": "#d7dfe6",
-        "soft": "#dde9f4",
-    },
+THEME = {
+    "bg": "#f6efe4",
+    "bg_alt": "#eadcc7",
+    "paper": "#fff9f2",
+    "ink": "#241d19",
+    "muted": "#65574b",
+    "accent": "#a75c43",
+    "accent_alt": "#5d6d4c",
+    "soft": "#efddcf",
+    "line": "#d8c7b7",
 }
 
 
@@ -134,26 +75,21 @@ def font(path: str, size: int) -> ImageFont.FreeTypeFont:
 def ensure_clean_dirs() -> None:
     DIST.mkdir(exist_ok=True)
     SELLER.mkdir(exist_ok=True)
-
     if LISTING_DIR.exists():
         shutil.rmtree(LISTING_DIR)
-
     if SOCIAL_DIR.exists():
         shutil.rmtree(SOCIAL_DIR)
-
-    LISTING_DIR.mkdir(parents=True, exist_ok=True)
-    SOCIAL_DIR.mkdir(parents=True, exist_ok=True)
-
     if PACKAGE_DIR.exists():
         shutil.rmtree(PACKAGE_DIR)
-
     if PACKAGE_ZIP.exists():
         PACKAGE_ZIP.unlink()
 
-
-def copy_package_files() -> None:
+    LISTING_DIR.mkdir(parents=True, exist_ok=True)
+    SOCIAL_DIR.mkdir(parents=True, exist_ok=True)
     PACKAGE_DIR.mkdir(parents=True, exist_ok=True)
 
+
+def copy_package_files() -> None:
     for name in FILES_TO_COPY:
         source = ROOT / name
         target = PACKAGE_DIR / name
@@ -178,7 +114,7 @@ def rounded(draw: ImageDraw.ImageDraw, box, radius: int, fill, outline=None, wid
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
 
-def vertical_gradient(size, top_color: str, bottom_color: str):
+def gradient(size, top_color: str, bottom_color: str):
     image = Image.new("RGB", size, top_color)
     draw = ImageDraw.Draw(image)
     width, height = size
@@ -188,445 +124,305 @@ def vertical_gradient(size, top_color: str, bottom_color: str):
         ratio = y / max(height - 1, 1)
         color = tuple(int(top[i] + (bottom[i] - top[i]) * ratio) for i in range(3))
         draw.line((0, y, width, y), fill=color)
-    return image
+    return image.convert("RGBA")
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, text: str, xy, width: int, font_obj, fill, spacing: int = 10):
-    chars_per_line = max(16, int(width / max(font_obj.size * 0.62, 10)))
+    chars_per_line = max(14, int(width / max(font_obj.size * 0.62, 10)))
     wrapped = textwrap.fill(text, width=chars_per_line)
     draw.multiline_text(xy, wrapped, font=font_obj, fill=fill, spacing=spacing)
 
 
-def new_slide(theme: dict) -> tuple[Image.Image, ImageDraw.ImageDraw]:
-    image = vertical_gradient(SLIDE_SIZE, theme["bg"], theme["bg_alt"]).convert("RGBA")
+def new_slide() -> tuple[Image.Image, ImageDraw.ImageDraw]:
+    image = gradient(SLIDE_SIZE, THEME["bg"], THEME["bg_alt"])
     draw = ImageDraw.Draw(image)
+    rounded(draw, (60, 60, 1940, 1540), 42, fill=THEME["paper"])
     return image, draw
 
 
-def slide_shell(draw: ImageDraw.ImageDraw, theme: dict):
-    rounded(draw, (56, 56, 1944, 1544), 42, fill=theme["paper"])
-    rounded(draw, (96, 96, 812, 1464), 34, fill="#ffffff", outline=theme["line"], width=2)
-    rounded(draw, (844, 96, 1904, 1464), 34, fill="#ffffff", outline=theme["line"], width=2)
+def draw_header(draw: ImageDraw.ImageDraw, title: str, subtitle: str):
+    draw.text((118, 118), "StayBook", fill=THEME["accent"], font=font(FONT_SANS_BOLD, 24))
+    draw.text((118, 165), title, fill=THEME["ink"], font=font(FONT_SERIF_BOLD, 78))
+    draw_wrapped(draw, subtitle, (118, 282), 760, font(FONT_SANS, 30), THEME["muted"], spacing=14)
 
 
-def draw_header(draw: ImageDraw.ImageDraw, title: str, subtitle: str, theme: dict):
-    draw.text((120, 120), "Guest Guide Atelier", fill=theme["accent"], font=font(FONT_SANS_BOLD, 24))
-    draw.text((120, 165), title, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 76))
-    draw_wrapped(draw, subtitle, (120, 275), 740, font(FONT_SANS, 30), theme["muted"], spacing=14)
+def draw_phone(draw: ImageDraw.ImageDraw, config: dict):
+    rounded(draw, (1035, 155, 1535, 1425), 70, fill="#14110f")
+    rounded(draw, (1060, 205, 1510, 1396), 56, fill=THEME["bg"])
+    rounded(draw, (1204, 220, 1398, 252), 14, fill="#14110f")
+    rounded(draw, (1092, 288, 1478, 640), 36, fill=THEME["paper"], outline=THEME["line"])
+    draw.text((1126, 324), config["property"]["badge"], fill=THEME["accent"], font=font(FONT_SANS_BOLD, 18))
+    draw_wrapped(draw, config["property"]["name"], (1126, 360), 300, font(FONT_SERIF_BOLD, 42), THEME["ink"], spacing=8)
+    draw_wrapped(draw, config["content"]["en"]["intro"], (1126, 490), 312, font(FONT_SANS, 18), THEME["muted"], spacing=6)
+    chips = [("Wi-Fi", 706), ("House rules", 820), ("Check-in", 934), ("Help", 1048)]
+    for label, y in chips:
+        rounded(draw, (1100, y, 1450, y + 84), 24, fill="#ffffff", outline=THEME["line"])
+        draw.text((1132, y + 26), label, fill=THEME["ink"], font=font(FONT_SANS_BOLD, 22))
 
 
-def draw_phone_mock(draw: ImageDraw.ImageDraw, theme: dict, config: dict):
-    rounded(draw, (960, 170, 1500, 1370), 66, fill="#101010")
-    rounded(draw, (986, 222, 1474, 1342), 54, fill=theme["bg"], outline="#1a1a1a", width=2)
-    rounded(draw, (1130, 238, 1330, 270), 14, fill="#101010")
-
-    rounded(draw, (1020, 308, 1440, 690), 34, fill=theme["paper"], outline=theme["line"])
-    draw.ellipse((1056, 340, 1144, 428), fill=theme["accent"])
-    draw.text((1100, 385), config["brand"]["crest"], fill="#fff8f1", font=font(FONT_SERIF_BOLD, 34), anchor="mm")
-    draw.text((1176, 344), "QR-ready guest guide", fill=theme["accent"], font=font(FONT_SANS_BOLD, 18))
-    draw_wrapped(draw, config["brand"]["headline"]["en"], (1058, 454), 350, font(FONT_SERIF_BOLD, 34), theme["ink"], spacing=8)
-    draw_wrapped(
-        draw,
-        "Wi-Fi, arrival, local picks and direct host contact in one mobile page.",
-        (1058, 582),
-        330,
-        font(FONT_SANS, 18),
-        theme["muted"],
-        spacing=7,
-    )
-
-    y = 742
-    cards = [
-        ("Wi-Fi", "Copy password or connect quickly"),
-        ("Arrival", "Self check-in, route and timing notes"),
-        ("Local picks", "Maps, food and nearby essentials"),
-        ("Host", "One-tap call or WhatsApp support"),
-    ]
-    for index, (label, copy) in enumerate(cards):
-        x = 1020 + (index % 2) * 214
-        row_y = y + (index // 2) * 174
-        rounded(draw, (x, row_y, x + 194, row_y + 150), 24, fill="#ffffff", outline=theme["line"])
-        draw.text((x + 18, row_y + 20), label, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 24))
-        draw_wrapped(draw, copy, (x + 18, row_y + 62), 158, font(FONT_SANS, 16), theme["muted"], spacing=6)
-
-
-def draw_feature_cards(draw: ImageDraw.ImageDraw, theme: dict, items: list[tuple[str, str]], start_y: int = 470):
+def draw_feature_stack(draw: ImageDraw.ImageDraw, items: list[tuple[str, str]], x: int = 118, start_y: int = 500):
     for index, (title, copy) in enumerate(items):
-        x = 126
-        y = start_y + index * 170
-        rounded(draw, (x, y, 740, y + 138), 28, fill=theme["soft"], outline=theme["line"])
-        draw.text((158, y + 24), title, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 32))
-        draw_wrapped(draw, copy, (158, y + 68), 520, font(FONT_SANS, 22), theme["muted"], spacing=8)
+        y = start_y + index * 182
+        rounded(draw, (x, y, 790, y + 148), 30, fill=THEME["soft"], outline=THEME["line"])
+        draw.text((150, y + 26), title, fill=THEME["ink"], font=font(FONT_SERIF_BOLD, 34))
+        draw_wrapped(draw, copy, (150, y + 76), 560, font(FONT_SANS, 22), THEME["muted"], spacing=8)
 
 
-def draw_checklist(draw: ImageDraw.ImageDraw, theme: dict, title: str, items: list[str], x: int = 874, y: int = 220):
-    draw.text((x, y), title, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 44))
-    line_y = y + 88
+def draw_checklist(draw: ImageDraw.ImageDraw, title: str, items: list[str], x: int = 915, y: int = 220):
+    draw.text((x, y), title, fill=THEME["ink"], font=font(FONT_SERIF_BOLD, 44))
+    cursor = y + 90
     for item in items:
-        draw.ellipse((x, line_y + 6, x + 18, line_y + 24), fill=theme["accent"])
-        draw_wrapped(draw, item, (x + 38, line_y), 820, font(FONT_SANS, 24), theme["muted"], spacing=8)
-        line_y += 118
+        draw.ellipse((x, cursor + 7, x + 18, cursor + 25), fill=THEME["accent_alt"])
+        draw_wrapped(draw, item, (x + 36, cursor), 800, font(FONT_SANS, 24), THEME["muted"], spacing=8)
+        cursor += 114
 
 
-def draw_steps(draw: ImageDraw.ImageDraw, theme: dict, title: str, steps: list[str], x: int = 874, y: int = 220):
-    draw.text((x, y), title, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 44))
-    step_y = y + 96
-    for index, item in enumerate(steps, start=1):
-        rounded(draw, (x, step_y, 1760, step_y + 124), 26, fill=theme["soft"], outline=theme["line"])
-        draw.ellipse((x + 24, step_y + 26, x + 96, step_y + 98), fill=theme["accent"])
-        draw.text((x + 60, step_y + 62), str(index), fill="#fff8f1", font=font(FONT_SANS_BOLD, 28), anchor="mm")
-        draw_wrapped(draw, item, (x + 126, step_y + 26), 580, font(FONT_SANS, 24), theme["ink"], spacing=8)
-        step_y += 148
+def draw_language_badges(draw: ImageDraw.ImageDraw, labels: list[str]):
+    x = 920
+    y = 900
+    for label in labels:
+        rounded(draw, (x, y, x + 142, y + 68), 24, fill="#ffffff", outline=THEME["line"])
+        draw.text((x + 71, y + 34), label, fill=THEME["ink"], font=font(FONT_SANS_BOLD, 22), anchor="mm")
+        x += 164
 
 
-def draw_preset_comparison(draw: ImageDraw.ImageDraw, theme: dict, presets: list[tuple[str, str, str]]):
-    columns = [904, 1240, 1576]
-    card_width = 296
-    row_heights = [300, 790]
-    for index, (name, mood, accent) in enumerate(presets):
-        col = index % 3
-        row = index // 3
-        x = columns[col]
-        y = row_heights[row]
-        rounded(draw, (x, y, x + card_width, y + 410), 34, fill="#ffffff", outline=theme["line"])
-        draw.ellipse((x + 28, y + 28, x + 112, y + 112), fill=accent)
-        draw.text((x + 70, y + 70), name[:2].upper(), fill="#fff8f1", font=font(FONT_SERIF_BOLD, 28), anchor="mm")
-        draw.text((x + 28, y + 142), name, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 28))
-        draw_wrapped(draw, mood, (x + 28, y + 194), 236, font(FONT_SANS, 19), theme["muted"], spacing=7)
-        rounded(draw, (x + 28, y + 308, x + card_width - 28, y + 382), 22, fill=theme["soft"], outline=theme["line"])
-        draw.text((x + 46, y + 334), "Best for", fill=theme["accent"], font=font(FONT_SANS_BOLD, 16))
-
-
-def draw_printable_strip(draw: ImageDraw.ImageDraw, theme: dict):
+def draw_printables(draw: ImageDraw.ImageDraw):
     blocks = [
-        (910, "QR Sign", "A4 / US Letter sign for a guest-facing QR code"),
-        (1235, "Wi-Fi Card", "Compact printable card with live Wi-Fi QR"),
-        (1560, "Welcome Sheet", "Entrance-ready sheet with host info and guide QR"),
+        ("QR sign", "Entrance sign with guest-safe QR code"),
+        ("Wi-Fi card", "Compact printable Wi-Fi card with QR"),
+        ("Welcome sheet", "One-page intro for the room or desk"),
+        ("Pocket card", "Small cut-out card for guests on the move"),
     ]
-    for x, title, copy in blocks:
-        rounded(draw, (x, 360, x + 260, 1160), 34, fill="#ffffff", outline=theme["line"])
-        rounded(draw, (x + 26, 398, x + 234, 690), 24, fill=theme["soft"], outline=theme["line"])
-        draw.ellipse((x + 76, 448, x + 184, 556), fill=theme["accent"])
-        rounded(draw, (x + 78, 584, x + 182, 688), 16, fill="#ffffff", outline=theme["line"])
-        draw.text((x + 32, 736), title, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 28))
-        draw_wrapped(draw, copy, (x + 32, 790), 196, font(FONT_SANS, 20), theme["muted"], spacing=7)
+    start_x = 920
+    for index, (title, copy) in enumerate(blocks):
+        x = start_x + index * 238
+        rounded(draw, (x, 430, x + 214, 1180), 28, fill="#ffffff", outline=THEME["line"])
+        rounded(draw, (x + 24, 468, x + 190, 670), 20, fill=THEME["soft"], outline=THEME["line"])
+        draw.text((x + 24, 716), title, fill=THEME["ink"], font=font(FONT_SERIF_BOLD, 28))
+        draw_wrapped(draw, copy, (x + 24, 768), 160, font(FONT_SANS, 18), THEME["muted"], spacing=6)
 
 
-def slide_cover(config: dict, theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
+def slide_cover(config: dict) -> Image.Image:
+    image, draw = new_slide()
     draw_header(
         draw,
-        "A premium guest guide that is easier than a full website and stronger than a PDF.",
-        "Sell it as a QR-ready hospitality mini web app for boutique, city, coastal, family, cabin and workstay rentals.",
-        theme,
+        "A digital guest book that feels easier than Canva and more useful than a PDF.",
+        "Built for hosts who need a clean guest-facing page with house rules, Wi-Fi, check-in details and local tips.",
     )
-    draw_feature_cards(
+    draw_feature_stack(
         draw,
-        theme,
         [
-            ("No-code customizer", "Basic edits happen in the browser. Buyers only replace one config file."),
-            ("Mobile-first guide", "Optimized for guest phones, pre-arrival links and in-home QR scanning."),
-            ("Premium bundle", "Includes website template, presets, deploy docs and practical printables."),
+            ("Five guest languages", "English, Italian, French, German and Spanish are already included."),
+            ("Simple editing flow", "The buyer updates one config file through a browser customizer, no code needed for normal edits."),
+            ("QR-ready extras", "The bundle includes matching printables for QR sharing, Wi-Fi access and welcome signage."),
         ],
     )
-    draw_phone_mock(draw, theme, config)
-    draw.text((874, 1240), "Includes QR-ready printables and deploy guidance", fill=theme["accent_alt"], font=font(FONT_SANS_BOLD, 28))
+    draw_phone(draw, config)
     return image
 
 
-def slide_guest_actions(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
+def slide_languages() -> Image.Image:
+    image, draw = new_slide()
     draw_header(
         draw,
-        "What guests can do with the template",
-        "Lead with outcomes, not technology. These are the actions buyers are really offering to guests.",
-        theme,
+        "The multilingual part is already done.",
+        "This matters on Etsy because buyers do not want to build five language versions from scratch.",
     )
-    draw_feature_cards(
+    draw_feature_stack(
         draw,
-        theme,
         [
-            ("Get Wi-Fi fast", "Share the network, password and live Wi-Fi QR without message back-and-forth."),
-            ("Handle arrival", "Surface route notes, self check-in details and building access instructions."),
-            ("Find local picks", "Keep the best food, map and neighborhood shortcuts in one guest-facing page."),
-            ("Reach the host", "One-tap phone or WhatsApp support without digging through chat history."),
+            ("5 tabs inside the customizer", "Edit one language at a time without touching the layout."),
+            ("Fixed guest-book structure", "Each language keeps the same clean sections: rules, useful info, check-in, check-out, local tips and emergency help."),
+            ("Less confusion for hosts", "The buyer never needs to decide how many pages or modules the guide should have."),
         ],
-        start_y=410,
     )
     draw_checklist(
         draw,
-        theme,
-        "Guest-facing promise",
+        "Languages included",
         [
-            "Wi-Fi access",
-            "Arrival and house notes",
+            "English",
+            "Italiano",
+            "Francais",
+            "Deutsch",
+            "Espanol",
+        ],
+    )
+    draw_language_badges(draw, ["EN", "IT", "FR", "DE", "ES"])
+    return image
+
+
+def slide_guest_book_structure() -> Image.Image:
+    image, draw = new_slide()
+    draw_header(
+        draw,
+        "Exactly the sections guests expect",
+        "The product is no longer a loose website template. It is a fixed digital guest book with the right hospitality sections.",
+    )
+    draw_feature_stack(
+        draw,
+        [
+            ("House rules", "Noise, smoking, keys and the practical rules guests always ask about."),
+            ("Useful info", "Hot water, trash, entry instructions and small stay notes."),
+            ("Check-in and check-out", "Arrival timing, late arrival notes and departure reminders."),
+            ("Local tips and help", "Nearby essentials plus emergency or urgent support info."),
+        ],
+        start_y=420,
+    )
+    draw_checklist(
+        draw,
+        "Guest-facing essentials",
+        [
+            "Wi-Fi network and password",
+            "House rules",
+            "Check-in notes",
+            "Check-out notes",
+            "Useful stay info",
             "Local recommendations",
-            "Maps and nearby essentials",
-            "Direct host contact",
+            "Emergency contacts",
         ],
     )
     return image
 
 
-def slide_whats_included(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
+def slide_editing_flow() -> Image.Image:
+    image, draw = new_slide()
     draw_header(
         draw,
-        "Everything included in the Etsy bundle",
-        "Make the product feel like a full host toolkit, not just a single HTML page.",
-        theme,
+        "Editing stays simple on purpose.",
+        "The product is meant for hosts, not designers. The customizer only exposes the fields that matter.",
     )
-    draw_feature_cards(
+    draw_feature_stack(
         draw,
-        theme,
         [
-            ("Website template", "Static guest guide homepage with cards, modals, maps and contact sections."),
-            ("Template wizard", "Start from host scenarios instead of raw files, then refine in the browser."),
-            ("6 templates + bonus", "Boutique, urban, coastal, family, cabin and workstay, plus one blank starter."),
+            ("Step 1", "Fill in the property name, address, check-in times and optional hero image."),
+            ("Step 2", "Add host contact details and Wi-Fi."),
+            ("Step 3", "Review the 5 language tabs and paste the final live URL."),
         ],
     )
     draw_checklist(
         draw,
-        theme,
-        "Bundle contents",
+        "Buyer flow",
         [
-            "Guide website template",
-            "No-code browser customizer and wizard",
-            "Single config.json setup",
-            "QR sign, Wi-Fi card and welcome sheet",
-            "GitHub Pages deploy guide",
-            "Buyer license for one business or one client",
-        ],
-    )
-    return image
-
-
-def slide_edit_flow(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
-    draw_header(
-        draw,
-        "How easy it is to edit",
-        "The listing should remove technical fear immediately: edit in browser, export one file, publish.",
-        theme,
-    )
-    draw_feature_cards(
-        draw,
-        theme,
-        [
-            ("Choose a host scenario", "Pick the property type that already matches the guest journey you need."),
-            ("Edit essentials", "Replace property details, Wi-Fi, host info and the live guest link first."),
-            ("Add your live URL", "Set the public guide URL once so the QR sign points to the final page."),
-        ],
-    )
-    draw_steps(
-        draw,
-        theme,
-        "Simple buyer flow",
-        [
-            "Choose a host-ready template",
-            "Edit text, links and Wi-Fi",
-            "Preview guide and printables",
+            "Open customize.html",
+            "Edit essentials",
+            "Review each language tab",
+            "Preview the guide and printables",
             "Download config.json",
-            "Publish to GitHub Pages and print the QR sign",
+            "Publish and share the final guest link",
         ],
     )
     return image
 
 
-def slide_presets(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
+def slide_printables() -> Image.Image:
+    image, draw = new_slide()
     draw_header(
         draw,
-        "Preset comparison",
-        "Show buyers they are choosing between different host scenarios, not just different colors.",
-        theme,
+        "Printables that make the bundle feel complete",
+        "The guest book works as a link, but the QR files increase perceived value and make the product more practical for real hosting.",
     )
-    draw_feature_cards(
+    draw_feature_stack(
         draw,
-        theme,
         [
-            ("6 commercial templates", "Each one changes layout density, quick actions, module mix and guest priorities."),
-            ("Blank bonus starter", "Keep the blank builder as an advanced extra, not as one of the main selling presets."),
+            ("QR sign", "Use it at the entrance, on the desk or in the kitchen."),
+            ("Wi-Fi card", "Small card for the room, hallway or bedside table."),
+            ("Welcome sheet", "Quick one-page intro for the first impression."),
         ],
         start_y=470,
     )
-    draw_preset_comparison(
-        draw,
-        theme,
-        [
-            ("Boutique", "Editorial city stays and design apartments", "#b86f46"),
-            ("Urban", "Self check-in, fast arrivals and business travel", "#1f3c63"),
-            ("Coastal", "Beach apartments, villas and slow-stay hosting", "#1e7474"),
-            ("Family", "Practical family rentals with essentials up front", "#be8b5e"),
-            ("Cabin", "Cabins, retreats and heating-aware guest flows", "#87674c"),
-            ("Workstay", "Remote work, autonomy and support shortcuts", "#31618c"),
-        ],
-    )
+    draw_printables(draw)
     return image
 
 
-def slide_printables(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
+def slide_delivery() -> Image.Image:
+    image, draw = new_slide()
     draw_header(
         draw,
-        "Bonus printables that increase perceived value",
-        "These extras matter on Etsy because they make the bundle feel immediately useful for real hosting.",
-        theme,
+        "Be explicit about delivery, hosting and license",
+        "Clear expectations reduce support questions and make the listing feel more trustworthy.",
     )
-    draw_feature_cards(
+    draw_feature_stack(
         draw,
-        theme,
         [
-            ("QR Welcome Sign", "Print a guest-facing sign for the entrance, kitchen or desk."),
-            ("Wi-Fi Card", "Use the live Wi-Fi QR as a compact password card near the door."),
-            ("Welcome Sheet", "Add a lightweight intro sheet with host contact and guide QR."),
-        ],
-        start_y=430,
-    )
-    draw_printable_strip(draw, theme)
-    return image
-
-
-def slide_after_purchase(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
-    draw_header(
-        draw,
-        "How it works after purchase",
-        "Spell out the post-purchase flow so buyers do not confuse the template with a hosted product.",
-        theme,
-    )
-    draw_feature_cards(
-        draw,
-        theme,
-        [
-            ("Download ZIP", "Open the bundle and choose the preset closest to the property."),
-            ("Customize", "Edit the content in the browser customizer and export config.json."),
-            ("Publish", "Upload the files to GitHub Pages or another static host."),
-        ],
-    )
-    draw_steps(
-        draw,
-        theme,
-        "After purchase flow",
-        [
-            "Download the ZIP",
-            "Open customize.html",
-            "Edit content and public guide URL",
-            "Export config.json",
-            "Publish the folder",
-            "Print the QR sign and share the guide with guests",
-        ],
-    )
-    return image
-
-
-def slide_delivery(theme: dict) -> Image.Image:
-    image, draw = new_slide(theme)
-    slide_shell(draw, theme)
-    draw_header(
-        draw,
-        "Delivery, hosting and license",
-        "This slide reduces support questions before they happen.",
-        theme,
-    )
-    draw_feature_cards(
-        draw,
-        theme,
-        [
-            ("Digital product only", "No physical item is shipped. Buyers receive a ZIP download."),
-            ("Hosting not included", "The template is self-hosted. GitHub Pages guidance is included."),
-            ("One-business license", "One purchase covers one business or one client deployment."),
+            ("Digital product only", "No physical item ships. Buyers receive a ZIP download."),
+            ("Hosting not included", "The buyer publishes the files on GitHub Pages or another static host."),
+            ("One file to update", "Normal customization happens inside config.json."),
         ],
     )
     draw_checklist(
         draw,
-        theme,
-        "Important clarifications",
+        "What to mention in the listing",
         [
-            "Website template, not a PDF",
-            "Basic edits without coding",
-            "QR printables included",
-            "Works for boutique, city, coastal, family, cabin and workstay rentals",
-            "Personalization can be sold separately as an add-on",
+            "Digital download only",
+            "No coding needed for basic edits",
+            "5 guest languages included",
+            "Printables included",
+            "Hosting not included",
+            "One business / one client license",
         ],
     )
     return image
 
 
-def save_slide(image: Image.Image, filename: str) -> None:
-    image.save(LISTING_DIR / filename)
+def save_square_crop(source: Image.Image, output_name: str) -> None:
+    width, height = source.size
+    side = min(width, height)
+    left = (width - side) // 2
+    top = (height - side) // 2
+    crop = source.crop((left, top, left + side, top + side)).resize(SQUARE_SIZE)
+    crop.save(SOCIAL_DIR / output_name)
 
 
-def save_square_crop(image: Image.Image, filename: str) -> None:
-    width, height = image.size
-    left = (width - SQUARE_SIZE[0]) // 2
-    top = max((height - SQUARE_SIZE[1]) // 2, 0)
-    crop = image.crop((left, top, left + SQUARE_SIZE[0], top + SQUARE_SIZE[1]))
-    crop.save(SOCIAL_DIR / filename)
-
-
-def write_seller_summary() -> None:
-    summary = textwrap.dedent(
-        f"""
-        Guest Guide Atelier seller bundle created successfully.
-
-        Buyer ZIP:
-        - {PACKAGE_ZIP.relative_to(ROOT)}
-
-        Buyer folder:
-        - {PACKAGE_DIR.relative_to(ROOT)}
-
-        Listing slides:
-        - {LISTING_DIR.relative_to(ROOT)}
-
-        Social crops:
-        - {SOCIAL_DIR.relative_to(ROOT)}
-
-        Reminder:
-        - publish a live demo before listing on Etsy
-        - upload only the ZIP file as the digital download
-        - keep seller-only files out of the buyer bundle
-        """
-    ).strip()
-    (DIST / "SELLER_READY_CHECKLIST.txt").write_text(summary + "\n", encoding="utf-8")
-
-
-def build_listing_assets(config: dict) -> None:
-    theme = THEMES.get(config.get("themePreset"), THEMES["mediterranean"])
+def generate_listing_slides(config: dict) -> None:
     slides = [
-        ("01-cover.png", slide_cover(config, theme)),
-        ("02-what-guests-can-do.png", slide_guest_actions(theme)),
-        ("03-whats-included.png", slide_whats_included(theme)),
-        ("04-how-easy-to-edit.png", slide_edit_flow(theme)),
-        ("05-preset-comparison.png", slide_presets(theme)),
-        ("06-bonus-printables.png", slide_printables(theme)),
-        ("07-after-purchase-flow.png", slide_after_purchase(theme)),
-        ("08-delivery-hosting-license.png", slide_delivery(theme)),
+        ("01-cover.png", slide_cover(config)),
+        ("02-five-languages.png", slide_languages()),
+        ("03-guest-book-structure.png", slide_guest_book_structure()),
+        ("04-easy-editing.png", slide_editing_flow()),
+        ("05-printables.png", slide_printables()),
+        ("06-delivery-license.png", slide_delivery()),
     ]
 
     for filename, image in slides:
-        save_slide(image, filename)
+        image.save(LISTING_DIR / filename)
 
     save_square_crop(slides[0][1], "square-cover.png")
-    save_square_crop(slides[2][1], "square-whats-included.png")
-    save_square_crop(slides[5][1], "square-printables.png")
+    save_square_crop(slides[4][1], "square-printables.png")
+    save_square_crop(slides[1][1], "square-five-languages.png")
+
+
+def write_seller_note() -> None:
+    note = textwrap.dedent(
+        f"""
+        StayBook seller bundle created successfully.
+
+        Package:
+          - {PACKAGE_ZIP}
+
+        Slides:
+          - {LISTING_DIR}
+
+        Social crops:
+          - {SOCIAL_DIR}
+
+        Buyer bundle contents:
+          - static guest book website
+          - browser customizer
+          - 5 language config
+          - QR sign, Wi-Fi card, welcome sheet and pocket QR card
+          - deploy guide and buyer docs
+        """
+    ).strip()
+    (DIST / "SELLER_READY_CHECKLIST.txt").write_text(note + "\n", encoding="utf-8")
 
 
 def main() -> None:
     ensure_clean_dirs()
     copy_package_files()
     zip_package()
-    config = load_json(ROOT / "config.json")
-    build_listing_assets(config)
-    write_seller_summary()
-    print(f"Created {PACKAGE_ZIP.relative_to(ROOT)}")
+    generate_listing_slides(load_json(ROOT / "config.json"))
+    write_seller_note()
+    print(f"Created {PACKAGE_ZIP}")
 
 
 if __name__ == "__main__":

@@ -1,59 +1,44 @@
 # Seller Checklist
 
-## Before publishing on Etsy
+## Product position
 
-1. Run:
+Sell this as:
+- `5-language digital guest book template`
+- `QR-ready house manual for Airbnb and vacation rentals`
+- `editable guest welcome website`
 
-   ```bash
-   npm run check:js
-   npm run build:etsy
-   ```
+Do not position it as a full website builder.
 
-2. Review:
-   - `dist-etsy/guest-guide-atelier-template.zip`
-   - `seller-assets/listing-slides/`
-   - `seller-assets/social-crops/`
+## Live demo URLs
 
-3. Upload only the ZIP file as the Etsy digital download
-4. Upload the generated PNG slides as the listing image set
-5. Use the listing copy from `ETSY_LISTING_COPY.md`
-6. Publish a live demo before going live on Etsy
+- guide: `https://scimansky.github.io/StampaceCharming/`
+- customizer: `https://scimansky.github.io/StampaceCharming/customize.html`
+- QR sign: `https://scimansky.github.io/StampaceCharming/printables/qr-sign.html`
+- Wi-Fi card: `https://scimansky.github.io/StampaceCharming/printables/wifi-card.html`
 
-## Demo URLs
+## Listing priorities
 
-- public demo homepage: `https://scimansky.github.io/StampaceCharming/`
-- demo customizer: `https://scimansky.github.io/StampaceCharming/customize.html`
-- demo QR sign: `https://scimansky.github.io/StampaceCharming/printables/qr-sign.html`
-- demo guest mode: `https://scimansky.github.io/StampaceCharming/?view=guest`
+1. explain that it is a digital guest book, not a PDF
+2. highlight the 5 included languages
+3. show the fixed hospitality sections
+4. show how simple the customizer is
+5. show the QR printables
+6. state that hosting is not included
 
-Recommended hosting: GitHub Pages.
+## Build before upload
 
-## Listing image order
+```bash
+npm run check:js
+npm run build:etsy
+```
 
-1. cover
-2. what guests can do
-3. what's included
-4. how easy it is to edit
-5. preset comparison
-6. bonus printables
-7. after purchase flow
-8. delivery / hosting / license
+Upload:
+- `dist-etsy/staybook-digital-guest-book-template.zip`
 
-## Offer setup
+## Final QA
 
-- base listing launch price: `USD 17`
-- later test range: `USD 19-24`
-- personalization add-on: `USD 49`
-
-## Manual QA
-
-- every phone number and email is clearly demo content
-- verify demo content for `house-rules`, `checkout` and `emergency` modules
-- verify host mode and guest mode links both work
-- verify hero image and gallery fallbacks still look clean when empty
-- the buyer ZIP contains no seller-only files
-- the QR sign opens the correct guide URL
-- the printables look coherent with the guide theme
-- the preset wizard clearly presents 6 commercial templates plus the blank bonus starter
-- the listing clearly says `website template`, `digital download` and `hosting not included`
-- the license matches one-business / one-client usage
+- open the live demo
+- open the customizer
+- check all 5 languages
+- confirm the printables load
+- confirm the ZIP contains no seller-only files

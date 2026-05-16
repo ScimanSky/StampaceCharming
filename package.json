@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "version": "1.0.0",
-  "description": "White-label guest guide template for vacation rentals, boutique stays and short-term hospitality brands.",
+  "description": "Five-language digital guest book template for vacation rentals, B&Bs and holiday homes.",
   "main": "app.js",
   "scripts": {
     "build:etsy": "python3 scripts/build_etsy_package.py",

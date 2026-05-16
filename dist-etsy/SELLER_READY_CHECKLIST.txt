@@ -1,18 +1,17 @@
-Guest Guide Atelier seller bundle created successfully.
+StayBook seller bundle created successfully.
 
-Buyer ZIP:
-- dist-etsy/guest-guide-atelier-template.zip
+Package:
+  - /home/scima/projects/StampaceCharming/dist-etsy/staybook-digital-guest-book-template.zip
 
-Buyer folder:
-- dist-etsy/guest-guide-atelier-template
-
-Listing slides:
-- seller-assets/listing-slides
+Slides:
+  - /home/scima/projects/StampaceCharming/seller-assets/listing-slides
 
 Social crops:
-- seller-assets/social-crops
+  - /home/scima/projects/StampaceCharming/seller-assets/social-crops
 
-Reminder:
-- publish a live demo before listing on Etsy
-- upload only the ZIP file as the digital download
-- keep seller-only files out of the buyer bundle
+Buyer bundle contents:
+  - static guest book website
+  - browser customizer
+  - 5 language config
+  - QR sign, Wi-Fi card, welcome sheet and pocket QR card
+  - deploy guide and buyer docs
