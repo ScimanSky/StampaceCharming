@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Atelier Verdi Guest Guide",
-    "description": "Editorial guest guide preset for boutique apartments, design stays and polished city hospitality."
+    "title": "Casa Mareluna Guide",
+    "description": "Grounded guest guide preset for cabins, countryside rentals and retreat-style stays."
   },
-  "themePreset": "mediterranean",
+  "themePreset": "cabin",
   "languages": [
     {
       "code": "en",
@@ -22,90 +22,90 @@
     }
   ],
   "brand": {
-    "name": "Atelier Verdi",
-    "crest": "AV",
+    "name": "Pine Hearth Cabin",
+    "crest": "PH",
     "eyebrow": {
-      "en": "Guest guide for boutique stays",
-      "it": "Guest guide for boutique stays",
-      "fr": "Guest guide for boutique stays"
+      "en": "Guest guide for mountain stays",
+      "it": "Guest guide for mountain stays",
+      "fr": "Guest guide for mountain stays"
     },
     "headline": {
-      "en": "A polished guest guide your visitors can open before they ring the bell.",
-      "it": "A polished guest guide your visitors can open before they ring the bell.",
-      "fr": "A polished guest guide your visitors can open before they ring the bell."
+      "en": "A slower guest guide for cabins, fireplaces and practical nature hospitality.",
+      "it": "A slower guest guide for cabins, fireplaces and practical nature hospitality.",
+      "fr": "A slower guest guide for cabins, fireplaces and practical nature hospitality."
     },
     "subtitle": {
-      "en": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page.",
-      "it": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page.",
-      "fr": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page."
+      "en": "Arrival notes, heating help, local essentials and backup support in one calm guest page.",
+      "it": "Arrival notes, heating help, local essentials and backup support in one calm guest page.",
+      "fr": "Arrival notes, heating help, local essentials and backup support in one calm guest page."
     },
     "welcome": {
-      "en": "This preset is designed to look premium out of the box while staying easy to personalize. Replace the text, links and contacts in the included JSON file, then share the page as a direct link or QR code.",
-      "it": "Questo preset e pensato per sembrare premium fin da subito, ma restare facile da personalizzare. Sostituisci testi, link e contatti nel file JSON incluso, poi condividi la pagina come link diretto o QR code.",
-      "fr": "Ce preset est concu pour paraitre premium des le depart tout en restant simple a personnaliser. Remplacez textes, liens et contacts dans le fichier JSON fourni, puis partagez la page via lien direct ou QR code."
+      "en": "This version is ideal when the property promise is atmosphere and ease. It suits villas, sea-view apartments, resort-style rentals and summer listings.",
+      "it": "Questa versione e ideale quando la promessa della struttura e atmosfera e facilita. Perfetta per ville, appartamenti vista mare, rental stile resort e annunci estivi.",
+      "fr": "Cette version est ideale lorsque la promesse du logement repose sur l'atmosphere et la facilite. Parfaite pour villas, appartements vue mer et locations estivales."
     },
-    "address": "Via Giuseppe Verdi 18, Florence",
-    "email": "hello@atelierverdi.example",
-    "license": "CIN / Registration: IT-DEMO-0001",
+    "address": "Lungomare delle Palme 6, Cefalu",
+    "email": "welcome@mareluna.example",
+    "license": "CIN / Registration: IT-DEMO-0027",
     "footerNote": {
-      "en": "Made for boutique apartments, short stays and premium hospitality brands.",
-      "it": "Pensato per appartamenti boutique, short stay e brand hospitality premium.",
-      "fr": "Pense pour appartements boutique, courts sejours et marques hospitality premium."
+      "en": "Designed for villas, retreats and destination-driven holiday rentals.",
+      "it": "Progettato per ville, retreat e case vacanza guidate dalla destinazione.",
+      "fr": "Concu pour villas, retraites et locations vacances orientees destination."
     }
   },
   "stats": [
     {
-      "value": "3",
+      "value": "8 min",
       "label": {
-        "en": "Included languages",
-        "it": "Lingue incluse",
-        "fr": "Langues incluses"
+        "en": "To the beach",
+        "it": "Alla spiaggia",
+        "fr": "Jusqu'a la plage"
       }
     },
     {
-      "value": "6",
+      "value": "4",
       "label": {
-        "en": "Service cards",
-        "it": "Carte servizio",
-        "fr": "Cartes service"
+        "en": "Day-trip ideas",
+        "it": "Idee gita",
+        "fr": "Idees sortie"
       }
     },
     {
-      "value": "1 tap",
+      "value": "Sunset",
       "label": {
-        "en": "To reach the host",
-        "it": "Per contattare l'host",
-        "fr": "Pour joindre l'hote"
+        "en": "Mood baked in",
+        "it": "Atmosfera inclusa",
+        "fr": "Ambiance incluse"
       }
     }
   ],
   "host": {
-    "name": "Sofia Verdi",
+    "name": "Elena Costa",
     "role": {
-      "en": "Guest host",
-      "it": "Host ospiti",
-      "fr": "Host voyageurs"
+      "en": "Villa host",
+      "it": "Host villa",
+      "fr": "Host villa"
     },
     "intro": {
-      "en": "Hi, I'm Sofia. If you need anything before arrival or during your stay, use one of the contact methods below.",
-      "it": "Ciao, sono Sofia. Se hai bisogno di qualcosa prima dell'arrivo o durante il soggiorno, usa uno dei contatti qui sotto.",
-      "fr": "Bonjour, je suis Sofia. Si vous avez besoin d'aide avant l'arrivee ou pendant le sejour, utilisez l'un des contacts ci-dessous."
+      "en": "Reach out for beach advice, restaurant reservations or anything that helps the stay feel easy.",
+      "it": "Scrivimi per consigli spiaggia, prenotazioni ristorante o qualsiasi cosa renda il soggiorno piu semplice.",
+      "fr": "Contactez-moi pour des conseils plage, reservations restaurant ou tout ce qui peut rendre le sejour plus simple."
     },
-    "email": "sofia@atelierverdi.example",
-    "phone": "+390000000001",
-    "whatsapp": "https://wa.me/390000000001",
-    "instagram": "https://instagram.com/atelierverdi"
+    "email": "elena@mareluna.example",
+    "phone": "+390000000221",
+    "whatsapp": "https://wa.me/390000000221",
+    "instagram": "https://instagram.com/casamareluna"
   },
   "wifi": {
-    "network": "Atelier Verdi Guest",
-    "password": "atelier-2026",
-    "connectUrl": "WIFI:T:WPA;S:Atelier Verdi Guest;P:atelier-2026;;"
+    "network": "Casa Mareluna Guest",
+    "password": "mareluna-sunset",
+    "connectUrl": "WIFI:T:WPA;S:Casa Mareluna Guest;P:mareluna-sunset;;"
   },
   "links": {
-    "cityMap": "https://maps.google.com/?q=Florence+historic+center",
-    "guidePdf": "https://example.com/guide.pdf",
-    "arrivalRoute": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
-    "excursions": "https://maps.google.com/?q=Tuscany+wine+tour"
+    "cityMap": "https://maps.google.com/?q=Cefalu+old+town",
+    "guidePdf": "https://example.com/coastal-guide.pdf",
+    "arrivalRoute": "https://maps.google.com/?q=Cefalu+station+to+Lungomare+delle+Palme+6",
+    "excursions": "https://maps.google.com/?q=Madonie+day+trip"
   },
   "ui": {
     "contactHosts": {
@@ -176,115 +176,116 @@
       "icon": "01"
     },
     {
-      "type": "copy-wifi",
-      "icon": "Wi",
+      "type": "modal",
+      "serviceId": "heating-fireplace",
       "label": {
-        "en": "Wi-Fi",
-        "it": "Wi-Fi",
-        "fr": "Wi-Fi"
-      }
+        "en": "Heating",
+        "it": "Riscaldamento",
+        "fr": "Chauffage"
+      },
+      "icon": "Stay"
     },
     {
       "type": "modal",
-      "serviceId": "food",
+      "serviceId": "nearby",
       "label": {
-        "en": "Local picks",
-        "it": "Consigli",
-        "fr": "Adresses"
+        "en": "Essentials",
+        "it": "Essenziali",
+        "fr": "Essentiels"
       },
-      "icon": "Fork"
+      "icon": "Map"
     },
     {
       "type": "host-sheet",
       "icon": "SOS",
       "label": {
-        "en": "Contact",
-        "it": "Contatti",
-        "fr": "Contact"
+        "en": "Host",
+        "it": "Host",
+        "fr": "Host"
       }
     }
   ],
   "sections": {
     "services": {
       "kicker": {
-        "en": "Quick tools",
-        "it": "Accesso rapido",
-        "fr": "Acces rapide"
+        "en": "Holiday flow",
+        "it": "Flusso vacanza",
+        "fr": "Flux vacances"
       },
       "title": {
-        "en": "Everything guests need in one place",
-        "it": "Everything guests need in one place",
-        "fr": "Everything guests need in one place"
+        "en": "A grounded guide for cabins and retreat stays",
+        "it": "A grounded guide for cabins and retreat stays",
+        "fr": "A grounded guide for cabins and retreat stays"
       },
       "copy": {
-        "en": "Editorial hospitality works best when practical details and local recommendations feel equally intentional.",
-        "it": "Editorial hospitality works best when practical details and local recommendations feel equally intentional.",
-        "fr": "Editorial hospitality works best when practical details and local recommendations feel equally intentional."
+        "en": "Nature stays feel smoother when the house systems are obvious and the local essentials are not buried in chat history.",
+        "it": "Nature stays feel smoother when the house systems are obvious and the local essentials are not buried in chat history.",
+        "fr": "Nature stays feel smoother when the house systems are obvious and the local essentials are not buried in chat history."
       }
     },
     "area": {
       "title": {
-        "en": "Around the stay",
-        "it": "Nei dintorni",
-        "fr": "Autour du sejour"
+        "en": "Nearby essentials",
+        "it": "Nearby essentials",
+        "fr": "Nearby essentials"
       },
       "copy": {
-        "en": "Use this section for your hand-picked neighborhood shortcuts.",
-        "it": "Usa questa sezione per i tuoi shortcut di quartiere selezionati.",
-        "fr": "Utilisez cette section pour vos raccourcis de quartier selectionnes."
+        "en": "Use this area for trailheads, groceries, parking and the few essentials guests actually need nearby.",
+        "it": "Use this area for trailheads, groceries, parking and the few essentials guests actually need nearby.",
+        "fr": "Use this area for trailheads, groceries, parking and the few essentials guests actually need nearby."
       }
     },
     "story": {
       "kicker": {
-        "en": "Creative direction",
-        "it": "Direzione creativa",
-        "fr": "Direction creative"
+        "en": "Preset personality",
+        "it": "Personalita del preset",
+        "fr": "Personnalite du preset"
       },
       "title": {
-        "en": "Editorial, warm and unmistakably boutique.",
-        "it": "Editorial, warm and unmistakably boutique.",
-        "fr": "Editorial, warm and unmistakably boutique."
+        "en": "Grounded, seasonal and calm.",
+        "it": "Grounded, seasonal and calm.",
+        "fr": "Grounded, seasonal and calm."
       },
       "body": {
-        "en": "This preset mixes serif typography, circular seals and soft hospitality colors to feel more like a printed welcome dossier than a generic app. It works well for city apartments, design stays and renovation-led properties.",
-        "it": "Questo preset unisce tipografia serif, sigilli circolari e colori hospitality morbidi per sembrare piu un dossier di benvenuto stampato che una generica app. Funziona bene per appartamenti in citta, design stay e proprieta ristrutturate.",
-        "fr": "Ce preset melange typographie serif, sceaux circulaires et couleurs hospitality douces pour evoquer davantage un dossier de bienvenue imprime qu'une application generique. Il fonctionne tres bien pour appartements en ville et sejours design."
+        "en": "Cabin hospitality benefits from atmosphere, but the real trust comes from making heating, access and local basics easy to understand.",
+        "it": "Cabin hospitality benefits from atmosphere, but the real trust comes from making heating, access and local basics easy to understand.",
+        "fr": "Cabin hospitality benefits from atmosphere, but the real trust comes from making heating, access and local basics easy to understand."
       }
     },
     "notes": {
       "kicker": {
-        "en": "What to edit first",
-        "it": "Cosa modificare per prima cosa",
-        "fr": "Quoi modifier en premier"
+        "en": "Best first edits",
+        "it": "Prime modifiche migliori",
+        "fr": "Premieres modifications utiles"
       },
       "items": {
         "en": [
-          "Replace property name, address, host contacts and license code in config.json.",
-          "Swap the demo map and route links with real guest-facing URLs.",
-          "Keep service cards focused on the questions guests ask most often."
+          "Replace the beach and parking copy with precise guest-facing instructions.",
+          "Add one backup indoor suggestion for windy or rainy days.",
+          "Use the experiences card for a boat trip, chef dinner or transfer service."
         ],
         "it": [
-          "Sostituisci nome struttura, indirizzo, contatti host e codice licenza in config.json.",
-          "Sostituisci mappa e link demo con URL reali per gli ospiti.",
-          "Mantieni le service card concentrate sulle domande piu frequenti."
+          "Sostituisci il testo su spiaggia e parcheggio con istruzioni precise per gli ospiti.",
+          "Aggiungi un suggerimento indoor di backup per giornate ventose o piovose.",
+          "Usa la card esperienze per gita in barca, chef dinner o transfer."
         ],
         "fr": [
-          "Remplacez nom, adresse, contacts host et code licence dans config.json.",
-          "Remplacez carte et liens demo par de vraies URL utiles aux voyageurs.",
-          "Gardez les cartes service concentrees sur les questions les plus frequentes."
+          "Remplacez le texte plage et parking par des instructions precises pour les voyageurs.",
+          "Ajoutez une suggestion indoor de secours pour les jours venteux ou pluvieux.",
+          "Utilisez la carte experiences pour une sortie bateau, un chef a domicile ou un transfert."
         ]
       }
     },
     "contact": {
       "title": {
-        "en": "Backup contacts",
-        "it": "Contatti di supporto",
-        "fr": "Contacts de support"
+        "en": "Local help",
+        "it": "Aiuto locale",
+        "fr": "Aide locale"
       },
       "copy": {
-        "en": "Add one or two additional people for check-in support, late arrivals or local assistance.",
-        "it": "Aggiungi una o due persone per supporto check-in, arrivi tardivi o assistenza locale.",
-        "fr": "Ajoutez une ou deux personnes pour le check-in, les arrivees tardives ou l'assistance locale."
+        "en": "Perfect for adding a beach contact, a driver and one trusted guest-care person.",
+        "it": "Perfetto per aggiungere un contatto spiaggia, un driver e una persona guest care fidata.",
+        "fr": "Parfait pour ajouter un contact plage, un chauffeur et une personne guest-care de confiance."
       }
     }
   },
@@ -577,6 +578,184 @@
       }
     },
     {
+      "id": "heating-fireplace",
+      "icon": "Stay",
+      "tone": "blue",
+      "chip": {
+        "en": "Cabin systems",
+        "it": "Cabin systems",
+        "fr": "Cabin systems"
+      },
+      "title": {
+        "en": "Heating and fireplace",
+        "it": "Heating and fireplace",
+        "fr": "Heating and fireplace"
+      },
+      "description": {
+        "en": "Use this card for heating controls, wood stove notes or fireplace safety.",
+        "it": "Use this card for heating controls, wood stove notes or fireplace safety.",
+        "fr": "Use this card for heating controls, wood stove notes or fireplace safety."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "heating-fireplace",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "House systems",
+          "it": "House systems",
+          "fr": "House systems"
+        },
+        "title": {
+          "en": "Make warmth feel effortless",
+          "it": "Make warmth feel effortless",
+          "fr": "Make warmth feel effortless"
+        },
+        "copy": {
+          "en": "Guests should never have to guess how to warm the space, add wood or handle night temperatures.",
+          "it": "Guests should never have to guess how to warm the space, add wood or handle night temperatures.",
+          "fr": "Guests should never have to guess how to warm the space, add wood or handle night temperatures."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Heating controls",
+              "it": "Heating controls",
+              "fr": "Heating controls"
+            },
+            "text": {
+              "en": "Explain thermostat location, standard comfortable temperature and any timing notes for older systems.",
+              "it": "Explain thermostat location, standard comfortable temperature and any timing notes for older systems.",
+              "fr": "Explain thermostat location, standard comfortable temperature and any timing notes for older systems."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Fireplace or stove",
+              "it": "Fireplace or stove",
+              "fr": "Fireplace or stove"
+            },
+            "text": {
+              "en": "Clarify which wood to use, how to open vents and whether guests should leave embers overnight.",
+              "it": "Clarify which wood to use, how to open vents and whether guests should leave embers overnight.",
+              "fr": "Clarify which wood to use, how to open vents and whether guests should leave embers overnight."
+            }
+          },
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "Safety note",
+              "it": "Safety note",
+              "fr": "Safety note"
+            },
+            "text": {
+              "en": "Mention smoke alarms, ash disposal and what to do if the heat drops unexpectedly.",
+              "it": "Mention smoke alarms, ash disposal and what to do if the heat drops unexpectedly.",
+              "fr": "Mention smoke alarms, ash disposal and what to do if the heat drops unexpectedly."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nearby",
+      "icon": "Map",
+      "tone": "olive",
+      "chip": {
+        "en": "Nearby",
+        "it": "Nearby",
+        "fr": "Nearby"
+      },
+      "title": {
+        "en": "Nearby essentials",
+        "it": "Nearby essentials",
+        "fr": "Nearby essentials"
+      },
+      "description": {
+        "en": "Point guests to groceries, parking, trailheads and the few local stops that matter.",
+        "it": "Point guests to groceries, parking, trailheads and the few local stops that matter.",
+        "fr": "Point guests to groceries, parking, trailheads and the few local stops that matter."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "nearby",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Local basics",
+          "it": "Local basics",
+          "fr": "Local basics"
+        },
+        "title": {
+          "en": "Show the practical landscape",
+          "it": "Show the practical landscape",
+          "fr": "Show the practical landscape"
+        },
+        "copy": {
+          "en": "Mountain stays need fewer recommendations, but the right ones matter more.",
+          "it": "Mountain stays need fewer recommendations, but the right ones matter more.",
+          "fr": "Mountain stays need fewer recommendations, but the right ones matter more."
+        },
+        "sections": [
+          {
+            "icon": "Map",
+            "title": {
+              "en": "Nearest grocery",
+              "it": "Nearest grocery",
+              "fr": "Nearest grocery"
+            },
+            "text": {
+              "en": "List the realistic grocery option, including closing days and the last good stop before arrival if relevant.",
+              "it": "List the realistic grocery option, including closing days and the last good stop before arrival if relevant.",
+              "fr": "List the realistic grocery option, including closing days and the last good stop before arrival if relevant."
+            }
+          },
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Trail or walk start",
+              "it": "Trail or walk start",
+              "fr": "Trail or walk start"
+            },
+            "text": {
+              "en": "Mention an easy first walk or nature stop guests can reach without much planning.",
+              "it": "Mention an easy first walk or nature stop guests can reach without much planning.",
+              "fr": "Mention an easy first walk or nature stop guests can reach without much planning."
+            }
+          },
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "Road note",
+              "it": "Road note",
+              "fr": "Road note"
+            },
+            "text": {
+              "en": "Add any steep access, snow-chain or late-night driving note that prevents confusion.",
+              "it": "Add any steep access, snow-chain or late-night driving note that prevents confusion.",
+              "fr": "Add any steep access, snow-chain or late-night driving note that prevents confusion."
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "checkout",
       "icon": "B",
       "tone": "sand",
@@ -648,267 +827,6 @@
               "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
               "fr": "Laissez les clés sur la console, éteignez les lumières et assurez-vous que la porte est fermée."
             }
-          }
-        ]
-      }
-    },
-    {
-      "id": "food",
-      "icon": "Taste",
-      "tone": "blue",
-      "chip": {
-        "en": "Local",
-        "it": "Locale",
-        "fr": "Local"
-      },
-      "title": {
-        "en": "Food picks",
-        "it": "Food picks",
-        "fr": "Bonnes adresses"
-      },
-      "description": {
-        "en": "Share a few strong recommendations instead of a long undifferentiated list.",
-        "it": "Condividi pochi consigli forti invece di una lunga lista indistinta.",
-        "fr": "Partagez quelques bonnes adresses fortes plutot qu'une longue liste sans hierarchie."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "food",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Neighborhood taste",
-          "it": "Sapori di quartiere",
-          "fr": "Gouts du quartier"
-        },
-        "title": {
-          "en": "Recommend by mood, not by quantity",
-          "it": "Consiglia per atmosfera, non per quantita",
-          "fr": "Recommandez par ambiance, pas par quantite"
-        },
-        "copy": {
-          "en": "Use categories such as breakfast, aperitivo or one special dinner spot. Guests decide faster when the list has a point of view.",
-          "it": "Usa categorie come colazione, aperitivo o una cena speciale. Gli ospiti decidono piu in fretta quando la lista ha un punto di vista.",
-          "fr": "Utilisez des categories comme petit-dejeuner, aperitivo ou diner special. Les voyageurs choisissent plus vite quand la liste a un point de vue."
-        },
-        "sections": [
-          {
-            "icon": "AM",
-            "title": {
-              "en": "Morning stop",
-              "it": "Tappa mattina",
-              "fr": "Etape du matin"
-            },
-            "text": {
-              "en": "A small coffee bar two streets away with fast service and strong pastries before museum visits.",
-              "it": "Un piccolo caffe a due strade di distanza con servizio veloce e ottima pasticceria prima dei musei.",
-              "fr": "Un petit cafe a deux rues avec service rapide et belle selection de viennoiseries avant les visites."
-            }
-          },
-          {
-            "icon": "PM",
-            "title": {
-              "en": "Dinner idea",
-              "it": "Idea cena",
-              "fr": "Idee diner"
-            },
-            "text": {
-              "en": "Book one signature trattoria and tell guests why it is worth choosing over tourist-heavy alternatives.",
-              "it": "Consiglia una trattoria signature e spiega perche vale la pena sceglierla invece di opzioni troppo turistiche.",
-              "fr": "Recommandez une trattoria signature et expliquez pourquoi elle vaut mieux que les options trop touristiques."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Florence+historic+center",
-                "reference": "cityMap",
-                "label": {
-                  "en": "Open map",
-                  "it": "Apri mappa",
-                  "fr": "Ouvrir la carte"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "mobility",
-      "icon": "Move",
-      "tone": "olive",
-      "chip": {
-        "en": "City",
-        "it": "Citta",
-        "fr": "Ville"
-      },
-      "title": {
-        "en": "Mobility tips",
-        "it": "Mobilita",
-        "fr": "Mobilite"
-      },
-      "description": {
-        "en": "Help guests decide when to walk, when to take a taxi and what is realistic from the property.",
-        "it": "Aiuta gli ospiti a capire quando camminare, quando prendere un taxi e cosa e realistico dall'alloggio.",
-        "fr": "Aidez les voyageurs a savoir quand marcher, quand prendre un taxi et ce qui est realiste depuis le logement."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "mobility",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Move with confidence",
-          "it": "Muoviti con sicurezza",
-          "fr": "Bougez sereinement"
-        },
-        "title": {
-          "en": "Answer the transport questions before they ask",
-          "it": "Rispondi prima alle domande sui trasporti",
-          "fr": "Repondez aux questions transport avant qu'elles n'arrivent"
-        },
-        "copy": {
-          "en": "State the easiest route from key arrival points and recommend one taxi app or number if relevant.",
-          "it": "Indica il percorso piu facile dai principali punti di arrivo e suggerisci una app taxi o un numero se utile.",
-          "fr": "Indiquez le trajet le plus simple depuis les principaux points d'arrivee et recommandez une appli taxi ou un numero si utile."
-        },
-        "sections": [
-          {
-            "icon": "T",
-            "title": {
-              "en": "Walking radius",
-              "it": "Raggio a piedi",
-              "fr": "Rayon a pied"
-            },
-            "text": {
-              "en": "Most landmarks are reachable on foot from the apartment. Mention this because it changes how guests plan their days.",
-              "it": "La maggior parte dei luoghi principali e raggiungibile a piedi dall'appartamento. Dillo, perche cambia il modo in cui gli ospiti organizzano la giornata.",
-              "fr": "La plupart des sites sont accessibles a pied depuis l'appartement. Dites-le, car cela change la facon dont les voyageurs organisent leurs journees."
-            }
-          },
-          {
-            "icon": "R",
-            "title": {
-              "en": "Station route",
-              "it": "Percorso stazione",
-              "fr": "Itineraire gare"
-            },
-            "text": {
-              "en": "Use a saved walking route for arrivals with luggage and avoid vague written directions.",
-              "it": "Usa un percorso salvato per gli arrivi con bagagli ed evita indicazioni scritte vaghe.",
-              "fr": "Utilisez un itineraire sauvegarde pour les arrivees avec bagages et evitez les indications vagues."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
-                "reference": "arrivalRoute",
-                "label": {
-                  "en": "Open route",
-                  "it": "Apri percorso",
-                  "fr": "Ouvrir l'itineraire"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "experiences",
-      "icon": "Trip",
-      "tone": "blue",
-      "chip": {
-        "en": "Days out",
-        "it": "Fuori porta",
-        "fr": "Escapades"
-      },
-      "title": {
-        "en": "Signature experiences",
-        "it": "Esperienze signature",
-        "fr": "Experiences signature"
-      },
-      "description": {
-        "en": "Use this area for a trusted partner, a transfer offer or one memorable add-on.",
-        "it": "Usa quest'area per un partner fidato, un transfer o un add-on memorabile.",
-        "fr": "Utilisez cette section pour un partenaire de confiance, un transfert ou un add-on memorable."
-      },
-      "cardActions": [
-        {
-          "type": "link",
-          "href": "https://maps.google.com/?q=Tuscany+wine+tour",
-          "reference": "excursions",
-          "label": {
-            "en": "View trips",
-            "it": "Vedi esperienze",
-            "fr": "Voir les experiences"
-          }
-        },
-        {
-          "type": "modal",
-          "serviceId": "experiences",
-          "label": {
-            "en": "Why this works",
-            "it": "Perche funziona",
-            "fr": "Pourquoi ca marche"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "High-value add-on",
-          "it": "Add-on ad alto valore",
-          "fr": "Add-on a forte valeur"
-        },
-        "title": {
-          "en": "Promote one curated option, not ten random ones",
-          "it": "Promuovi una sola opzione curata, non dieci casuali",
-          "fr": "Proposez une option selectionnee, pas dix choix aleatoires"
-        },
-        "copy": {
-          "en": "Templates sell better when they show a clear hospitality use case. This card is ideal for private tours, airport transfers or partner offers.",
-          "it": "I template vendono meglio quando mostrano un caso hospitality chiaro. Questa card e ideale per tour privati, transfer aeroporto o offerte partner.",
-          "fr": "Les templates se vendent mieux lorsqu'ils montrent un usage hospitality clair. Cette carte est ideale pour tours prives, transferts aeroport ou offres partenaires."
-        },
-        "sections": [
-          {
-            "icon": "GO",
-            "title": {
-              "en": "Featured day trip",
-              "it": "Escursione in evidenza",
-              "fr": "Excursion en vedette"
-            },
-            "text": {
-              "en": "Show one strong excursion with a direct inquiry link rather than multiple low-context links.",
-              "it": "Mostra una sola escursione forte con link diretto invece di molti link senza contesto.",
-              "fr": "Mettez en avant une seule excursion forte avec lien direct plutot que plusieurs liens peu contextuels."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Tuscany+wine+tour",
-                "reference": "excursions",
-                "label": {
-                  "en": "View excursions",
-                  "it": "Apri escursioni",
-                  "fr": "Voir les excursions"
-                }
-              }
-            ]
           }
         ]
       }
@@ -1000,10 +918,95 @@
           }
         ]
       }
+    },
+    {
+      "id": "experiences",
+      "icon": "Trip",
+      "tone": "blue",
+      "chip": {
+        "en": "Days out",
+        "it": "Fuori porta",
+        "fr": "Escapades"
+      },
+      "title": {
+        "en": "Signature experiences",
+        "it": "Esperienze signature",
+        "fr": "Experiences signature"
+      },
+      "description": {
+        "en": "Use this area for a trusted partner, a transfer offer or one memorable add-on.",
+        "it": "Usa quest'area per un partner fidato, un transfer o un add-on memorabile.",
+        "fr": "Utilisez cette section pour un partenaire de confiance, un transfert ou un add-on memorable."
+      },
+      "cardActions": [
+        {
+          "type": "link",
+          "href": "https://maps.google.com/?q=Tuscany+wine+tour",
+          "reference": "excursions",
+          "label": {
+            "en": "View trips",
+            "it": "Vedi esperienze",
+            "fr": "Voir les experiences"
+          }
+        },
+        {
+          "type": "modal",
+          "serviceId": "experiences",
+          "label": {
+            "en": "Why this works",
+            "it": "Perche funziona",
+            "fr": "Pourquoi ca marche"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "High-value add-on",
+          "it": "Add-on ad alto valore",
+          "fr": "Add-on a forte valeur"
+        },
+        "title": {
+          "en": "Promote one curated option, not ten random ones",
+          "it": "Promuovi una sola opzione curata, non dieci casuali",
+          "fr": "Proposez une option selectionnee, pas dix choix aleatoires"
+        },
+        "copy": {
+          "en": "Templates sell better when they show a clear hospitality use case. This card is ideal for private tours, airport transfers or partner offers.",
+          "it": "I template vendono meglio quando mostrano un caso hospitality chiaro. Questa card e ideale per tour privati, transfer aeroporto o offerte partner.",
+          "fr": "Les templates se vendent mieux lorsqu'ils montrent un usage hospitality clair. Cette carte est ideale pour tours prives, transferts aeroport ou offres partenaires."
+        },
+        "sections": [
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Featured day trip",
+              "it": "Escursione in evidenza",
+              "fr": "Excursion en vedette"
+            },
+            "text": {
+              "en": "Show one strong excursion with a direct inquiry link rather than multiple low-context links.",
+              "it": "Mostra una sola escursione forte con link diretto invece di molti link senza contesto.",
+              "fr": "Mettez en avant une seule excursion forte avec lien direct plutot que plusieurs liens peu contextuels."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Tuscany+wine+tour",
+                "reference": "excursions",
+                "label": {
+                  "en": "View excursions",
+                  "it": "Apri escursioni",
+                  "fr": "Voir les excursions"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "area": {
-    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=11.240%2C43.764%2C11.266%2C43.779&layer=mapnik&marker=43.7715%2C11.2558",
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=14.011%2C38.029%2C14.031%2C38.041&layer=mapnik&marker=38.0354%2C14.0208",
     "filters": [
       {
         "id": "all",
@@ -1014,11 +1017,11 @@
         }
       },
       {
-        "id": "coffee",
+        "id": "beach",
         "label": {
-          "en": "Coffee",
-          "it": "Caffe",
-          "fr": "Cafe"
+          "en": "Beach",
+          "it": "Spiaggia",
+          "fr": "Plage"
         }
       },
       {
@@ -1030,92 +1033,92 @@
         }
       },
       {
-        "id": "sights",
+        "id": "views",
         "label": {
-          "en": "Sights",
-          "it": "Luoghi",
-          "fr": "Lieux"
+          "en": "Views",
+          "it": "Panorami",
+          "fr": "Vues"
         }
       }
     ],
     "points": [
       {
-        "category": "coffee",
-        "icon": "AM",
+        "category": "beach",
+        "icon": "Sea",
         "title": {
-          "en": "Morning bar",
-          "it": "Bar del mattino",
-          "fr": "Bar du matin"
+          "en": "Nearest beach access",
+          "it": "Accesso spiaggia vicino",
+          "fr": "Acces plage proche"
         },
         "meta": {
-          "en": "Coffee stop · 4 min walk",
-          "it": "Tappa caffe · 4 min a piedi",
-          "fr": "Pause cafe · 4 min a pied"
+          "en": "Sea access · 8 min walk",
+          "it": "Accesso mare · 8 min a piedi",
+          "fr": "Acces mer · 8 min a pied"
         },
-        "href": "https://maps.google.com/?q=Florence+coffee"
+        "href": "https://maps.google.com/?q=Cefalu+beach"
       },
       {
         "category": "food",
-        "icon": "PM",
+        "icon": "Eat",
         "title": {
-          "en": "Favorite trattoria",
-          "it": "Trattoria preferita",
-          "fr": "Trattoria preferee"
+          "en": "Sunset seafood",
+          "it": "Seafood al tramonto",
+          "fr": "Poissons au coucher du soleil"
         },
         "meta": {
-          "en": "Dinner pick · Tuscan cuisine",
-          "it": "Cena consigliata · cucina toscana",
-          "fr": "Diner conseille · cuisine toscane"
+          "en": "Dinner pick · sea view",
+          "it": "Cena consigliata · vista mare",
+          "fr": "Diner conseille · vue mer"
         },
-        "href": "https://maps.google.com/?q=Florence+trattoria"
+        "href": "https://maps.google.com/?q=Cefalu+seafood"
       },
       {
-        "category": "sights",
-        "icon": "Art",
+        "category": "views",
+        "icon": "View",
         "title": {
-          "en": "Old town walk",
-          "it": "Passeggiata centro",
-          "fr": "Balade centre historique"
+          "en": "Scenic lookout",
+          "it": "Punto panoramico",
+          "fr": "Point de vue"
         },
         "meta": {
-          "en": "Landmarks nearby · sunset route",
-          "it": "Luoghi vicini · percorso al tramonto",
-          "fr": "Lieux proches · itineraire au coucher du soleil"
+          "en": "Golden hour stop · local favorite",
+          "it": "Tappa golden hour · preferita locale",
+          "fr": "Arret golden hour · favori local"
         },
-        "href": "https://maps.google.com/?q=Florence+historic+center"
+        "href": "https://maps.google.com/?q=Cefalu+viewpoint"
       }
     ]
   },
   "contacts": [
     {
-      "name": "Marco",
+      "name": "Giulia",
       "role": {
-        "en": "Check-in support",
-        "it": "Supporto check-in",
-        "fr": "Support check-in"
+        "en": "Arrival support",
+        "it": "Supporto arrivi",
+        "fr": "Support arrivee"
       },
-      "phone": "+390000000002",
-      "whatsapp": "https://wa.me/390000000002"
+      "phone": "+390000000222",
+      "whatsapp": "https://wa.me/390000000222"
     },
     {
-      "name": "Chiara",
+      "name": "Salvo",
+      "role": {
+        "en": "Driver contact",
+        "it": "Contatto driver",
+        "fr": "Contact chauffeur"
+      },
+      "phone": "+390000000223",
+      "whatsapp": "https://wa.me/390000000223"
+    },
+    {
+      "name": "Mareluna Care",
       "role": {
         "en": "Guest care",
         "it": "Guest care",
         "fr": "Guest care"
       },
-      "phone": "+390000000003",
-      "whatsapp": "https://wa.me/390000000003"
-    },
-    {
-      "name": "Studio Verdi",
-      "role": {
-        "en": "Property office",
-        "it": "Ufficio struttura",
-        "fr": "Bureau propriete"
-      },
-      "phone": "+390000000004",
-      "whatsapp": "https://wa.me/390000000004"
+      "phone": "+390000000224",
+      "whatsapp": "https://wa.me/390000000224"
     }
   ],
   "share": {
@@ -1211,37 +1214,37 @@
     ]
   },
   "presetMeta": {
-    "key": "boutique",
+    "key": "cabin",
     "label": {
-      "en": "Boutique City",
-      "it": "Boutique City",
-      "fr": "Boutique City"
+      "en": "Mountain Cabin",
+      "it": "Mountain Cabin",
+      "fr": "Mountain Cabin"
     },
     "audience": {
-      "en": "Boutique apartments and design stays",
-      "it": "Boutique apartments and design stays",
-      "fr": "Boutique apartments and design stays"
+      "en": "Cabins, retreats and nature stays",
+      "it": "Cabins, retreats and nature stays",
+      "fr": "Cabins, retreats and nature stays"
     },
     "summary": {
-      "en": "Editorial, refined and hospitality-led.",
-      "it": "Editorial, refined and hospitality-led.",
-      "fr": "Editorial, refined and hospitality-led."
+      "en": "Calm guidance with home systems made clear.",
+      "it": "Calm guidance with home systems made clear.",
+      "fr": "Calm guidance with home systems made clear."
     },
     "featured": true,
-    "wizardCategory": "city-boutique",
-    "listingOrder": 1
+    "wizardCategory": "nature-cabin",
+    "listingOrder": 5
   },
   "wizardDefaults": {
     "recommendedFor": [
-      "city",
-      "boutique"
+      "cabin",
+      "retreat"
     ],
-    "primaryGoal": "guest-experience",
-    "bestFor": "Hosts who want a polished welcome page with local recommendations.",
+    "primaryGoal": "confidence",
+    "bestFor": "Guests who need arrival, heating and nearby essentials clearly explained.",
     "focusModules": [
-      "arrival",
-      "food",
-      "experiences"
+      "heating-fireplace",
+      "nearby",
+      "arrival"
     ]
   }
 }

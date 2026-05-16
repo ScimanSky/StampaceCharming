@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Atelier Verdi Guest Guide",
-    "description": "Editorial mobile guide for a boutique apartment in the historic center."
+    "description": "Editorial guest guide preset for boutique apartments, design stays and polished city hospitality."
   },
   "themePreset": "mediterranean",
   "languages": [
@@ -26,18 +26,18 @@
     "crest": "AV",
     "eyebrow": {
       "en": "Guest guide for boutique stays",
-      "it": "Guida ospiti per soggiorni boutique",
-      "fr": "Guide invite pour sejours boutique"
+      "it": "Guest guide for boutique stays",
+      "fr": "Guest guide for boutique stays"
     },
     "headline": {
       "en": "A polished guest guide your visitors can open before they ring the bell.",
-      "it": "Una guida elegante che i tuoi ospiti possono aprire prima ancora di suonare il campanello.",
-      "fr": "Un guide elegant que vos voyageurs peuvent ouvrir avant meme de sonner."
+      "it": "A polished guest guide your visitors can open before they ring the bell.",
+      "fr": "A polished guest guide your visitors can open before they ring the bell."
     },
     "subtitle": {
-      "en": "Wi-Fi, arrival notes, house details, trusted local picks and host contacts in one mobile-first page.",
-      "it": "Wi-Fi, arrivo, note della casa, consigli locali e contatti host in un'unica pagina mobile-first.",
-      "fr": "Wi-Fi, arrivee, infos maison, bonnes adresses et contacts host dans une seule page mobile."
+      "en": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page.",
+      "it": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page.",
+      "fr": "Wi-Fi, arrival notes, trusted local picks and host contacts in one mobile-first page."
     },
     "welcome": {
       "en": "This preset is designed to look premium out of the box while staying easy to personalize. Replace the text, links and contacts in the included JSON file, then share the page as a direct link or QR code.",
@@ -52,42 +52,6 @@
       "it": "Pensato per appartamenti boutique, short stay e brand hospitality premium.",
       "fr": "Pense pour appartements boutique, courts sejours et marques hospitality premium."
     }
-  },
-  "media": {
-    "heroImage": {
-      "src": "",
-      "alt": {
-        "en": "",
-        "it": "",
-        "fr": ""
-      }
-    },
-    "gallery": [
-      {
-        "src": "",
-        "alt": {
-          "en": "",
-          "it": "",
-          "fr": ""
-        }
-      },
-      {
-        "src": "",
-        "alt": {
-          "en": "",
-          "it": "",
-          "fr": ""
-        }
-      },
-      {
-        "src": "",
-        "alt": {
-          "en": "",
-          "it": "",
-          "fr": ""
-        }
-      }
-    ]
   },
   "stats": [
     {
@@ -204,12 +168,12 @@
     {
       "type": "modal",
       "serviceId": "arrival",
-      "icon": "01",
       "label": {
         "en": "Arrival",
         "it": "Arrivo",
         "fr": "Arrivee"
-      }
+      },
+      "icon": "01"
     },
     {
       "type": "copy-wifi",
@@ -221,15 +185,14 @@
       }
     },
     {
-      "type": "link",
-      "href": "https://maps.google.com/?q=Florence+historic+center",
-      "reference": "cityMap",
-      "icon": "Map",
+      "type": "modal",
+      "serviceId": "food",
       "label": {
-        "en": "Map",
-        "it": "Mappa",
-        "fr": "Carte"
-      }
+        "en": "Local picks",
+        "it": "Consigli",
+        "fr": "Adresses"
+      },
+      "icon": "Fork"
     },
     {
       "type": "host-sheet",
@@ -250,13 +213,13 @@
       },
       "title": {
         "en": "Everything guests need in one place",
-        "it": "Tutto cio che serve agli ospiti in un solo posto",
-        "fr": "Tout ce dont les voyageurs ont besoin au meme endroit"
+        "it": "Everything guests need in one place",
+        "fr": "Everything guests need in one place"
       },
       "copy": {
-        "en": "Each card is ready for a modal, a direct action or an external link. Keep the page short, useful and easy to scan from a phone.",
-        "it": "Ogni card e pronta per una modale, un'azione diretta o un link esterno. Mantieni la pagina breve, utile e facile da leggere da smartphone.",
-        "fr": "Chaque carte peut ouvrir une modale, lancer une action directe ou un lien externe. Gardez la page courte, utile et lisible sur mobile."
+        "en": "Editorial hospitality works best when practical details and local recommendations feel equally intentional.",
+        "it": "Editorial hospitality works best when practical details and local recommendations feel equally intentional.",
+        "fr": "Editorial hospitality works best when practical details and local recommendations feel equally intentional."
       }
     },
     "area": {
@@ -279,8 +242,8 @@
       },
       "title": {
         "en": "Editorial, warm and unmistakably boutique.",
-        "it": "Editoriale, caldo e decisamente boutique.",
-        "fr": "Editorial, chaleureux et clairement boutique."
+        "it": "Editorial, warm and unmistakably boutique.",
+        "fr": "Editorial, warm and unmistakably boutique."
       },
       "body": {
         "en": "This preset mixes serif typography, circular seals and soft hospitality colors to feel more like a printed welcome dossier than a generic app. It works well for city apartments, design stays and renovation-led properties.",
@@ -544,17 +507,17 @@
       "chip": {
         "en": "Rules",
         "it": "Regole",
-        "fr": "R\u00e8gles"
+        "fr": "Règles"
       },
       "title": {
         "en": "House rules",
         "it": "Regole della casa",
-        "fr": "R\u00e8gles de la maison"
+        "fr": "Règles de la maison"
       },
       "description": {
         "en": "The few important notes to ensure a smooth stay.",
         "it": "Le poche note importanti per garantire un soggiorno tranquillo.",
-        "fr": "Les quelques notes importantes pour assurer un bon s\u00e9jour."
+        "fr": "Les quelques notes importantes pour assurer un bon séjour."
       },
       "cardActions": [
         {
@@ -563,7 +526,7 @@
           "label": {
             "en": "Read rules",
             "it": "Leggi regole",
-            "fr": "Lire les r\u00e8gles"
+            "fr": "Lire les règles"
           }
         }
       ],
@@ -571,7 +534,7 @@
         "kicker": {
           "en": "Stay notes",
           "it": "Note soggiorno",
-          "fr": "Notes s\u00e9jour"
+          "fr": "Notes séjour"
         },
         "title": {
           "en": "Respect the space and the neighbors",
@@ -581,7 +544,7 @@
         "copy": {
           "en": "These few rules help us maintain the property in perfect condition for everyone.",
           "it": "Queste poche regole ci aiutano a mantenere la struttura in perfette condizioni per tutti.",
-          "fr": "Ces quelques r\u00e8gles nous aident \u00e0 maintenir la propri\u00e9t\u00e9 en parfait \u00e9tat pour tous."
+          "fr": "Ces quelques règles nous aident à maintenir la propriété en parfait état pour tous."
         },
         "sections": [
           {
@@ -594,7 +557,7 @@
             "text": {
               "en": "Please keep noise low after 22:00 and inside the common staircase.",
               "it": "Mantieni il rumore basso dopo le 22:00 e nelle scale comuni.",
-              "fr": "Merci de limiter le bruit apr\u00e8s 22h00 et dans l'escalier commun."
+              "fr": "Merci de limiter le bruit après 22h00 et dans l'escalier commun."
             }
           },
           {
@@ -606,8 +569,8 @@
             },
             "text": {
               "en": "Smoking is strictly forbidden inside. You can smoke on the balcony.",
-              "it": "\u00c8 severamente vietato fumare all'interno. Puoi fumare sul balcone.",
-              "fr": "Il est strictement interdit de fumer \u00e0 l'int\u00e9rieur. Vous pouvez fumer sur le balcon."
+              "it": "È severamente vietato fumare all'interno. Puoi fumare sul balcone.",
+              "fr": "Il est strictement interdit de fumer à l'intérieur. Vous pouvez fumer sur le balcon."
             }
           }
         ]
@@ -620,12 +583,12 @@
       "chip": {
         "en": "Departure",
         "it": "Partenza",
-        "fr": "D\u00e9part"
+        "fr": "Départ"
       },
       "title": {
         "en": "Checkout steps",
         "it": "Checkout",
-        "fr": "D\u00e9part"
+        "fr": "Départ"
       },
       "description": {
         "en": "Everything you need to know before leaving.",
@@ -639,7 +602,7 @@
           "label": {
             "en": "View details",
             "it": "Vedi dettagli",
-            "fr": "Voir d\u00e9tails"
+            "fr": "Voir détails"
           }
         }
       ],
@@ -652,12 +615,12 @@
         "title": {
           "en": "A simple checkout process",
           "it": "Un processo di checkout semplice",
-          "fr": "Un processus de d\u00e9part simple"
+          "fr": "Un processus de départ simple"
         },
         "copy": {
           "en": "No need to clean, just a few quick checks before closing the door.",
           "it": "Non serve pulire, solo un rapido controllo prima di chiudere la porta.",
-          "fr": "Pas besoin de nettoyer, juste quelques v\u00e9rifications avant de fermer la porte."
+          "fr": "Pas besoin de nettoyer, juste quelques vérifications avant de fermer la porte."
         },
         "sections": [
           {
@@ -669,8 +632,8 @@
             },
             "text": {
               "en": "Standard checkout is at 10:30. Let us know if you need to store luggage.",
-              "it": "Il checkout standard \u00e8 alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
-              "fr": "Le d\u00e9part standard est \u00e0 10h30. Dites-nous si vous devez laisser des bagages."
+              "it": "Il checkout standard è alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
+              "fr": "Le départ standard est à 10h30. Dites-nous si vous devez laisser des bagages."
             }
           },
           {
@@ -678,100 +641,12 @@
             "title": {
               "en": "Keys & lights",
               "it": "Chiavi e luci",
-              "fr": "Cl\u00e9s et lumi\u00e8res"
+              "fr": "Clés et lumières"
             },
             "text": {
               "en": "Leave the keys on the console table, turn off the lights and ensure the door is locked behind you.",
               "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
-              "fr": "Laissez les cl\u00e9s sur la console, \u00e9teignez les lumi\u00e8res et assurez-vous que la porte est ferm\u00e9e."
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "emergency",
-      "icon": "SOS",
-      "tone": "red",
-      "chip": {
-        "en": "Urgent",
-        "it": "Urgente",
-        "fr": "Urgent"
-      },
-      "title": {
-        "en": "Emergency & safety",
-        "it": "Emergenze e sicurezza",
-        "fr": "Urgences et s\u00e9curit\u00e9"
-      },
-      "description": {
-        "en": "Important numbers and safety information.",
-        "it": "Numeri importanti e informazioni sulla sicurezza.",
-        "fr": "Num\u00e9ros importants et informations de s\u00e9curit\u00e9."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "emergency",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Safety first",
-          "it": "Sicurezza prima",
-          "fr": "S\u00e9curit\u00e9 d'abord"
-        },
-        "title": {
-          "en": "Local emergency contacts",
-          "it": "Contatti di emergenza locali",
-          "fr": "Contacts d'urgence locaux"
-        },
-        "copy": {
-          "en": "In case of immediate danger, always call the national emergency number first.",
-          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
-          "fr": "En cas de danger imm\u00e9diat, appelez toujours d'abord le num\u00e9ro d'urgence national."
-        },
-        "sections": [
-          {
-            "icon": "SOS",
-            "title": {
-              "en": "National emergency",
-              "it": "Emergenza nazionale",
-              "fr": "Urgence nationale"
-            },
-            "text": {
-              "en": "Call 112 for police, ambulance or fire department.",
-              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
-              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
-            },
-            "actions": [
-              {
-                "type": "call",
-                "phone": "112",
-                "reference": "emergencyPhone",
-                "label": {
-                  "en": "Call 112",
-                  "it": "Chiama 112",
-                  "fr": "Appeler 112"
-                }
-              }
-            ]
-          },
-          {
-            "icon": "A",
-            "title": {
-              "en": "First aid kit",
-              "it": "Kit primo soccorso",
-              "fr": "Trousse de secours"
-            },
-            "text": {
-              "en": "Located in the bathroom cabinet.",
-              "it": "Si trova nell'armadietto del bagno.",
-              "fr": "Situ\u00e9 dans le placard de la salle de bain."
+              "fr": "Laissez les clés sur la console, éteignez les lumières et assurez-vous que la porte est fermée."
             }
           }
         ]
@@ -1037,6 +912,94 @@
           }
         ]
       }
+    },
+    {
+      "id": "emergency",
+      "icon": "SOS",
+      "tone": "red",
+      "chip": {
+        "en": "Urgent",
+        "it": "Urgente",
+        "fr": "Urgent"
+      },
+      "title": {
+        "en": "Emergency & safety",
+        "it": "Emergenze e sicurezza",
+        "fr": "Urgences et sécurité"
+      },
+      "description": {
+        "en": "Important numbers and safety information.",
+        "it": "Numeri importanti e informazioni sulla sicurezza.",
+        "fr": "Numéros importants et informations de sécurité."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "emergency",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Safety first",
+          "it": "Sicurezza prima",
+          "fr": "Sécurité d'abord"
+        },
+        "title": {
+          "en": "Local emergency contacts",
+          "it": "Contatti di emergenza locali",
+          "fr": "Contacts d'urgence locaux"
+        },
+        "copy": {
+          "en": "In case of immediate danger, always call the national emergency number first.",
+          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
+          "fr": "En cas de danger immédiat, appelez toujours d'abord le numéro d'urgence national."
+        },
+        "sections": [
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "National emergency",
+              "it": "Emergenza nazionale",
+              "fr": "Urgence nationale"
+            },
+            "text": {
+              "en": "Call 112 for police, ambulance or fire department.",
+              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
+              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "112",
+                "reference": "emergencyPhone",
+                "label": {
+                  "en": "Call 112",
+                  "it": "Chiama 112",
+                  "fr": "Appeler 112"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "A",
+            "title": {
+              "en": "First aid kit",
+              "it": "Kit primo soccorso",
+              "fr": "Trousse de secours"
+            },
+            "text": {
+              "en": "Located in the bathroom cabinet.",
+              "it": "Si trova nell'armadietto del bagno.",
+              "fr": "Situé dans le placard de la salle de bain."
+            }
+          }
+        ]
+      }
     }
   ],
   "area": {
@@ -1085,9 +1048,9 @@
           "fr": "Bar du matin"
         },
         "meta": {
-          "en": "Coffee stop \u00b7 4 min walk",
-          "it": "Tappa caffe \u00b7 4 min a piedi",
-          "fr": "Pause cafe \u00b7 4 min a pied"
+          "en": "Coffee stop · 4 min walk",
+          "it": "Tappa caffe · 4 min a piedi",
+          "fr": "Pause cafe · 4 min a pied"
         },
         "href": "https://maps.google.com/?q=Florence+coffee"
       },
@@ -1100,9 +1063,9 @@
           "fr": "Trattoria preferee"
         },
         "meta": {
-          "en": "Dinner pick \u00b7 Tuscan cuisine",
-          "it": "Cena consigliata \u00b7 cucina toscana",
-          "fr": "Diner conseille \u00b7 cuisine toscane"
+          "en": "Dinner pick · Tuscan cuisine",
+          "it": "Cena consigliata · cucina toscana",
+          "fr": "Diner conseille · cuisine toscane"
         },
         "href": "https://maps.google.com/?q=Florence+trattoria"
       },
@@ -1115,9 +1078,9 @@
           "fr": "Balade centre historique"
         },
         "meta": {
-          "en": "Landmarks nearby \u00b7 sunset route",
-          "it": "Luoghi vicini \u00b7 percorso al tramonto",
-          "fr": "Lieux proches \u00b7 itineraire au coucher du soleil"
+          "en": "Landmarks nearby · sunset route",
+          "it": "Luoghi vicini · percorso al tramonto",
+          "fr": "Lieux proches · itineraire au coucher du soleil"
         },
         "href": "https://maps.google.com/?q=Florence+historic+center"
       }
@@ -1206,6 +1169,79 @@
     }
   },
   "layout": {
-    "heroMode": "full"
+    "heroMode": "full",
+    "density": "editorial",
+    "quickActionsStyle": "pill",
+    "serviceCardStyle": "layered"
+  },
+  "media": {
+    "heroImage": {
+      "src": "",
+      "alt": {
+        "en": "",
+        "it": "",
+        "fr": ""
+      }
+    },
+    "gallery": [
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      }
+    ]
+  },
+  "presetMeta": {
+    "key": "boutique",
+    "label": {
+      "en": "Boutique City",
+      "it": "Boutique City",
+      "fr": "Boutique City"
+    },
+    "audience": {
+      "en": "Boutique apartments and design stays",
+      "it": "Boutique apartments and design stays",
+      "fr": "Boutique apartments and design stays"
+    },
+    "summary": {
+      "en": "Editorial, refined and hospitality-led.",
+      "it": "Editorial, refined and hospitality-led.",
+      "fr": "Editorial, refined and hospitality-led."
+    },
+    "featured": true,
+    "wizardCategory": "city-boutique",
+    "listingOrder": 1
+  },
+  "wizardDefaults": {
+    "recommendedFor": [
+      "city",
+      "boutique"
+    ],
+    "primaryGoal": "guest-experience",
+    "bestFor": "Hosts who want a polished welcome page with local recommendations.",
+    "focusModules": [
+      "arrival",
+      "food",
+      "experiences"
+    ]
   }
 }

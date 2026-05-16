@@ -75,35 +75,82 @@
           <section class="editor-panel" id="start-section">
             <div class="panel-heading">
               <p class="panel-eyebrow">Start</p>
-              <h2>Choose the right starting point</h2>
+              <h2>Choose the template that fits the property</h2>
             </div>
             <p class="helper-copy">
-              Pick the preset closest to the property style, then set the business fundamentals.
+              Start with a hospitality scenario, not a raw file. Each template is tuned for a
+              different host type, guest rhythm and information density.
             </p>
 
-            <div class="field-row">
+            <div class="preset-wizard-grid" id="preset-wizard-grid"></div>
+
+            <section class="preset-summary-card" id="preset-summary-card">
+              <div class="preset-summary-head">
+                <div>
+                  <p class="panel-eyebrow">Selected Template</p>
+                  <h3 id="preset-summary-title">Boutique City</h3>
+                </div>
+                <span class="preset-summary-badge" id="preset-summary-badge">Featured</span>
+              </div>
+              <p class="preset-summary-copy" id="preset-summary-copy">
+                Editorial, refined and hospitality-led.
+              </p>
+              <div class="preset-summary-grid">
+                <article>
+                  <span>Best for</span>
+                  <strong id="preset-summary-audience">Boutique apartments and design stays.</strong>
+                </article>
+                <article>
+                  <span>Hero style</span>
+                  <strong id="preset-summary-hero">Full hero</strong>
+                </article>
+                <article>
+                  <span>Sharing style</span>
+                  <strong id="preset-summary-sharing">Guest guide plus curated local highlights</strong>
+                </article>
+                <article>
+                  <span>Quick actions</span>
+                  <strong id="preset-summary-actions">Arrival, Wi-Fi, local picks, host contact</strong>
+                </article>
+              </div>
+              <div class="preset-feature-list" id="preset-feature-list"></div>
+              <div class="publish-actions compact-actions">
+                <button class="primary-action" id="use-template-button" type="button">Use this template</button>
+              </div>
+            </section>
+
+            <details class="advanced-start">
+              <summary>Advanced template controls</summary>
+              <p class="helper-copy">
+                Use these only if you want to override the selected template direction manually.
+              </p>
+              <div class="field-row">
+                <label class="field">
+                  <span>Preset</span>
+                  <select id="preset-select"></select>
+                </label>
+                <label class="field">
+                  <span>Theme preset</span>
+                  <select id="theme-select">
+                    <option value="mediterranean">Mediterranean</option>
+                    <option value="gallery">Gallery</option>
+                    <option value="coastal">Coastal</option>
+                    <option value="family">Family</option>
+                    <option value="cabin">Cabin</option>
+                    <option value="workstay">Workstay</option>
+                  </select>
+                </label>
+              </div>
+
               <label class="field">
-                <span>Preset</span>
-                <select id="preset-select"></select>
-              </label>
-              <label class="field">
-                <span>Theme preset</span>
-                <select id="theme-select">
-                  <option value="mediterranean">Mediterranean</option>
-                  <option value="gallery">Gallery</option>
-                  <option value="coastal">Coastal</option>
+                <span>Hero display</span>
+                <select id="hero-mode-select">
+                  <option value="full">Full hero</option>
+                  <option value="compact">Compact hero</option>
+                  <option value="hidden">Hide hero copy</option>
                 </select>
               </label>
-            </div>
-
-            <label class="field">
-              <span>Hero display</span>
-              <select id="hero-mode-select">
-                <option value="full">Full hero</option>
-                <option value="compact">Compact hero</option>
-                <option value="hidden">Hide hero copy</option>
-              </select>
-            </label>
+            </details>
 
             <div class="field-row">
               <label class="field">
@@ -142,6 +189,21 @@
               These fields are the ones most buyers will change first: host info, Wi-Fi, headline,
               and core links.
             </p>
+
+            <section class="preset-guidance-card" id="preset-guidance-card">
+              <div class="preset-guidance-head">
+                <div>
+                  <p class="panel-eyebrow">Edit Priorities</p>
+                  <h3 id="preset-guidance-title">Start with the modules that matter most for this template.</h3>
+                </div>
+                <span class="preset-guidance-pill" id="preset-guidance-goal">Guest experience</span>
+              </div>
+              <p class="preset-guidance-copy" id="preset-guidance-copy">
+                Adjust the guest-facing essentials first, then refine the highlighted modules in the
+                JSON editor if you want a stronger category fit.
+              </p>
+              <div class="preset-focus-list" id="preset-focus-list"></div>
+            </section>
 
             <div class="field-row">
               <label class="field">
@@ -295,11 +357,12 @@
           <section class="editor-panel" id="publish-section">
             <div class="panel-heading">
               <p class="panel-eyebrow">Publish</p>
-              <h2>Prepare the live share link before printing any QR</h2>
+              <h2>Generate the exact link you will send to guests</h2>
             </div>
             <p class="helper-copy">
-              Add the public guide URL once the page is live. The QR welcome sign will use it by
-              default unless you enter a custom QR destination.
+              Add the public guide URL once the page is live. The template generates a guest-safe
+              link automatically, and the QR printables use that guest version by default unless
+              you enter a custom QR destination.
             </p>
 
             <div class="field-row">
@@ -308,15 +371,26 @@
                 <input id="public-url-input" type="url" placeholder="https://yourdomain.com/guide/" />
               </label>
               <label class="field">
+                <span>Guest link override</span>
+                <input id="guest-url-input" type="url" placeholder="Optional custom guest-safe URL" />
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
                 <span>QR destination URL</span>
                 <input id="qr-destination-input" type="url" placeholder="Optional override for the QR code destination" />
+              </label>
+              <label class="field">
+                <span>Recommended guest link</span>
+                <input id="resolved-guest-url-output" type="text" readonly />
               </label>
             </div>
 
             <div class="publish-actions">
               <button class="primary-action" id="host-preview-button" type="button">Preview host mode</button>
               <button class="secondary-action" id="guest-preview-button" type="button">Preview guest mode</button>
-              <button class="secondary-action" id="copy-share-link-button" type="button">Copy share link</button>
+              <button class="secondary-action" id="copy-share-link-button" type="button">Copy QR link</button>
               <button class="secondary-action" id="copy-guest-link-button" type="button">Copy guest link</button>
               <button class="secondary-action" id="download-button" type="button">Download config.json</button>
               <label class="secondary-action upload-button">
@@ -325,9 +399,50 @@
               </label>
             </div>
             <p class="helper-copy">
-              Preview uses browser storage. Download `config.json` when the guide is ready, then
-              replace the root file before publishing or deploying.
+              `Copy guest link` is the safest option to send in Airbnb messages, WhatsApp, email
+              or SMS. Preview uses browser storage. Download `config.json` when the guide is ready,
+              then replace the root file before publishing or deploying.
             </p>
+            <label class="field">
+              <span>Ready-to-send guest message</span>
+              <textarea
+                id="guest-message-output"
+                rows="6"
+                readonly
+                placeholder="A guest-safe message will appear here as soon as you add a live URL."
+              ></textarea>
+            </label>
+            <div class="publish-actions compact-actions">
+              <button class="secondary-action" id="copy-guest-message-button" type="button">
+                Copy guest message
+              </button>
+            </div>
+            <section class="send-card" aria-labelledby="send-card-title">
+              <div class="send-card-header">
+                <div>
+                  <p class="panel-eyebrow">Send To Guests</p>
+                  <h3 id="send-card-title">Finish here, then share the guide</h3>
+                </div>
+                <span class="send-status" id="send-status-badge">Live URL needed</span>
+              </div>
+              <p class="send-card-copy" id="send-card-copy">
+                Add the live guide URL first. Then copy the guest-safe link or the ready message
+                below and send it to guests.
+              </p>
+              <ol class="send-checklist">
+                <li>Publish the guide and paste the live URL above.</li>
+                <li>Use the guest-safe link, not the host preview link.</li>
+                <li>Send the copied message in Airbnb, WhatsApp, email or SMS.</li>
+              </ol>
+              <div class="send-actions">
+                <button class="primary-action" id="send-copy-message-button" type="button">
+                  Copy guest message
+                </button>
+                <button class="secondary-action" id="send-copy-link-button" type="button">
+                  Copy guest link
+                </button>
+              </div>
+            </section>
             <div class="preview-links">
               <a class="ghost-link" id="guide-preview-link" target="_blank" rel="noreferrer">Open guide preview</a>
               <a class="ghost-link" href="./DEPLOY_GUIDE.md">Open deploy guide</a>

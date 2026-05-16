@@ -137,7 +137,14 @@ function renderPreviewBanner() {
 function renderHero() {
   const { brand, stats } = state.config;
   const heroMode = state.config.layout?.heroMode ?? "full";
+  const density = state.config.layout?.density ?? "balanced";
+  const serviceCardStyle = state.config.layout?.serviceCardStyle ?? "layered";
+  const quickActionsStyle = state.config.layout?.quickActionsStyle ?? "pill";
   document.body.dataset.heroMode = heroMode;
+  document.body.dataset.density = density;
+  document.body.dataset.serviceCardStyle = serviceCardStyle;
+  document.body.dataset.quickActionsStyle = quickActionsStyle;
+  document.body.dataset.presetKey = state.config.presetMeta?.key ?? "blank";
   dom.hero.dataset.heroMode = heroMode;
   dom.brandSeal.textContent = brand.crest;
   dom.sheetSeal.textContent = brand.crest;
@@ -199,7 +206,7 @@ function renderTopbar() {
 
   // Host-only elements: hide in guest mode
   dom.customizerLink.hidden = isGuest;
-  dom.hostButton.hidden = isGuest;
+  dom.hostButton.hidden = false;
 
   dom.hostButton.innerHTML = renderIcon('user') + " " + escapeHtml(getCopy(state.config.ui?.contactHosts, "Host"));
   dom.themeToggle.innerHTML =
@@ -207,6 +214,20 @@ function renderTopbar() {
       ? renderIcon('sun') + " " + escapeHtml(getCopy(state.config.ui?.themeLight, "Light"))
       : renderIcon('moon') + " " + escapeHtml(getCopy(state.config.ui?.themeDark, "Night"));
   dom.customizerLink.innerHTML = renderIcon('settings') + " " + escapeHtml(getCopy(state.config.ui?.openCustomizer, "Customizer"));
+}
+
+function getInitialViewMode(source) {
+  const query = getQueryConfig();
+
+  if (query.view === "guest") {
+    return true;
+  }
+
+  if (query.view === "host") {
+    return false;
+  }
+
+  return source !== "browser";
 }
 
 function getActionMarkup(action, classes = "ghost-link") {
@@ -269,7 +290,7 @@ function renderServices() {
             );
 
       return `
-        <article class="service-card service-tone-${escapeHtml(service.tone ?? "sand")}">
+        <article class="service-card service-tone-${escapeHtml(service.tone ?? "sand")} service-priority-${escapeHtml(service.priority ?? "medium")}">
           <div class="service-card-top">
             <span class="service-icon">${renderIcon(service.icon)}</span>
             <span class="service-chip">${escapeHtml(getCopy(service.chip))}</span>
@@ -597,7 +618,7 @@ loadTemplateConfig()
     state.config = config;
     state.source = source;
     state.locale = getInitialLocale();
-    state.isGuestMode = getQueryConfig().view === "guest";
+    state.isGuestMode = getInitialViewMode(source);
     renderAll();
   })
   .catch((error) => {

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Porta Nova Loft Guide",
-    "description": "City-forward guest guide preset for urban lofts and short-stay apartments."
+    "description": "Utility-first guest guide preset for urban lofts, serviced apartments and business travelers."
   },
   "themePreset": "gallery",
   "languages": [
@@ -25,19 +25,19 @@
     "name": "Porta Nova Loft",
     "crest": "PN",
     "eyebrow": {
-      "en": "Smart guest page for urban stays",
-      "it": "Pagina ospiti smart per soggiorni urbani",
-      "fr": "Page invite intelligente pour sejours urbains"
+      "en": "City guide for fast arrivals",
+      "it": "City guide for fast arrivals",
+      "fr": "City guide for fast arrivals"
     },
     "headline": {
-      "en": "A sharper preset for business travelers, design lofts and fast city stays.",
-      "it": "Un preset piu deciso per business traveler, design loft e soggiorni rapidi in citta.",
-      "fr": "Un preset plus direct pour voyageurs d'affaires, lofts design et courts sejours urbains."
+      "en": "A sharper guest guide for business travelers, self check-ins and fast city stays.",
+      "it": "A sharper guest guide for business travelers, self check-ins and fast city stays.",
+      "fr": "A sharper guest guide for business travelers, self check-ins and fast city stays."
     },
     "subtitle": {
-      "en": "Built for guests who want clarity: self check-in, transport shortcuts, work-friendly details and immediate contacts.",
-      "it": "Pensato per ospiti che vogliono chiarezza: self check-in, scorciatoie trasporti, dettagli work-friendly e contatti immediati.",
-      "fr": "Concu pour des voyageurs qui veulent de la clarte : self check-in, raccourcis transport, details work-friendly et contacts immediats."
+      "en": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal.",
+      "it": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal.",
+      "fr": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal."
     },
     "welcome": {
       "en": "Use this preset if your listing tone is modern, practical and slightly premium. It suits serviced apartments, city lofts and remote-work-friendly stays.",
@@ -167,33 +167,31 @@
   "quickActions": [
     {
       "type": "modal",
-      "serviceId": "arrival",
-      "icon": "Door",
+      "serviceId": "self-check-in",
       "label": {
-        "en": "Access",
-        "it": "Accesso",
-        "fr": "Acces"
+        "en": "Check-in",
+        "it": "Check-in",
+        "fr": "Check-in"
+      },
+      "icon": "Door"
+    },
+    {
+      "type": "connect-wifi",
+      "label": {
+        "en": "Connect Wi-Fi",
+        "it": "Connetti Wi-Fi",
+        "fr": "Connecter Wi-Fi"
       }
     },
     {
-      "type": "copy-wifi",
-      "icon": "Wi",
+      "type": "modal",
+      "serviceId": "mobility",
       "label": {
-        "en": "Wi-Fi",
-        "it": "Wi-Fi",
-        "fr": "Wi-Fi"
-      }
-    },
-    {
-      "type": "link",
-      "href": "https://maps.google.com/?q=Milan+Porta+Nuova",
-      "reference": "cityMap",
-      "icon": "Map",
-      "label": {
-        "en": "Map",
-        "it": "Mappa",
-        "fr": "Carte"
-      }
+        "en": "Transport",
+        "it": "Trasporti",
+        "fr": "Transport"
+      },
+      "icon": "Metro"
     },
     {
       "type": "host-sheet",
@@ -214,20 +212,20 @@
       },
       "title": {
         "en": "A guest page built for fast decisions",
-        "it": "Una pagina ospiti pensata per decisioni rapide",
-        "fr": "Une page invite construite pour des decisions rapides"
+        "it": "A guest page built for fast decisions",
+        "fr": "A guest page built for fast decisions"
       },
       "copy": {
-        "en": "This preset is more structured and practical. It works when guests are in transit, arriving late or mixing leisure with work.",
-        "it": "Questo preset e piu strutturato e pratico. Funziona quando gli ospiti sono in transito, arrivano tardi o mescolano lavoro e tempo libero.",
-        "fr": "Ce preset est plus structure et pratique. Il fonctionne bien pour les voyageurs en transit, les arrivees tardives et les sejours mixant travail et loisir."
+        "en": "Urban guests should find access, transport and workspace details before they need to message the host.",
+        "it": "Urban guests should find access, transport and workspace details before they need to message the host.",
+        "fr": "Urban guests should find access, transport and workspace details before they need to message the host."
       }
     },
     "area": {
       "title": {
         "en": "Nearby shortcuts",
-        "it": "Shortcut vicini",
-        "fr": "Raccourcis a proximite"
+        "it": "Nearby shortcuts",
+        "fr": "Nearby shortcuts"
       },
       "copy": {
         "en": "Focus on speed: metro, groceries, pharmacy and one or two strong dining options.",
@@ -243,8 +241,8 @@
       },
       "title": {
         "en": "Less romance, more signal.",
-        "it": "Meno romanticismo, piu segnale.",
-        "fr": "Moins de romantisme, plus de signal."
+        "it": "Less romance, more signal.",
+        "fr": "Less romance, more signal."
       },
       "body": {
         "en": "The gallery theme shifts the template toward a cleaner metropolitan tone. It is useful when the property promise is efficiency, location and smart autonomy rather than leisurely escape.",
@@ -293,21 +291,21 @@
     {
       "id": "wifi",
       "icon": "Wi",
-      "tone": "blue",
+      "tone": "sand",
       "chip": {
-        "en": "Work-ready",
-        "it": "Work-ready",
-        "fr": "Work-ready"
+        "en": "Always on",
+        "it": "Sempre attivo",
+        "fr": "Toujours pret"
       },
       "title": {
-        "en": "Fast Wi-Fi",
-        "it": "Wi-Fi veloce",
-        "fr": "Wi-Fi rapide"
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
       },
       "description": {
-        "en": "Highlight network speed, direct access and any desk-friendly detail.",
-        "it": "Metti in evidenza velocita rete, accesso diretto ed eventuali dettagli desk-friendly.",
-        "fr": "Mettez en avant la vitesse reseau, l'acces direct et tout detail desk-friendly."
+        "en": "Give guests a quick way to connect without searching in messages.",
+        "it": "Dai agli ospiti un modo rapido per connettersi senza cercare nei messaggi.",
+        "fr": "Donnez aux voyageurs un acces rapide au Wi-Fi sans fouiller dans les messages."
       },
       "cardActions": [
         {
@@ -329,19 +327,19 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Digital setup",
-          "it": "Setup digitale",
-          "fr": "Setup numerique"
+          "en": "Digital essentials",
+          "it": "Essenziali digitali",
+          "fr": "Essentiels numeriques"
         },
         "title": {
-          "en": "Short, clean, useful",
-          "it": "Breve, pulito, utile",
-          "fr": "Court, clair, utile"
+          "en": "Share network details beautifully",
+          "it": "Condividi i dettagli rete con stile",
+          "fr": "Partagez les details reseau avec style"
         },
         "copy": {
-          "en": "For city stays the Wi-Fi card should answer one question fast: how do I get online now?",
-          "it": "Per soggiorni urbani la card Wi-Fi dovrebbe rispondere velocemente a una domanda: come vado online adesso?",
-          "fr": "Pour les sejours urbains, la carte Wi-Fi doit repondre vite a une question : comment me connecter maintenant ?"
+          "en": "Use the built-in buttons for one-tap copying and direct connection on supported devices.",
+          "it": "Usa i pulsanti inclusi per copiare in un tap e collegarti direttamente sui dispositivi supportati.",
+          "fr": "Utilisez les boutons integres pour copier en un tap et se connecter directement sur les appareils compatibles."
         },
         "sections": [
           {
@@ -352,9 +350,9 @@
               "fr": "Reseau"
             },
             "text": {
-              "en": "Porta Nova Work Loft",
-              "it": "Porta Nova Work Loft",
-              "fr": "Porta Nova Work Loft"
+              "en": "Atelier Verdi Guest",
+              "it": "Atelier Verdi Guest",
+              "fr": "Atelier Verdi Guest"
             }
           },
           {
@@ -365,9 +363,9 @@
               "fr": "Mot de passe"
             },
             "text": {
-              "en": "nova-fast-2026",
-              "it": "nova-fast-2026",
-              "fr": "nova-fast-2026"
+              "en": "atelier-2026",
+              "it": "atelier-2026",
+              "fr": "atelier-2026"
             },
             "actions": [
               {
@@ -392,9 +390,9 @@
       }
     },
     {
-      "id": "arrival",
-      "icon": "Key",
-      "tone": "olive",
+      "id": "self-check-in",
+      "icon": "Door",
+      "tone": "blue",
       "chip": {
         "en": "Access",
         "it": "Accesso",
@@ -406,9 +404,119 @@
         "fr": "Self check-in"
       },
       "description": {
-        "en": "Door codes, elevator notes and building entry should live here.",
-        "it": "Qui devono stare codici porta, ascensore e accesso al palazzo.",
-        "fr": "Les codes porte, l'ascenseur et l'acces immeuble doivent vivre ici."
+        "en": "Door code, keypad flow and building access belong here.",
+        "it": "Door code, keypad flow and building access belong here.",
+        "fr": "Door code, keypad flow and building access belong here."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "self-check-in",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Arrival operations",
+          "it": "Arrival operations",
+          "fr": "Arrival operations"
+        },
+        "title": {
+          "en": "Write this as if the guest is reading on the sidewalk",
+          "it": "Write this as if the guest is reading on the sidewalk",
+          "fr": "Write this as if the guest is reading on the sidewalk"
+        },
+        "copy": {
+          "en": "Every sentence should remove hesitation during building access.",
+          "it": "Every sentence should remove hesitation during building access.",
+          "fr": "Every sentence should remove hesitation during building access."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Check-in window",
+              "it": "Fascia check-in",
+              "fr": "Plage check-in"
+            },
+            "text": {
+              "en": "Standard arrival from 15:00. Message the host for luggage drop or late check-in support.",
+              "it": "Arrivo standard dalle 15:00. Scrivi all'host per deposito bagagli o supporto late check-in.",
+              "fr": "Arrivee standard a partir de 15h00. Ecrivez a l'host pour depot bagages ou arrivee tardive."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "+390000000001",
+                "reference": "hostPhone",
+                "label": {
+                  "en": "Call host",
+                  "it": "Chiama host",
+                  "fr": "Appeler l'host"
+                }
+              },
+              {
+                "type": "link",
+                "href": "https://wa.me/390000000001",
+                "reference": "hostWhatsapp",
+                "label": {
+                  "en": "WhatsApp host",
+                  "it": "WhatsApp host",
+                  "fr": "WhatsApp host"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "From the station",
+              "it": "Dalla stazione",
+              "fr": "Depuis la gare"
+            },
+            "text": {
+              "en": "The walk takes around 18 minutes. Use this route to avoid the busiest vehicle-only streets.",
+              "it": "La camminata dura circa 18 minuti. Usa questo percorso per evitare le strade piu trafficate.",
+              "fr": "La marche prend environ 18 minutes. Utilisez cet itineraire pour eviter les rues les plus chargees."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrival",
+      "icon": "Arr",
+      "tone": "olive",
+      "chip": {
+        "en": "Transit",
+        "it": "Transito",
+        "fr": "Transit"
+      },
+      "title": {
+        "en": "Arrival route",
+        "it": "Arrivo in zona",
+        "fr": "Acces au quartier"
+      },
+      "description": {
+        "en": "Use this card for station, airport or taxi guidance before guests reach the building.",
+        "it": "Use this card for station, airport or taxi guidance before guests reach the building.",
+        "fr": "Use this card for station, airport or taxi guidance before guests reach the building."
       },
       "cardActions": [
         {
@@ -423,50 +531,72 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Arrival operations",
-          "it": "Operativita arrivo",
-          "fr": "Operations d'arrivee"
+          "en": "Arrival route",
+          "it": "Arrival route",
+          "fr": "Arrival route"
         },
         "title": {
-          "en": "Write this as if the guest is reading on the sidewalk",
-          "it": "Scrivilo come se l'ospite lo stesse leggendo sul marciapiede",
-          "fr": "Ecrivez ceci comme si le voyageur le lisait sur le trottoir"
+          "en": "Make the last 15 minutes feel predictable",
+          "it": "Make the last 15 minutes feel predictable",
+          "fr": "Make the last 15 minutes feel predictable"
         },
         "copy": {
-          "en": "Every sentence should remove hesitation during building access.",
-          "it": "Ogni frase dovrebbe togliere esitazione durante l'accesso al palazzo.",
-          "fr": "Chaque phrase doit lever les hesitations pendant l'acces a l'immeuble."
+          "en": "This card should cover where to get out, which exit to use and when a taxi is easier than walking.",
+          "it": "This card should cover where to get out, which exit to use and when a taxi is easier than walking.",
+          "fr": "This card should cover where to get out, which exit to use and when a taxi is easier than walking."
         },
         "sections": [
           {
             "icon": "01",
             "title": {
-              "en": "Arrival window",
-              "it": "Finestra arrivo",
-              "fr": "Fenetre d'arrivee"
+              "en": "Check-in window",
+              "it": "Fascia check-in",
+              "fr": "Plage check-in"
             },
             "text": {
-              "en": "Self check-in from 15:00 with keypad entry. Send the code on the day of arrival only.",
-              "it": "Self check-in dalle 15:00 con tastierino. Invia il codice solo il giorno di arrivo.",
-              "fr": "Self check-in a partir de 15h00 avec clavier. Envoyez le code uniquement le jour de l'arrivee."
-            }
+              "en": "Standard arrival from 15:00. Message the host for luggage drop or late check-in support.",
+              "it": "Arrivo standard dalle 15:00. Scrivi all'host per deposito bagagli o supporto late check-in.",
+              "fr": "Arrivee standard a partir de 15h00. Ecrivez a l'host pour depot bagages ou arrivee tardive."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "+390000000001",
+                "reference": "hostPhone",
+                "label": {
+                  "en": "Call host",
+                  "it": "Chiama host",
+                  "fr": "Appeler l'host"
+                }
+              },
+              {
+                "type": "link",
+                "href": "https://wa.me/390000000001",
+                "reference": "hostWhatsapp",
+                "label": {
+                  "en": "WhatsApp host",
+                  "it": "WhatsApp host",
+                  "fr": "WhatsApp host"
+                }
+              }
+            ]
           },
           {
             "icon": "02",
             "title": {
-              "en": "From Milano Centrale",
-              "it": "Da Milano Centrale",
-              "fr": "Depuis Milano Centrale"
+              "en": "From the station",
+              "it": "Dalla stazione",
+              "fr": "Depuis la gare"
             },
             "text": {
-              "en": "Use the direct route to reach the building quickly by metro and a short walk.",
-              "it": "Usa il percorso diretto per raggiungere il palazzo rapidamente con metro e breve camminata.",
-              "fr": "Utilisez l'itineraire direct pour rejoindre l'immeuble rapidement en metro puis a pied."
+              "en": "The walk takes around 18 minutes. Use this route to avoid the busiest vehicle-only streets.",
+              "it": "La camminata dura circa 18 minuti. Usa questo percorso per evitare le strade piu trafficate.",
+              "fr": "La marche prend environ 18 minutes. Utilisez cet itineraire pour eviter les rues les plus chargees."
             },
             "actions": [
               {
                 "type": "link",
-                "href": "https://maps.google.com/?q=Milan+Central+Station+to+Corso+Garibaldi+52",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
                 "reference": "arrivalRoute",
                 "label": {
                   "en": "Open route",
@@ -480,76 +610,89 @@
       }
     },
     {
-      "id": "house-rules",
-      "icon": "Stay",
+      "id": "workspace",
+      "icon": "Metro",
       "tone": "sand",
       "chip": {
-        "en": "Rules",
-        "it": "Regole",
-        "fr": "R\u00e8gles"
+        "en": "Work",
+        "it": "Lavoro",
+        "fr": "Travail"
       },
       "title": {
-        "en": "House rules",
-        "it": "Regole della casa",
-        "fr": "R\u00e8gles de la maison"
+        "en": "Workspace notes",
+        "it": "Spazio lavoro",
+        "fr": "Espace travail"
       },
       "description": {
-        "en": "The few important notes to ensure a smooth stay.",
-        "it": "Le poche note importanti per garantire un soggiorno tranquillo.",
-        "fr": "Les quelques notes importantes pour assurer un bon s\u00e9jour."
+        "en": "Desk, calls, lighting and nearby backup spots for remote work.",
+        "it": "Desk, calls, lighting and nearby backup spots for remote work.",
+        "fr": "Desk, calls, lighting and nearby backup spots for remote work."
       },
       "cardActions": [
         {
           "type": "modal",
-          "serviceId": "house-rules",
+          "serviceId": "workspace",
           "label": {
-            "en": "Read rules",
-            "it": "Leggi regole",
-            "fr": "Lire les r\u00e8gles"
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
           }
         }
       ],
       "modal": {
         "kicker": {
-          "en": "Stay notes",
-          "it": "Note soggiorno",
-          "fr": "Notes s\u00e9jour"
+          "en": "Work setup",
+          "it": "Work setup",
+          "fr": "Work setup"
         },
         "title": {
-          "en": "Respect the space and the neighbors",
-          "it": "Rispetta lo spazio e i vicini",
-          "fr": "Respectez l'espace et les voisins"
+          "en": "Tell guests how to work here without guessing",
+          "it": "Tell guests how to work here without guessing",
+          "fr": "Tell guests how to work here without guessing"
         },
         "copy": {
-          "en": "These few rules help us maintain the property in perfect condition for everyone.",
-          "it": "Queste poche regole ci aiutano a mantenere la struttura in perfette condizioni per tutti.",
-          "fr": "Ces quelques r\u00e8gles nous aident \u00e0 maintenir la propri\u00e9t\u00e9 en parfait \u00e9tat pour tous."
+          "en": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe.",
+          "it": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe.",
+          "fr": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe."
         },
         "sections": [
           {
-            "icon": "A",
+            "icon": "ID",
             "title": {
-              "en": "Quiet hours",
-              "it": "Orari di quiete",
-              "fr": "Heures calmes"
+              "en": "Desk setup",
+              "it": "Desk setup",
+              "fr": "Desk setup"
             },
             "text": {
-              "en": "Please keep noise low after 22:00 and inside the common staircase.",
-              "it": "Mantieni il rumore basso dopo le 22:00 e nelle scale comuni.",
-              "fr": "Merci de limiter le bruit apr\u00e8s 22h00 et dans l'escalier commun."
+              "en": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work.",
+              "it": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work.",
+              "fr": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work."
             }
           },
           {
-            "icon": "B",
+            "icon": "PW",
             "title": {
-              "en": "Smoking policy",
-              "it": "Fumo",
-              "fr": "Politique fumeur"
+              "en": "Calls and uploads",
+              "it": "Calls and uploads",
+              "fr": "Calls and uploads"
             },
             "text": {
-              "en": "Smoking is strictly forbidden inside. You can smoke on the balcony.",
-              "it": "\u00c8 severamente vietato fumare all'interno. Puoi fumare sul balcone.",
-              "fr": "Il est strictement interdit de fumer \u00e0 l'int\u00e9rieur. Vous pouvez fumer sur le balcon."
+              "en": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls.",
+              "it": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls.",
+              "fr": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls."
+            }
+          },
+          {
+            "icon": "Map",
+            "title": {
+              "en": "Nearby backup",
+              "it": "Nearby backup",
+              "fr": "Nearby backup"
+            },
+            "text": {
+              "en": "List one reliable cafe or coworking option nearby in case guests need a change of scene.",
+              "it": "List one reliable cafe or coworking option nearby in case guests need a change of scene.",
+              "fr": "List one reliable cafe or coworking option nearby in case guests need a change of scene."
             }
           }
         ]
@@ -562,12 +705,12 @@
       "chip": {
         "en": "Departure",
         "it": "Partenza",
-        "fr": "D\u00e9part"
+        "fr": "Départ"
       },
       "title": {
         "en": "Checkout steps",
         "it": "Checkout",
-        "fr": "D\u00e9part"
+        "fr": "Départ"
       },
       "description": {
         "en": "Everything you need to know before leaving.",
@@ -581,7 +724,7 @@
           "label": {
             "en": "View details",
             "it": "Vedi dettagli",
-            "fr": "Voir d\u00e9tails"
+            "fr": "Voir détails"
           }
         }
       ],
@@ -594,12 +737,12 @@
         "title": {
           "en": "A simple checkout process",
           "it": "Un processo di checkout semplice",
-          "fr": "Un processus de d\u00e9part simple"
+          "fr": "Un processus de départ simple"
         },
         "copy": {
           "en": "No need to clean, just a few quick checks before closing the door.",
           "it": "Non serve pulire, solo un rapido controllo prima di chiudere la porta.",
-          "fr": "Pas besoin de nettoyer, juste quelques v\u00e9rifications avant de fermer la porte."
+          "fr": "Pas besoin de nettoyer, juste quelques vérifications avant de fermer la porte."
         },
         "sections": [
           {
@@ -611,8 +754,8 @@
             },
             "text": {
               "en": "Standard checkout is at 10:30. Let us know if you need to store luggage.",
-              "it": "Il checkout standard \u00e8 alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
-              "fr": "Le d\u00e9part standard est \u00e0 10h30. Dites-nous si vous devez laisser des bagages."
+              "it": "Il checkout standard è alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
+              "fr": "Le départ standard est à 10h30. Dites-nous si vous devez laisser des bagages."
             }
           },
           {
@@ -620,13 +763,189 @@
             "title": {
               "en": "Keys & lights",
               "it": "Chiavi e luci",
-              "fr": "Cl\u00e9s et lumi\u00e8res"
+              "fr": "Clés et lumières"
             },
             "text": {
               "en": "Leave the keys on the console table, turn off the lights and ensure the door is locked behind you.",
               "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
-              "fr": "Laissez les cl\u00e9s sur la console, \u00e9teignez les lumi\u00e8res et assurez-vous que la porte est ferm\u00e9e."
+              "fr": "Laissez les clés sur la console, éteignez les lumières et assurez-vous que la porte est fermée."
             }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mobility",
+      "icon": "Move",
+      "tone": "olive",
+      "chip": {
+        "en": "City",
+        "it": "Citta",
+        "fr": "Ville"
+      },
+      "title": {
+        "en": "Mobility tips",
+        "it": "Mobilita",
+        "fr": "Mobilite"
+      },
+      "description": {
+        "en": "Help guests decide when to walk, when to take a taxi and what is realistic from the property.",
+        "it": "Aiuta gli ospiti a capire quando camminare, quando prendere un taxi e cosa e realistico dall'alloggio.",
+        "fr": "Aidez les voyageurs a savoir quand marcher, quand prendre un taxi et ce qui est realiste depuis le logement."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "mobility",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Move with confidence",
+          "it": "Muoviti con sicurezza",
+          "fr": "Bougez sereinement"
+        },
+        "title": {
+          "en": "Answer the transport questions before they ask",
+          "it": "Rispondi prima alle domande sui trasporti",
+          "fr": "Repondez aux questions transport avant qu'elles n'arrivent"
+        },
+        "copy": {
+          "en": "State the easiest route from key arrival points and recommend one taxi app or number if relevant.",
+          "it": "Indica il percorso piu facile dai principali punti di arrivo e suggerisci una app taxi o un numero se utile.",
+          "fr": "Indiquez le trajet le plus simple depuis les principaux points d'arrivee et recommandez une appli taxi ou un numero si utile."
+        },
+        "sections": [
+          {
+            "icon": "T",
+            "title": {
+              "en": "Walking radius",
+              "it": "Raggio a piedi",
+              "fr": "Rayon a pied"
+            },
+            "text": {
+              "en": "Most landmarks are reachable on foot from the apartment. Mention this because it changes how guests plan their days.",
+              "it": "La maggior parte dei luoghi principali e raggiungibile a piedi dall'appartamento. Dillo, perche cambia il modo in cui gli ospiti organizzano la giornata.",
+              "fr": "La plupart des sites sont accessibles a pied depuis l'appartement. Dites-le, car cela change la facon dont les voyageurs organisent leurs journees."
+            }
+          },
+          {
+            "icon": "R",
+            "title": {
+              "en": "Station route",
+              "it": "Percorso stazione",
+              "fr": "Itineraire gare"
+            },
+            "text": {
+              "en": "Use a saved walking route for arrivals with luggage and avoid vague written directions.",
+              "it": "Usa un percorso salvato per gli arrivi con bagagli ed evita indicazioni scritte vaghe.",
+              "fr": "Utilisez un itineraire sauvegarde pour les arrivees avec bagages et evitez les indications vagues."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "food",
+      "icon": "Taste",
+      "tone": "blue",
+      "chip": {
+        "en": "Local",
+        "it": "Locale",
+        "fr": "Local"
+      },
+      "title": {
+        "en": "Food picks",
+        "it": "Food picks",
+        "fr": "Bonnes adresses"
+      },
+      "description": {
+        "en": "Share a few strong recommendations instead of a long undifferentiated list.",
+        "it": "Condividi pochi consigli forti invece di una lunga lista indistinta.",
+        "fr": "Partagez quelques bonnes adresses fortes plutot qu'une longue liste sans hierarchie."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "food",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Neighborhood taste",
+          "it": "Sapori di quartiere",
+          "fr": "Gouts du quartier"
+        },
+        "title": {
+          "en": "Recommend by mood, not by quantity",
+          "it": "Consiglia per atmosfera, non per quantita",
+          "fr": "Recommandez par ambiance, pas par quantite"
+        },
+        "copy": {
+          "en": "Use categories such as breakfast, aperitivo or one special dinner spot. Guests decide faster when the list has a point of view.",
+          "it": "Usa categorie come colazione, aperitivo o una cena speciale. Gli ospiti decidono piu in fretta quando la lista ha un punto di vista.",
+          "fr": "Utilisez des categories comme petit-dejeuner, aperitivo ou diner special. Les voyageurs choisissent plus vite quand la liste a un point de vue."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Morning stop",
+              "it": "Tappa mattina",
+              "fr": "Etape du matin"
+            },
+            "text": {
+              "en": "A small coffee bar two streets away with fast service and strong pastries before museum visits.",
+              "it": "Un piccolo caffe a due strade di distanza con servizio veloce e ottima pasticceria prima dei musei.",
+              "fr": "Un petit cafe a deux rues avec service rapide et belle selection de viennoiseries avant les visites."
+            }
+          },
+          {
+            "icon": "PM",
+            "title": {
+              "en": "Dinner idea",
+              "it": "Idea cena",
+              "fr": "Idee diner"
+            },
+            "text": {
+              "en": "Book one signature trattoria and tell guests why it is worth choosing over tourist-heavy alternatives.",
+              "it": "Consiglia una trattoria signature e spiega perche vale la pena sceglierla invece di opzioni troppo turistiche.",
+              "fr": "Recommandez une trattoria signature et expliquez pourquoi elle vaut mieux que les options trop touristiques."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+historic+center",
+                "reference": "cityMap",
+                "label": {
+                  "en": "Open map",
+                  "it": "Apri mappa",
+                  "fr": "Ouvrir la carte"
+                }
+              }
+            ]
           }
         ]
       }
@@ -643,12 +962,12 @@
       "title": {
         "en": "Emergency & safety",
         "it": "Emergenze e sicurezza",
-        "fr": "Urgences et s\u00e9curit\u00e9"
+        "fr": "Urgences et sécurité"
       },
       "description": {
         "en": "Important numbers and safety information.",
         "it": "Numeri importanti e informazioni sulla sicurezza.",
-        "fr": "Num\u00e9ros importants et informations de s\u00e9curit\u00e9."
+        "fr": "Numéros importants et informations de sécurité."
       },
       "cardActions": [
         {
@@ -665,7 +984,7 @@
         "kicker": {
           "en": "Safety first",
           "it": "Sicurezza prima",
-          "fr": "S\u00e9curit\u00e9 d'abord"
+          "fr": "Sécurité d'abord"
         },
         "title": {
           "en": "Local emergency contacts",
@@ -675,7 +994,7 @@
         "copy": {
           "en": "In case of immediate danger, always call the national emergency number first.",
           "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
-          "fr": "En cas de danger imm\u00e9diat, appelez toujours d'abord le num\u00e9ro d'urgence national."
+          "fr": "En cas de danger immédiat, appelez toujours d'abord le numéro d'urgence national."
         },
         "sections": [
           {
@@ -713,269 +1032,8 @@
             "text": {
               "en": "Located in the bathroom cabinet.",
               "it": "Si trova nell'armadietto del bagno.",
-              "fr": "Situ\u00e9 dans le placard de la salle de bain."
+              "fr": "Situé dans le placard de la salle de bain."
             }
-          }
-        ]
-      }
-    },
-    {
-      "id": "food",
-      "icon": "Fork",
-      "tone": "blue",
-      "chip": {
-        "en": "Food",
-        "it": "Food",
-        "fr": "Food"
-      },
-      "title": {
-        "en": "Fast local picks",
-        "it": "Consigli veloci",
-        "fr": "Adresses rapides"
-      },
-      "description": {
-        "en": "Perfect for one breakfast spot, one business lunch and one dinner fallback.",
-        "it": "Perfetta per un posto colazione, un business lunch e una cena affidabile.",
-        "fr": "Parfaite pour un spot petit-dejeuner, un dejeuner business et un diner fiable."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "food",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "City eating",
-          "it": "Mangiare in citta",
-          "fr": "Manger en ville"
-        },
-        "title": {
-          "en": "Curate for pace",
-          "it": "Cura in base al ritmo",
-          "fr": "Curate selon le rythme"
-        },
-        "copy": {
-          "en": "Urban guests often want places that are close, predictable and good enough to trust quickly.",
-          "it": "Gli ospiti urbani spesso vogliono posti vicini, affidabili e abbastanza buoni da scegliere in fretta.",
-          "fr": "Les voyageurs urbains veulent souvent des lieux proches, fiables et assez bons pour choisir rapidement."
-        },
-        "sections": [
-          {
-            "icon": "AM",
-            "title": {
-              "en": "Coffee + pastry",
-              "it": "Caffe + pastry",
-              "fr": "Cafe + viennoiserie"
-            },
-            "text": {
-              "en": "Recommend a nearby bar that opens early and handles take-away well.",
-              "it": "Consiglia un bar vicino che apra presto e gestisca bene il take-away.",
-              "fr": "Recommandez un bar proche qui ouvre tot et gere bien le take-away."
-            }
-          },
-          {
-            "icon": "PM",
-            "title": {
-              "en": "Reliable dinner",
-              "it": "Cena affidabile",
-              "fr": "Diner fiable"
-            },
-            "text": {
-              "en": "One trusted neighborhood restaurant beats a long list every time.",
-              "it": "Un solo ristorante di quartiere affidabile batte sempre una lista lunga.",
-              "fr": "Un seul restaurant de quartier fiable vaut mieux qu'une longue liste."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Milan+Porta+Nuova",
-                "reference": "cityMap",
-                "label": {
-                  "en": "Open map",
-                  "it": "Apri mappa",
-                  "fr": "Ouvrir la carte"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "mobility",
-      "icon": "Metro",
-      "tone": "olive",
-      "chip": {
-        "en": "Transit",
-        "it": "Trasporti",
-        "fr": "Transport"
-      },
-      "title": {
-        "en": "Metro and taxi",
-        "it": "Metro e taxi",
-        "fr": "Metro et taxi"
-      },
-      "description": {
-        "en": "Give the two or three transport truths that save guests time immediately.",
-        "it": "Dai le due o tre verita sui trasporti che fanno risparmiare tempo subito.",
-        "fr": "Donnez les deux ou trois verites transport qui font gagner du temps tout de suite."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "mobility",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Mobility",
-          "it": "Mobilita",
-          "fr": "Mobilite"
-        },
-        "title": {
-          "en": "Be specific about what is actually easy",
-          "it": "Sii specifico su cio che e davvero facile",
-          "fr": "Soyez precis sur ce qui est vraiment simple"
-        },
-        "copy": {
-          "en": "Mention the nearest metro, an airport transfer option and when a taxi is faster than public transport.",
-          "it": "Menziona la metro piu vicina, un'opzione aeroporto e quando un taxi e piu rapido del trasporto pubblico.",
-          "fr": "Mentionnez le metro le plus proche, une option aeroport et quand le taxi est plus rapide que les transports publics."
-        },
-        "sections": [
-          {
-            "icon": "M",
-            "title": {
-              "en": "Nearest metro",
-              "it": "Metro vicina",
-              "fr": "Metro proche"
-            },
-            "text": {
-              "en": "The station is a short walk away. Call this out early because it anchors every city movement decision.",
-              "it": "La stazione e a pochi minuti a piedi. Dillo subito, perche orienta tutte le decisioni di spostamento.",
-              "fr": "La station est a quelques minutes a pied. Dites-le rapidement, car cela guide les decisions de deplacement."
-            }
-          },
-          {
-            "icon": "R",
-            "title": {
-              "en": "Arrival route",
-              "it": "Percorso arrivo",
-              "fr": "Itineraire d'arrivee"
-            },
-            "text": {
-              "en": "Use one saved route from the station so guests can follow something precise with luggage.",
-              "it": "Usa un solo percorso salvato dalla stazione cosi gli ospiti seguono qualcosa di preciso con i bagagli.",
-              "fr": "Utilisez un seul itineraire sauvegarde depuis la gare pour que les voyageurs suivent quelque chose de precis avec leurs bagages."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Milan+Central+Station+to+Corso+Garibaldi+52",
-                "reference": "arrivalRoute",
-                "label": {
-                  "en": "Open route",
-                  "it": "Apri percorso",
-                  "fr": "Ouvrir l'itineraire"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "experiences",
-      "icon": "City",
-      "tone": "sand",
-      "chip": {
-        "en": "Add-on",
-        "it": "Add-on",
-        "fr": "Add-on"
-      },
-      "title": {
-        "en": "City escape",
-        "it": "Fuga in giornata",
-        "fr": "Escapade en journee"
-      },
-      "description": {
-        "en": "Useful for day trips, private drivers or one premium upsell.",
-        "it": "Utile per gite giornaliere, driver privati o un upsell premium.",
-        "fr": "Utile pour excursions, chauffeurs prives ou un upsell premium."
-      },
-      "cardActions": [
-        {
-          "type": "link",
-          "href": "https://maps.google.com/?q=Lake+Como+day+trip",
-          "reference": "excursions",
-          "label": {
-            "en": "View trips",
-            "it": "Vedi gite",
-            "fr": "Voir les sorties"
-          }
-        },
-        {
-          "type": "modal",
-          "serviceId": "experiences",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Optional revenue",
-          "it": "Ricavo opzionale",
-          "fr": "Revenu optionnel"
-        },
-        "title": {
-          "en": "A template can sell experiences too",
-          "it": "Un template puo anche vendere esperienze",
-          "fr": "Un template peut aussi vendre des experiences"
-        },
-        "copy": {
-          "en": "For urban stays this is a smart place for a lake day trip, airport transfer or premium mobility partner.",
-          "it": "Per soggiorni urbani questa e un'ottima area per una gita al lago, un transfer aeroporto o un partner mobilita premium.",
-          "fr": "Pour les sejours urbains, cet espace est ideal pour une sortie au lac, un transfert aeroport ou un partenaire mobilite premium."
-        },
-        "sections": [
-          {
-            "icon": "GO",
-            "title": {
-              "en": "Featured outing",
-              "it": "Uscita in evidenza",
-              "fr": "Sortie en vedette"
-            },
-            "text": {
-              "en": "Offer one polished extra instead of overwhelming guests with options.",
-              "it": "Offri un extra curato invece di sommergere gli ospiti di opzioni.",
-              "fr": "Proposez un extra soigne plutot que de noyer les voyageurs sous les options."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Lake+Como+day+trip",
-                "reference": "excursions",
-                "label": {
-                  "en": "Open experience",
-                  "it": "Apri esperienza",
-                  "fr": "Ouvrir l'experience"
-                }
-              }
-            ]
           }
         ]
       }
@@ -1027,9 +1085,9 @@
           "fr": "Metro la plus proche"
         },
         "meta": {
-          "en": "Transit stop \u00b7 3 min walk",
-          "it": "Fermata \u00b7 3 min a piedi",
-          "fr": "Station \u00b7 3 min a pied"
+          "en": "Transit stop · 3 min walk",
+          "it": "Fermata · 3 min a piedi",
+          "fr": "Station · 3 min a pied"
         },
         "href": "https://maps.google.com/?q=Milan+Porta+Nuova+metro"
       },
@@ -1042,9 +1100,9 @@
           "fr": "Courses tardives"
         },
         "meta": {
-          "en": "Convenience store \u00b7 open late",
-          "it": "Convenience store \u00b7 aperto tardi",
-          "fr": "Commerce pratique \u00b7 ouvert tard"
+          "en": "Convenience store · open late",
+          "it": "Convenience store · aperto tardi",
+          "fr": "Commerce pratique · ouvert tard"
         },
         "href": "https://maps.google.com/?q=Milan+convenience+store"
       },
@@ -1057,9 +1115,9 @@
           "fr": "Diner fiable"
         },
         "meta": {
-          "en": "Neighborhood spot \u00b7 easy booking",
-          "it": "Locale di quartiere \u00b7 prenotazione facile",
-          "fr": "Adresse de quartier \u00b7 reservation facile"
+          "en": "Neighborhood spot · easy booking",
+          "it": "Locale di quartiere · prenotazione facile",
+          "fr": "Adresse de quartier · reservation facile"
         },
         "href": "https://maps.google.com/?q=Milan+dinner"
       }
@@ -1148,7 +1206,10 @@
     }
   },
   "layout": {
-    "heroMode": "full"
+    "heroMode": "compact",
+    "density": "utility",
+    "quickActionsStyle": "grid",
+    "serviceCardStyle": "clean"
   },
   "media": {
     "heroImage": {
@@ -1184,6 +1245,40 @@
           "fr": ""
         }
       }
+    ]
+  },
+  "presetMeta": {
+    "key": "urban",
+    "label": {
+      "en": "Urban Loft",
+      "it": "Urban Loft",
+      "fr": "Urban Loft"
+    },
+    "audience": {
+      "en": "Lofts, serviced apartments and business travelers",
+      "it": "Lofts, serviced apartments and business travelers",
+      "fr": "Lofts, serviced apartments and business travelers"
+    },
+    "summary": {
+      "en": "Fast decisions, strong utility and low-friction arrival.",
+      "it": "Fast decisions, strong utility and low-friction arrival.",
+      "fr": "Fast decisions, strong utility and low-friction arrival."
+    },
+    "featured": true,
+    "wizardCategory": "city-utility",
+    "listingOrder": 2
+  },
+  "wizardDefaults": {
+    "recommendedFor": [
+      "city",
+      "business"
+    ],
+    "primaryGoal": "fast-arrival",
+    "bestFor": "Guests arriving late, self-checking in or working from the apartment.",
+    "focusModules": [
+      "self-check-in",
+      "workspace",
+      "mobility"
     ]
   }
 }

@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Porta Nova Loft Guide",
-    "description": "Utility-first guest guide preset for urban lofts, serviced apartments and business travelers."
+    "description": "Operations-first guest guide preset for remote work stays and autonomous self check-in rentals."
   },
-  "themePreset": "gallery",
+  "themePreset": "workstay",
   "languages": [
     {
       "code": "en",
@@ -22,22 +22,22 @@
     }
   ],
   "brand": {
-    "name": "Porta Nova Loft",
-    "crest": "PN",
+    "name": "Northline Workstay",
+    "crest": "NW",
     "eyebrow": {
-      "en": "City guide for fast arrivals",
-      "it": "City guide for fast arrivals",
-      "fr": "City guide for fast arrivals"
+      "en": "Guest guide for autonomous stays",
+      "it": "Guest guide for autonomous stays",
+      "fr": "Guest guide for autonomous stays"
     },
     "headline": {
-      "en": "A sharper guest guide for business travelers, self check-ins and fast city stays.",
-      "it": "A sharper guest guide for business travelers, self check-ins and fast city stays.",
-      "fr": "A sharper guest guide for business travelers, self check-ins and fast city stays."
+      "en": "A workstay guide built for self check-ins, smart autonomy and minimal guest friction.",
+      "it": "A workstay guide built for self check-ins, smart autonomy and minimal guest friction.",
+      "fr": "A workstay guide built for self check-ins, smart autonomy and minimal guest friction."
     },
     "subtitle": {
-      "en": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal.",
-      "it": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal.",
-      "fr": "Access, Wi-Fi, workspace notes and nearby shortcuts surfaced with less romance and more signal."
+      "en": "Quick access first: Wi-Fi, check-in, workspace, support and house systems without decorative detours.",
+      "it": "Quick access first: Wi-Fi, check-in, workspace, support and house systems without decorative detours.",
+      "fr": "Quick access first: Wi-Fi, check-in, workspace, support and house systems without decorative detours."
     },
     "welcome": {
       "en": "Use this preset if your listing tone is modern, practical and slightly premium. It suits serviced apartments, city lofts and remote-work-friendly stays.",
@@ -185,13 +185,13 @@
     },
     {
       "type": "modal",
-      "serviceId": "mobility",
+      "serviceId": "workspace",
       "label": {
-        "en": "Transport",
-        "it": "Trasporti",
-        "fr": "Transport"
+        "en": "Workspace",
+        "it": "Workspace",
+        "fr": "Workspace"
       },
-      "icon": "Metro"
+      "icon": "Wi"
     },
     {
       "type": "host-sheet",
@@ -211,21 +211,21 @@
         "fr": "Clarte operationnelle"
       },
       "title": {
-        "en": "A guest page built for fast decisions",
-        "it": "A guest page built for fast decisions",
-        "fr": "A guest page built for fast decisions"
+        "en": "Operations-first guest essentials",
+        "it": "Operations-first guest essentials",
+        "fr": "Operations-first guest essentials"
       },
       "copy": {
-        "en": "Urban guests should find access, transport and workspace details before they need to message the host.",
-        "it": "Urban guests should find access, transport and workspace details before they need to message the host.",
-        "fr": "Urban guests should find access, transport and workspace details before they need to message the host."
+        "en": "This template is intentionally utility-heavy. Guests should be able to solve access, workspace and support questions in seconds.",
+        "it": "This template is intentionally utility-heavy. Guests should be able to solve access, workspace and support questions in seconds.",
+        "fr": "This template is intentionally utility-heavy. Guests should be able to solve access, workspace and support questions in seconds."
       }
     },
     "area": {
       "title": {
-        "en": "Nearby shortcuts",
-        "it": "Nearby shortcuts",
-        "fr": "Nearby shortcuts"
+        "en": "Useful nearby shortcuts",
+        "it": "Useful nearby shortcuts",
+        "fr": "Useful nearby shortcuts"
       },
       "copy": {
         "en": "Focus on speed: metro, groceries, pharmacy and one or two strong dining options.",
@@ -240,9 +240,9 @@
         "fr": "Cas d'usage du preset"
       },
       "title": {
-        "en": "Less romance, more signal.",
-        "it": "Less romance, more signal.",
-        "fr": "Less romance, more signal."
+        "en": "Quick access, low friction, smart autonomy.",
+        "it": "Quick access, low friction, smart autonomy.",
+        "fr": "Quick access, low friction, smart autonomy."
       },
       "body": {
         "en": "The gallery theme shifts the template toward a cleaner metropolitan tone. It is useful when the property promise is efficiency, location and smart autonomy rather than leisurely escape.",
@@ -395,8 +395,8 @@
       "tone": "blue",
       "chip": {
         "en": "Access",
-        "it": "Accesso",
-        "fr": "Acces"
+        "it": "Access",
+        "fr": "Access"
       },
       "title": {
         "en": "Self check-in",
@@ -404,9 +404,9 @@
         "fr": "Self check-in"
       },
       "description": {
-        "en": "Door code, keypad flow and building access belong here.",
-        "it": "Door code, keypad flow and building access belong here.",
-        "fr": "Door code, keypad flow and building access belong here."
+        "en": "Door code, building access and after-hours notes live here.",
+        "it": "Door code, building access and after-hours notes live here.",
+        "fr": "Door code, building access and after-hours notes live here."
       },
       "cardActions": [
         {
@@ -421,129 +421,19 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Arrival operations",
-          "it": "Arrival operations",
-          "fr": "Arrival operations"
+          "en": "Access",
+          "it": "Access",
+          "fr": "Access"
         },
         "title": {
-          "en": "Write this as if the guest is reading on the sidewalk",
-          "it": "Write this as if the guest is reading on the sidewalk",
-          "fr": "Write this as if the guest is reading on the sidewalk"
+          "en": "Give guests the shortest path from street to door",
+          "it": "Give guests the shortest path from street to door",
+          "fr": "Give guests the shortest path from street to door"
         },
         "copy": {
-          "en": "Every sentence should remove hesitation during building access.",
-          "it": "Every sentence should remove hesitation during building access.",
-          "fr": "Every sentence should remove hesitation during building access."
-        },
-        "sections": [
-          {
-            "icon": "01",
-            "title": {
-              "en": "Check-in window",
-              "it": "Fascia check-in",
-              "fr": "Plage check-in"
-            },
-            "text": {
-              "en": "Standard arrival from 15:00. Message the host for luggage drop or late check-in support.",
-              "it": "Arrivo standard dalle 15:00. Scrivi all'host per deposito bagagli o supporto late check-in.",
-              "fr": "Arrivee standard a partir de 15h00. Ecrivez a l'host pour depot bagages ou arrivee tardive."
-            },
-            "actions": [
-              {
-                "type": "call",
-                "phone": "+390000000001",
-                "reference": "hostPhone",
-                "label": {
-                  "en": "Call host",
-                  "it": "Chiama host",
-                  "fr": "Appeler l'host"
-                }
-              },
-              {
-                "type": "link",
-                "href": "https://wa.me/390000000001",
-                "reference": "hostWhatsapp",
-                "label": {
-                  "en": "WhatsApp host",
-                  "it": "WhatsApp host",
-                  "fr": "WhatsApp host"
-                }
-              }
-            ]
-          },
-          {
-            "icon": "02",
-            "title": {
-              "en": "From the station",
-              "it": "Dalla stazione",
-              "fr": "Depuis la gare"
-            },
-            "text": {
-              "en": "The walk takes around 18 minutes. Use this route to avoid the busiest vehicle-only streets.",
-              "it": "La camminata dura circa 18 minuti. Usa questo percorso per evitare le strade piu trafficate.",
-              "fr": "La marche prend environ 18 minutes. Utilisez cet itineraire pour eviter les rues les plus chargees."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
-                "reference": "arrivalRoute",
-                "label": {
-                  "en": "Open route",
-                  "it": "Apri percorso",
-                  "fr": "Ouvrir l'itineraire"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "arrival",
-      "icon": "Arr",
-      "tone": "olive",
-      "chip": {
-        "en": "Transit",
-        "it": "Transito",
-        "fr": "Transit"
-      },
-      "title": {
-        "en": "Arrival route",
-        "it": "Arrivo in zona",
-        "fr": "Acces au quartier"
-      },
-      "description": {
-        "en": "Use this card for station, airport or taxi guidance before guests reach the building.",
-        "it": "Use this card for station, airport or taxi guidance before guests reach the building.",
-        "fr": "Use this card for station, airport or taxi guidance before guests reach the building."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "arrival",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Arrival route",
-          "it": "Arrival route",
-          "fr": "Arrival route"
-        },
-        "title": {
-          "en": "Make the last 15 minutes feel predictable",
-          "it": "Make the last 15 minutes feel predictable",
-          "fr": "Make the last 15 minutes feel predictable"
-        },
-        "copy": {
-          "en": "This card should cover where to get out, which exit to use and when a taxi is easier than walking.",
-          "it": "This card should cover where to get out, which exit to use and when a taxi is easier than walking.",
-          "fr": "This card should cover where to get out, which exit to use and when a taxi is easier than walking."
+          "en": "Use this card for keypad flow, building access, elevator notes and backup contact rules.",
+          "it": "Use this card for keypad flow, building access, elevator notes and backup contact rules.",
+          "fr": "Use this card for keypad flow, building access, elevator notes and backup contact rules."
         },
         "sections": [
           {
@@ -615,18 +505,18 @@
       "tone": "sand",
       "chip": {
         "en": "Work",
-        "it": "Lavoro",
-        "fr": "Travail"
+        "it": "Work",
+        "fr": "Work"
       },
       "title": {
-        "en": "Workspace notes",
-        "it": "Spazio lavoro",
-        "fr": "Espace travail"
+        "en": "Workspace setup",
+        "it": "Workspace setup",
+        "fr": "Workspace setup"
       },
       "description": {
-        "en": "Desk, calls, lighting and nearby backup spots for remote work.",
-        "it": "Desk, calls, lighting and nearby backup spots for remote work.",
-        "fr": "Desk, calls, lighting and nearby backup spots for remote work."
+        "en": "Desk, calls, sockets and backup work options in one place.",
+        "it": "Desk, calls, sockets and backup work options in one place.",
+        "fr": "Desk, calls, sockets and backup work options in one place."
       },
       "cardActions": [
         {
@@ -641,58 +531,147 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Work setup",
-          "it": "Work setup",
-          "fr": "Work setup"
+          "en": "Remote work",
+          "it": "Remote work",
+          "fr": "Remote work"
         },
         "title": {
-          "en": "Tell guests how to work here without guessing",
-          "it": "Tell guests how to work here without guessing",
-          "fr": "Tell guests how to work here without guessing"
+          "en": "Treat the workspace like a real feature",
+          "it": "Treat the workspace like a real feature",
+          "fr": "Treat the workspace like a real feature"
         },
         "copy": {
-          "en": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe.",
-          "it": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe.",
-          "fr": "Clarify desk location, chair comfort, call suitability and your best nearby backup cafe."
+          "en": "If the stay is work-friendly, tell guests exactly how the setup behaves during a full day of use.",
+          "it": "If the stay is work-friendly, tell guests exactly how the setup behaves during a full day of use.",
+          "fr": "If the stay is work-friendly, tell guests exactly how the setup behaves during a full day of use."
         },
         "sections": [
           {
             "icon": "ID",
             "title": {
-              "en": "Desk setup",
-              "it": "Desk setup",
-              "fr": "Desk setup"
+              "en": "Desk and light",
+              "it": "Desk and light",
+              "fr": "Desk and light"
             },
             "text": {
-              "en": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work.",
-              "it": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work.",
-              "fr": "Main desk faces natural light, with sockets on the right side and a reading lamp for evening work."
+              "en": "Explain where the main desk sits, how natural light changes during the day and where sockets are easiest to reach.",
+              "it": "Explain where the main desk sits, how natural light changes during the day and where sockets are easiest to reach.",
+              "fr": "Explain where the main desk sits, how natural light changes during the day and where sockets are easiest to reach."
             }
           },
           {
             "icon": "PW",
             "title": {
-              "en": "Calls and uploads",
-              "it": "Calls and uploads",
-              "fr": "Calls and uploads"
+              "en": "Calls and quiet hours",
+              "it": "Calls and quiet hours",
+              "fr": "Calls and quiet hours"
             },
             "text": {
-              "en": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls.",
-              "it": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls.",
-              "fr": "Video calls are best from the desk or bedroom corner. Mention any hours that are especially quiet for calls."
+              "en": "Mention the best corner for calls and any time windows that are extra quiet for meetings.",
+              "it": "Mention the best corner for calls and any time windows that are extra quiet for meetings.",
+              "fr": "Mention the best corner for calls and any time windows that are extra quiet for meetings."
             }
           },
           {
             "icon": "Map",
             "title": {
-              "en": "Nearby backup",
-              "it": "Nearby backup",
-              "fr": "Nearby backup"
+              "en": "Backup option",
+              "it": "Backup option",
+              "fr": "Backup option"
             },
             "text": {
-              "en": "List one reliable cafe or coworking option nearby in case guests need a change of scene.",
-              "it": "List one reliable cafe or coworking option nearby in case guests need a change of scene.",
-              "fr": "List one reliable cafe or coworking option nearby in case guests need a change of scene."
+              "en": "Recommend one reliable cafe or coworking option for a guest who wants a second workspace nearby.",
+              "it": "Recommend one reliable cafe or coworking option for a guest who wants a second workspace nearby.",
+              "fr": "Recommend one reliable cafe or coworking option for a guest who wants a second workspace nearby."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-systems",
+      "icon": "Stay",
+      "tone": "olive",
+      "chip": {
+        "en": "Systems",
+        "it": "Systems",
+        "fr": "Systems"
+      },
+      "title": {
+        "en": "House systems",
+        "it": "House systems",
+        "fr": "House systems"
+      },
+      "description": {
+        "en": "Hot water, building access, switches or smart devices that guests should understand fast.",
+        "it": "Hot water, building access, switches or smart devices that guests should understand fast.",
+        "fr": "Hot water, building access, switches or smart devices that guests should understand fast."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "house-systems",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Practical systems",
+          "it": "Practical systems",
+          "fr": "Practical systems"
+        },
+        "title": {
+          "en": "Explain the apartment like a product",
+          "it": "Explain the apartment like a product",
+          "fr": "Explain the apartment like a product"
+        },
+        "copy": {
+          "en": "This is the right place for things that are easy once explained but frustrating when hidden.",
+          "it": "This is the right place for things that are easy once explained but frustrating when hidden.",
+          "fr": "This is the right place for things that are easy once explained but frustrating when hidden."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Hot water and heating",
+              "it": "Hot water and heating",
+              "fr": "Hot water and heating"
+            },
+            "text": {
+              "en": "State whether hot water is instant, how long it takes to recover and where guests adjust the temperature.",
+              "it": "State whether hot water is instant, how long it takes to recover and where guests adjust the temperature.",
+              "fr": "State whether hot water is instant, how long it takes to recover and where guests adjust the temperature."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Entry systems",
+              "it": "Entry systems",
+              "fr": "Entry systems"
+            },
+            "text": {
+              "en": "Clarify intercom, smart lock, common building door or mailbox instructions if they matter after check-in.",
+              "it": "Clarify intercom, smart lock, common building door or mailbox instructions if they matter after check-in.",
+              "fr": "Clarify intercom, smart lock, common building door or mailbox instructions if they matter after check-in."
+            }
+          },
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "Troubleshooting",
+              "it": "Troubleshooting",
+              "fr": "Troubleshooting"
+            },
+            "text": {
+              "en": "Give one fast reset or contact path for issues with power, router or smart devices.",
+              "it": "Give one fast reset or contact path for issues with power, router or smart devices.",
+              "fr": "Give one fast reset or contact path for issues with power, router or smart devices."
             }
           }
         ]
@@ -769,6 +748,94 @@
               "en": "Leave the keys on the console table, turn off the lights and ensure the door is locked behind you.",
               "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
               "fr": "Laissez les clés sur la console, éteignez les lumières et assurez-vous que la porte est fermée."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "icon": "SOS",
+      "tone": "red",
+      "chip": {
+        "en": "Urgent",
+        "it": "Urgente",
+        "fr": "Urgent"
+      },
+      "title": {
+        "en": "Emergency & safety",
+        "it": "Emergenze e sicurezza",
+        "fr": "Urgences et sécurité"
+      },
+      "description": {
+        "en": "Important numbers and safety information.",
+        "it": "Numeri importanti e informazioni sulla sicurezza.",
+        "fr": "Numéros importants et informations de sécurité."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "emergency",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Safety first",
+          "it": "Sicurezza prima",
+          "fr": "Sécurité d'abord"
+        },
+        "title": {
+          "en": "Local emergency contacts",
+          "it": "Contatti di emergenza locali",
+          "fr": "Contacts d'urgence locaux"
+        },
+        "copy": {
+          "en": "In case of immediate danger, always call the national emergency number first.",
+          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
+          "fr": "En cas de danger immédiat, appelez toujours d'abord le numéro d'urgence national."
+        },
+        "sections": [
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "National emergency",
+              "it": "Emergenza nazionale",
+              "fr": "Urgence nationale"
+            },
+            "text": {
+              "en": "Call 112 for police, ambulance or fire department.",
+              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
+              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "112",
+                "reference": "emergencyPhone",
+                "label": {
+                  "en": "Call 112",
+                  "it": "Chiama 112",
+                  "fr": "Appeler 112"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "A",
+            "title": {
+              "en": "First aid kit",
+              "it": "Kit primo soccorso",
+              "fr": "Trousse de secours"
+            },
+            "text": {
+              "en": "Located in the bathroom cabinet.",
+              "it": "Si trova nell'armadietto del bagno.",
+              "fr": "Situé dans le placard de la salle de bain."
             }
           }
         ]
@@ -863,116 +930,28 @@
       }
     },
     {
-      "id": "food",
-      "icon": "Taste",
-      "tone": "blue",
-      "chip": {
-        "en": "Local",
-        "it": "Locale",
-        "fr": "Local"
-      },
-      "title": {
-        "en": "Food picks",
-        "it": "Food picks",
-        "fr": "Bonnes adresses"
-      },
-      "description": {
-        "en": "Share a few strong recommendations instead of a long undifferentiated list.",
-        "it": "Condividi pochi consigli forti invece di una lunga lista indistinta.",
-        "fr": "Partagez quelques bonnes adresses fortes plutot qu'une longue liste sans hierarchie."
-      },
-      "cardActions": [
-        {
-          "type": "modal",
-          "serviceId": "food",
-          "label": {
-            "en": "Open details",
-            "it": "Apri dettagli",
-            "fr": "Ouvrir"
-          }
-        }
-      ],
-      "modal": {
-        "kicker": {
-          "en": "Neighborhood taste",
-          "it": "Sapori di quartiere",
-          "fr": "Gouts du quartier"
-        },
-        "title": {
-          "en": "Recommend by mood, not by quantity",
-          "it": "Consiglia per atmosfera, non per quantita",
-          "fr": "Recommandez par ambiance, pas par quantite"
-        },
-        "copy": {
-          "en": "Use categories such as breakfast, aperitivo or one special dinner spot. Guests decide faster when the list has a point of view.",
-          "it": "Usa categorie come colazione, aperitivo o una cena speciale. Gli ospiti decidono piu in fretta quando la lista ha un punto di vista.",
-          "fr": "Utilisez des categories comme petit-dejeuner, aperitivo ou diner special. Les voyageurs choisissent plus vite quand la liste a un point de vue."
-        },
-        "sections": [
-          {
-            "icon": "AM",
-            "title": {
-              "en": "Morning stop",
-              "it": "Tappa mattina",
-              "fr": "Etape du matin"
-            },
-            "text": {
-              "en": "A small coffee bar two streets away with fast service and strong pastries before museum visits.",
-              "it": "Un piccolo caffe a due strade di distanza con servizio veloce e ottima pasticceria prima dei musei.",
-              "fr": "Un petit cafe a deux rues avec service rapide et belle selection de viennoiseries avant les visites."
-            }
-          },
-          {
-            "icon": "PM",
-            "title": {
-              "en": "Dinner idea",
-              "it": "Idea cena",
-              "fr": "Idee diner"
-            },
-            "text": {
-              "en": "Book one signature trattoria and tell guests why it is worth choosing over tourist-heavy alternatives.",
-              "it": "Consiglia una trattoria signature e spiega perche vale la pena sceglierla invece di opzioni troppo turistiche.",
-              "fr": "Recommandez une trattoria signature et expliquez pourquoi elle vaut mieux que les options trop touristiques."
-            },
-            "actions": [
-              {
-                "type": "link",
-                "href": "https://maps.google.com/?q=Florence+historic+center",
-                "reference": "cityMap",
-                "label": {
-                  "en": "Open map",
-                  "it": "Apri mappa",
-                  "fr": "Ouvrir la carte"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "emergency",
+      "id": "support",
       "icon": "SOS",
       "tone": "red",
       "chip": {
-        "en": "Urgent",
-        "it": "Urgente",
-        "fr": "Urgent"
+        "en": "Support",
+        "it": "Support",
+        "fr": "Support"
       },
       "title": {
-        "en": "Emergency & safety",
-        "it": "Emergenze e sicurezza",
-        "fr": "Urgences et sécurité"
+        "en": "Support routes",
+        "it": "Support routes",
+        "fr": "Support routes"
       },
       "description": {
-        "en": "Important numbers and safety information.",
-        "it": "Numeri importanti e informazioni sulla sicurezza.",
-        "fr": "Numéros importants et informations de sécurité."
+        "en": "Direct guests to the right channel before they escalate a simple issue.",
+        "it": "Direct guests to the right channel before they escalate a simple issue.",
+        "fr": "Direct guests to the right channel before they escalate a simple issue."
       },
       "cardActions": [
         {
           "type": "modal",
-          "serviceId": "emergency",
+          "serviceId": "support",
           "label": {
             "en": "Open details",
             "it": "Apri dettagli",
@@ -982,57 +961,58 @@
       ],
       "modal": {
         "kicker": {
-          "en": "Safety first",
-          "it": "Sicurezza prima",
-          "fr": "Sécurité d'abord"
+          "en": "Support routing",
+          "it": "Support routing",
+          "fr": "Support routing"
         },
         "title": {
-          "en": "Local emergency contacts",
-          "it": "Contatti di emergenza locali",
-          "fr": "Contacts d'urgence locaux"
+          "en": "Tell guests who to contact for what",
+          "it": "Tell guests who to contact for what",
+          "fr": "Tell guests who to contact for what"
         },
         "copy": {
-          "en": "In case of immediate danger, always call the national emergency number first.",
-          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
-          "fr": "En cas de danger immédiat, appelez toujours d'abord le numéro d'urgence national."
+          "en": "Differentiate urgent safety issues from access questions and normal host support.",
+          "it": "Differentiate urgent safety issues from access questions and normal host support.",
+          "fr": "Differentiate urgent safety issues from access questions and normal host support."
         },
         "sections": [
           {
             "icon": "SOS",
             "title": {
-              "en": "National emergency",
-              "it": "Emergenza nazionale",
-              "fr": "Urgence nationale"
+              "en": "Urgent help",
+              "it": "Urgent help",
+              "fr": "Urgent help"
             },
             "text": {
-              "en": "Call 112 for police, ambulance or fire department.",
-              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
-              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
-            },
-            "actions": [
-              {
-                "type": "call",
-                "phone": "112",
-                "reference": "emergencyPhone",
-                "label": {
-                  "en": "Call 112",
-                  "it": "Chiama 112",
-                  "fr": "Appeler 112"
-                }
-              }
-            ]
+              "en": "Keep the emergency number first for safety issues or immediate danger.",
+              "it": "Keep the emergency number first for safety issues or immediate danger.",
+              "fr": "Keep the emergency number first for safety issues or immediate danger."
+            }
           },
           {
-            "icon": "A",
+            "icon": "Map",
             "title": {
-              "en": "First aid kit",
-              "it": "Kit primo soccorso",
-              "fr": "Trousse de secours"
+              "en": "Host support",
+              "it": "Host support",
+              "fr": "Host support"
             },
             "text": {
-              "en": "Located in the bathroom cabinet.",
-              "it": "Si trova nell'armadietto del bagno.",
-              "fr": "Situé dans le placard de la salle de bain."
+              "en": "Clarify the fastest route for access or apartment questions: WhatsApp, phone or message app.",
+              "it": "Clarify the fastest route for access or apartment questions: WhatsApp, phone or message app.",
+              "fr": "Clarify the fastest route for access or apartment questions: WhatsApp, phone or message app."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Backup contact",
+              "it": "Backup contact",
+              "fr": "Backup contact"
+            },
+            "text": {
+              "en": "If you use a co-host or local contact, say when guests should reach them instead of the main host.",
+              "it": "If you use a co-host or local contact, say when guests should reach them instead of the main host.",
+              "fr": "If you use a co-host or local contact, say when guests should reach them instead of the main host."
             }
           }
         ]
@@ -1206,10 +1186,10 @@
     }
   },
   "layout": {
-    "heroMode": "compact",
+    "heroMode": "hidden",
     "density": "utility",
-    "quickActionsStyle": "grid",
-    "serviceCardStyle": "clean"
+    "quickActionsStyle": "compact",
+    "serviceCardStyle": "utility"
   },
   "media": {
     "heroImage": {
@@ -1248,37 +1228,37 @@
     ]
   },
   "presetMeta": {
-    "key": "urban",
+    "key": "workstay",
     "label": {
-      "en": "Urban Loft",
-      "it": "Urban Loft",
-      "fr": "Urban Loft"
+      "en": "Self Check-In Workstay",
+      "it": "Self Check-In Workstay",
+      "fr": "Self Check-In Workstay"
     },
     "audience": {
-      "en": "Lofts, serviced apartments and business travelers",
-      "it": "Lofts, serviced apartments and business travelers",
-      "fr": "Lofts, serviced apartments and business travelers"
+      "en": "Remote workers, self check-in rentals and autonomous guests",
+      "it": "Remote workers, self check-in rentals and autonomous guests",
+      "fr": "Remote workers, self check-in rentals and autonomous guests"
     },
     "summary": {
-      "en": "Fast decisions, strong utility and low-friction arrival.",
-      "it": "Fast decisions, strong utility and low-friction arrival.",
-      "fr": "Fast decisions, strong utility and low-friction arrival."
+      "en": "Operations-first flow with smart autonomy.",
+      "it": "Operations-first flow with smart autonomy.",
+      "fr": "Operations-first flow with smart autonomy."
     },
     "featured": true,
-    "wizardCategory": "city-utility",
-    "listingOrder": 2
+    "wizardCategory": "workstay-autonomy",
+    "listingOrder": 6
   },
   "wizardDefaults": {
     "recommendedFor": [
-      "city",
-      "business"
+      "workstay",
+      "self-check-in"
     ],
-    "primaryGoal": "fast-arrival",
-    "bestFor": "Guests arriving late, self-checking in or working from the apartment.",
+    "primaryGoal": "autonomy",
+    "bestFor": "Hosts who want check-in, workspace and support visible before anything else.",
     "focusModules": [
       "self-check-in",
       "workspace",
-      "mobility"
+      "house-systems"
     ]
   }
 }

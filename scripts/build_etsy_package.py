@@ -86,6 +86,39 @@ THEMES = {
         "line": "#c8dedb",
         "soft": "#d9eeeb",
     },
+    "family": {
+        "bg": "#f7f4ee",
+        "bg_alt": "#ebe5da",
+        "paper": "#ffffff",
+        "ink": "#2b2722",
+        "muted": "#666056",
+        "accent": "#be8b5e",
+        "accent_alt": "#56706b",
+        "line": "#ddd4c8",
+        "soft": "#f2e5d8",
+    },
+    "cabin": {
+        "bg": "#efe8de",
+        "bg_alt": "#ddd0c0",
+        "paper": "#fffdf9",
+        "ink": "#232019",
+        "muted": "#615a4e",
+        "accent": "#87674c",
+        "accent_alt": "#43584d",
+        "line": "#d4c7b8",
+        "soft": "#e5d6c6",
+    },
+    "workstay": {
+        "bg": "#edf1f4",
+        "bg_alt": "#dde5ea",
+        "paper": "#ffffff",
+        "ink": "#151a20",
+        "muted": "#586371",
+        "accent": "#31618c",
+        "accent_alt": "#1f2f44",
+        "line": "#d7dfe6",
+        "soft": "#dde9f4",
+    },
 }
 
 
@@ -247,17 +280,21 @@ def draw_steps(draw: ImageDraw.ImageDraw, theme: dict, title: str, steps: list[s
 
 
 def draw_preset_comparison(draw: ImageDraw.ImageDraw, theme: dict, presets: list[tuple[str, str, str]]):
-    x_positions = [900, 1230, 1560, 1890]
-    card_width = 280
-    for (name, mood, accent), x in zip(presets, x_positions):
-        rounded(draw, (x - card_width, 300, x, 1230), 34, fill="#ffffff", outline=theme["line"])
-        draw.ellipse((x - card_width + 34, 336, x - card_width + 118, 420), fill=accent)
-        draw.text((x - card_width + 76, 378), name[:2].upper(), fill="#fff8f1", font=font(FONT_SERIF_BOLD, 28), anchor="mm")
-        draw.text((x - card_width + 34, 460), name, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 32))
-        draw_wrapped(draw, mood, (x - card_width + 34, 516), 212, font(FONT_SANS, 21), theme["muted"], spacing=8)
-        rounded(draw, (x - card_width + 34, 900, x - 34, 1050), 26, fill=theme["soft"], outline=theme["line"])
-        draw.text((x - card_width + 54, 930), "Best for", fill=theme["accent"], font=font(FONT_SANS_BOLD, 18))
-        draw_wrapped(draw, mood, (x - card_width + 54, 968), 190, font(FONT_SANS, 18), theme["ink"], spacing=6)
+    columns = [904, 1240, 1576]
+    card_width = 296
+    row_heights = [300, 790]
+    for index, (name, mood, accent) in enumerate(presets):
+        col = index % 3
+        row = index // 3
+        x = columns[col]
+        y = row_heights[row]
+        rounded(draw, (x, y, x + card_width, y + 410), 34, fill="#ffffff", outline=theme["line"])
+        draw.ellipse((x + 28, y + 28, x + 112, y + 112), fill=accent)
+        draw.text((x + 70, y + 70), name[:2].upper(), fill="#fff8f1", font=font(FONT_SERIF_BOLD, 28), anchor="mm")
+        draw.text((x + 28, y + 142), name, fill=theme["ink"], font=font(FONT_SERIF_BOLD, 28))
+        draw_wrapped(draw, mood, (x + 28, y + 194), 236, font(FONT_SANS, 19), theme["muted"], spacing=7)
+        rounded(draw, (x + 28, y + 308, x + card_width - 28, y + 382), 22, fill=theme["soft"], outline=theme["line"])
+        draw.text((x + 46, y + 334), "Best for", fill=theme["accent"], font=font(FONT_SANS_BOLD, 16))
 
 
 def draw_printable_strip(draw: ImageDraw.ImageDraw, theme: dict):
@@ -281,7 +318,7 @@ def slide_cover(config: dict, theme: dict) -> Image.Image:
     draw_header(
         draw,
         "A premium guest guide that is easier than a full website and stronger than a PDF.",
-        "Sell it as a QR-ready hospitality mini web app for Airbnb hosts, vacation rentals and boutique stays.",
+        "Sell it as a QR-ready hospitality mini web app for boutique, city, coastal, family, cabin and workstay rentals.",
         theme,
     )
     draw_feature_cards(
@@ -347,8 +384,8 @@ def slide_whats_included(theme: dict) -> Image.Image:
         theme,
         [
             ("Website template", "Static guest guide homepage with cards, modals, maps and contact sections."),
-            ("Customizer", "Browser editor for presets, links, Wi-Fi and printable titles."),
-            ("4 presets", "Boutique, urban, coastal and blank starter versions included."),
+            ("Template wizard", "Start from host scenarios instead of raw files, then refine in the browser."),
+            ("6 templates + bonus", "Boutique, urban, coastal, family, cabin and workstay, plus one blank starter."),
         ],
     )
     draw_checklist(
@@ -357,7 +394,7 @@ def slide_whats_included(theme: dict) -> Image.Image:
         "Bundle contents",
         [
             "Guide website template",
-            "No-code browser customizer",
+            "No-code browser customizer and wizard",
             "Single config.json setup",
             "QR sign, Wi-Fi card and welcome sheet",
             "GitHub Pages deploy guide",
@@ -380,8 +417,8 @@ def slide_edit_flow(theme: dict) -> Image.Image:
         draw,
         theme,
         [
-            ("Choose a preset", "Start with a look that already fits your property type."),
-            ("Edit content", "Replace property details, Wi-Fi, host info and guest links."),
+            ("Choose a host scenario", "Pick the property type that already matches the guest journey you need."),
+            ("Edit essentials", "Replace property details, Wi-Fi, host info and the live guest link first."),
             ("Add your live URL", "Set the public guide URL once so the QR sign points to the final page."),
         ],
     )
@@ -390,7 +427,7 @@ def slide_edit_flow(theme: dict) -> Image.Image:
         theme,
         "Simple buyer flow",
         [
-            "Choose preset",
+            "Choose a host-ready template",
             "Edit text, links and Wi-Fi",
             "Preview guide and printables",
             "Download config.json",
@@ -406,15 +443,15 @@ def slide_presets(theme: dict) -> Image.Image:
     draw_header(
         draw,
         "Preset comparison",
-        "Show buyers they are not starting from zero. Each preset serves a different hospitality tone.",
+        "Show buyers they are choosing between different host scenarios, not just different colors.",
         theme,
     )
     draw_feature_cards(
         draw,
         theme,
         [
-            ("Boutique stay", "Warm editorial tone for charming apartments and design-focused city stays."),
-            ("Urban loft", "Sharper structure for self check-in, business travel and fast city stays."),
+            ("6 commercial templates", "Each one changes layout density, quick actions, module mix and guest priorities."),
+            ("Blank bonus starter", "Keep the blank builder as an advanced extra, not as one of the main selling presets."),
         ],
         start_y=470,
     )
@@ -422,10 +459,12 @@ def slide_presets(theme: dict) -> Image.Image:
         draw,
         theme,
         [
-            ("Boutique", "Warm, editorial and refined", "#b86f46"),
-            ("Urban", "Metropolitan, practical and clean", "#1f3c63"),
-            ("Coastal", "Bright, breezy and destination-led", "#1e7474"),
-            ("Blank", "Start from scratch with the same structure", "#8f5e31"),
+            ("Boutique", "Editorial city stays and design apartments", "#b86f46"),
+            ("Urban", "Self check-in, fast arrivals and business travel", "#1f3c63"),
+            ("Coastal", "Beach apartments, villas and slow-stay hosting", "#1e7474"),
+            ("Family", "Practical family rentals with essentials up front", "#be8b5e"),
+            ("Cabin", "Cabins, retreats and heating-aware guest flows", "#87674c"),
+            ("Workstay", "Remote work, autonomy and support shortcuts", "#31618c"),
         ],
     )
     return image
@@ -514,7 +553,7 @@ def slide_delivery(theme: dict) -> Image.Image:
             "Website template, not a PDF",
             "Basic edits without coding",
             "QR printables included",
-            "Works best for small hosts and boutique properties",
+            "Works for boutique, city, coastal, family, cabin and workstay rentals",
             "Personalization can be sold separately as an add-on",
         ],
     )

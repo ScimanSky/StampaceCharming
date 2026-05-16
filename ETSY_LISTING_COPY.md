@@ -6,7 +6,7 @@ Vacation Rental Guest Guide Website Template, Airbnb QR Welcome Page, Digital Ho
 
 ## Short description
 
-Mobile-first guest guide website template for Airbnb hosts, vacation rentals and boutique stays. Includes a no-code customizer, 4 presets, guest mode sharing, property image support, and printable bonus files for your Wi-Fi card, welcome sheet and guest QR sign.
+Mobile-first guest guide website template for Airbnb hosts, vacation rentals, villas, family stays, cabins and work-friendly rentals. Includes a no-code customizer, a template-selection wizard, 6 distinct guest guide templates, 1 blank bonus starter, guest mode sharing, property image support, and printable bonus files for your Wi-Fi card, welcome sheet and guest QR sign.
 
 ## Key value bullets
 
@@ -16,7 +16,8 @@ Mobile-first guest guide website template for Airbnb hosts, vacation rentals and
 - guest mode link for cleaner guest-facing sharing
 - optional hero image and gallery support
 - QR-ready sharing flow for pre-arrival messages and in-home signage
-- 4 included presets: boutique, urban, coastal and blank
+- 6 distinct templates: boutique, urban, coastal, family, cabin and self check-in workstay
+- 1 blank bonus starter for advanced buyers
 - bundled printables: QR sign, Wi-Fi card, welcome sheet and pocket QR card
 - dedicated pre-built modules for House Rules, Checkout, and Emergency contacts
 - ideal for Airbnb hosts, vacation rentals, villas and boutique apartments
@@ -26,7 +27,8 @@ Mobile-first guest guide website template for Airbnb hosts, vacation rentals and
 - editable guest guide website template
 - browser customizer
 - root `config.json`
-- 4 starter presets
+- 6 distinct guest guide templates
+- 1 blank bonus starter
 - QR Welcome Sign
 - Wi-Fi Card
 - Welcome Sheet
@@ -50,7 +52,7 @@ No. This is a self-hosted static template. A GitHub Pages guide is included.
 
 ### Can I use it with Airbnb guests?
 
-Yes. It is designed for Airbnb hosts, vacation rentals, villas and boutique stays.
+Yes. It is designed for Airbnb hosts, vacation rentals, villas, family stays, cabins and work-friendly rentals.
 
 ### Can I change the colors and text?
 

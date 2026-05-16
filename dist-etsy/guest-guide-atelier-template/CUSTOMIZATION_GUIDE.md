@@ -3,7 +3,7 @@
 ## Recommended workflow
 
 1. Open `customize.html`
-2. Pick a preset
+2. Pick a template in the wizard
 3. Edit the quick fields in `Edit Content`
 4. Add your live URL in `Publish`
 5. Preview the guide and printables
@@ -24,6 +24,7 @@
 - property hero image and gallery image URLs
 - printable titles for the QR sign, Wi-Fi card, welcome sheet and pocket card
 - theme preset
+- preset summary and wizard-driven template guidance
 
 The customizer also keeps dependent actions in sync:
 
@@ -37,6 +38,8 @@ The customizer also keeps dependent actions in sync:
 Main sections inside `config.json`:
 
 - `meta`
+- `presetMeta`
+- `wizardDefaults`
 - `layout`
 - `themePreset`
 - `languages`
@@ -60,6 +63,7 @@ The template now includes dedicated modules for common guest needs:
 - `house-rules`: to clearly outline the essential rules.
 - `checkout`: for step-by-step departure instructions.
 - `emergency`: to list local emergency contacts and safety measures.
+- `self-check-in`, `workspace`, `family-essentials`, `kitchen`, `heating-fireplace`, `house-systems`, `nearby` and `support`: to create more category-specific guest flows.
 
 These are pre-configured in the `services` array in `config.json`.
 
@@ -76,7 +80,7 @@ These are pre-configured in the `services` array in `config.json`.
 - `publicUrl`: the final published URL of the guide
 - `qrDestinationUrl`: optional override used by the printable QR sign
 - `guestUrl`: optional explicit guest-facing URL; if blank, the template derives one automatically from the public URL
-- If `qrDestinationUrl` is empty, the printables use `publicUrl`
+- If `qrDestinationUrl` is empty, the printables use the guest-safe URL derived from `guestUrl` or `publicUrl`
 
 ## `media` section
 
@@ -117,13 +121,31 @@ Translations stay inside the same file to keep the Etsy handoff simple.
 
 ```json
 "layout": {
-  "heroMode": "full"
+  "heroMode": "full",
+  "density": "editorial",
+  "quickActionsStyle": "pill",
+  "serviceCardStyle": "layered"
 }
 ```
 
 - `full`: shows the large editorial hero
 - `compact`: keeps the hero but removes the welcome paragraph and stats
 - `hidden`: hides the large hero copy and leaves the topbar plus quick access rail
+- `density`: changes overall rhythm between editorial, balanced and utility
+- `quickActionsStyle`: changes the quick access rail between pill, grid and compact
+- `serviceCardStyle`: changes card rendering between layered, clean, soft and utility
+
+## Template lineup
+
+The bundle now includes 6 commercial templates plus 1 blank bonus starter:
+
+- `Boutique City`
+- `Urban Loft`
+- `Coastal Retreat`
+- `Family Stay`
+- `Mountain Cabin`
+- `Self Check-In Workstay`
+- `Blank Builder` as the advanced bonus starter
 
 ## When to edit raw JSON directly
 

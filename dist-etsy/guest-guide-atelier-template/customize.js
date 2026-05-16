@@ -1,4 +1,5 @@
 import {
+  PRESET_CATALOG,
   PRESET_PATHS,
   browserConfigKey,
   cloneConfig,
@@ -6,7 +7,6 @@ import {
   normalizeConfig,
   resolveGuestUrl,
   resolveQrDestinationUrl,
-  t,
 } from "./template-utils.js";
 
 const state = {
@@ -15,9 +15,19 @@ const state = {
 };
 
 const dom = {
+  presetWizardGrid: document.querySelector("#preset-wizard-grid"),
   presetSelect: document.querySelector("#preset-select"),
   themeSelect: document.querySelector("#theme-select"),
   heroModeSelect: document.querySelector("#hero-mode-select"),
+  presetSummaryTitle: document.querySelector("#preset-summary-title"),
+  presetSummaryBadge: document.querySelector("#preset-summary-badge"),
+  presetSummaryCopy: document.querySelector("#preset-summary-copy"),
+  presetSummaryAudience: document.querySelector("#preset-summary-audience"),
+  presetSummaryHero: document.querySelector("#preset-summary-hero"),
+  presetSummarySharing: document.querySelector("#preset-summary-sharing"),
+  presetSummaryActions: document.querySelector("#preset-summary-actions"),
+  presetFeatureList: document.querySelector("#preset-feature-list"),
+  useTemplateButton: document.querySelector("#use-template-button"),
   brandNameInput: document.querySelector("#brand-name-input"),
   brandCrestInput: document.querySelector("#brand-crest-input"),
   brandAddressInput: document.querySelector("#brand-address-input"),
@@ -32,12 +42,21 @@ const dom = {
   headlineEnInput: document.querySelector("#headline-en-input"),
   headlineItInput: document.querySelector("#headline-it-input"),
   headlineFrInput: document.querySelector("#headline-fr-input"),
+  presetGuidanceTitle: document.querySelector("#preset-guidance-title"),
+  presetGuidanceGoal: document.querySelector("#preset-guidance-goal"),
+  presetGuidanceCopy: document.querySelector("#preset-guidance-copy"),
+  presetFocusList: document.querySelector("#preset-focus-list"),
   cityMapInput: document.querySelector("#city-map-input"),
   arrivalRouteInput: document.querySelector("#arrival-route-input"),
   guidePdfInput: document.querySelector("#guide-pdf-input"),
   excursionsInput: document.querySelector("#excursions-input"),
   publicUrlInput: document.querySelector("#public-url-input"),
+  guestUrlInput: document.querySelector("#guest-url-input"),
   qrDestinationInput: document.querySelector("#qr-destination-input"),
+  resolvedGuestUrlOutput: document.querySelector("#resolved-guest-url-output"),
+  guestMessageOutput: document.querySelector("#guest-message-output"),
+  sendStatusBadge: document.querySelector("#send-status-badge"),
+  sendCardCopy: document.querySelector("#send-card-copy"),
   qrTitleEnInput: document.querySelector("#qr-title-en-input"),
   qrTitleItInput: document.querySelector("#qr-title-it-input"),
   qrTitleFrInput: document.querySelector("#qr-title-fr-input"),
@@ -62,6 +81,9 @@ const dom = {
   guestPreviewButton: document.querySelector("#guest-preview-button"),
   copyShareLinkButton: document.querySelector("#copy-share-link-button"),
   copyGuestLinkButton: document.querySelector("#copy-guest-link-button"),
+  copyGuestMessageButton: document.querySelector("#copy-guest-message-button"),
+  sendCopyMessageButton: document.querySelector("#send-copy-message-button"),
+  sendCopyLinkButton: document.querySelector("#send-copy-link-button"),
   downloadButton: document.querySelector("#download-button"),
   importInput: document.querySelector("#import-input"),
   guidePreviewLink: document.querySelector("#guide-preview-link"),
@@ -205,6 +227,13 @@ const fieldBindings = [
     read: (config) => config.share.publicUrl,
     write: (config, value) => {
       config.share.publicUrl = value;
+    },
+  },
+  {
+    input: dom.guestUrlInput,
+    read: (config) => config.share.guestUrl,
+    write: (config, value) => {
+      config.share.guestUrl = value;
     },
   },
   {
@@ -398,30 +427,169 @@ function previewUrl(path) {
   return `${path}?config=browser`;
 }
 
+function buildGuestMessage() {
+  const guestUrl = getGuestUrl();
+  const publicUrl = state.config.share?.publicUrl?.trim();
+
+  if (!publicUrl && !state.config.share?.guestUrl?.trim()) {
+    return "";
+  }
+
+  const propertyName = state.config.brand?.name?.trim() || "your stay";
+  const hostName = state.config.host?.name?.trim();
+  const hostPhone = state.config.host?.phone?.trim();
+  const wifiNetwork = state.config.wifi?.network?.trim();
+  const wifiPassword = state.config.wifi?.password?.trim();
+
+  const lines = [
+    `Welcome to ${propertyName}.`,
+    "",
+    "Here is your guest guide with Wi-Fi, arrival details and local recommendations:",
+    guestUrl,
+  ];
+
+  if (wifiNetwork && wifiPassword) {
+    lines.push("", `Wi-Fi: ${wifiNetwork}`, `Password: ${wifiPassword}`);
+  }
+
+  if (hostName || hostPhone) {
+    lines.push("", `Need anything? Contact ${hostName || "your host"}${hostPhone ? ` at ${hostPhone}` : ""}.`);
+  }
+
+  return lines.join("\n");
+}
+
+function renderSendCard() {
+  const hasLiveUrl = Boolean(state.config.share?.publicUrl?.trim() || state.config.share?.guestUrl?.trim());
+
+  if (hasLiveUrl) {
+    dom.sendStatusBadge.textContent = "Ready to share";
+    dom.sendStatusBadge.classList.add("is-ready");
+    dom.sendCardCopy.textContent =
+      "Your guest-safe link is ready. Copy the full message for Airbnb, WhatsApp, email or SMS, or send the guest link on its own.";
+    return;
+  }
+
+  dom.sendStatusBadge.textContent = "Live URL needed";
+  dom.sendStatusBadge.classList.remove("is-ready");
+  dom.sendCardCopy.textContent =
+    "Add the live guide URL first. Then copy the guest-safe link or the ready message below and send it to guests.";
+}
+
 function renderPreviewLinks() {
-  dom.guidePreviewLink.href = previewUrl("./index.html");
+  dom.guidePreviewLink.href = `${previewUrl("./index.html")}&view=guest`;
   dom.qrSignPreviewLink.href = previewUrl("./printables/qr-sign.html");
   dom.wifiCardPreviewLink.href = previewUrl("./printables/wifi-card.html");
   dom.welcomeSheetPreviewLink.href = previewUrl("./printables/welcome-sheet.html");
   dom.pocketCardPreviewLink.href = previewUrl("./printables/qr-pocket-card.html");
+  dom.resolvedGuestUrlOutput.value = getGuestUrl();
+  dom.guestMessageOutput.value = buildGuestMessage();
+  renderSendCard();
 }
 
 function renderPresetOptions() {
-  dom.presetSelect.innerHTML = [
-    ["boutique", "Boutique stay"],
-    ["urban", "Urban loft"],
-    ["coastal", "Coastal retreat"],
-    ["blank", "Blank template"],
-  ]
+  dom.presetSelect.innerHTML = PRESET_CATALOG
     .map(
-      ([value, label]) =>
-        `<option value="${value}" ${value === state.activePreset ? "selected" : ""}>${escapeHtml(label)}</option>`,
+      (preset) =>
+        `<option value="${preset.key}" ${preset.key === state.activePreset ? "selected" : ""}>${escapeHtml(
+          preset.advanced ? `${preset.label} (Bonus)` : preset.label,
+        )}</option>`,
     )
     .join("");
 }
 
+function renderPresetWizard() {
+  dom.presetWizardGrid.innerHTML = PRESET_CATALOG.map((preset) => {
+    const activeClass = preset.key === state.activePreset ? "is-active" : "";
+    const advancedClass = preset.advanced ? "is-advanced" : "";
+    const badge = preset.advanced ? "Bonus" : "Featured";
+    return `
+      <button class="preset-card ${activeClass} ${advancedClass}" type="button" data-preset-card="${escapeHtml(preset.key)}">
+        <div class="preset-card-head">
+          <div>
+            <p class="panel-eyebrow">${escapeHtml(preset.advanced ? "Advanced starter" : "Property template")}</p>
+            <h3>${escapeHtml(preset.label)}</h3>
+          </div>
+          <span class="preset-card-badge">${escapeHtml(badge)}</span>
+        </div>
+        <p>${escapeHtml(preset.summary)}</p>
+        <p><strong>Best for:</strong> ${escapeHtml(preset.bestFor)}</p>
+        <ul>
+          ${preset.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}
+        </ul>
+      </button>
+    `;
+  }).join("");
+}
+
+function getActivePresetCard() {
+  return PRESET_CATALOG.find((preset) => preset.key === state.activePreset) ?? PRESET_CATALOG[0];
+}
+
+function syncActivePresetFromConfig() {
+  const configKey = state.config?.presetMeta?.key;
+  if (configKey && PRESET_CATALOG.some((preset) => preset.key === configKey)) {
+    state.activePreset = configKey;
+  }
+}
+
+function getHeroStyleLabel(config) {
+  const heroMode = config.layout?.heroMode ?? "full";
+  if (heroMode === "hidden") {
+    return "Quick access first";
+  }
+  if (heroMode === "compact") {
+    return "Compact hero";
+  }
+  return "Full hero";
+}
+
+function getQuickActionSummary(config) {
+  return (config.quickActions ?? [])
+    .map((action) => action.label?.en ?? action.label?.it ?? action.type ?? "Action")
+    .slice(0, 4)
+    .join(", ");
+}
+
+function getFocusModuleLabels(config) {
+  const focusModules = Array.isArray(config.wizardDefaults?.focusModules) ? config.wizardDefaults.focusModules : [];
+  return focusModules
+    .map((id) => config.services.find((service) => service.id === id))
+    .filter(Boolean)
+    .map((service) => service.title?.en ?? service.id);
+}
+
+function renderPresetSummary() {
+  const card = getActivePresetCard();
+  dom.presetSummaryTitle.textContent = state.config.presetMeta?.label?.en ?? card.label;
+  dom.presetSummaryBadge.textContent = card.advanced ? "Bonus starter" : "Featured template";
+  dom.presetSummaryCopy.textContent = state.config.presetMeta?.summary?.en ?? card.summary;
+  dom.presetSummaryAudience.textContent = state.config.wizardDefaults?.bestFor ?? state.config.presetMeta?.audience?.en ?? card.audience;
+  dom.presetSummaryHero.textContent = getHeroStyleLabel(state.config);
+  dom.presetSummarySharing.textContent = card.sharing;
+  dom.presetSummaryActions.textContent = getQuickActionSummary(state.config) || card.quickActions;
+  dom.presetFeatureList.innerHTML = card.features
+    .map((feature) => `<span>${escapeHtml(feature)}</span>`)
+    .join("");
+}
+
+function renderPresetGuidance() {
+  const card = getActivePresetCard();
+  const focusLabels = getFocusModuleLabels(state.config);
+  dom.presetGuidanceTitle.textContent = state.config.wizardDefaults?.bestFor ?? card.bestFor;
+  dom.presetGuidanceGoal.textContent = String(state.config.wizardDefaults?.primaryGoal ?? "guest-experience")
+    .replaceAll("-", " ");
+  dom.presetGuidanceCopy.textContent =
+    "Start with host details, Wi-Fi and the live guest link. Then tailor the highlighted modules if you want this template to feel category-specific.";
+  dom.presetFocusList.innerHTML = focusLabels
+    .map((label) => `<span>${escapeHtml(label)}</span>`)
+    .join("");
+}
+
 function renderForm() {
+  syncActivePresetFromConfig();
   renderPresetOptions();
+  renderPresetWizard();
   dom.themeSelect.value = state.config.themePreset;
   dom.heroModeSelect.value = state.config.layout?.heroMode ?? "full";
 
@@ -429,6 +597,8 @@ function renderForm() {
     binding.input.value = binding.read(state.config) ?? "";
   });
 
+  renderPresetSummary();
+  renderPresetGuidance();
   renderPreviewLinks();
 }
 
@@ -484,6 +654,7 @@ function parseJsonEditor() {
   try {
     const parsed = JSON.parse(dom.jsonEditor.value);
     state.config = normalizeConfig(parsed);
+    syncActivePresetFromConfig();
     renderForm();
     dom.jsonEditor.classList.remove("is-invalid");
     return true;
@@ -523,8 +694,46 @@ async function copyGuestLink() {
   }
 }
 
+async function copyGuestMessage() {
+  const message = buildGuestMessage();
+
+  if (!message) {
+    showToast("Add a public guide URL first");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(message);
+    showToast("Guest message copied");
+  } catch {
+    showToast(message);
+  }
+}
+
 dom.presetSelect.addEventListener("change", () => {
   loadPreset(dom.presetSelect.value).catch((error) => {
+    console.error(error);
+    showToast("Unable to load preset");
+  });
+});
+
+dom.presetWizardGrid.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof HTMLElement)) {
+    return;
+  }
+
+  const presetButton = target.closest("[data-preset-card]");
+  if (!(presetButton instanceof HTMLElement)) {
+    return;
+  }
+
+  const presetKey = presetButton.dataset.presetCard;
+  if (!presetKey || presetKey === state.activePreset) {
+    return;
+  }
+
+  loadPreset(presetKey).catch((error) => {
     console.error(error);
     showToast("Unable to load preset");
   });
@@ -575,6 +784,37 @@ dom.copyGuestLinkButton.addEventListener("click", () => {
   copyGuestLink();
 });
 
+dom.copyGuestMessageButton.addEventListener("click", () => {
+  if (!parseJsonEditor()) {
+    showToast("Fix the JSON before copying");
+    return;
+  }
+
+  copyGuestMessage();
+});
+
+dom.sendCopyMessageButton.addEventListener("click", () => {
+  if (!parseJsonEditor()) {
+    showToast("Fix the JSON before copying");
+    return;
+  }
+
+  copyGuestMessage();
+});
+
+dom.sendCopyLinkButton.addEventListener("click", () => {
+  if (!parseJsonEditor()) {
+    showToast("Fix the JSON before copying");
+    return;
+  }
+
+  copyGuestLink();
+});
+
+dom.useTemplateButton.addEventListener("click", () => {
+  document.querySelector("#edit-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
 dom.downloadButton.addEventListener("click", () => {
   if (!parseJsonEditor()) {
     showToast("Fix the JSON before downloading");
@@ -602,6 +842,7 @@ dom.importInput.addEventListener("change", async () => {
 
   try {
     state.config = normalizeConfig(JSON.parse(text));
+    syncActivePresetFromConfig();
     renderForm();
     renderJson();
     showToast("Config imported");

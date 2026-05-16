@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Your Property Name",
-    "description": "Blank guest guide template ready for your own branding and hospitality content."
+    "description": "Blank bonus preset for advanced buyers who want the same guest guide engine with a neutral starting point."
   },
   "themePreset": "mediterranean",
   "languages": [
@@ -218,9 +218,9 @@
         "fr": "Remplacez ces modules par votre propre parcours voyageur"
       },
       "copy": {
-        "en": "You can rename, reorder or remove cards inside the JSON editor.",
-        "it": "Puoi rinominare, riordinare o rimuovere le card dentro l'editor JSON.",
-        "fr": "Vous pouvez renommer, reordonner ou supprimer les cartes dans l'editeur JSON."
+        "en": "Use this only when you prefer a neutral starter instead of one of the six finished hospitality directions.",
+        "it": "Use this only when you prefer a neutral starter instead of one of the six finished hospitality directions.",
+        "fr": "Use this only when you prefer a neutral starter instead of one of the six finished hospitality directions."
       }
     },
     "area": {
@@ -491,12 +491,12 @@
       "title": {
         "en": "House rules",
         "it": "Regole casa",
-        "fr": "R\u00e8gles maison"
+        "fr": "Règles maison"
       },
       "description": {
         "en": "Use this for the rules guests really need.",
         "it": "Usa questa per le regole che servono davvero.",
-        "fr": "Utilisez-la pour les r\u00e8gles vraiment utiles."
+        "fr": "Utilisez-la pour les règles vraiment utiles."
       },
       "cardActions": [
         {
@@ -518,7 +518,7 @@
         "title": {
           "en": "House rules go here",
           "it": "Le regole vanno qui",
-          "fr": "Les r\u00e8gles vont ici"
+          "fr": "Les règles vont ici"
         },
         "copy": {
           "en": "Use only the information guests may forget or ask often.",
@@ -531,12 +531,12 @@
             "title": {
               "en": "Rule one",
               "it": "Regola uno",
-              "fr": "R\u00e8gle un"
+              "fr": "Règle un"
             },
             "text": {
               "en": "Write one practical note.",
               "it": "Scrivi una nota pratica.",
-              "fr": "\u00c9crivez une note pratique."
+              "fr": "Écrivez une note pratique."
             }
           },
           {
@@ -544,12 +544,12 @@
             "title": {
               "en": "Rule two",
               "it": "Regola due",
-              "fr": "R\u00e8gle deux"
+              "fr": "Règle deux"
             },
             "text": {
               "en": "Write another practical note.",
               "it": "Scrivi un'altra nota pratica.",
-              "fr": "\u00c9crivez une autre note pratique."
+              "fr": "Écrivez une autre note pratique."
             }
           }
         ]
@@ -567,12 +567,12 @@
       "title": {
         "en": "Checkout",
         "it": "Checkout",
-        "fr": "D\u00e9part"
+        "fr": "Départ"
       },
       "description": {
         "en": "Use this for departure instructions.",
         "it": "Usa questa per le istruzioni di partenza.",
-        "fr": "Utilisez-la pour les instructions de d\u00e9part."
+        "fr": "Utilisez-la pour les instructions de départ."
       },
       "cardActions": [
         {
@@ -594,12 +594,12 @@
         "title": {
           "en": "Checkout details go here",
           "it": "I dettagli di checkout vanno qui",
-          "fr": "Les d\u00e9tails de d\u00e9part vont ici"
+          "fr": "Les détails de départ vont ici"
         },
         "copy": {
           "en": "Keep this focused on what guests actually need to do.",
-          "it": "Mantieni questa sezione focalizzata su ci\u00f2 che gli ospiti devono fare.",
-          "fr": "Gardez cette section concentr\u00e9e sur ce que les voyageurs doivent faire."
+          "it": "Mantieni questa sezione focalizzata su ciò che gli ospiti devono fare.",
+          "fr": "Gardez cette section concentrée sur ce que les voyageurs doivent faire."
         },
         "sections": [
           {
@@ -612,7 +612,7 @@
             "text": {
               "en": "Standard checkout time.",
               "it": "Orario di checkout standard.",
-              "fr": "Heure de d\u00e9part standard."
+              "fr": "Heure de départ standard."
             }
           },
           {
@@ -620,12 +620,12 @@
             "title": {
               "en": "Keys",
               "it": "Chiavi",
-              "fr": "Cl\u00e9s"
+              "fr": "Clés"
             },
             "text": {
               "en": "Where to leave the keys.",
               "it": "Dove lasciare le chiavi.",
-              "fr": "O\u00f9 laisser les cl\u00e9s."
+              "fr": "Où laisser les clés."
             }
           }
         ]
@@ -688,7 +688,7 @@
             "text": {
               "en": "Emergency number details.",
               "it": "Dettagli numero di emergenza.",
-              "fr": "D\u00e9tails du num\u00e9ro d'urgence."
+              "fr": "Détails du numéro d'urgence."
             },
             "actions": [
               {
@@ -1148,7 +1148,10 @@
     }
   },
   "layout": {
-    "heroMode": "full"
+    "heroMode": "full",
+    "density": "balanced",
+    "quickActionsStyle": "pill",
+    "serviceCardStyle": "clean"
   },
   "media": {
     "heroImage": {
@@ -1184,6 +1187,39 @@
           "fr": ""
         }
       }
+    ]
+  },
+  "presetMeta": {
+    "key": "blank",
+    "label": {
+      "en": "Blank Builder",
+      "it": "Blank Builder",
+      "fr": "Blank Builder"
+    },
+    "audience": {
+      "en": "Advanced buyers who want a neutral starter",
+      "it": "Advanced buyers who want a neutral starter",
+      "fr": "Advanced buyers who want a neutral starter"
+    },
+    "summary": {
+      "en": "Start from a clean structure and build your own.",
+      "it": "Start from a clean structure and build your own.",
+      "fr": "Start from a clean structure and build your own."
+    },
+    "featured": false,
+    "wizardCategory": "advanced",
+    "listingOrder": 99
+  },
+  "wizardDefaults": {
+    "recommendedFor": [
+      "advanced"
+    ],
+    "primaryGoal": "custom-build",
+    "bestFor": "Advanced buyers who prefer editing the structure instead of adapting a demo.",
+    "focusModules": [
+      "wifi",
+      "arrival",
+      "checkout"
     ]
   }
 }

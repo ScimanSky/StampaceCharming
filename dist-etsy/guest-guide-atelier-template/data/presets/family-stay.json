@@ -1,0 +1,1253 @@
+{
+  "meta": {
+    "title": "Family Stay",
+    "description": "Practical guest guide preset for family apartments, holiday homes and multi-room rentals."
+  },
+  "themePreset": "family",
+  "languages": [
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN"
+    },
+    {
+      "code": "it",
+      "label": "Italiano",
+      "short": "IT"
+    },
+    {
+      "code": "fr",
+      "label": "Francais",
+      "short": "FR"
+    }
+  ],
+  "brand": {
+    "name": "Casa Felice Family Stay",
+    "crest": "CF",
+    "eyebrow": {
+      "en": "Guest guide for family stays",
+      "it": "Guest guide for family stays",
+      "fr": "Guest guide for family stays"
+    },
+    "headline": {
+      "en": "A guest guide built for family logistics, not just pretty presentation.",
+      "it": "A guest guide built for family logistics, not just pretty presentation.",
+      "fr": "A guest guide built for family logistics, not just pretty presentation."
+    },
+    "subtitle": {
+      "en": "Wi-Fi, arrival, kitchen notes, nearby basics and support in one calm mobile page.",
+      "it": "Wi-Fi, arrival, kitchen notes, nearby basics and support in one calm mobile page.",
+      "fr": "Wi-Fi, arrival, kitchen notes, nearby basics and support in one calm mobile page."
+    },
+    "welcome": {
+      "en": "Family stays work better when the essentials are obvious before the first unpacking moment.",
+      "it": "Family stays work better when the essentials are obvious before the first unpacking moment.",
+      "fr": "Family stays work better when the essentials are obvious before the first unpacking moment."
+    },
+    "address": "Street Address, City",
+    "email": "your@email.com",
+    "license": "License / registration code",
+    "footerNote": {
+      "en": "Built for family apartments, short holiday homes and practical multi-room stays.",
+      "it": "Built for family apartments, short holiday homes and practical multi-room stays.",
+      "fr": "Built for family apartments, short holiday homes and practical multi-room stays."
+    }
+  },
+  "stats": [
+    {
+      "value": "3",
+      "label": {
+        "en": "Starter languages",
+        "it": "Lingue starter",
+        "fr": "Langues de depart"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "en": "Editable cards",
+        "it": "Card modificabili",
+        "fr": "Cartes editables"
+      }
+    },
+    {
+      "value": "JSON",
+      "label": {
+        "en": "Single config file",
+        "it": "Singolo file config",
+        "fr": "Fichier config unique"
+      }
+    }
+  ],
+  "host": {
+    "name": "Your Host Name",
+    "role": {
+      "en": "Host",
+      "it": "Host",
+      "fr": "Host"
+    },
+    "intro": {
+      "en": "Write a short message guests can read before contacting you.",
+      "it": "Scrivi un breve messaggio che gli ospiti possano leggere prima di contattarti.",
+      "fr": "Ecrivez un court message que les voyageurs peuvent lire avant de vous contacter."
+    },
+    "email": "host@email.com",
+    "phone": "+390000000000",
+    "whatsapp": "https://wa.me/390000000000",
+    "instagram": "https://instagram.com/yourbrand"
+  },
+  "wifi": {
+    "network": "Your Wi-Fi Name",
+    "password": "your-password",
+    "connectUrl": "WIFI:T:WPA;S:Your Wi-Fi Name;P:your-password;;"
+  },
+  "links": {
+    "cityMap": "https://maps.google.com/",
+    "guidePdf": "https://example.com/guide.pdf",
+    "arrivalRoute": "https://maps.google.com/",
+    "excursions": "https://maps.google.com/"
+  },
+  "ui": {
+    "contactHosts": {
+      "en": "Host",
+      "it": "Host",
+      "fr": "Host"
+    },
+    "themeLight": {
+      "en": "Light",
+      "it": "Chiaro",
+      "fr": "Clair"
+    },
+    "themeDark": {
+      "en": "Night",
+      "it": "Notte",
+      "fr": "Nuit"
+    },
+    "openCard": {
+      "en": "Open details",
+      "it": "Apri dettagli",
+      "fr": "Ouvrir"
+    },
+    "call": {
+      "en": "Call",
+      "it": "Chiama",
+      "fr": "Appeler"
+    },
+    "whatsapp": {
+      "en": "WhatsApp",
+      "it": "WhatsApp",
+      "fr": "WhatsApp"
+    },
+    "email": {
+      "en": "Email",
+      "it": "Email",
+      "fr": "Email"
+    },
+    "instagram": {
+      "en": "Instagram",
+      "it": "Instagram",
+      "fr": "Instagram"
+    },
+    "copied": {
+      "en": "Password copied",
+      "it": "Password copiata",
+      "fr": "Mot de passe copie"
+    },
+    "openCustomizer": {
+      "en": "Customizer",
+      "it": "Customizer",
+      "fr": "Customizer"
+    },
+    "previewBanner": {
+      "en": "Previewing your browser config",
+      "it": "Anteprima della tua configurazione browser",
+      "fr": "Apercu de votre configuration navigateur"
+    }
+  },
+  "quickActions": [
+    {
+      "type": "copy-wifi",
+      "icon": "Wi",
+      "label": {
+        "en": "Wi-Fi",
+        "it": "Wi-Fi",
+        "fr": "Wi-Fi"
+      }
+    },
+    {
+      "type": "modal",
+      "serviceId": "family-essentials",
+      "label": {
+        "en": "Family kit",
+        "it": "Family kit",
+        "fr": "Kit famille"
+      },
+      "icon": "Stay"
+    },
+    {
+      "type": "modal",
+      "serviceId": "nearby",
+      "label": {
+        "en": "Nearby basics",
+        "it": "Nelle vicinanze",
+        "fr": "A proximite"
+      },
+      "icon": "Map"
+    },
+    {
+      "type": "host-sheet",
+      "icon": "SOS",
+      "label": {
+        "en": "Need help",
+        "it": "Serve aiuto",
+        "fr": "Besoin d aide"
+      }
+    }
+  ],
+  "sections": {
+    "services": {
+      "kicker": {
+        "en": "Guest essentials",
+        "it": "Guest essentials",
+        "fr": "Guest essentials"
+      },
+      "title": {
+        "en": "A calmer guide for practical family hosting",
+        "it": "A calmer guide for practical family hosting",
+        "fr": "A calmer guide for practical family hosting"
+      },
+      "copy": {
+        "en": "Surface the things families ask for most: Wi-Fi, arrival, kitchen basics, child-friendly notes and where to get essentials nearby.",
+        "it": "Surface the things families ask for most: Wi-Fi, arrival, kitchen basics, child-friendly notes and where to get essentials nearby.",
+        "fr": "Surface the things families ask for most: Wi-Fi, arrival, kitchen basics, child-friendly notes and where to get essentials nearby."
+      }
+    },
+    "area": {
+      "title": {
+        "en": "Nearby basics",
+        "it": "Nearby basics",
+        "fr": "Nearby basics"
+      },
+      "copy": {
+        "en": "Use the map for grocery stores, pharmacies, parking and family-friendly coffee stops.",
+        "it": "Use the map for grocery stores, pharmacies, parking and family-friendly coffee stops.",
+        "fr": "Use the map for grocery stores, pharmacies, parking and family-friendly coffee stops."
+      }
+    },
+    "story": {
+      "kicker": {
+        "en": "Template note",
+        "it": "Nota template",
+        "fr": "Note template"
+      },
+      "title": {
+        "en": "Reassuring, clear and easy to skim.",
+        "it": "Reassuring, clear and easy to skim.",
+        "fr": "Reassuring, clear and easy to skim."
+      },
+      "body": {
+        "en": "Family guests do not need a romantic manifesto. They need confidence that the stay is set up for real routines.",
+        "it": "Family guests do not need a romantic manifesto. They need confidence that the stay is set up for real routines.",
+        "fr": "Family guests do not need a romantic manifesto. They need confidence that the stay is set up for real routines."
+      }
+    },
+    "notes": {
+      "kicker": {
+        "en": "Checklist",
+        "it": "Checklist",
+        "fr": "Checklist"
+      },
+      "items": {
+        "en": [
+          "Mention baby gear clearly if you have it.",
+          "Call out the nearest grocery and pharmacy.",
+          "Use kitchen and laundry notes to reduce repetitive questions."
+        ],
+        "it": [
+          "Indica chiaramente eventuale baby gear disponibile.",
+          "Segnala grocery e farmacia piu vicine.",
+          "Usa note cucina e lavanderia per ridurre domande ripetitive."
+        ],
+        "fr": [
+          "Indiquez clairement le materiel bebe si vous en avez.",
+          "Signalez l epicerie et la pharmacie les plus proches.",
+          "Utilisez les notes cuisine et lessive pour reduire les questions repetitives."
+        ]
+      }
+    },
+    "contact": {
+      "title": {
+        "en": "Support contacts",
+        "it": "Support contacts",
+        "fr": "Support contacts"
+      },
+      "copy": {
+        "en": "Keep one direct host number and one backup for practical issues.",
+        "it": "Keep one direct host number and one backup for practical issues.",
+        "fr": "Keep one direct host number and one backup for practical issues."
+      }
+    }
+  },
+  "services": [
+    {
+      "id": "wifi",
+      "icon": "Wi",
+      "tone": "sand",
+      "chip": {
+        "en": "Always on",
+        "it": "Sempre attivo",
+        "fr": "Toujours pret"
+      },
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      },
+      "description": {
+        "en": "Give guests a quick way to connect without searching in messages.",
+        "it": "Dai agli ospiti un modo rapido per connettersi senza cercare nei messaggi.",
+        "fr": "Donnez aux voyageurs un acces rapide au Wi-Fi sans fouiller dans les messages."
+      },
+      "cardActions": [
+        {
+          "type": "copy-wifi",
+          "label": {
+            "en": "Copy password",
+            "it": "Copia password",
+            "fr": "Copier le mot de passe"
+          }
+        },
+        {
+          "type": "connect-wifi",
+          "label": {
+            "en": "Connect",
+            "it": "Connetti",
+            "fr": "Connecter"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Digital essentials",
+          "it": "Essenziali digitali",
+          "fr": "Essentiels numeriques"
+        },
+        "title": {
+          "en": "Share network details beautifully",
+          "it": "Condividi i dettagli rete con stile",
+          "fr": "Partagez les details reseau avec style"
+        },
+        "copy": {
+          "en": "Use the built-in buttons for one-tap copying and direct connection on supported devices.",
+          "it": "Usa i pulsanti inclusi per copiare in un tap e collegarti direttamente sui dispositivi supportati.",
+          "fr": "Utilisez les boutons integres pour copier en un tap et se connecter directement sur les appareils compatibles."
+        },
+        "sections": [
+          {
+            "icon": "ID",
+            "title": {
+              "en": "Network",
+              "it": "Rete",
+              "fr": "Reseau"
+            },
+            "text": {
+              "en": "Atelier Verdi Guest",
+              "it": "Atelier Verdi Guest",
+              "fr": "Atelier Verdi Guest"
+            }
+          },
+          {
+            "icon": "PW",
+            "title": {
+              "en": "Password",
+              "it": "Password",
+              "fr": "Mot de passe"
+            },
+            "text": {
+              "en": "atelier-2026",
+              "it": "atelier-2026",
+              "fr": "atelier-2026"
+            },
+            "actions": [
+              {
+                "type": "copy-wifi",
+                "label": {
+                  "en": "Copy password",
+                  "it": "Copia password",
+                  "fr": "Copier le mot de passe"
+                }
+              },
+              {
+                "type": "connect-wifi",
+                "label": {
+                  "en": "Connect",
+                  "it": "Connetti",
+                  "fr": "Connecter"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arrival",
+      "icon": "Arr",
+      "tone": "olive",
+      "chip": {
+        "en": "Check-in",
+        "it": "Check-in",
+        "fr": "Check-in"
+      },
+      "title": {
+        "en": "Arrival notes",
+        "it": "Note di arrivo",
+        "fr": "Infos d'arrivee"
+      },
+      "description": {
+        "en": "Summarize building access, timing and the best last-mile route.",
+        "it": "Riassumi accesso al palazzo, orari e il miglior ultimo tratto.",
+        "fr": "Resumez acces, horaires et meilleur dernier kilometre."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "arrival",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Smooth arrivals",
+          "it": "Arrivi fluidi",
+          "fr": "Arrivees fluides"
+        },
+        "title": {
+          "en": "Keep first access clear and short",
+          "it": "Rendi il primo accesso chiaro e breve",
+          "fr": "Gardez l'acces initial clair et court"
+        },
+        "copy": {
+          "en": "This section works best when every instruction answers a real arrival question and nothing more.",
+          "it": "Questa sezione funziona meglio quando ogni istruzione risponde a una vera domanda di arrivo e nulla di piu.",
+          "fr": "Cette section fonctionne mieux lorsque chaque instruction repond a une vraie question d'arrivee et rien de plus."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Check-in window",
+              "it": "Fascia check-in",
+              "fr": "Plage check-in"
+            },
+            "text": {
+              "en": "Standard arrival from 15:00. Message the host for luggage drop or late check-in support.",
+              "it": "Arrivo standard dalle 15:00. Scrivi all'host per deposito bagagli o supporto late check-in.",
+              "fr": "Arrivee standard a partir de 15h00. Ecrivez a l'host pour depot bagages ou arrivee tardive."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "+390000000001",
+                "reference": "hostPhone",
+                "label": {
+                  "en": "Call host",
+                  "it": "Chiama host",
+                  "fr": "Appeler l'host"
+                }
+              },
+              {
+                "type": "link",
+                "href": "https://wa.me/390000000001",
+                "reference": "hostWhatsapp",
+                "label": {
+                  "en": "WhatsApp host",
+                  "it": "WhatsApp host",
+                  "fr": "WhatsApp host"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "From the station",
+              "it": "Dalla stazione",
+              "fr": "Depuis la gare"
+            },
+            "text": {
+              "en": "The walk takes around 18 minutes. Use this route to avoid the busiest vehicle-only streets.",
+              "it": "La camminata dura circa 18 minuti. Usa questo percorso per evitare le strade piu trafficate.",
+              "fr": "La marche prend environ 18 minutes. Utilisez cet itineraire pour eviter les rues les plus chargees."
+            },
+            "actions": [
+              {
+                "type": "link",
+                "href": "https://maps.google.com/?q=Florence+Santa+Maria+Novella+to+Via+Giuseppe+Verdi+18",
+                "reference": "arrivalRoute",
+                "label": {
+                  "en": "Open route",
+                  "it": "Apri percorso",
+                  "fr": "Ouvrir l'itineraire"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "house-rules",
+      "icon": "Stay",
+      "tone": "sand",
+      "chip": {
+        "en": "Rules",
+        "it": "Regole",
+        "fr": "Règles"
+      },
+      "title": {
+        "en": "House rules",
+        "it": "Regole della casa",
+        "fr": "Règles de la maison"
+      },
+      "description": {
+        "en": "The few important notes to ensure a smooth stay.",
+        "it": "Le poche note importanti per garantire un soggiorno tranquillo.",
+        "fr": "Les quelques notes importantes pour assurer un bon séjour."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "house-rules",
+          "label": {
+            "en": "Read rules",
+            "it": "Leggi regole",
+            "fr": "Lire les règles"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Stay notes",
+          "it": "Note soggiorno",
+          "fr": "Notes séjour"
+        },
+        "title": {
+          "en": "Respect the space and the neighbors",
+          "it": "Rispetta lo spazio e i vicini",
+          "fr": "Respectez l'espace et les voisins"
+        },
+        "copy": {
+          "en": "These few rules help us maintain the property in perfect condition for everyone.",
+          "it": "Queste poche regole ci aiutano a mantenere la struttura in perfette condizioni per tutti.",
+          "fr": "Ces quelques règles nous aident à maintenir la propriété en parfait état pour tous."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Quiet hours",
+              "it": "Orari di quiete",
+              "fr": "Heures calmes"
+            },
+            "text": {
+              "en": "Please keep noise low after 22:00 and inside the common staircase.",
+              "it": "Mantieni il rumore basso dopo le 22:00 e nelle scale comuni.",
+              "fr": "Merci de limiter le bruit après 22h00 et dans l'escalier commun."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Smoking policy",
+              "it": "Fumo",
+              "fr": "Politique fumeur"
+            },
+            "text": {
+              "en": "Smoking is strictly forbidden inside. You can smoke on the balcony.",
+              "it": "È severamente vietato fumare all'interno. Puoi fumare sul balcone.",
+              "fr": "Il est strictement interdit de fumer à l'intérieur. Vous pouvez fumer sur le balcon."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "family-essentials",
+      "icon": "Stay",
+      "tone": "blue",
+      "chip": {
+        "en": "Family",
+        "it": "Family",
+        "fr": "Family"
+      },
+      "title": {
+        "en": "Family essentials",
+        "it": "Family essentials",
+        "fr": "Family essentials"
+      },
+      "description": {
+        "en": "Call out baby gear, laundry help and the small details that reduce parent stress.",
+        "it": "Call out baby gear, laundry help and the small details that reduce parent stress.",
+        "fr": "Call out baby gear, laundry help and the small details that reduce parent stress."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "family-essentials",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Family help",
+          "it": "Family help",
+          "fr": "Family help"
+        },
+        "title": {
+          "en": "The small practical details matter most here",
+          "it": "The small practical details matter most here",
+          "fr": "The small practical details matter most here"
+        },
+        "copy": {
+          "en": "Use this module for baby gear, laundry expectations and any child-friendly note that saves a message.",
+          "it": "Use this module for baby gear, laundry expectations and any child-friendly note that saves a message.",
+          "fr": "Use this module for baby gear, laundry expectations and any child-friendly note that saves a message."
+        },
+        "sections": [
+          {
+            "icon": "A",
+            "title": {
+              "en": "Baby gear",
+              "it": "Baby gear",
+              "fr": "Baby gear"
+            },
+            "text": {
+              "en": "List what is included: crib, high chair, bath seat or stroller-friendly access.",
+              "it": "List what is included: crib, high chair, bath seat or stroller-friendly access.",
+              "fr": "List what is included: crib, high chair, bath seat or stroller-friendly access."
+            }
+          },
+          {
+            "icon": "B",
+            "title": {
+              "en": "Laundry",
+              "it": "Laundry",
+              "fr": "Laundry"
+            },
+            "text": {
+              "en": "Explain where detergent is stored, how the washer works and whether drying racks are available.",
+              "it": "Explain where detergent is stored, how the washer works and whether drying racks are available.",
+              "fr": "Explain where detergent is stored, how the washer works and whether drying racks are available."
+            }
+          },
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "Family backup",
+              "it": "Family backup",
+              "fr": "Family backup"
+            },
+            "text": {
+              "en": "Recommend one nearby pharmacy or pediatric-friendly urgent care option for peace of mind.",
+              "it": "Recommend one nearby pharmacy or pediatric-friendly urgent care option for peace of mind.",
+              "fr": "Recommend one nearby pharmacy or pediatric-friendly urgent care option for peace of mind."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "kitchen",
+      "icon": "Fork",
+      "tone": "sand",
+      "chip": {
+        "en": "Kitchen",
+        "it": "Kitchen",
+        "fr": "Kitchen"
+      },
+      "title": {
+        "en": "Kitchen basics",
+        "it": "Kitchen basics",
+        "fr": "Kitchen basics"
+      },
+      "description": {
+        "en": "Explain coffee, cookware, kid-friendly meals and what guests can use freely.",
+        "it": "Explain coffee, cookware, kid-friendly meals and what guests can use freely.",
+        "fr": "Explain coffee, cookware, kid-friendly meals and what guests can use freely."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "kitchen",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Kitchen notes",
+          "it": "Kitchen notes",
+          "fr": "Kitchen notes"
+        },
+        "title": {
+          "en": "Answer the kitchen questions before breakfast",
+          "it": "Answer the kitchen questions before breakfast",
+          "fr": "Answer the kitchen questions before breakfast"
+        },
+        "copy": {
+          "en": "Families often need to know how the coffee works, where breakfast basics live and what is safe to use for kids.",
+          "it": "Families often need to know how the coffee works, where breakfast basics live and what is safe to use for kids.",
+          "fr": "Families often need to know how the coffee works, where breakfast basics live and what is safe to use for kids."
+        },
+        "sections": [
+          {
+            "icon": "AM",
+            "title": {
+              "en": "Coffee + breakfast",
+              "it": "Coffee + breakfast",
+              "fr": "Coffee + breakfast"
+            },
+            "text": {
+              "en": "Show how to use the coffee setup and whether tea, sugar or oil are provided.",
+              "it": "Show how to use the coffee setup and whether tea, sugar or oil are provided.",
+              "fr": "Show how to use the coffee setup and whether tea, sugar or oil are provided."
+            }
+          },
+          {
+            "icon": "PM",
+            "title": {
+              "en": "Cookware",
+              "it": "Cookware",
+              "fr": "Cookware"
+            },
+            "text": {
+              "en": "Mention pans, oven use and whether guests can use freezer or dishwasher.",
+              "it": "Mention pans, oven use and whether guests can use freezer or dishwasher.",
+              "fr": "Mention pans, oven use and whether guests can use freezer or dishwasher."
+            }
+          },
+          {
+            "icon": "Map",
+            "title": {
+              "en": "Nearest grocery",
+              "it": "Nearest grocery",
+              "fr": "Nearest grocery"
+            },
+            "text": {
+              "en": "Point to the closest reliable grocery for milk, fruit, water and simple meals.",
+              "it": "Point to the closest reliable grocery for milk, fruit, water and simple meals.",
+              "fr": "Point to the closest reliable grocery for milk, fruit, water and simple meals."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "checkout",
+      "icon": "B",
+      "tone": "sand",
+      "chip": {
+        "en": "Departure",
+        "it": "Partenza",
+        "fr": "Départ"
+      },
+      "title": {
+        "en": "Checkout steps",
+        "it": "Checkout",
+        "fr": "Départ"
+      },
+      "description": {
+        "en": "Everything you need to know before leaving.",
+        "it": "Tutto quello che devi sapere prima di partire.",
+        "fr": "Tout ce que vous devez savoir avant de partir."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "checkout",
+          "label": {
+            "en": "View details",
+            "it": "Vedi dettagli",
+            "fr": "Voir détails"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Before you go",
+          "it": "Prima di andare",
+          "fr": "Avant de partir"
+        },
+        "title": {
+          "en": "A simple checkout process",
+          "it": "Un processo di checkout semplice",
+          "fr": "Un processus de départ simple"
+        },
+        "copy": {
+          "en": "No need to clean, just a few quick checks before closing the door.",
+          "it": "Non serve pulire, solo un rapido controllo prima di chiudere la porta.",
+          "fr": "Pas besoin de nettoyer, juste quelques vérifications avant de fermer la porte."
+        },
+        "sections": [
+          {
+            "icon": "01",
+            "title": {
+              "en": "Timing",
+              "it": "Orario",
+              "fr": "Horaire"
+            },
+            "text": {
+              "en": "Standard checkout is at 10:30. Let us know if you need to store luggage.",
+              "it": "Il checkout standard è alle 10:30. Facci sapere se hai bisogno di depositare i bagagli.",
+              "fr": "Le départ standard est à 10h30. Dites-nous si vous devez laisser des bagages."
+            }
+          },
+          {
+            "icon": "02",
+            "title": {
+              "en": "Keys & lights",
+              "it": "Chiavi e luci",
+              "fr": "Clés et lumières"
+            },
+            "text": {
+              "en": "Leave the keys on the console table, turn off the lights and ensure the door is locked behind you.",
+              "it": "Lascia le chiavi sul mobile all'ingresso, spegni le luci e assicurati che la porta sia chiusa.",
+              "fr": "Laissez les clés sur la console, éteignez les lumières et assurez-vous que la porte est fermée."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "emergency",
+      "icon": "SOS",
+      "tone": "red",
+      "chip": {
+        "en": "Urgent",
+        "it": "Urgente",
+        "fr": "Urgent"
+      },
+      "title": {
+        "en": "Emergency & safety",
+        "it": "Emergenze e sicurezza",
+        "fr": "Urgences et sécurité"
+      },
+      "description": {
+        "en": "Important numbers and safety information.",
+        "it": "Numeri importanti e informazioni sulla sicurezza.",
+        "fr": "Numéros importants et informations de sécurité."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "emergency",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Safety first",
+          "it": "Sicurezza prima",
+          "fr": "Sécurité d'abord"
+        },
+        "title": {
+          "en": "Local emergency contacts",
+          "it": "Contatti di emergenza locali",
+          "fr": "Contacts d'urgence locaux"
+        },
+        "copy": {
+          "en": "In case of immediate danger, always call the national emergency number first.",
+          "it": "In caso di pericolo immediato, chiama sempre prima il numero di emergenza nazionale.",
+          "fr": "En cas de danger immédiat, appelez toujours d'abord le numéro d'urgence national."
+        },
+        "sections": [
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "National emergency",
+              "it": "Emergenza nazionale",
+              "fr": "Urgence nationale"
+            },
+            "text": {
+              "en": "Call 112 for police, ambulance or fire department.",
+              "it": "Chiama 112 per polizia, ambulanza o vigili del fuoco.",
+              "fr": "Appelez le 112 pour la police, l'ambulance ou les pompiers."
+            },
+            "actions": [
+              {
+                "type": "call",
+                "phone": "112",
+                "reference": "emergencyPhone",
+                "label": {
+                  "en": "Call 112",
+                  "it": "Chiama 112",
+                  "fr": "Appeler 112"
+                }
+              }
+            ]
+          },
+          {
+            "icon": "A",
+            "title": {
+              "en": "First aid kit",
+              "it": "Kit primo soccorso",
+              "fr": "Trousse de secours"
+            },
+            "text": {
+              "en": "Located in the bathroom cabinet.",
+              "it": "Si trova nell'armadietto del bagno.",
+              "fr": "Situé dans le placard de la salle de bain."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nearby",
+      "icon": "Map",
+      "tone": "olive",
+      "chip": {
+        "en": "Nearby",
+        "it": "Nearby",
+        "fr": "Nearby"
+      },
+      "title": {
+        "en": "Nearby basics",
+        "it": "Nearby basics",
+        "fr": "Nearby basics"
+      },
+      "description": {
+        "en": "Map the grocery, pharmacy, playground or parking that matters most to families.",
+        "it": "Map the grocery, pharmacy, playground or parking that matters most to families.",
+        "fr": "Map the grocery, pharmacy, playground or parking that matters most to families."
+      },
+      "cardActions": [
+        {
+          "type": "modal",
+          "serviceId": "nearby",
+          "label": {
+            "en": "Open details",
+            "it": "Apri dettagli",
+            "fr": "Ouvrir"
+          }
+        }
+      ],
+      "modal": {
+        "kicker": {
+          "en": "Nearby essentials",
+          "it": "Nearby essentials",
+          "fr": "Nearby essentials"
+        },
+        "title": {
+          "en": "Show the practical places first",
+          "it": "Show the practical places first",
+          "fr": "Show the practical places first"
+        },
+        "copy": {
+          "en": "Prioritize the stops that make a family stay feel easier in the first 24 hours.",
+          "it": "Prioritize the stops that make a family stay feel easier in the first 24 hours.",
+          "fr": "Prioritize the stops that make a family stay feel easier in the first 24 hours."
+        },
+        "sections": [
+          {
+            "icon": "Map",
+            "title": {
+              "en": "Grocery",
+              "it": "Grocery",
+              "fr": "Grocery"
+            },
+            "text": {
+              "en": "List the nearest grocery with realistic walking time and opening hours.",
+              "it": "List the nearest grocery with realistic walking time and opening hours.",
+              "fr": "List the nearest grocery with realistic walking time and opening hours."
+            }
+          },
+          {
+            "icon": "SOS",
+            "title": {
+              "en": "Pharmacy",
+              "it": "Pharmacy",
+              "fr": "Pharmacy"
+            },
+            "text": {
+              "en": "Include one nearby pharmacy and one late-night backup if relevant.",
+              "it": "Include one nearby pharmacy and one late-night backup if relevant.",
+              "fr": "Include one nearby pharmacy and one late-night backup if relevant."
+            }
+          },
+          {
+            "icon": "GO",
+            "title": {
+              "en": "Play or pause",
+              "it": "Play or pause",
+              "fr": "Play or pause"
+            },
+            "text": {
+              "en": "Recommend a quick playground, square or relaxed stop where kids can decompress.",
+              "it": "Recommend a quick playground, square or relaxed stop where kids can decompress.",
+              "fr": "Recommend a quick playground, square or relaxed stop where kids can decompress."
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "area": {
+    "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=9.101%2C39.210%2C9.128%2C39.226&layer=mapnik&marker=39.2183%2C9.1134",
+    "filters": [
+      {
+        "id": "all",
+        "label": {
+          "en": "All",
+          "it": "Tutti",
+          "fr": "Tout"
+        }
+      },
+      {
+        "id": "food",
+        "label": {
+          "en": "Food",
+          "it": "Food",
+          "fr": "Food"
+        }
+      },
+      {
+        "id": "views",
+        "label": {
+          "en": "Views",
+          "it": "Panorami",
+          "fr": "Vues"
+        }
+      },
+      {
+        "id": "essentials",
+        "label": {
+          "en": "Essentials",
+          "it": "Essenziali",
+          "fr": "Essentiels"
+        }
+      }
+    ],
+    "points": [
+      {
+        "category": "food",
+        "icon": "Eat",
+        "title": {
+          "en": "Replace me",
+          "it": "Sostituiscimi",
+          "fr": "Remplacez-moi"
+        },
+        "meta": {
+          "en": "Add a short note here",
+          "it": "Aggiungi una nota breve qui",
+          "fr": "Ajoutez une note courte ici"
+        },
+        "href": "https://maps.google.com/"
+      },
+      {
+        "category": "views",
+        "icon": "View",
+        "title": {
+          "en": "Replace me too",
+          "it": "Sostituisci anche me",
+          "fr": "Remplacez-moi aussi"
+        },
+        "meta": {
+          "en": "Another short note here",
+          "it": "Un'altra nota breve qui",
+          "fr": "Une autre note courte ici"
+        },
+        "href": "https://maps.google.com/"
+      },
+      {
+        "category": "essentials",
+        "icon": "Go",
+        "title": {
+          "en": "One practical spot",
+          "it": "Un punto pratico",
+          "fr": "Un lieu pratique"
+        },
+        "meta": {
+          "en": "Use for parking, pharmacy or transit",
+          "it": "Usalo per parcheggio, farmacia o trasporti",
+          "fr": "Utilisez-le pour parking, pharmacie ou transport"
+        },
+        "href": "https://maps.google.com/"
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Support Person 1",
+      "role": {
+        "en": "Check-in support",
+        "it": "Supporto check-in",
+        "fr": "Support check-in"
+      },
+      "phone": "+390000000001",
+      "whatsapp": "https://wa.me/390000000001"
+    },
+    {
+      "name": "Support Person 2",
+      "role": {
+        "en": "Guest care",
+        "it": "Guest care",
+        "fr": "Guest care"
+      },
+      "phone": "+390000000002",
+      "whatsapp": "https://wa.me/390000000002"
+    },
+    {
+      "name": "Support Person 3",
+      "role": {
+        "en": "Operations",
+        "it": "Operations",
+        "fr": "Operations"
+      },
+      "phone": "+390000000003",
+      "whatsapp": "https://wa.me/390000000003"
+    }
+  ],
+  "share": {
+    "publicUrl": "",
+    "qrDestinationUrl": "",
+    "guestUrl": ""
+  },
+  "printables": {
+    "qrSign": {
+      "title": {
+        "en": "Scan for your guest guide",
+        "it": "Scansiona per la guida ospiti",
+        "fr": "Scannez pour le guide voyageurs"
+      },
+      "subtitle": {
+        "en": "Wi-Fi, arrival details, local recommendations and host contacts",
+        "it": "Wi-Fi, arrivo, consigli locali e contatti host",
+        "fr": "Wi-Fi, arrivee, recommandations locales et contacts host"
+      },
+      "footer": {
+        "en": "Open on your phone",
+        "it": "Apri sul telefono",
+        "fr": "Ouvrez sur votre telephone"
+      }
+    },
+    "wifiCard": {
+      "title": {
+        "en": "Wi-Fi access",
+        "it": "Accesso Wi-Fi",
+        "fr": "Acces Wi-Fi"
+      }
+    },
+    "welcomeSheet": {
+      "title": {
+        "en": "Welcome",
+        "it": "Benvenuti",
+        "fr": "Bienvenue"
+      }
+    },
+    "qrPocketCard": {
+      "title": {
+        "en": "Your guest guide",
+        "it": "La tua guida ospiti",
+        "fr": "Votre guide voyageurs"
+      },
+      "tagline": {
+        "en": "Scan for Wi-Fi, arrival info & local tips",
+        "it": "Scansiona per Wi-Fi, arrivo e consigli locali",
+        "fr": "Scannez pour Wi-Fi, arrivee et conseils locaux"
+      }
+    }
+  },
+  "layout": {
+    "heroMode": "compact",
+    "density": "balanced",
+    "quickActionsStyle": "grid",
+    "serviceCardStyle": "soft"
+  },
+  "media": {
+    "heroImage": {
+      "src": "",
+      "alt": {
+        "en": "",
+        "it": "",
+        "fr": ""
+      }
+    },
+    "gallery": [
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      },
+      {
+        "src": "",
+        "alt": {
+          "en": "",
+          "it": "",
+          "fr": ""
+        }
+      }
+    ]
+  },
+  "presetMeta": {
+    "key": "family",
+    "label": {
+      "en": "Family Stay",
+      "it": "Family Stay",
+      "fr": "Family Stay"
+    },
+    "audience": {
+      "en": "Family apartments, holiday homes and practical stays",
+      "it": "Family apartments, holiday homes and practical stays",
+      "fr": "Family apartments, holiday homes and practical stays"
+    },
+    "summary": {
+      "en": "Essentials visible fast, less guest messaging.",
+      "it": "Essentials visible fast, less guest messaging.",
+      "fr": "Essentials visible fast, less guest messaging."
+    },
+    "featured": true,
+    "wizardCategory": "family-practical",
+    "listingOrder": 4
+  },
+  "wizardDefaults": {
+    "recommendedFor": [
+      "family",
+      "holiday-home"
+    ],
+    "primaryGoal": "reduce-messages",
+    "bestFor": "Families who need groceries, kitchen basics and child-friendly notes quickly.",
+    "focusModules": [
+      "family-essentials",
+      "kitchen",
+      "nearby"
+    ]
+  }
+}

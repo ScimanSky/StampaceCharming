@@ -9,9 +9,10 @@
    ```
 
 2. Open `http://localhost:4173/customize.html`
-3. Choose the preset closest to your property
+3. Choose the template that matches your property type
 4. Update:
    - property name
+   - template direction if you want to override the wizard
    - hero display mode
    - guest-facing guest mode link
    - optional property images
@@ -58,6 +59,7 @@
 ## Best practice
 
 - Keep the guide short and useful
+- Use the wizard templates as category-specific starting points, not just visual skins
 - Limit service cards to real guest questions
 - Test on mobile before sharing
 - Replace every demo URL and phone number

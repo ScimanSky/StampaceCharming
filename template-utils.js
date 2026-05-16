@@ -2,8 +2,112 @@ export const PRESET_PATHS = {
   boutique: "./data/presets/boutique-stay.json",
   urban: "./data/presets/urban-loft.json",
   coastal: "./data/presets/coastal-retreat.json",
+  family: "./data/presets/family-stay.json",
+  cabin: "./data/presets/mountain-cabin.json",
+  workstay: "./data/presets/self-checkin-workstay.json",
   blank: "./data/presets/blank-template.json",
 };
+
+export const PRESET_CATALOG = [
+  {
+    key: "boutique",
+    path: PRESET_PATHS.boutique,
+    label: "Boutique City",
+    summary: "Editorial, refined and hospitality-led.",
+    audience: "Boutique apartments, design stays and city properties.",
+    bestFor: "Polished welcome pages with local recommendations and warm tone.",
+    features: ["Arrival notes", "Local picks", "Editorial feel"],
+    hero: "Full hero",
+    sharing: "Guest guide plus curated local highlights",
+    quickActions: "Arrival, Wi-Fi, local picks, host contact",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "urban",
+    path: PRESET_PATHS.urban,
+    label: "Urban Loft",
+    summary: "Fast decisions, strong utility and low-friction arrival.",
+    audience: "Lofts, serviced apartments and business travelers.",
+    bestFor: "Guests arriving late or mixing work with short city stays.",
+    features: ["Self check-in", "Transit-first", "Practical layout"],
+    hero: "Compact hero",
+    sharing: "Task-first guide for autonomous city guests",
+    quickActions: "Check-in, Wi-Fi, transport, support",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "coastal",
+    path: PRESET_PATHS.coastal,
+    label: "Coastal Retreat",
+    summary: "Relaxed navigation with local atmosphere first.",
+    audience: "Beach apartments, villas and destination stays.",
+    bestFor: "Holiday rentals where guests want ease, rhythm and local tips.",
+    features: ["Beach access", "Dining picks", "Soft pacing"],
+    hero: "Full hero",
+    sharing: "Destination-led guide with slower, image-friendly rhythm",
+    quickActions: "Beach, Wi-Fi, dining, host help",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "family",
+    path: PRESET_PATHS.family,
+    label: "Family Stay",
+    summary: "Essentials visible fast, less guest messaging.",
+    audience: "Family apartments, holiday homes and practical stays.",
+    bestFor: "Hosts who want grocery, kitchen and child-friendly info up front.",
+    features: ["Family essentials", "Kitchen notes", "Nearby basics"],
+    hero: "Compact hero",
+    sharing: "Reassuring guide for practical family trips",
+    quickActions: "Wi-Fi, family kit, grocery, help",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "cabin",
+    path: PRESET_PATHS.cabin,
+    label: "Mountain Cabin",
+    summary: "Calm guidance with home systems made clear.",
+    audience: "Cabins, retreats and nature stays.",
+    bestFor: "Hosts who need heating, arrival and local essentials easy to find.",
+    features: ["Heating help", "Nature nearby", "Grounded tone"],
+    hero: "Full hero",
+    sharing: "Atmospheric guide with practical home-system support",
+    quickActions: "Arrival, heating, essentials, host contact",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "workstay",
+    path: PRESET_PATHS.workstay,
+    label: "Self Check-In Workstay",
+    summary: "Operations-first flow with smart autonomy.",
+    audience: "Remote workers, self check-in rentals and autonomous guests.",
+    bestFor: "Hosts who want check-in, workspace and support immediately visible.",
+    features: ["Self check-in", "Workspace", "Support shortcuts"],
+    hero: "Quick access first",
+    sharing: "Guest-safe link optimized for low-contact hosting",
+    quickActions: "Check-in, Wi-Fi, workspace, support",
+    featured: true,
+    advanced: false,
+  },
+  {
+    key: "blank",
+    path: PRESET_PATHS.blank,
+    label: "Blank Builder",
+    summary: "Start from a clean structure and build your own.",
+    audience: "Advanced buyers who prefer a neutral starter.",
+    bestFor: "Hosts comfortable editing raw structure and module order.",
+    features: ["Neutral starter", "Same engine", "Advanced bonus"],
+    hero: "Full hero",
+    sharing: "Flexible starter for fully custom hospitality flows",
+    quickActions: "Neutral defaults",
+    featured: false,
+    advanced: true,
+  },
+];
 
 export const browserConfigKey = "guest-guide-template-config";
 export const modeStorageKey = "guest-guide-template-mode";
@@ -100,6 +204,96 @@ export const themePresets = {
       glow: "rgba(86, 185, 177, 0.2)",
     },
   },
+  family: {
+    light: {
+      bg: "#f7f4ee",
+      bgAlt: "#ebe5da",
+      paper: "rgba(255, 255, 255, 0.92)",
+      paperStrong: "rgba(255, 255, 255, 0.99)",
+      ink: "#2b2722",
+      inkSoft: "#666056",
+      accent: "#be8b5e",
+      accentSoft: "#efd6bf",
+      accentAlt: "#56706b",
+      line: "rgba(43, 39, 34, 0.1)",
+      shadow: "0 26px 64px rgba(72, 56, 41, 0.11)",
+      glow: "rgba(190, 139, 94, 0.12)",
+    },
+    dark: {
+      bg: "#171513",
+      bgAlt: "#24201b",
+      paper: "rgba(34, 31, 28, 0.9)",
+      paperStrong: "rgba(40, 36, 32, 0.98)",
+      ink: "#f8f1e7",
+      inkSoft: "#cbc0b2",
+      accent: "#d8a06d",
+      accentSoft: "#6e5036",
+      accentAlt: "#99b4ad",
+      line: "rgba(248, 241, 231, 0.1)",
+      shadow: "0 30px 86px rgba(0, 0, 0, 0.36)",
+      glow: "rgba(216, 160, 109, 0.18)",
+    },
+  },
+  cabin: {
+    light: {
+      bg: "#efe8de",
+      bgAlt: "#ddd0c0",
+      paper: "rgba(255, 252, 247, 0.92)",
+      paperStrong: "rgba(255, 253, 250, 0.99)",
+      ink: "#232019",
+      inkSoft: "#5e5a50",
+      accent: "#87674c",
+      accentSoft: "#dcc7b2",
+      accentAlt: "#43584d",
+      line: "rgba(35, 32, 25, 0.1)",
+      shadow: "0 26px 64px rgba(63, 50, 36, 0.12)",
+      glow: "rgba(67, 88, 77, 0.16)",
+    },
+    dark: {
+      bg: "#111511",
+      bgAlt: "#1b241d",
+      paper: "rgba(26, 31, 27, 0.92)",
+      paperStrong: "rgba(31, 36, 32, 0.98)",
+      ink: "#ecf0e8",
+      inkSoft: "#bcc8ba",
+      accent: "#c99c6f",
+      accentSoft: "#5e4734",
+      accentAlt: "#8eab93",
+      line: "rgba(236, 240, 232, 0.1)",
+      shadow: "0 32px 92px rgba(0, 0, 0, 0.38)",
+      glow: "rgba(142, 171, 147, 0.18)",
+    },
+  },
+  workstay: {
+    light: {
+      bg: "#edf1f4",
+      bgAlt: "#dde5ea",
+      paper: "rgba(255, 255, 255, 0.9)",
+      paperStrong: "rgba(255, 255, 255, 0.99)",
+      ink: "#151a20",
+      inkSoft: "#586371",
+      accent: "#31618c",
+      accentSoft: "#d5e2ee",
+      accentAlt: "#1f2f44",
+      line: "rgba(21, 26, 32, 0.1)",
+      shadow: "0 28px 74px rgba(18, 28, 41, 0.12)",
+      glow: "rgba(49, 97, 140, 0.15)",
+    },
+    dark: {
+      bg: "#0d1218",
+      bgAlt: "#151d26",
+      paper: "rgba(20, 27, 35, 0.92)",
+      paperStrong: "rgba(24, 31, 39, 0.98)",
+      ink: "#f0f5fa",
+      inkSoft: "#b5c2cf",
+      accent: "#7baad6",
+      accentSoft: "#23384f",
+      accentAlt: "#d5c2a4",
+      line: "rgba(240, 245, 250, 0.11)",
+      shadow: "0 32px 96px rgba(0, 0, 0, 0.4)",
+      glow: "rgba(123, 170, 214, 0.18)",
+    },
+  },
 };
 
 export const printableDefaults = {
@@ -150,6 +344,58 @@ export const printableDefaults = {
 
 export const layoutDefaults = {
   heroMode: "full",
+  density: "balanced",
+  quickActionsStyle: "pill",
+  serviceCardStyle: "layered",
+};
+
+export const presetMetaDefaults = {
+  key: "blank",
+  label: {
+    en: "Blank Builder",
+    it: "Blank Builder",
+    fr: "Blank Builder",
+  },
+  audience: {
+    en: "Advanced buyers",
+    it: "Acquirenti avanzati",
+    fr: "Acheteurs avances",
+  },
+  summary: {
+    en: "Start from a clean structure and build your own.",
+    it: "Parti da una struttura pulita e costruisci il tuo flusso.",
+    fr: "Partez d'une structure propre et construisez votre flux.",
+  },
+  featured: false,
+  wizardCategory: "advanced",
+  listingOrder: 99,
+};
+
+export const wizardDefaultsShape = {
+  recommendedFor: ["general"],
+  primaryGoal: "guest-experience",
+  bestFor: "Hosts who want a clean guest guide starter.",
+  focusModules: ["wifi", "arrival", "host contact"],
+};
+
+export const serviceMetadataDefaults = {
+  wifi: { templateCategory: "core", priority: "high", audienceTags: ["all", "family", "workstay"] },
+  arrival: { templateCategory: "arrival", priority: "high", audienceTags: ["all", "city", "cabin"] },
+  "self-check-in": { templateCategory: "arrival", priority: "high", audienceTags: ["urban", "workstay"] },
+  "house-rules": { templateCategory: "core", priority: "medium", audienceTags: ["all"] },
+  checkout: { templateCategory: "core", priority: "high", audienceTags: ["all"] },
+  emergency: { templateCategory: "core", priority: "high", audienceTags: ["all"] },
+  food: { templateCategory: "neighborhood", priority: "medium", audienceTags: ["boutique", "coastal", "urban"] },
+  mobility: { templateCategory: "neighborhood", priority: "medium", audienceTags: ["urban", "workstay", "city"] },
+  experiences: { templateCategory: "lifestyle", priority: "low", audienceTags: ["boutique", "coastal", "cabin"] },
+  beach: { templateCategory: "lifestyle", priority: "high", audienceTags: ["coastal"] },
+  workspace: { templateCategory: "utility", priority: "high", audienceTags: ["urban", "workstay"] },
+  "family-essentials": { templateCategory: "utility", priority: "high", audienceTags: ["family"] },
+  kitchen: { templateCategory: "utility", priority: "medium", audienceTags: ["family"] },
+  "heating-fireplace": { templateCategory: "utility", priority: "high", audienceTags: ["cabin"] },
+  "house-systems": { templateCategory: "utility", priority: "high", audienceTags: ["workstay", "cabin"] },
+  nearby: { templateCategory: "neighborhood", priority: "medium", audienceTags: ["family", "cabin"] },
+  support: { templateCategory: "support", priority: "high", audienceTags: ["workstay"] },
 };
 
 export function escapeHtml(value) {
@@ -228,9 +474,29 @@ export function ensurePrintableConfig(config) {
   config.layout.heroMode = ["full", "compact", "hidden"].includes(config.layout.heroMode)
     ? config.layout.heroMode
     : layoutDefaults.heroMode;
+  config.layout.density = ["editorial", "balanced", "utility"].includes(config.layout.density)
+    ? config.layout.density
+    : layoutDefaults.density;
+  config.layout.quickActionsStyle = ["pill", "grid", "compact"].includes(config.layout.quickActionsStyle)
+    ? config.layout.quickActionsStyle
+    : layoutDefaults.quickActionsStyle;
+  config.layout.serviceCardStyle = ["layered", "clean", "soft", "utility"].includes(config.layout.serviceCardStyle)
+    ? config.layout.serviceCardStyle
+    : layoutDefaults.serviceCardStyle;
 
   config.share ??= { publicUrl: "", qrDestinationUrl: "", guestUrl: "" };
   config.share.guestUrl ??= "";
+  config.presetMeta = {
+    ...presetMetaDefaults,
+    ...(config.presetMeta ?? {}),
+    label: ensureLocalizedValue(config.presetMeta?.label, presetMetaDefaults.label),
+    audience: ensureLocalizedValue(config.presetMeta?.audience, presetMetaDefaults.audience),
+    summary: ensureLocalizedValue(config.presetMeta?.summary, presetMetaDefaults.summary),
+  };
+  config.wizardDefaults = {
+    ...wizardDefaultsShape,
+    ...(config.wizardDefaults ?? {}),
+  };
   config.printables ??= {};
   config.printables.qrSign = {
     ...printableDefaults.qrSign,
@@ -255,6 +521,22 @@ export function ensurePrintableConfig(config) {
     title: ensureLocalizedValue(config.printables.qrPocketCard?.title, printableDefaults.qrPocketCard.title),
     tagline: ensureLocalizedValue(config.printables.qrPocketCard?.tagline, printableDefaults.qrPocketCard.tagline),
   };
+
+  if (Array.isArray(config.services)) {
+    config.services = config.services.map((service) => {
+      const defaults = serviceMetadataDefaults[service.id] ?? {
+        templateCategory: "utility",
+        priority: "medium",
+        audienceTags: ["all"],
+      };
+      return {
+        ...service,
+        templateCategory: service.templateCategory ?? defaults.templateCategory,
+        priority: service.priority ?? defaults.priority,
+        audienceTags: Array.isArray(service.audienceTags) ? service.audienceTags : defaults.audienceTags,
+      };
+    });
+  }
 }
 
 export function syncActionReferences(config, action) {
@@ -330,12 +612,7 @@ export function normalizeConfig(config) {
   return config;
 }
 
-export function resolveQrDestinationUrl(config) {
-  const explicit = config.share?.qrDestinationUrl?.trim();
-  if (explicit) {
-    return explicit;
-  }
-
+export function resolvePublicGuideUrl(config) {
   const publicUrl = config.share?.publicUrl?.trim();
   if (publicUrl) {
     return publicUrl;
@@ -351,10 +628,19 @@ export function resolveGuestUrl(config) {
     return explicit;
   }
 
-  const base = resolveQrDestinationUrl(config);
-  const url = new URL(base);
+  const base = resolvePublicGuideUrl(config);
+  const url = new URL(base, window.location.href);
   url.searchParams.set("view", "guest");
   return url.toString();
+}
+
+export function resolveQrDestinationUrl(config) {
+  const explicit = config.share?.qrDestinationUrl?.trim();
+  if (explicit) {
+    return explicit;
+  }
+
+  return resolveGuestUrl(config);
 }
 
 export function getLocaleList(config) {

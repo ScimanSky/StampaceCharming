@@ -1,6 +1,6 @@
 # Guest Guide Atelier
 
-Mobile-first guest guide website template for Airbnb hosts, vacation rentals, villas and boutique stays.
+Mobile-first guest guide website template for Airbnb hosts, vacation rentals, villas, family stays, cabins and work-friendly rentals.
 
 This product is packaged as an Etsy-ready digital bundle:
 
@@ -8,7 +8,7 @@ This product is packaged as an Etsy-ready digital bundle:
 - `customize.html`: no-code browser customizer
 - `config.json`: single editable content file
 - `printables/`: QR sign, Wi-Fi card, welcome sheet and pocket QR card
-- `data/presets/`: 4 starter presets
+- `data/presets/`: 6 commercial templates plus 1 blank bonus starter
 - `icons.js`: local SVG icon system for service cards and UI
 - `vendor/qrcode.js`: local MIT QR generator, no external API required
 - hero display modes: full, compact or hidden
@@ -50,12 +50,15 @@ Preset previews:
 - `http://localhost:4173/index.html?preset=boutique`
 - `http://localhost:4173/index.html?preset=urban`
 - `http://localhost:4173/index.html?preset=coastal`
+- `http://localhost:4173/index.html?preset=family`
+- `http://localhost:4173/index.html?preset=cabin`
+- `http://localhost:4173/index.html?preset=workstay`
 - `http://localhost:4173/index.html?preset=blank`
 
 ## Buyer workflow
 
 1. Open `customize.html`
-2. Choose a preset
+2. Choose a template from the wizard
 3. Edit the core content
 4. Add your public guide URL in the `Publish` step
 5. Add property images if desired
@@ -70,7 +73,8 @@ Preset previews:
 - Guide website template
 - No-code customizer
 - Single `config.json` system
-- 4 starter presets
+- 6 distinct guest guide templates
+- 1 blank bonus starter
 - QR Welcome Sign
 - Wi-Fi Card
 - Welcome Sheet

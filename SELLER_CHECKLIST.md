@@ -54,5 +54,6 @@ Recommended hosting: GitHub Pages.
 - the buyer ZIP contains no seller-only files
 - the QR sign opens the correct guide URL
 - the printables look coherent with the guide theme
+- the preset wizard clearly presents 6 commercial templates plus the blank bonus starter
 - the listing clearly says `website template`, `digital download` and `hosting not included`
 - the license matches one-business / one-client usage
