@@ -7,6 +7,7 @@ import {
   getStoredColorMode,
   loadTemplateConfig,
   modeStorageKey,
+  resolveGuestUrl,
   t,
 } from "./template-utils.js";
 import { renderIcon } from "./icons.js";
@@ -23,6 +24,14 @@ const state = {
 };
 
 const dom = {
+  hostUtility: document.querySelector("#host-utility"),
+  hostUtilityTitle: document.querySelector("#host-utility-title"),
+  hostUtilityBody: document.querySelector("#host-utility-body"),
+  hostModePill: document.querySelector("#host-mode-pill"),
+  hostSourcePill: document.querySelector("#host-source-pill"),
+  hostPlaceholderPill: document.querySelector("#host-placeholder-pill"),
+  hostCopyLinkButton: document.querySelector("#host-copy-link-button"),
+  hostOpenGuestLink: document.querySelector("#host-open-guest-link"),
   hero: document.querySelector(".hero"),
   brandSeal: document.querySelector("#brand-seal"),
   brandName: document.querySelector("#brand-name"),
@@ -132,6 +141,70 @@ function renderPreviewBanner() {
     state.config.ui?.previewBanner,
     "Previewing your browser config. Export the file when you are ready to publish.",
   );
+}
+
+function buildGuestViewUrl() {
+  const url = new URL(window.location.href);
+  url.searchParams.set("view", "guest");
+
+  if (state.source === "browser") {
+    url.searchParams.set("config", "browser");
+  }
+
+  return url.toString();
+}
+
+function getPlaceholderCount() {
+  const checks = [
+    state.config.brand?.name,
+    state.config.brand?.address,
+    state.config.brand?.email,
+    state.config.brand?.license,
+    state.config.host?.name,
+    state.config.host?.email,
+    state.config.host?.phone,
+    state.config.wifi?.network,
+    state.config.wifi?.password,
+    state.config.share?.publicUrl,
+  ];
+
+  return checks.filter((value) => {
+    const text = String(value ?? "").toLowerCase();
+    return (
+      !text ||
+      text.includes("your") ||
+      text.includes("example.com") ||
+      text.includes("0000") ||
+      text.includes("street address") ||
+      text.includes("license / registration")
+    );
+  }).length;
+}
+
+function renderHostUtility() {
+  if (state.isGuestMode) {
+    dom.hostUtility.hidden = true;
+    return;
+  }
+
+  const placeholderCount = getPlaceholderCount();
+  const guestUrl = resolveGuestUrl(state.config);
+  const sourceLabel = state.source === "browser" ? "Browser preview" : "Live host view";
+  const body =
+    placeholderCount > 0
+      ? `Use this host view to finish setup. ${placeholderCount} placeholder field${placeholderCount === 1 ? "" : "s"} still need a quick pass before you send the guide to guests.`
+      : "This guide looks ready to share. Use the guest-safe link below for Airbnb, WhatsApp or your QR printables.";
+
+  dom.hostUtility.hidden = false;
+  dom.hostUtilityTitle.textContent =
+    placeholderCount > 0 ? "Setup helpers are visible in this mode." : "This host view is ready for a final pass.";
+  dom.hostUtilityBody.textContent = body;
+  dom.hostModePill.textContent = "Host preview";
+  dom.hostSourcePill.textContent = sourceLabel;
+  dom.hostPlaceholderPill.textContent = `${placeholderCount} placeholder check${placeholderCount === 1 ? "" : "s"}`;
+  dom.hostPlaceholderPill.classList.toggle("is-clean", placeholderCount === 0);
+  dom.hostOpenGuestLink.href = buildGuestViewUrl();
+  dom.hostCopyLinkButton.dataset.guestUrl = guestUrl;
 }
 
 function renderHero() {
@@ -453,6 +526,17 @@ async function copyWifiPassword() {
   }
 }
 
+async function copyGuestLink() {
+  const guestUrl = dom.hostCopyLinkButton.dataset.guestUrl || buildGuestViewUrl();
+
+  try {
+    await navigator.clipboard.writeText(guestUrl);
+    showToast("Guest link copied");
+  } catch {
+    showToast(guestUrl);
+  }
+}
+
 function connectWifi() {
   window.location.href = state.config.wifi.connectUrl;
 }
@@ -525,6 +609,7 @@ function renderAll() {
   renderTopbar();
   renderLocaleSwitch();
   renderPreviewBanner();
+  renderHostUtility();
   renderHero();
   renderHeroImage();
   renderGallery();
@@ -591,6 +676,8 @@ dom.hostButton.addEventListener("click", () => {
   state.hostSheetOpen = true;
   renderHostSheet();
 });
+
+dom.hostCopyLinkButton.addEventListener("click", copyGuestLink);
 
 dom.themeToggle.addEventListener("click", () => {
   state.colorMode = state.colorMode === "dark" ? "light" : "dark";
